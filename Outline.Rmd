@@ -11,7 +11,7 @@ Type: Methodological Developments in Landscape Ecology
 
 <br/>
 
-< **TITLE** >
+< **Open source landscape ecology tools** >
 
 Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
 
@@ -27,7 +27,7 @@ Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
 
 <br/>
 
-Keywords: keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, …
+Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
 
 ### 1. Introduction
 - First topic
