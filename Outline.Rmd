@@ -1,0 +1,86 @@
+---
+title: "Outline"
+output: html_document
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+---
+
+<br/>
+
+Journal: Current Landscape Ecology Reports
+Type: Methodological Developments in Landscape Ecology
+
+<br/>
+
+< **TITLE** >
+
+Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
+
+<br/>
+
+<sup>1</sup>Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany 
+
+<sup>2</sup>Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
+
+<br/>
+
+*Corresponding author: E-Mail address: maximilian.hesselbarth@uni-goettingen.de
+
+<br/>
+
+Keywords: keyword 1, keyword 2, keyword 3, keyword 4, keyword 5, …
+
+### 1. Introduction
+- First topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- Second topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- ...
+- Last topic (often objectives and hypotheses)
+    - ...
+
+### 2. Methods
+- First topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- Second topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- ...
+- Last topic
+    - ...	
+
+### 3. Results (same structure and order as Methods)
+- First topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- Second topic
+    - First paragraph headline
+    - Second paragraph headline
+    - ...
+- ...
+- Last topic (often objectives and hypotheses)
+    - ...
+    
+### 4. Discussion
+-	Possible points to discuss
+    - First point
+    - Second point
+- ...
+- Conclusions
+    - Conclusion 1 
+    - Conclusion 2
+    - ...
+    
+### 5. Acknowledgments
+- ...
+
+### Open questions:
+- ...
+- ...
