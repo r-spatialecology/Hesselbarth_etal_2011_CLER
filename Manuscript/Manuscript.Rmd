@@ -3,6 +3,7 @@ title: Open source landscape ecology tools
 # subtitle: Do you have a subtitle? If so, write it here
 # titlerunning: Short form of title (if too long for head)
 # authorrunning: Short form of author list if too long for running head
+
 thanks: | 
     Grants or other notes about the article that should go on the front 
     page should be placed here. General acknowledgments should be placed at the
@@ -12,15 +13,12 @@ authors:
 - name: Maximilian H.K. Hesselbarth
   address: Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany 
   email: maximilian.hesselbarth@uni-goettingen.de
-  
 - name: Jakub Nowosad
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
   email: nowosad.jakub@gmail.com
-  
 - name: Author 3
   address: Adress author 3
   email: E-Mail author 3
-  
 - name: ...
   address: ...
   email: ...
@@ -32,30 +30,24 @@ keywords:
 - keyword 4
 - ...
 
-#PACS: 
-#- PAC1
-#- superPAC
-    
-# MSC:
-# - MSC code 1
-# - MSC code 2
-
 abstract: |
-  The text of your abstract.
+  (max. x words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 
 bibliography: bibliography.bib
 bibstyle: spphys
-# bibstyle options spbasic(default), spphys, spmpsci
+
 output: rticles::springer_article
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Introduction {#intro}
 
-Your text comes here. Separate text sections with \cite{Mislevy06Cog}.
+Your text comes here.
 
 # Section title {#sec:1}
 
-Text with citations by \cite{Galyardt14mmm}.
+Text with citations by \cite{turner2005}.
 
 ## Subsection title {#sec:2}
 
