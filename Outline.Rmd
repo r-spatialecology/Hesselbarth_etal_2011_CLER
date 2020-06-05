@@ -1,17 +1,21 @@
 ---
 title: "Outline"
 output: html_document
+theme: cosmo
 date: '`r format(Sys.time(), "%d %B, %Y")`'
+editor_options: 
+  chunk_output_type: console
 ---
 
 <br/>
 
 Journal: Current Landscape Ecology Reports
+
 Type: Methodological Developments in Landscape Ecology
 
 <br/>
 
-< **Open source landscape ecology tools** >
+Title: **Open source landscape ecology tools**
 
 Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
 
@@ -21,8 +25,6 @@ Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
 
 <sup>2</sup>Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
 
-<br/>
-
 *Corresponding author: E-Mail address: maximilian.hesselbarth@uni-goettingen.de
 
 <br/>
@@ -30,32 +32,62 @@ Maximillian H.K. Hesselbarth<sup>1</sup>, Jakub Nowosad<sup>2</sup>, ...
 Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
 
 ### 1. Introduction
-- First topic
-    - First paragraph headline
-    - Second paragraph headline
+- Intro to landscape ecology
+    - How do landscape characteristics influence ecological processes and vice verse
+    - Growing importance because often scales of policy making are adressed
+    - Need to preprocess, modify, model and analyze spatial data
+    - Short overview over common tasks/analysis in landscape ecology
     - ...
-- Second topic
-    - First paragraph headline
-    - Second paragraph headline
+- Intro to open-source
+    - What is open-source and why is it advantageous to closed source
+    - R environment
+    - ...
+- Landscape ecology in R
+    - One of the most used tools/powerful tool in ecology and spatial data analysis
+    - History of landscape ecology/spatial data analysis in R
+    - Growing body of specific textbooks and literature; e.g.:
+        - "Geocomputation with R"
+        - "Spatial Data Science"
+        - "Spatial Ecology and Conservation Modeling. Applications with R"
+        - "Learning Landscape Ecology. A Practical Guide to Concepts and Techniques"
+        - ...
+    - Growing body of specific R package for spatial data analysis
+    - ...
+- Objectives of review
+    - Existing/important R packages for landscape ecology
+    - Missing packages R packages for landscape ecology
     - ...
 - ...
-- Last topic (often objectives and hypotheses)
-    - ...
 
-### 2. Methods
-- First topic
-    - First paragraph headline
-    - Second paragraph headline
+### 2. Existing packages
+- Basic spatial data
+    - Basic data types (i.e. vector vs. raster data)
+        - raster, stars, terra(?)
+        - sp, sf
+        - rgeos, rgdal
+        - ...
+    - Creating maps
+        - maptools, tmap, ggplot2
+        - ...
+- Web-mapping frameworks
+    - mapview, leaflet
     - ...
-- Second topic
-    - First paragraph headline
-    - Second paragraph headline
+- Spatial regression
+    - nlme, spdep, kriging
+    - ...
+- Ecological analysis
+    - Landscape metrics
+        - landscapmetrics
+        - ...
+    - Habitat selection and SDM
+        - ade4, sdm
+        - ...
+    - Various
+        - vegan
+        - NLMR
     - ...
 - ...
-- Last topic
-    - ...	
-
-### 3. Results (same structure and order as Methods)
+### 3. Missing packages
 - First topic
     - First paragraph headline
     - Second paragraph headline
@@ -69,18 +101,26 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
     - ...
     
 ### 4. Discussion
--	Possible points to discuss
+- Possible points to discuss
     - First point
     - Second point
+    - ...
 - ...
 - Conclusions
     - Conclusion 1 
     - Conclusion 2
     - ...
+- ...
     
 ### 5. Acknowledgments
 - ...
 
 ### Open questions:
-- ...
+- Remote sensing/GIS?
+- Landscape genetics?
+- Landscape Connectivity?
+- Some "results"/meta-analysis of increase of R in landscape ecology?
+- Missing packages
+    - surface metrics
+    - vector-based metrics
 - ...
