@@ -1,8 +1,9 @@
 ---
 title: Open source landscape ecology tools
-subtitle: Do you have a subtitle? If so, write it here
-titlerunning: Open source landscape ecology tools
-authorrunning: Short form of author list if too long for running head
+# subtitle: Do you have a subtitle? If so, write it here
+# titlerunning: Open source landscape ecology tools
+# authorrunning: Short form of author list if too long for running head
+
 thanks: | 
     Grants or other notes about the article that should go on the front 
     page should be placed here. General acknowledgments should be placed at the
@@ -12,32 +13,38 @@ authors:
 - name: Maximillian H.K. Hesselbarth
   address: Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
   email: maximilian.hesselbarth@uni-goettingen.de
-  
 - name: Jakub Nowosad
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
   email: nowosad.jakub@gmail.com
+- name: Author 3
+  address: Adress author 3
+  email: E-Mail author 3
+- name: ...
+  address: ...
+  email: ...
 
 keywords:
-- key
-- dictionary
-- word
+- keyword 1
+- keyword 2
+- keyword 3
+- keyword 4
+- ...
 
 abstract: |
-  The text of your abstract.  150 -- 250 words.
+  max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 
 bibliography: bibliography.bib
-bibstyle: spphys
-# bibstyle options spbasic(default), spphys, spmpsci
+bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 output: rticles::springer_article
 ---
 
 # Introduction {#intro}
 
-Your text comes here. Separate text sections with \cite{Mislevy06Cog}.
+Landscape ecology does this and that \cite{turner2005}. 
 
 # Section title {#sec:1}
 
-Text with citations by \cite{Galyardt14mmm}.
+Open-source is great \cite{sandve2013}.
 
 ## Subsection title {#sec:2}
 
@@ -51,5 +58,3 @@ Use paragraph headings as needed.
 \begin{align}
 a^2+b^2=c^2
 \end{align}
-
-

@@ -119,7 +119,10 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
 - Remote sensing/GIS?
 - Landscape genetics?
 - Landscape Connectivity?
+  - ResistanceGA
+  - LQGraph
 - Some "results"/meta-analysis of increase of R in landscape ecology?
+- Open-source licenses
 - Missing packages
     - surface metrics
     - vector-based metrics
