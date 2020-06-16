@@ -73,6 +73,8 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
 - Spatial regression
     - nlme, spdep, kriging
     - ...
+- Spatial statistics?? (point-patterns analysis)
+    - spatstat
 - Ecological analysis
     - Landscape metrics
         - landscapmetrics
