@@ -60,31 +60,40 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
 - ...
 
 ### 2. Existing packages
+
+- Base R
 - Basic spatial data
     - Basic data types (i.e. vector vs. raster data)
         - raster, stars, terra(?)
-        - sp, sf
-        - rgeos, rgdal
+        - sp (+rgeos, rgdal), sf
         - ...
 - Creating maps
     - tmap, ggplot2
     - mapview, leaflet
     - ...
 - Spatial regression
-    - nlme, spdep, kriging
+    - nlme, spdep, gstat
     - ...
 - Spatial statistics?? (point-patterns analysis)
     - spatstat
 - Ecological analysis
     - Landscape metrics
         - landscapmetrics
+        - belg
         - ...
     - Habitat selection and SDM
+        - lm(), glm(), gam, RandomForest (ranger)
         - ade4, sdm
+        - biomod2??
         - ...
     - Various
         - vegan
-        - NLMR
+        - NLMR, landscapetools
+        - ecospat?? (https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.02671)
+        - PresenceAbsence?? (https://www.jstatsoft.org/article/view/v023i11)
+        - ENMeval?? (https://cran.r-project.org/web/packages/ENMeval/index.html)
+        - prioritizr?? (https://prioritizr.net/)
+        - data sources/API connections?
     - ...
 - ...
 ### 3. Missing packages
