@@ -72,23 +72,32 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
     - mapview, leaflet
     - ...
 - Spatial regression
-    - nlme, spdep, gstat
+    - nlme
+    - spdep, gstat/geoR (spatial autocorrelation), + pgirmess??, (http://www.r-inla.org/download; INLA?? check license)
     - ...
 - Spatial statistics?? (point-patterns analysis)
-    - spatstat
+    - spatstat (e.g., https://link.springer.com/chapter/10.1007/978-3-030-01989-1_4)
 - Ecological analysis
     - Landscape metrics
         - landscapmetrics
         - belg
         - ...
     - Habitat selection and SDM
-        - lm(), glm(), gam, RandomForest (ranger)
-        - ade4, sdm
+        - https://link.springer.com/chapter/10.1007/978-3-030-01989-1_7
+        - lm(), glm(), gam, rpart, RandomForest (ranger), lme4
+        - ade4, adehabitat, sdm
+        - some MAXENT package?
         - biomod2??
         - ...
+    - Connectivity? 
+        - https://link.springer.com/chapter/10.1007/978-3-030-01989-1_9
+        - gdistance??
+    - Spatial population dynamics
+        - https://link.springer.com/chapter/10.1007/978-3-030-01989-1_10
     - Various
         - vegan
-        - NLMR, landscapetools
+        - dismo
+        - NLMR (and RandomFields), landscapetools
         - ecospat?? (https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.02671)
         - PresenceAbsence?? (https://www.jstatsoft.org/article/view/v023i11)
         - ENMeval?? (https://cran.r-project.org/web/packages/ENMeval/index.html)
@@ -97,6 +106,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
         - ecodist?? (https://cran.r-project.org/web/packages/ecodist/index.html)
         - LEA?? (http://membres-timc.imag.fr/Olivier.Francois/Frichot_etal_MEE_2015.pdf)
         - remote sensing??
+        - agent-based modelling
     - ...
 - ...
 ### 3. Missing packages
@@ -134,7 +144,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
   - ResistanceGA
   - LQGraph
 - Some "results"/meta-analysis of increase of R in landscape ecology?
-- Open-source licenses
+- Open-source licenses (!!)
 - Missing packages
     - surface metrics
     - vector-based metrics
