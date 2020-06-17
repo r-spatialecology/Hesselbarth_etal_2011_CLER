@@ -375,7 +375,7 @@ summary {
 
 
 <h1 class="title toc-ignore">Outline</h1>
-<h4 class="date">08 June, 2020</h4>
+<h4 class="date">17 June, 2020</h4>
 
 </div>
 
@@ -436,47 +436,72 @@ summary {
 <div id="existing-packages" class="section level3">
 <h3>2. Existing packages</h3>
 <ul>
+<li>Base R</li>
 <li>Basic spatial data
 <ul>
 <li>Basic data types (i.e. vector vs. raster data)
 <ul>
 <li>raster, stars, terra(?)</li>
-<li>sp, sf</li>
-<li>rgeos, rgdal</li>
+<li>sp (+rgeos, rgdal), sf</li>
 <li>…</li>
+</ul></li>
 </ul></li>
 <li>Creating maps
 <ul>
-<li>maptools, tmap, ggplot2</li>
-<li>…</li>
-</ul></li>
-</ul></li>
-<li>Web-mapping frameworks
-<ul>
+<li>tmap, ggplot2</li>
 <li>mapview, leaflet</li>
 <li>…</li>
 </ul></li>
 <li>Spatial regression
 <ul>
-<li>nlme, spdep, kriging</li>
+<li>nlme</li>
+<li>spdep, gstat/geoR (spatial autocorrelation), + pgirmess??, (<a href="http://www.r-inla.org/download" class="uri">http://www.r-inla.org/download</a>; INLA?? check license)</li>
 <li>…</li>
+</ul></li>
+<li>Spatial statistics?? (point-patterns analysis)
+<ul>
+<li>spatstat (e.g., <a href="https://link.springer.com/chapter/10.1007/978-3-030-01989-1_4" class="uri">https://link.springer.com/chapter/10.1007/978-3-030-01989-1_4</a>)</li>
 </ul></li>
 <li>Ecological analysis
 <ul>
 <li>Landscape metrics
 <ul>
 <li>landscapmetrics</li>
+<li>belg</li>
 <li>…</li>
 </ul></li>
 <li>Habitat selection and SDM
 <ul>
-<li>ade4, sdm</li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-030-01989-1_7" class="uri">https://link.springer.com/chapter/10.1007/978-3-030-01989-1_7</a></li>
+<li>lm(), glm(), gam, rpart, RandomForest (ranger), lme4</li>
+<li>ade4, adehabitat, sdm</li>
+<li>some MAXENT package?</li>
+<li>biomod2??</li>
 <li>…</li>
+</ul></li>
+<li>Connectivity?
+<ul>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-030-01989-1_9" class="uri">https://link.springer.com/chapter/10.1007/978-3-030-01989-1_9</a></li>
+<li>gdistance??</li>
+</ul></li>
+<li>Spatial population dynamics
+<ul>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-030-01989-1_10" class="uri">https://link.springer.com/chapter/10.1007/978-3-030-01989-1_10</a></li>
 </ul></li>
 <li>Various
 <ul>
 <li>vegan</li>
-<li>NLMR</li>
+<li>dismo</li>
+<li>NLMR (and RandomFields), landscapetools</li>
+<li>ecospat?? (<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.02671" class="uri">https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.02671</a>)</li>
+<li>PresenceAbsence?? (<a href="https://www.jstatsoft.org/article/view/v023i11" class="uri">https://www.jstatsoft.org/article/view/v023i11</a>)</li>
+<li>ENMeval?? (<a href="https://cran.r-project.org/web/packages/ENMeval/index.html" class="uri">https://cran.r-project.org/web/packages/ENMeval/index.html</a>)</li>
+<li>prioritizr?? (<a href="https://prioritizr.net/" class="uri">https://prioritizr.net/</a>)</li>
+<li>data sources/API connections?</li>
+<li>ecodist?? (<a href="https://cran.r-project.org/web/packages/ecodist/index.html" class="uri">https://cran.r-project.org/web/packages/ecodist/index.html</a>)</li>
+<li>LEA?? (<a href="http://membres-timc.imag.fr/Olivier.Francois/Frichot_etal_MEE_2015.pdf" class="uri">http://membres-timc.imag.fr/Olivier.Francois/Frichot_etal_MEE_2015.pdf</a>)</li>
+<li>remote sensing??</li>
+<li>agent-based modelling</li>
 </ul></li>
 <li>…</li>
 </ul></li>
@@ -536,11 +561,12 @@ summary {
 <li>LQGraph</li>
 </ul></li>
 <li>Some “results”/meta-analysis of increase of R in landscape ecology?</li>
-<li>Open-source licenses</li>
+<li>Open-source licenses (!!)</li>
 <li>Missing packages
 <ul>
 <li>surface metrics</li>
 <li>vector-based metrics</li>
+<li>Morphological Spatial Pattern Analysis (<a href="https://forest.jrc.ec.europa.eu/en/activities/lpa/mspa/" class="uri">https://forest.jrc.ec.europa.eu/en/activities/lpa/mspa/</a>)</li>
 </ul></li>
 <li>…</li>
 </ul>

@@ -75,7 +75,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
     - nlme
     - spdep, gstat/geoR (spatial autocorrelation), + pgirmess??, (http://www.r-inla.org/download; INLA?? check license)
     - ...
-- Spatial statistics?? (point-patterns analysis)
+- Spatial statistics?? (point-patterns analysis) // MH:I think that's way too much
     - spatstat (e.g., https://link.springer.com/chapter/10.1007/978-3-030-01989-1_4)
 - Ecological analysis
     - Landscape metrics
@@ -106,7 +106,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
         - ecodist?? (https://cran.r-project.org/web/packages/ecodist/index.html)
         - LEA?? (http://membres-timc.imag.fr/Olivier.Francois/Frichot_etal_MEE_2015.pdf)
         - remote sensing??
-        - agent-based modelling
+        - agent-based modelling // MH:I think that's way too much
     - ...
 - ...
 ### 3. Missing packages
