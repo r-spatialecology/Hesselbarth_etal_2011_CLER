@@ -66,6 +66,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
     - Basic data types (i.e. vector vs. raster data)
         - raster, stars, terra(?)
         - sp (+rgeos, rgdal), sf
+        - Access to spatial data (e.g. rnaturalearth) (?)
         - ...
 - Creating maps
     - tmap, ggplot2
