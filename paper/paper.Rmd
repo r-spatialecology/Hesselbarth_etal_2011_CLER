@@ -42,24 +42,66 @@ output: rticles::springer_article
 
 ## A short introduction to landscape ecology {#sec:landscape_ecology}
 
-Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and simultaneously how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}. In this context, landscape ecology considers, besides others, spatial and temporal dynamics of heterogeneous landscapes, interactions, fluxes and exchange within these landscapes, how the landscapes influence ecological processes (and vice versa) and lastly how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and simultaneously how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}. In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa) and lastly iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
-While human activities have altered their environment for millennials \cite{Ellis2011}, in the past centuries the effects of humans on the global environment have increased to an unknown high, known as the the Anthropocene \cite{Crutzen2002}. Today, almost all ecosystems are directly or indirectly influenced by human activities \cite{Vitousek1997}. Thus, understanding the complex interactions between landscapes and ecological processes also becomes more important \cite{With2019}. 
+While human activities have altered the landscapes for millennials \cite{Ellis2011,Ellis2015}, in the past centuries the effects of humans on landscapes have increased to an unknown high, known as the the Anthropocene \cite{Crutzen2002}. Today, almost all landscapes are directly or indirectly influenced by human activities \cite{Vitousek1997}. Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important \cite{With2019}. 
 
-Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995}, spatial context is important and ecological processes will vary spatially \cite{With2019}. Thus, in contrast to many other sub-disciplines of ecology, landscape ecology emphasizes spatial patterns \cite{Risser1984}. Consequently, the field of landscape ecology relies on tools to preprocess, modify, model, analyze and visualize spatial data.
+Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes will vary spatially \cite{With2019}. Thus, in contrast to many other sub-disciplines of ecology, landscape ecology emphasizes spatial patterns to a high degree \cite{Risser1984}. Consequently, the field of landscape ecology relies on tools to preprocess, modify, model, analyze and visualize spatial data.
+
+<!-- MH: Do we need some more basic introduction to landscape ecology? -->
 
 ## Open-source software and R {#sec:open_source}
 
-Open-source software includes all software which is released under a license that allows to freely use, modify and distribute the software \cite{St.Laurent2008}. Open-source software development has many advantages, such as fast innovation, transparency and reliability as well as longevity due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
+Open-source software includes all software which is released under a license that allows to freely use, modify and distribute the software \cite{St.Laurent2008}. Open-source software development has many advantages, such as fast innovation, transparency and reliability as well as longevity mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
 
-One example of a successful open-source project is the R programming language and its *Comprehensive R Archive Network* (CRAN) for extensions (also called packages) \cite{RCoreTeam2019}. Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
+<!-- MH: Is this enough about the advantages of open-source? I feel like this could be a bit more in contrast to proprietary software, but also don't want to repeat stuff -->
 
-## Landscape ecology in R {#sec:R}
+One example of a successful open-source project is the *R* programming language and its *Comprehensive R Archive Network* (CRAN) for extensions (also called packages) \cite{RCoreTeam2019}. Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}. Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006}. This is documented by the growing *CRAN Task View: Analysis of Spatial Data* \cite{Bivand2019a} and *CRAN Task View: Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} with currently almost 300 packages in total. The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen by the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
 
-#### Paragraph headings 
+Even though many other open-source tools for landscape ecology exist \cite{Baker1992,QGISDevelopmentTeam2016,Porta2017}, in this review we are going to focus on tools implemented in the *R* programming language. For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}. Therefore, in the first part we are going to try to give a comprehensive overview over existing *R* packages for landscape ecology. In the second part, we will identify topics for which *R* packages are currently missing to the best of our knowledge.
 
-Use paragraph headings as needed.
+<!-- MH: Maybe there are better examples for open-source but not R than currently cited, e.g. GRASS -->
 
-\begin{align}
-a^2+b^2=c^2
-\end{align}
+# Existing packages {#sec:existing_packages}
+
+<!-- MH: I went for a structure where in the first paragraph I briefly introduce the topic and then list the most common packages. -->
+
+<!-- MH: Maybe we need to think about a table with the topics and the packages as a nice overview. Additionally, a figure where we show a typical workflow would be nice maybe -->
+
+## Basic spatial data
+
+## Creating maps
+
+## Spatial regression
+<!-- MH: Do we really want to include this? -->
+
+## Ecological analysis {#sec:ecological_analysis}
+
+#### Landscape metrics {#sec:landscape_metrics}
+
+One of the most fundamental steps of landscape ecology is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}. For discrete land cover classes the composition (number and abundance) and configuration (spatial arrangement) of the landscape is often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}. These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}. 
+
+The use of landscape metrics was heavily facilitated by the introduction of the *FRAGSTATS* software \cite{McGarigal2012}, firstly published in 1995 \cite{Kupfer2012,Gustafson2019}. However, *FRAGSTATS* is not not open-source software (however it is free to download at the developers' homepage), which restricts transparency and reproducibility. To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed. The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment. 
+
+#### Species distribution modeling {#sec:SDM}
+
+Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}. Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in R exists \cite{Guisan2017,Fletcher2019}.
+
+Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. Popular approaches and packages include generalized linear models using e.g. the *stats* package; generalized additive models using e.g.the *mgcv* or *lme4* package; classification and regression trees (CART) using e.g. the *rpart*, *randomForest* or *ranger* package or multivariate data analysis using e.g. the *ade4* package. Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. Of course, also packages specifically designed for SDM exists. This includes the *dismo*, *sdm*, *ecospat*, *biomod2* and *PresenceAbsence* packages.
+
+#### Landscape genetics {#sec:landscape_genetics}
+
+Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift and selection \cite{Manel2003}. Such insights improve our understanding of metapopulation dynamics, speciation, species’ distributions and conservation \cite{Storfer2007}. By explicitly including characteristics of landscape, landscape genetics is a way more realistic way of analysis than e.g. metapopulation genetics \cite{Holderegger2006}. As a result of its interdisciplinary, landscape genetics combines methods from different disciplines including landscape ecology, spatial statistics, geography and population genetics \cite{Storfer2007}.
+
+<!-- MH: This is work in progress. However, there seems to be a lot of connection to basic connectivity. Maybe include here and/or combine the overall topic with connectivity. -->
+
+<!-- Resistance surface -->
+<!-- Commute distances -->
+<!-- Least cost path -->
+
+<!-- *graph4lg*  -->
+<!-- *gdistance* -->
+<!-- *lme4* -->
+<!-- *HierDpart* -->
+<!-- *PopGenReport* -->
+<!-- https://dyerlab.github.io/Landscape-Genetics-Data-Analysis/index.html -->

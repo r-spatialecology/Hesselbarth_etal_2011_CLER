@@ -119,29 +119,29 @@ Landscape ecology focuses on how ecological processes are influenced and
 modified by the heterogeneous landscapes they occur in and
 simultaneously how the ecological processes themselves influence the
 landscapes \cite{Turner1989,Turner2005,With2019}. In this context,
-landscape ecology considers, besides others, spatial and temporal
-dynamics of heterogeneous landscapes, interactions, fluxes and exchange
-within these landscapes, how the landscapes influence ecological
-processes (and vice versa) and lastly how to manage these heterogeneous
-landscapes \cite{Risser1984,Turner1989}.
+landscape ecology considers, besides others, i) spatial and temporal
+dynamics of heterogeneous landscapes, ii) interactions, fluxes and
+exchange within these landscapes, iii) how the landscapes influence
+ecological processes (and vice versa) and lastly iv) how to manage these
+heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
-While human activities have altered their environment for millennials
-\cite{Ellis2011}, in the past centuries the effects of humans on the
-global environment have increased to an unknown high, known as the the
-Anthropocene \cite{Crutzen2002}. Today, almost all ecosystems are
+While human activities have altered the landscapes for millennials
+\cite{Ellis2011,Ellis2015}, in the past centuries the effects of humans
+on landscapes have increased to an unknown high, known as the the
+Anthropocene \cite{Crutzen2002}. Today, almost all landscapes are
 directly or indirectly influenced by human activities
 \cite{Vitousek1997}. Thus, understanding the complex interactions
-between landscapes and ecological processes also becomes more important
-\cite{With2019}.
+between landscapes and ecological processes becomes increasingly
+important \cite{With2019}.
 
 Because landscapes are defined as mosaics of different land covers,
-ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995},
-spatial context is important and ecological processes will vary
-spatially \cite{With2019}. Thus, in contrast to many other
-sub-disciplines of ecology, landscape ecology emphasizes spatial
-patterns \cite{Risser1984}. Consequently, the field of landscape ecology
-relies on tools to preprocess, modify, model, analyze and visualize
-spatial data.
+ecosystems, habitat types, or land uses
+\cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and
+ecological processes will vary spatially \cite{With2019}. Thus, in
+contrast to many other sub-disciplines of ecology, landscape ecology
+emphasizes spatial patterns to a high degree \cite{Risser1984}.
+Consequently, the field of landscape ecology relies on tools to
+preprocess, modify, model, analyze and visualize spatial data.
 
 \hypertarget{sec:open_source}{%
 \subsection{Open-source software and R}\label{sec:open_source}}
@@ -150,27 +150,114 @@ Open-source software includes all software which is released under a
 license that allows to freely use, modify and distribute the software
 \cite{St.Laurent2008}. Open-source software development has many
 advantages, such as fast innovation, transparency and reliability as
-well as longevity due to many diverse contributors
+well as longevity mainly due to many diverse contributors
 \cite{vonKrogh2006,St.Laurent2008}.
 
-One example of a successful open-source project is the R programming
-language and its \emph{Comprehensive R Archive Network} (CRAN) for
-extensions (also called packages) \cite{RCoreTeam2019}. Firstly
-introduced in 1995 \cite{Smith2016}, today the programming language is
-among the most popular programming languages, especially in ecology
-\cite{Lai2019}.
+One example of a successful open-source project is the \emph{R}
+programming language and its \emph{Comprehensive R Archive Network}
+(CRAN) for extensions (also called packages) \cite{RCoreTeam2019}.
+Firstly introduced in 1995 \cite{Smith2016}, today the programming
+language is among the most popular programming languages, especially in
+ecology \cite{Lai2019}. Originally introduced as a statistical
+programming language, a growing body of packages designed to analyze
+spatial data subsequently emerged for the \emph{R} programming language
+\cite{Bivand2006}. This is documented by the growing \emph{CRAN Task
+View: Analysis of Spatial Data} \cite{Bivand2019a} and \emph{CRAN Task
+View: Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020}
+with currently almost 300 packages in total. The growing popularity of
+the \emph{R} programming language for spatial data analysis and
+landscape ecology can also be seen by the increasing number of related
+textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
 
-\hypertarget{sec:R}{%
-\subsection{Landscape ecology in R}\label{sec:R}}
+Even though many other open-source tools for landscape ecology exist
+\cite{Baker1992,QGISDevelopmentTeam2016,Porta2017}, in this review we
+are going to focus on tools implemented in the \emph{R} programming
+language. For more general overviews see
+e.g.~\cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
+Therefore, in the first part we are going to try to give a comprehensive
+overview over existing \emph{R} packages for landscape ecology. In the
+second part, we will identify topics for which \emph{R} packages are
+currently missing to the best of our knowledge.
 
-\hypertarget{paragraph-headings}{%
-\paragraph{Paragraph headings}\label{paragraph-headings}}
+\hypertarget{sec:existing_packages}{%
+\section{Existing packages}\label{sec:existing_packages}}
 
-Use paragraph headings as needed.
+\hypertarget{basic-spatial-data}{%
+\subsection{Basic spatial data}\label{basic-spatial-data}}
 
-\begin{align}
-a^2+b^2=c^2
-\end{align}
+\hypertarget{creating-maps}{%
+\subsection{Creating maps}\label{creating-maps}}
+
+\hypertarget{spatial-regression}{%
+\subsection{Spatial regression}\label{spatial-regression}}
+
+\hypertarget{sec:ecological_analysis}{%
+\subsection{Ecological analysis}\label{sec:ecological_analysis}}
+
+\hypertarget{sec:landscape_metrics}{%
+\paragraph{Landscape metrics}\label{sec:landscape_metrics}}
+
+One of the most fundamental steps of landscape ecology is to describe
+and quantify landscape characteristics \cite{Turner2005,Lausch2015}. For
+discrete land cover classes the composition (number and abundance) and
+configuration (spatial arrangement) of the landscape is often described
+using landscape metrics
+\cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}. These metrics
+allow to compare different landscapes, quantify temporal and spatial
+landscape changes and investigate interactions between landscape
+characteristics and ecological processes \cite{Uuemaa2009}.
+
+The use of landscape metrics was heavily facilitated by the introduction
+of the \emph{FRAGSTATS} software \cite{McGarigal2012}, firstly published
+in 1995 \cite{Kupfer2012,Gustafson2019}. However, \emph{FRAGSTATS} is
+not not open-source software (however it is free to download at the
+developers' homepage), which restricts transparency and reproducibility.
+To provide a truly open-source solution to calculate landscape metrics,
+recently the \emph{landscapemetrics} package \cite{Hesselbarth2019a} was
+developed. The package allows to calculate the most widely used
+landscape metrics in a transparent and reproducible workflow within the
+\emph{R} environment.
+
+\hypertarget{sec:SDM}{%
+\paragraph{Species distribution modeling}\label{sec:SDM}}
+
+Species distribution modeling (SDM) analysis how landscape patterns
+(e.g.~habitat suitability, resources availability, etc.) influence and
+determine the patterns of species distribution, mainly to infer
+ecological processes and predict future species distributions
+\cite{Wiersma2011}. Originated in the 1970s, SDM has experienced
+numerous methodological advancement and a numerous body of literature
+exists today \cite{Zimmermann2010}. Additionally, textbooks introducing
+basic concepts of SDM in R exists \cite{Guisan2017,Fletcher2019}.
+
+Because the used modeling approaches are diverse
+\cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of
+\emph{R} packages used for SDMs. Popular approaches and packages include
+generalized linear models using e.g.~the \emph{stats} package;
+generalized additive models using e.g.the \emph{mgcv} or \emph{lme4}
+package; classification and regression trees (CART) using e.g.~the
+\emph{rpart}, \emph{randomForest} or \emph{ranger} package or
+multivariate data analysis using e.g.~the \emph{ade4} package. Another
+widely used SDM approach uses the concept of maximum entropy
+\cite{Phillips2006,Fletcher2019}. However, currently the \emph{maxent}
+package is not available on \emph{CRAN} anymore. Of course, also
+packages specifically designed for SDM exists. This includes the
+\emph{dismo}, \emph{sdm}, \emph{ecospat}, \emph{biomod2} and
+\emph{PresenceAbsence} packages.
+
+\hypertarget{sec:landscape_genetics}{%
+\paragraph{Landscape genetics}\label{sec:landscape_genetics}}
+
+Landscape genetics investigates how characteristics of landscapes
+interact with gene flow, genetic drift and selection \cite{Manel2003}.
+Such insights improve our understanding of metapopulation dynamics,
+speciation, species' distributions and conservation \cite{Storfer2007}.
+By explicitly including characteristics of landscape, landscape genetics
+is a way more realistic way of analysis than e.g.~metapopulation
+genetics \cite{Holderegger2006}. As a result of its interdisciplinary,
+landscape genetics combines methods from different disciplines including
+landscape ecology, spatial statistics, geography and population genetics
+\cite{Storfer2007}.
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
