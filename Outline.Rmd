@@ -95,6 +95,7 @@ Keywords: keyword 1, keyword 2, keyword 3, keyword 4, ...
         - gdistance??
     - Spatial population dynamics
         - https://link.springer.com/chapter/10.1007/978-3-030-01989-1_10
+    - Landscape genetics
     - Various
         - vegan
         - dismo
