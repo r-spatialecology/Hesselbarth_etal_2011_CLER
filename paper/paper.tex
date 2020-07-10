@@ -137,21 +137,33 @@ important \cite{With2019}.
 Because landscapes are defined as mosaics of different land covers,
 ecosystems, habitat types, or land uses
 \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and
-ecological processes will vary spatially \cite{With2019}. Thus, in
-contrast to many other sub-disciplines of ecology, landscape ecology
-emphasizes spatial patterns to a high degree \cite{Risser1984}.
-Consequently, the field of landscape ecology relies on tools to
-preprocess, modify, model, analyze and visualize spatial data.
+ecological processes will vary spatially \cite{With2019}. Related to
+this, the importance of scale was already raised decades ago
+\cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance until
+today \cite{Simova2012,Estes2018}. Thus, in contrast to many other
+sub-disciplines of ecology, landscape ecology emphasizes especially
+spatial patterns to a high degree \cite{Risser1984}. Consequently, the
+field of landscape ecology relies on software to preprocess, modify,
+model, analyze and visualize spatial data.
 
 \hypertarget{sec:open_source}{%
 \subsection{Open-source software and R}\label{sec:open_source}}
 
-Open-source software includes all software which is released under a
-license that allows to freely use, modify and distribute the software
-\cite{St.Laurent2008}. Open-source software development has many
-advantages, such as fast innovation, transparency and reliability as
-well as longevity mainly due to many diverse contributors
-\cite{vonKrogh2006,St.Laurent2008}.
+Software to manage and analyze data becomes increasingly important in
+modern scientific research \cite{Wilson2014} and many scientific studies
+would not have been possible without open-source software
+\cite{Prlic2012}. Open-source software includes all software which is
+released under a license that allows to freely use, modify and
+distribute the software \cite{St.Laurent2008}. Open-source software
+development has many advantages, such as fast innovation, transparency
+and reliability as well as longevity mainly due to many diverse
+contributors \cite{vonKrogh2006,St.Laurent2008}. Additionally, the use
+of open-source software facilitates (computational) reproducibility and
+can allow a better understanding of the methodology
+\cite{Prlic2012,Powers2019}. Lastly, open-source software allows other
+scientists to reuse code and not ``reinvent the wheel'' \cite{Prlic2012}
+and customize existing software to their specific needs easily
+\cite{Steiniger2009}.
 
 One example of a successful open-source project is the \emph{R}
 programming language and its \emph{Comprehensive R Archive Network}
@@ -170,14 +182,14 @@ landscape ecology can also be seen by the increasing number of related
 textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
 
 Even though many other open-source tools for landscape ecology exist
-\cite{Baker1992,QGISDevelopmentTeam2016,Porta2017}, in this review we
-are going to focus on tools implemented in the \emph{R} programming
-language. For more general overviews see
+\cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in
+this review we are going to focus on tools implemented in the \emph{R}
+programming language. Thus, in the first part we are going to try to
+give a comprehensive overview over existing \emph{R} packages for
+landscape ecology. In the second part, we will identify topics for which
+\emph{R} packages are currently missing to the best of our knowledge.
+For more general overviews see
 e.g.~\cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Therefore, in the first part we are going to try to give a comprehensive
-overview over existing \emph{R} packages for landscape ecology. In the
-second part, we will identify topics for which \emph{R} packages are
-currently missing to the best of our knowledge.
 
 \hypertarget{sec:existing_packages}{%
 \section{Existing packages}\label{sec:existing_packages}}
@@ -245,6 +257,34 @@ packages specifically designed for SDM exists. This includes the
 \emph{dismo}, \emph{sdm}, \emph{ecospat}, \emph{biomod2} and
 \emph{PresenceAbsence} packages.
 
+\hypertarget{sec:connectivity}{%
+\paragraph{Connectivity}\label{sec:connectivity}}
+
+Connectivity is one of the core elements of landscape structure
+\cite{Taylor1993} and thus one of the core concepts of landscape ecology
+\cite{With2019}. Landscape connectivity describes how landscape
+characteristics facilitate or hinder the movement of species
+\cite{Tischendorf2000} or other aspects of mobility, such as dispersal,
+gene or nutrient flow \cite{With2019}. While structural connectivity
+focuses only on landscape characteristics (e.g.~movement corridors,
+barriers, etc.), functional connectivity also includes behavior
+characteristics of the species \cite{Tischendorf2000,With2019}.
+
+Given its wide concept, many different measures of connectivity exists
+\cite{Kindlmann2008}. On patch level structural connectivity can be
+measured using nearest-neighbor distances or characterizations of the
+patch neighborhood (e.g.~amount of suitable habitat)
+\cite{Kindlmann2008,With2019}. Such measures are provided within the
+\emph{landscapemetrics} package (see \ref{sec:landscape_metrics}).
+Another way to describe connectivity is based on graph theory with the
+advantages that also functional connectivity can be included
+\cite{Kindlmann2008}. In graph theory \cite{Laita2011} landscapes are
+described by nodes (i.e.~habitat patches) connected by and functional
+connections called links \cite{Laita2011}. The \emph{grainscape} package
+\cite{Chubaty2020} provides a tool to model connectivity based on
+spatially explicit networks. More general, the \emph{igraph} packages
+\cite{Csardi2006} provides functionality related to graph theory.
+
 \hypertarget{sec:landscape_genetics}{%
 \paragraph{Landscape genetics}\label{sec:landscape_genetics}}
 
@@ -258,6 +298,9 @@ genetics \cite{Holderegger2006}. As a result of its interdisciplinary,
 landscape genetics combines methods from different disciplines including
 landscape ecology, spatial statistics, geography and population genetics
 \cite{Storfer2007}.
+
+\hypertarget{sec:NLM}{%
+\paragraph{Neutral landscape models}\label{sec:NLM}}
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
