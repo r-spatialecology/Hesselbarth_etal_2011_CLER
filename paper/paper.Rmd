@@ -72,7 +72,9 @@ Even though many other open-source tools for landscape ecology exist \cite{QGISD
 
 ## Basic spatial data
 
-<!--MH: Short paragraph about scale; *grainchanger* https://doi.org/10.1111/2041-210X.13177 -->
+<!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
+
+<!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
 ## Creating maps
 
@@ -110,20 +112,15 @@ Given its wide concept, many different measures of connectivity exists \cite{Kin
 Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift and selection \cite{Manel2003}. Such insights improve our understanding of metapopulation dynamics, speciation, species’ distributions and conservation \cite{Storfer2007}. By explicitly including characteristics of landscape, landscape genetics is a way more realistic way of analysis than e.g. metapopulation genetics \cite{Holderegger2006}. As a result of its interdisciplinary, landscape genetics combines methods from different disciplines including landscape ecology, spatial statistics, geography and population genetics \cite{Storfer2007}.
 
 <!-- MH: Work-in-Progress -->
+<!-- There seems to be a lot of connection to basic connectivity -->
 <!-- ISOLATION BY RESISTANCE; DOI: 10.1111/j.0014-3820.2006.tb00500.x -->
-
-
-#### Neutral landscape models {#sec:NLM}
-
-<!-- MH: This is work in progress. However, there seems to be a lot of connection to basic connectivity. Maybe include here and/or combine the overall topic with connectivity. -->
-
-<!-- Resistance surface -->
-<!-- Commute distances -->
-<!-- Least cost path -->
-
 <!-- *graph4lg*  -->
 <!-- *gdistance* -->
 <!-- *lme4* -->
 <!-- *HierDpart* -->
 <!-- *PopGenReport* -->
 <!-- https://dyerlab.github.io/Landscape-Genetics-Data-Analysis/index.html -->
+
+#### Neutral landscape models {#sec:NLM}
+
+<!-- MH: NLMR; DOI:  https://doi.org/10.1111/2041-210X.13076 -->
