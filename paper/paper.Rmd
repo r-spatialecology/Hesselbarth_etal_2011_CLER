@@ -3,12 +3,10 @@ title: Open source landscape ecology tools
 # subtitle: Do you have a subtitle? If so, write it here
 # titlerunning: Open source landscape ecology tools
 # authorrunning: Short form of author list if too long for running head
-
 thanks: | 
     Grants or other notes about the article that should go on the front 
     page should be placed here. General acknowledgments should be placed at the
     end of the article.
-
 authors: 
 - name: Maximillian H.K. Hesselbarth
   address: Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
@@ -22,20 +20,19 @@ authors:
 - name: ...
   address: ...
   email: ...
-
 keywords:
 - keyword 1
 - keyword 2
 - keyword 3
 - keyword 4
 - ...
-
 abstract: |
   max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
-
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 output: rticles::springer_article
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Introduction {#sec:intro}
@@ -54,7 +51,7 @@ Because landscapes are defined as mosaics of different land covers, ecosystems, 
 
 ## Open-source software and R {#sec:open_source}
 
-Software to manage and analyze data becomes increasingly important in modern scientific research \cite{Wilson2014} and many scientific studies would not have been possible without open-source software \cite{Prlic2012}. Open-source software includes all software which is released under a license that allows to freely use, modify and distribute the software \cite{St.Laurent2008}. Open-source software development has many advantages, such as fast innovation, transparency and reliability as well as longevity mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}. Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the methodology \cite{Prlic2012,Powers2019}. Lastly, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} and customize existing software to their specific needs easily \cite{Steiniger2009}. 
+Software to manage and analyze data becomes increasingly important in modern scientific research \cite{Wilson2014} and many scientific studies would not have been possible without open-source software \cite{Prlic2012}. Open-source software includes all software which is released under a license that allows to freely use, modify and distribute the software \cite{St.Laurent2008}. Open-source software development has many advantages, such as fast innovation, transparency and reliability as well as longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}. Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the methodology \cite{Prlic2012,Powers2019}. Lastly, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} and to customize existing software to their specific needs \cite{Steiniger2009}. 
 
 One example of a successful open-source project is the *R* programming language and its *Comprehensive R Archive Network* (CRAN) for extensions (also called packages) \cite{RCoreTeam2019}. Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}. Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006}. This is documented by the growing *CRAN Task View: Analysis of Spatial Data* \cite{Bivand2019a} and *CRAN Task View: Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} with currently almost 300 packages in total. The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen by the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
 
@@ -91,36 +88,32 @@ The use of landscape metrics was heavily facilitated by the introduction of the 
 
 #### Species distribution modeling {#sec:SDM}
 
-Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}. Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in R exists \cite{Guisan2017,Fletcher2019}.
+Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}. Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
-Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. Popular approaches and packages include generalized linear models using e.g. the *stats* package; generalized additive models using e.g.the *mgcv* or *lme4* package; classification and regression trees (CART) using e.g. the *rpart*, *randomForest* or *ranger* package or multivariate data analysis using e.g. the *ade4* package. Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. Of course, also packages specifically designed for SDM exists. This includes the *dismo*, *sdm*, *ecospat*, *biomod2* and *PresenceAbsence* packages.
+Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. Popular approaches and packages include generalized linear models using e.g. the *stats* package; generalized additive models using e.g.the *mgcv* or *lme4* package; classification and regression trees (CART) using e.g. the *rpart*, *randomForest* or *ranger* package or multivariate data analysis using e.g. the *ade4* or *vegan* package. Of course, also packages specifically designed for SDM exists. This includes the *dismo*, *sdm*, *ecospat*, *biomod2* and *PresenceAbsence* packages.
 
 #### Connectivity {#sec:connectivity}
 Connectivity is one of the core elements of landscape structure \cite{Taylor1993} and thus one of the core concepts of landscape ecology \cite{With2019}. Landscape connectivity describes how landscape characteristics facilitate or hinder the movement of species \cite{Tischendorf2000} or other aspects of mobility, such as dispersal, gene or nutrient flow \cite{With2019}. While structural connectivity focuses only on landscape characteristics (e.g. movement corridors, barriers, etc.), functional connectivity also includes behavior characteristics of the species \cite{Tischendorf2000,With2019}. 
 
-Given its wide concept, many different measures of connectivity exists \cite{Kindlmann2008}. On patch level structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g. amount of suitable habitat) \cite{Kindlmann2008,With2019}. Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}). Another way to describe connectivity is based on graph theory with the advantages that also functional connectivity can be included \cite{Kindlmann2008}. In graph theory  \cite{Laita2011} landscapes are described by nodes (i.e. habitat patches) connected by and functional connections called links \cite{Laita2011}. The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks. More general, the *igraph* packages \cite{Csardi2006} provides functionality related to graph theory.
-
-<!-- MH: Work-in-Progress -->
-
-<!-- - resistance surfaces (DOI: https://doi.org/10.1016/S0169-2046(02)00242-6): *gdistance* package DOI: 10.18637/jss.v076.i13-->
-
-<!-- - *samc*: an R package for connectivity modeling with spatial absorbing Markov chains; DOI: https://doi.org/10.1111/ecog.04891 -->
-
+Given its wide concept, many different measures of connectivity exists \cite{Kindlmann2008}. On patch level structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g. amount of suitable habitat) \cite{Kindlmann2008,With2019}. Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}). Another way to describe connectivity is based on graph theory with the advantages that also functional connectivity can be included \cite{Kindlmann2008}. In graph theory  \cite{Laita2011} landscapes are described by nodes (i.e. habitat patches) connected by and functional connections called links \cite{Laita2011}. The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks. More general, the *igraph* packages \cite{Csardi2006} provides functionality related to graph theory. Resistance surfaces and least-cost paths are another tool to model functional connectivity. The resistance surface describes effects of facilitating or hindering characteristics of the landscape for an organism moving within it \cite{Adriaensen2003}. Least-cost paths can be calculated using the *gdistance* package \cite{vanEtten2017}. Absorbing Markov chains that combines random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published *samc* package \cite{Marx2020}.
 
 #### Landscape genetics {#sec:landscape_genetics}
 
 Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift and selection \cite{Manel2003}. Such insights improve our understanding of metapopulation dynamics, speciation, species’ distributions and conservation \cite{Storfer2007}. By explicitly including characteristics of landscape, landscape genetics is a way more realistic way of analysis than e.g. metapopulation genetics \cite{Holderegger2006}. As a result of its interdisciplinary, landscape genetics combines methods from different disciplines including landscape ecology, spatial statistics, geography and population genetics \cite{Storfer2007}.
 
 <!-- MH: Work-in-Progress -->
-<!-- There seems to be a lot of connection to basic connectivity -->
-<!-- ISOLATION BY RESISTANCE; DOI: 10.1111/j.0014-3820.2006.tb00500.x -->
-<!-- *graph4lg*  -->
-<!-- *gdistance* -->
-<!-- *lme4* -->
-<!-- *HierDpart* -->
-<!-- *PopGenReport* -->
-<!-- https://dyerlab.github.io/Landscape-Genetics-Data-Analysis/index.html -->
+<!-- MH: General population genetics -->
+<!-- MH: Isolation by resistance  -->
+<!-- MH: Bayesian Genetic Clustering -->
+<!-- MH: Multivariate Ordination Techniques -->
+
+Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also of importance for landscape genetics. Further functionality for landscape genetics can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, or *HierDpart* packages \cite{Qin2019}.
 
 #### Neutral landscape models {#sec:NLM}
+Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}. Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found (for a comprehensive list, see \cite{Sciaini2018}). 
 
-<!-- MH: NLMR; DOI:  https://doi.org/10.1111/2041-210X.13076 -->
+Currently, to our knowledge, only one *R* packages exists that allows the use of neutral landscapes. Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} provides framework to simulate neutral landscape rasters. 
+
+<!-- # Missing packages -->
+
+<!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->

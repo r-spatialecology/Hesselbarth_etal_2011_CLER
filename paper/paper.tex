@@ -35,27 +35,25 @@
 
 \begin{document}
 
-\title{Open source landscape ecology tools \thanks{Grants or other notes
-about the article that should go on the front page should be placed
-here. General acknowledgments should be placed at the end of the
-article.} }
+\title{Open source landscape ecology tools \thanks{Grants or other notes about the article that should go on the front page
+should be placed here. General acknowledgments should be placed at the
+end of the article.} }
 
 
 
-\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Author
-3 \and  \ldots{} \and  }
+\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Author 3 \and  \ldots{} \and  }
 
 
 \institute{
         Maximillian H.K. Hesselbarth \at
-     Department of Ecosystem Modelling, University of Goettingen,
-Buesgenweg 4, 37077 Goettingen, Germany \\
+     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg
+ 4, 37077 Goettingen, Germany \\
      \email{\href{mailto:maximilian.hesselbarth@uni-goettingen.de}{\nolinkurl{maximilian.hesselbarth@uni-goettingen.de}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
         Jakub Nowosad \at
-     Institute of Geoecology and Geoinformation, Adam Mickiewicz
-University, Krygowskiego 10, 61-680 Poznan, Poland \\
+     Institute of Geoecology and Geoinformation, Adam Mickiewicz University,
+ Krygowskiego 10, 61-680 Poznan, Poland \\
      \email{\href{mailto:nowosad.jakub@gmail.com}{\nolinkurl{nowosad.jakub@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
@@ -156,13 +154,13 @@ would not have been possible without open-source software
 released under a license that allows to freely use, modify and
 distribute the software \cite{St.Laurent2008}. Open-source software
 development has many advantages, such as fast innovation, transparency
-and reliability as well as longevity mainly due to many diverse
+and reliability as well as longevity, mainly due to many diverse
 contributors \cite{vonKrogh2006,St.Laurent2008}. Additionally, the use
 of open-source software facilitates (computational) reproducibility and
 can allow a better understanding of the methodology
 \cite{Prlic2012,Powers2019}. Lastly, open-source software allows other
 scientists to reuse code and not ``reinvent the wheel'' \cite{Prlic2012}
-and customize existing software to their specific needs easily
+and to customize existing software to their specific needs
 \cite{Steiniger2009}.
 
 One example of a successful open-source project is the \emph{R}
@@ -240,7 +238,7 @@ ecological processes and predict future species distributions
 \cite{Wiersma2011}. Originated in the 1970s, SDM has experienced
 numerous methodological advancement and a numerous body of literature
 exists today \cite{Zimmermann2010}. Additionally, textbooks introducing
-basic concepts of SDM in R exists \cite{Guisan2017,Fletcher2019}.
+basic concepts of SDM in \emph{R} exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse
 \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of
@@ -249,13 +247,10 @@ generalized linear models using e.g.~the \emph{stats} package;
 generalized additive models using e.g.the \emph{mgcv} or \emph{lme4}
 package; classification and regression trees (CART) using e.g.~the
 \emph{rpart}, \emph{randomForest} or \emph{ranger} package or
-multivariate data analysis using e.g.~the \emph{ade4} package. Another
-widely used SDM approach uses the concept of maximum entropy
-\cite{Phillips2006,Fletcher2019}. However, currently the \emph{maxent}
-package is not available on \emph{CRAN} anymore. Of course, also
-packages specifically designed for SDM exists. This includes the
-\emph{dismo}, \emph{sdm}, \emph{ecospat}, \emph{biomod2} and
-\emph{PresenceAbsence} packages.
+multivariate data analysis using e.g.~the \emph{ade4} or \emph{vegan}
+package. Of course, also packages specifically designed for SDM exists.
+This includes the \emph{dismo}, \emph{sdm}, \emph{ecospat},
+\emph{biomod2} and \emph{PresenceAbsence} packages.
 
 \hypertarget{sec:connectivity}{%
 \paragraph{Connectivity}\label{sec:connectivity}}
@@ -284,6 +279,14 @@ connections called links \cite{Laita2011}. The \emph{grainscape} package
 \cite{Chubaty2020} provides a tool to model connectivity based on
 spatially explicit networks. More general, the \emph{igraph} packages
 \cite{Csardi2006} provides functionality related to graph theory.
+Resistance surfaces and least-cost paths are another tool to model
+functional connectivity. The resistance surface describes effects of
+facilitating or hindering characteristics of the landscape for an
+organism moving within it \cite{Adriaensen2003}. Least-cost paths can be
+calculated using the \emph{gdistance} package \cite{vanEtten2017}.
+Absorbing Markov chains that combines random walk theory and mortality
+based on the landscape characteristics \cite{Fletcher2019a} and is
+provided by the recently published \emph{samc} package \cite{Marx2020}.
 
 \hypertarget{sec:landscape_genetics}{%
 \paragraph{Landscape genetics}\label{sec:landscape_genetics}}
@@ -299,8 +302,30 @@ landscape genetics combines methods from different disciplines including
 landscape ecology, spatial statistics, geography and population genetics
 \cite{Storfer2007}.
 
+Since describing connectivity between two locations is one of the
+fundamental steps of landscape genetics, all packages useful for
+connectivity (see \ref{sec:landscape_genetics}) are also of importance
+for landscape genetics. Further functionality for landscape genetics can
+be found in the \emph{graphs4lg} \cite{Savary2020}, \emph{PopGenReport}
+\cite{Adamack2014,Gruber2015}, or \emph{HierDpart} packages
+\cite{Qin2019}.
+
 \hypertarget{sec:NLM}{%
 \paragraph{Neutral landscape models}\label{sec:NLM}}
+
+Neutral landscape models are used to create structured landscapes in the
+absence of specific ecological and landscape processes as null models
+against which hypotheses including specific ecological and landscape
+processes can be tested statistically \cite{Gardner1987,With1997}.
+Because neutral landscape models are not based on ecological and
+landscape process, many different generic algorithms to create
+landscapes can be found (for a comprehensive list, see
+\cite{Sciaini2018}).
+
+Currently, to our knowledge, only one \emph{R} packages exists that
+allows the use of neutral landscapes. Using a wide collection of
+algorithms, the \emph{NLMR} package \cite{Sciaini2018} provides
+framework to simulate neutral landscape rasters.
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
