@@ -30,6 +30,11 @@ abstract: |
   max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
+preamble: | 
+  \usepackage{caption}
+  \usepackage{ltablex}
+  \usepackage{lscape}
+  \usepackage{multirow}
 output: rticles::springer_article
 editor_options: 
   chunk_output_type: console
@@ -84,7 +89,7 @@ Even though many other open-source tools for landscape ecology exist \cite{QGISD
 
 One of the most fundamental steps of landscape ecology is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}. For discrete land cover classes the composition (number and abundance) and configuration (spatial arrangement) of the landscape is often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}. These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}. 
 
-The use of landscape metrics was heavily facilitated by the introduction of the *FRAGSTATS* software \cite{McGarigal2012}, firstly published in 1995 \cite{Kupfer2012,Gustafson2019}. However, *FRAGSTATS* is not not open-source software (however it is free to download at the developers' homepage), which restricts transparency and reproducibility. To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed. The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment. 
+The use of landscape metrics was heavily facilitated by the introduction of the *FRAGSTATS* software \cite{McGarigal2012}, firstly published in 1995 \cite{Kupfer2012,Gustafson2019}. However, *FRAGSTATS* is not not open-source software (however it is free to download at the developers' homepage), which restricts transparency and reproducibility. To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed. The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.  Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{Nowosad2019a}.
 
 #### Species distribution modeling {#sec:SDM}
 
@@ -113,6 +118,50 @@ Since describing connectivity between two locations is one of the fundamental st
 Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}. Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found (for a comprehensive list, see \cite{Sciaini2018}). 
 
 Currently, to our knowledge, only one *R* packages exists that allows the use of neutral landscapes. Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} provides framework to simulate neutral landscape rasters. 
+
+\begin{landscape}
+
+\begin{center}
+  \begin{table}
+    \begin{tabularx}{0.9\linewidth}{XXXX}
+      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included. SDM = Species distribution modeling; NLM = Neutral landscape model} \\
+      \hline
+      Topic & Package & Description & Source \\
+      \hline
+      \multirow{5}{*}{Spatial data} & \textit{raster} & Methods for raster data & \cite{Hijmans2019} \\
+      & \textit{stars} & Methods for spatiotemporal arrays (raster and vector data cubes) & \cite{Pebesma2019} \\
+      & \textit{sp} & Methods for mainly vector data & \cite{Pebesma2005,Bivand2013} \\
+      & \textit{sf} & Methods for vector data as simple features & \cite{Pebesma2018} \\
+      & \textit{landscapetools} & Utility functions for landscape analysis & \cite{Sciaini2018} \\
+      \hline
+      \multirow{3}{*}{Creating maps} & \textit{tmap} & xxx & xxx \\
+      & \textit{mapview} & xxx & xxx \\
+      & \textit{leaflet} & xxx & xxx \\
+      \hline
+      \multirow{2}{*}{Landscape metrics} & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
+      & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{Nowosad2019a} \\
+      \hline
+      \multirow{5}{*}{SDM} & \textit{dismo} & xxx & xxx \\
+      & \textit{sdm} & xxx & xxx \\
+      & \textit{ecospat} & xxx & xxx \\
+      & \textit{biomod2} & xxx & xxx \\
+      & \textit{PresenceAbsence} & xxx & xxx \\
+      \hline
+      \multirow{3}{*}{Connectivity} & \textit{grainscape} & xxx & \cite{Chubaty2020} \\
+      & \textit{gdistance} & xxx & \cite{vanEtten2017} \\
+      & \textit{samc} & xxx & \cite{Marx2020} \\
+      \hline
+      \multirow{3}{*}{Landscape genetics} & \textit{graphs4lg} & xxx & \cite{Savary2020} \\
+      & \textit{PopGenReport} & xxx & \cite{Adamack2014,Gruber2015} \\
+      & \textit{HierDpart} & xxx & \cite{Qin2019} \\
+      \hline
+      NLM & \textit{NLMR} & xxx & \cite{Sciaini2018} \\
+      \hline
+    \end{tabularx}
+  \end{table}
+\end{center}
+
+\end{landscape}
 
 <!-- # Missing packages -->
 

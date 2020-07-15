@@ -28,32 +28,37 @@
 %
 
 %% load any required packages here
-
+\usepackage{caption}
+\usepackage{ltablex}
+\usepackage{lscape}
+\usepackage{multirow}
 
 
 
 
 \begin{document}
 
-\title{Open source landscape ecology tools \thanks{Grants or other notes about the article that should go on the front page
-should be placed here. General acknowledgments should be placed at the
-end of the article.} }
+\title{Open source landscape ecology tools \thanks{Grants or other notes
+about the article that should go on the front page should be placed
+here. General acknowledgments should be placed at the end of the
+article.} }
 
 
 
-\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Author 3 \and  \ldots{} \and  }
+\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Author
+3 \and  \ldots{} \and  }
 
 
 \institute{
         Maximillian H.K. Hesselbarth \at
-     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg
- 4, 37077 Goettingen, Germany \\
+     Department of Ecosystem Modelling, University of Goettingen,
+Buesgenweg 4, 37077 Goettingen, Germany \\
      \email{\href{mailto:maximilian.hesselbarth@uni-goettingen.de}{\nolinkurl{maximilian.hesselbarth@uni-goettingen.de}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
         Jakub Nowosad \at
-     Institute of Geoecology and Geoinformation, Adam Mickiewicz University,
- Krygowskiego 10, 61-680 Poznan, Poland \\
+     Institute of Geoecology and Geoinformation, Adam Mickiewicz
+University, Krygowskiego 10, 61-680 Poznan, Poland \\
      \email{\href{mailto:nowosad.jakub@gmail.com}{\nolinkurl{nowosad.jakub@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
@@ -226,7 +231,9 @@ To provide a truly open-source solution to calculate landscape metrics,
 recently the \emph{landscapemetrics} package \cite{Hesselbarth2019a} was
 developed. The package allows to calculate the most widely used
 landscape metrics in a transparent and reproducible workflow within the
-\emph{R} environment.
+\emph{R} environment. Additionally, the \emph{belg} packages allows to
+calculate the Boltzmann entropy of a landscape gradient
+\cite{Nowosad2019a}.
 
 \hypertarget{sec:SDM}{%
 \paragraph{Species distribution modeling}\label{sec:SDM}}
@@ -326,6 +333,50 @@ Currently, to our knowledge, only one \emph{R} packages exists that
 allows the use of neutral landscapes. Using a wide collection of
 algorithms, the \emph{NLMR} package \cite{Sciaini2018} provides
 framework to simulate neutral landscape rasters.
+
+\begin{landscape}
+
+\begin{center}
+  \begin{table}
+    \begin{tabularx}{0.9\linewidth}{XXXX}
+      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included. SDM = Species distribution modeling; NLM = Neutral landscape model} \\
+      \hline
+      Topic & Package & Description & Source \\
+      \hline
+      \multirow{5}{*}{Spatial data} & \textit{raster} & Methods for raster data & \cite{Hijmans2019} \\
+      & \textit{stars} & Methods for spatiotemporal arrays (raster and vector data cubes) & \cite{Pebesma2019} \\
+      & \textit{sp} & Methods for mainly vector data & \cite{Pebesma2005,Bivand2013} \\
+      & \textit{sf} & Methods for vector data as simple features & \cite{Pebesma2018} \\
+      & \textit{landscapetools} & Utility functions for landscape analysis & \cite{Sciaini2018} \\
+      \hline
+      \multirow{3}{*}{Creating maps} & \textit{tmap} & xxx & xxx \\
+      & \textit{mapview} & xxx & xxx \\
+      & \textit{leaflet} & xxx & xxx \\
+      \hline
+      \multirow{2}{*}{Landscape metrics} & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
+      & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{Nowosad2019a} \\
+      \hline
+      \multirow{5}{*}{SDM} & \textit{dismo} & xxx & xxx \\
+      & \textit{sdm} & xxx & xxx \\
+      & \textit{ecospat} & xxx & xxx \\
+      & \textit{biomod2} & xxx & xxx \\
+      & \textit{PresenceAbsence} & xxx & xxx \\
+      \hline
+      \multirow{3}{*}{Connectivity} & \textit{grainscape} & xxx & \cite{Chubaty2020} \\
+      & \textit{gdistance} & xxx & \cite{vanEtten2017} \\
+      & \textit{samc} & xxx & \cite{Marx2020} \\
+      \hline
+      \multirow{3}{*}{Landscape genetics} & \textit{graphs4lg} & xxx & \cite{Savary2020} \\
+      & \textit{PopGenReport} & xxx & \cite{Adamack2014,Gruber2015} \\
+      & \textit{HierDpart} & xxx & \cite{Qin2019} \\
+      \hline
+      NLM & \textit{NLMR} & xxx & \cite{Sciaini2018} \\
+      \hline
+    \end{tabularx}
+  \end{table}
+\end{center}
+
+\end{landscape}
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
