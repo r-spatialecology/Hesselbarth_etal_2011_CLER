@@ -188,7 +188,7 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
 \begin{center}
   \begin{table}
     \begin{tabularx}{0.9\linewidth}{XXXX}
-      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included. SDM = Species distribution modeling; NLM = Neutral landscape model} \\
+      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included.} \\
       \hline
       Topic & Package & Description & Source \\
       \hline
@@ -205,7 +205,7 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
       \multirow{2}{*}{Landscape metrics} & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
       & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{Nowosad2019a} \\
       \hline
-      \multirow{5}{*}{SDM} & \textit{dismo} & xxx & xxx \\
+      \multirow{5}{*}{}Species distribution modeling (SDM) & \textit{dismo} & xxx & xxx \\
       & \textit{sdm} & xxx & xxx \\
       & \textit{ecospat} & xxx & xxx \\
       & \textit{biomod2} & xxx & xxx \\
@@ -219,7 +219,7 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
       & \textit{PopGenReport} & xxx & \cite{Adamack2014,Gruber2015} \\
       & \textit{HierDpart} & xxx & \cite{Qin2019} \\
       \hline
-      NLM & \textit{NLMR} & xxx & \cite{Sciaini2018} \\
+      Neutral Landscape Models (NLM) & \textit{NLMR} & xxx & \cite{Sciaini2018} \\
       \hline
     \end{tabularx}
   \end{table}
