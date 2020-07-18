@@ -94,17 +94,56 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 <!-- JN: can you think of one/a few typical workflows? -->
 
 <!-- MH: What about packages that are not on CRAN anymore, e.g. adehabitat? -->
-<!-- JN: if you think this package (or similar) are still useful, maybe we can mention them somewhere is the first part of the paper with annotation about their state, and then also write someting more about issues with archived packages in the second part (what's missing in R)... -->
+<!-- JN: if you think this package (or similar) are still useful, maybe we can mention them somewhere is the first part of the paper with annotation about their state, and then also write something more about issues with archived packages in the second part (what's missing in R)... -->
 
 <!-- MH: Add references for all packages -->
 
+<!-- JN: maybe we should also add an introduction to R packages here-->
+<!-- for example, CRAN vs GitHub vs other -->
+<!-- who creates R packages? -->
+<!-- who maintains them and what is an archived package -->
+<!-- resources on how to create your own packages - https://r-pkgs.org/ -->
+<!-- comment on never-ending changes in r world -->
+
+## Spatial data representations
+
+<!-- a paragraph or two about what are data representations, why do we need them, and what do they offer -->
+
+<!-- two major data types - raster and vector -->
+
+<!-- raster data representations -->
+<!-- raster (+ mention terra) -->
+<!-- stars -->
+
+<!-- vector data representation -->
+<!-- sp -->
+<!-- sf -->
+<!-- (conversion from text) -->
+<!-- terra new representations -->
+
+## Spatial data download
+
+<!-- access to spatial data -->
+
 ## Basic spatial data
+
+<!-- the role of data preparation - cropping, reprojecting, chaning resolution/simplifing, merging/joing -->
 
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
 
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
 ## Creating maps
+
+<!-- role of making maps - from checking data, through the data exploration, to presenting the results  -->
+
+<!-- maps in the computer age -->
+<!-- static maps and interactive maps -->
+
+<!-- build-in plotting functions -->
+<!-- tmap -->
+<!-- leaflet/mapview -->
+<!-- mention ggplot2/ggspatial as well -->
 
 ## Spatial regression
 <!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
