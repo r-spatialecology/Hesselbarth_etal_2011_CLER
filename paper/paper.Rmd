@@ -85,6 +85,8 @@ Thus, in the first part we are give a comprehensive overview over existing *R* p
 In the second part, we identify topics for which *R* packages are currently missing to the best of our knowledge. 
 For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
 
+<!-- JN: maybe we can also add info about RMarkdown and similar, with R as an integrative tool for making scientific outputs -->
+
 # Existing packages {#sec:existing_packages}
 
 <!-- MH: I went for a structure where in the first paragraph I briefly introduce the topic and then list the most common packages. -->
@@ -127,11 +129,13 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 
 ## Basic spatial data
 
-<!-- the role of data preparation - cropping, reprojecting, chaning resolution/simplifing, merging/joing -->
+<!-- the role of data preparation - cropping, reprojecting, changing resolution/simplifying, merging/joining -->
 
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
 
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
+
+<!-- JN: I am also thinking (unsure yet) about mentioning R as a bridge between other software (e.g. GRASSGIS) -->
 
 ## Creating maps
 
