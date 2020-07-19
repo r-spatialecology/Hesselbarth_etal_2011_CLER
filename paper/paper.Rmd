@@ -109,23 +109,40 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 
 ## Spatial data representations
 
-<!-- a paragraph or two about what are data representations, why do we need them, and what do they offer -->
+Most of the existing spatial data belong to one of two data models: spatial raster and spatial vectors.
+In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
+The values could represent discrete phenomena, such as a class number of a land cover category, or continuous phenomena, such as elevation values.
+The vector data model consists of two main elements, geometries, such as points, lines, polygons, and attributes.
+Each geometry is connected to a row in an attribute table.
+<!-- ... -->
+A few hundred of different spatial data file formats were developed to store data in these formats.
 
-<!-- two major data types - raster and vector -->
+While R has several build-in data structures, including data frames, it has not got any internal support for reading, processing, or visualizing spatial data.
+However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page ????). <!--history section-->
+Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector models have several implementations in the R language.
+<!-- are pros/cons of that needed? -->
+<!-- info about GDAL/PROJ? -->
 
-<!-- raster data representations -->
-<!-- raster (+ mention terra) -->
+The most prominent package allowing for raster data representation is *raster*.
+<!-- maybe check number of reverse dependencies? -->
+A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed, however, it could take several years for this package to be adopted by users.
+Alternatively, *stars* package can be used to read and process raster data.
 <!-- stars -->
 
-<!-- vector data representation -->
-<!-- sp -->
-<!-- sf -->
-<!-- (conversion from text) -->
-<!-- terra new representations -->
+The *sp* package was a standard for vector data representation for more than 10 years.
+<!-- used by many packages -->
+However, it is now in a maintenance mode only with a recommended successor - the *sf* package.
+<!-- terra new vector representations -->
+<!-- maybe check number of reverse dependencies? -->
+
+Importantly, all of the above packages use the external libraries GDAL and PROJ, which allow for reading and writing of hundreds of spatial data formats and coordinates transformation.
+They also have dedicated methods or functions to convert between representations, for example between *sp* and *sf* objects or *raster* and *stars* objects.
+This can be useful when a given function expects different data representation than currently existing.
 
 ## Spatial data download
 
 <!-- access to spatial data -->
+<!-- rgee -->
 
 ## Basic spatial data
 
@@ -136,6 +153,7 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
 <!-- JN: I am also thinking (unsure yet) about mentioning R as a bridge between other software (e.g. GRASSGIS) -->
+<!-- rgee -->
 
 ## Creating maps
 
