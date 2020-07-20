@@ -35,7 +35,10 @@ preamble: |
   \usepackage{ltablex}
   \usepackage{lscape}
   \usepackage{multirow}
-output: rticles::springer_article
+output:
+  bookdown::pdf_book:
+    base_format: rticles::springer_article
+    number_sections: yes
 editor_options: 
   chunk_output_type: console
 ---
@@ -107,7 +110,7 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 <!-- resources on how to create your own packages - https://r-pkgs.org/ -->
 <!-- comment on never-ending changes in r world -->
 
-## Spatial data representations
+## Spatial data representations {#spatrep}
 
 Most of the existing spatial data belong to one of two data models: spatial raster and spatial vectors.
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
@@ -155,15 +158,19 @@ This can be useful when a given function expects different data representation t
 
 ## Creating maps
 
+Creating maps is essential when working with spatial data.
+It has a role in checking the quality of data<!--(both coordinates and values)-->, data exploration, and finally in communicating the results.
 <!-- role of making maps - from checking data, through the data exploration, to presenting the results  -->
-
 <!-- maps in the computer age -->
-<!-- static maps and interactive maps -->
+Two main types of maps, static maps with full creator control and interactive maps where more control is given to the user, can be created in R.
 
-<!-- build-in plotting functions -->
-<!-- tmap -->
-<!-- leaflet/mapview -->
-<!-- mention ggplot2/ggspatial as well -->
+All of the packages listed in Section \@ref(spatrep) have build-in methods for plotting spatial data using the `plot()` function.
+However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
+Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data.
+The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
+This package aims for creating publication-ready maps.
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library.<!--this sentence can be easily removed-->
+R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data.
 
 ## Spatial regression
 <!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
