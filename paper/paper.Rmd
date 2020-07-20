@@ -10,7 +10,7 @@ thanks: |
 authors: 
 - name: Maximillian H.K. Hesselbarth
   address: Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
-  email: mhk.hesselbarthh@gmail.com
+  email: mhk.hesselbarth@gmail.com
 - name: Jakub Nowosad
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
   email: nowosad.jakub@gmail.com
