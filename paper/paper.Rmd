@@ -131,8 +131,14 @@ This can be useful when a given function expects different data representation t
 
 ## Spatial data download
 
-<!-- mention different data types/formats/projections/extents/resolutions -->
-<!-- access to spatial data -->
+Nowadays, spatial data for many spatial scales is available from abundance of sources.
+Some of them require registration or having appropriate credentials and allows downloading only from the web interface.
+However, many of the sources made their data publicly available either as a direct download or through an API connection.
+This is used by some R packages allowing for downloading various environmental spatial dataset.
+
+<!-- elevatr + ?? - elevation -->
+<!-- land cover -->
+<!-- rgbif + ?? -->
 <!-- rgee -->
 
 ## Spatial data processing
@@ -182,6 +188,7 @@ R's general-purpose plotting package *ggplot2* together with its extension *ggsp
 
 ## Spatial regression
 <!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
+<!-- JN: we could wait with this section to after receiving the results of the questionnaire -->
 
 ## Ecological analysis {#sec:ecological_analysis}
 
