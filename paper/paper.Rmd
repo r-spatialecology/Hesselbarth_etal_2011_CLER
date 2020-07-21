@@ -131,12 +131,23 @@ This can be useful when a given function expects different data representation t
 
 ## Spatial data download
 
+<!-- mention different data types/formats/projections/extents/resolutions -->
 <!-- access to spatial data -->
 <!-- rgee -->
 
 ## Spatial data processing
 
-<!-- the role of data preparation - cropping, reprojecting, changing resolution/simplifying, merging/joining -->
+As we mentioned in the previous sections, obtained data can be represented by different data types and stored in various file formats and read into R using one of the packages from Section \@ref(sec:spatrep).
+However, several potential obstacles to applying this data for ecological analysis still exist.
+
+<!-- geographic/projected CRS -->
+<!-- reprojecting -->
+<!-- Different data can also used one of many coordinate reference systems (CRS) -->
+
+<!-- different extents -->
+<!-- cropping -->
+
+<!-- the role of data preparation - changing resolution/simplifying, merging/joining -->
 
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
 
