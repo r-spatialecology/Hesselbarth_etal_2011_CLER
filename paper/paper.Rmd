@@ -86,7 +86,8 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 
 # Existing packages {#sec:existing_packages}
 
-There are two major platforms to host *R* packages and make them easily accessible to potential users. Firstly, hosting the package on *GitHub* allows users to install it with only one line of code. 
+There are two major platforms to host *R* packages and make them easily accessible to potential users.
+Firstly, hosting the package on *GitHub* allows users to install it with only one line of code. 
 Additionally, hosting the package on *GitHub* provides many useful tools to communicate between developers and users, such as bug reports \cite{Wickham2015}.
 Secondly, the *Comprehensive R Archive Network* (*CRAN*) provides large visibility to the community, ease of installation and a certain quality standard \cite{Wickham2015}.
 However, at the same time, releasing a *R* package on *CRAN* requires more initial work for the developers compared to *GitHub*.
@@ -110,7 +111,7 @@ Each geometry is connected to a row in an attribute table.
 A few hundred of different spatial data file formats were developed to store data in these formats.
 
 While R has several build-in data structures, including data frames, it has not got any internal support for reading, processing, or visualizing spatial data.
-However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10). <!--history section-->
+However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10).
 Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector models have several implementations in the R language.
 <!-- are pros/cons of that needed? -->
 <!-- info about GDAL/PROJ? -->
@@ -213,7 +214,8 @@ Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a
 #### Species distribution modeling {#sec:SDM}
 
 Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
-Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
+Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}.
+Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. 
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package. 
