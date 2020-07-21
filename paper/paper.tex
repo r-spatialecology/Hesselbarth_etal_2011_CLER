@@ -50,7 +50,7 @@ end of the article.} }
 \institute{
         Maximillian H.K. Hesselbarth \at
      Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany \\
-     \email{\href{mailto:mhk.hesselbarthh@gmail.com}{\nolinkurl{mhk.hesselbarthh@gmail.com}}}  %  \\
+     \email{\href{mailto:mhk.hesselbarth@gmail.com}{\nolinkurl{mhk.hesselbarth@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
         Jakub Nowosad \at
@@ -123,7 +123,7 @@ Additionally, the use of open-source software facilitates (computational) reprod
 Furthermore, open-source software allows other scientists to reuse code and not ``reinvent the wheel'' \cite{Prlic2012} and to customize existing software to their specific needs \cite{Steiniger2009}.
 Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost which allows to use the software without any costs in contrast to many quite expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
 
-One example of a successful open-source project is the \emph{R} programming language and its \emph{Comprehensive R Archive Network} (CRAN) for extensions (also called packages) \cite{RCoreTeam2019}.
+One example of a successful open-source project is the \emph{R} programming language and its extensions (also called packages) \cite{RCoreTeam2019}.
 Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
 Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the \emph{R} programming language \cite{Bivand2006}.
 This is documented by the growing \emph{CRAN Task View: Analysis of Spatial Data} \cite{Bivand2019a} and \emph{CRAN Task View: Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} that currently list almost 300 packages in total.
@@ -140,8 +140,15 @@ For more general overviews see e.g.~\cite{Jolma2008,Steiniger2009,Steiniger2009a
 \hypertarget{sec:existing_packages}{%
 \section{Existing packages}\label{sec:existing_packages}}
 
-\hypertarget{spatrep}{%
-\subsection{Spatial data representations}\label{spatrep}}
+There are two major platforms to host \emph{R} packages and make them easily accessible to potential users. Firstly, hosting the package on \emph{GitHub} allows users to install it with only one line of code.
+Additionally, hosting the package on \emph{GitHub} provides many useful tools to communicate between developers and users, such as bug reports \cite{Wickham2015}.
+Secondly, the \emph{Comprehensive R Archive Network} (\emph{CRAN}) provides large visibility to the community, ease of installation and a certain quality standard \cite{Wickham2015}.
+However, at the same time, releasing a \emph{R} package on \emph{CRAN} requires more initial work for the developers compared to \emph{GitHub}.
+Since most \emph{R} packages are developed and maintained by the community, this is a good example of how open-source software development can facilitate innovation, reproducibility and reuse of code, especially since now many \emph{R} packages depend on each other (i.e.~package \emph{x} requires and uses code from package \emph{y}) \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+For more information about \emph{R} package development, see \cite{Wickham2015}.
+
+\hypertarget{sec:spatrep}{%
+\subsection{Spatial data representations}\label{sec:spatrep}}
 
 Most of the existing spatial data belong to one of two data models: spatial raster and spatial vectors.
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
@@ -180,7 +187,7 @@ Creating maps is essential when working with spatial data.
 It has a role in checking the quality of data, data exploration, and finally in communicating the results.
 Two main types of maps, static maps with full creator control and interactive maps where more control is given to the user, can be created in R.
 
-All of the packages listed in Section \ref{spatrep} have build-in methods for plotting spatial data using the \texttt{plot()} function.
+All of the packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the \texttt{plot()} function.
 However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
 Alternatively, the \emph{mapview} package can be used for quick interactive visualization of spatial data.
 The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
@@ -214,9 +221,9 @@ Species distribution modeling (SDM) analysis how landscape patterns (e.g.~habita
 Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing basic concepts of SDM in \emph{R} exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of \emph{R} packages used for SDMs.
-Popular approaches and packages include generalized linear models using, e.g., the \emph{stats} package; generalized additive models using, e.g., the \emph{mgcv} or \emph{lme4} package; classification and regression trees (CART) using, e.g., the \emph{rpart}, \emph{randomForest} or \emph{ranger} package or multivariate data analysis using , e.g., the \emph{ade4} or \emph{vegan} package.
+Popular approaches and packages include generalized linear models using, e.g., the \emph{stats} \cite{RCoreTeam2019} package; generalized additive models using, e.g., the \emph{mgcv} \cite{Wood2017} or \emph{lme4} \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the \emph{rpart} \cite{Therneau2019}, \emph{randomForest} \cite{Liaw2002} or \emph{ranger} \cite{Wright2017} package or multivariate data analysis using , e.g., the \emph{ade4} \cite{Dray2007} or \emph{vegan} \cite{Oksanen2019} package.
 Of course, also packages specifically designed for SDM exists.
-This includes the \emph{dismo}, \emph{sdm}, \emph{ecospat}, \emph{biomod2} and \emph{PresenceAbsence} packages.
+This includes the \emph{dismo} \cite{Hijmans2017}, \emph{sdm} \cite{Naimi2016}, \emph{ecospat} \cite{Broennimann2020}, \emph{biomod2} \cite{Thuiller2020} and \emph{PresenceAbsence} \cite{Freeman2008} packages.
 
 \hypertarget{sec:connectivity}{%
 \paragraph{Connectivity}\label{sec:connectivity}}

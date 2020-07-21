@@ -70,7 +70,7 @@ Additionally, the use of open-source software facilitates (computational) reprod
 Furthermore, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} and to customize existing software to their specific needs \cite{Steiniger2009}. 
 Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost which allows to use the software without any costs in contrast to many quite expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
 
-One example of a successful open-source project is the *R* programming language and its *Comprehensive R Archive Network* (CRAN) for extensions (also called packages) \cite{RCoreTeam2019}. 
+One example of a successful open-source project is the *R* programming language and its extensions (also called packages) \cite{RCoreTeam2019}. 
 Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}. 
 Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006}.
 This is documented by the growing *CRAN Task View: Analysis of Spatial Data* \cite{Bivand2019a} and *CRAN Task View: Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} that currently list almost 300 packages in total. 
@@ -86,23 +86,20 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 
 # Existing packages {#sec:existing_packages}
 
+There are two major platforms to host *R* packages and make them easily accessible to potential users. Firstly, hosting the package on *GitHub* allows users to install it with only one line of code. 
+Additionally, hosting the package on *GitHub* provides many useful tools to communicate between developers and users, such as bug reports \cite{Wickham2015}.
+Secondly, the *Comprehensive R Archive Network* (*CRAN*) provides large visibility to the community, ease of installation and a certain quality standard \cite{Wickham2015}.
+However, at the same time, releasing a *R* package on *CRAN* requires more initial work for the developers compared to *GitHub*.
+Since most *R* packages are developed and maintained by the community, this is a good example of how open-source software development can facilitate innovation, reproducibility and reuse of code, especially since now many *R* packages depend on each other (i.e. package *x* requires and uses code from package *y*) \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+For more information about *R* package development, see \cite{Wickham2015}.
+
 <!-- MH: Maybe we need to think about a table with the topics and the packages as a nice overview. Additionally, a figure where we show a typical workflow would be nice maybe -->
 <!-- JN: can you think of one/a few typical workflows? -->
 
 <!-- MH: What about packages that are not on CRAN anymore, e.g. adehabitat? -->
 <!-- JN: if you think this package (or similar) are still useful, maybe we can mention them somewhere is the first part of the paper with annotation about their state, and then also write something more about issues with archived packages in the second part (what's missing in R)... -->
 
-<!-- MH: Add references for all packages -->
-
-<!-- JN: maybe we should also add an introduction to R packages here-->
-<!-- for example, CRAN vs GitHub vs other -->
-<!-- who creates R packages? -->
-<!-- who maintains them and what is an archived package -->
-<!-- resources on how to create your own packages - https://r-pkgs.org/ -->
-<!-- comment on never-ending changes in r world -->
-<!-- MH: I like this idea. I will add a short paragraph -->
-
-## Spatial data representations {#spatrep}
+## Spatial data representations {#sec:spatrep}
 
 Most of the existing spatial data belong to one of two data models: spatial raster and spatial vectors.
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
@@ -147,6 +144,7 @@ This can be useful when a given function expects different data representation t
 
 <!-- JN: I am also thinking (unsure yet) about mentioning R as a bridge between other software (e.g. GRASSGIS) -->
 <!-- rgee -->
+<!-- MH: Maybe one short sentence that R allows to connect to other open-source software. We already introduce the topic previously anyhow -->
 
 ## Creating maps
 
@@ -156,7 +154,7 @@ It has a role in checking the quality of data<!--(both coordinates and values)--
 <!-- maps in the computer age -->
 Two main types of maps, static maps with full creator control and interactive maps where more control is given to the user, can be created in R.
 
-All of the packages listed in Section \@ref(spatrep) have build-in methods for plotting spatial data using the `plot()` function.
+All of the packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the `plot()` function.
 However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
 Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
@@ -191,11 +189,9 @@ Species distribution modeling (SDM) analysis how landscape patterns (e.g. habita
 Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. 
-Popular approaches and packages include generalized linear models using, e.g., the *stats* package; generalized additive models using, e.g., the *mgcv* or *lme4* package; classification and regression trees (CART) using, e.g., the *rpart*, *randomForest* or *ranger* package or multivariate data analysis using , e.g., the *ade4* or *vegan* package. 
+Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package. 
 Of course, also packages specifically designed for SDM exists. 
-This includes the *dismo*, *sdm*, *ecospat*, *biomod2* and *PresenceAbsence* packages.
-<!-- JN: I think all of the above packages should be cited -->
-<!-- MH: Yeah, will do. I was just to lazy  -->
+This includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020} and *PresenceAbsence* \cite{Freeman2008} packages.
 
 #### Connectivity {#sec:connectivity}
 
