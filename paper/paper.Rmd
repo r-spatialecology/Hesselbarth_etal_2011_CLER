@@ -139,7 +139,9 @@ This is used by some R packages allowing for downloading various environmental s
 <!-- elevatr + ?? - elevation -->
 <!-- land cover -->
 <!-- rgbif + ?? -->
+<!-- climate data? -->
 <!-- rgee -->
+<!-- look for rOpenSci packages -->
 
 ## Spatial data processing
 
