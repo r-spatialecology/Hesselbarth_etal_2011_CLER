@@ -110,7 +110,7 @@ Each geometry is connected to a row in an attribute table.
 A few hundred of different spatial data file formats were developed to store data in these formats.
 
 While R has several build-in data structures, including data frames, it has not got any internal support for reading, processing, or visualizing spatial data.
-However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page ????). <!--history section-->
+However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10). <!--history section-->
 Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector models have several implementations in the R language.
 <!-- are pros/cons of that needed? -->
 <!-- info about GDAL/PROJ? -->
@@ -134,7 +134,7 @@ This can be useful when a given function expects different data representation t
 <!-- access to spatial data -->
 <!-- rgee -->
 
-## Basic spatial data
+## Spatial data processing
 
 <!-- the role of data preparation - cropping, reprojecting, changing resolution/simplifying, merging/joining -->
 
