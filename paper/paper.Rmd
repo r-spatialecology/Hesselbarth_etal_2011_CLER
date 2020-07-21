@@ -137,25 +137,32 @@ This can be useful when a given function expects different data representation t
 
 ## Spatial data processing
 
-As we mentioned in the previous sections, obtained data can be represented by different data types and stored in various file formats and read into R using one of the packages from Section \@ref(sec:spatrep).
+As we mentioned in the previous sections, gathered or obtained data can be represented by different data types and stored in various file formats.
+<!-- and read into R using one of the packages from Section \@ref(sec:spatrep). -->
 However, several potential obstacles to applying this data for ecological analysis still exist.
 
-<!-- geographic/projected CRS -->
-<!-- reprojecting -->
-<!-- Different data can also used one of many coordinate reference systems (CRS) -->
+The main issue for many landscape ecology studies is related to projections of the used data.
+It is not only required to have all of the used datasets in the same projection, but also selection of a proper projection is crucial.
+Coordinates in spatial data can represent one of many coordinate reference systems.
+Two main groups of coordinate reference systems (CRS) exist, namely geographical and projected, each having many members.
+In the first one, geographical, positions are specified by latitude and longitude coordinates in degrees.
+<!---->
+However, in most landscape ecology studies, projected CRSs, which use some measurement units (e.g., meters), should be utilized.
+<!-- Projected CRS  -->
+Selected projected CRS should be based on projection that keeps important properties of spatial data intact (e.g., does not distort areas, shapes, distances, angles) and be appropriate for a given study area.
+<!-- Where to find advice on how to select projections-->
+Gladly, all of the packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations.
 
-<!-- different extents -->
-<!-- cropping -->
-
-<!-- the role of data preparation - changing resolution/simplifying, merging/joining -->
+Second possible issue with spatial data is when the obtained data extends over a larger area than the study region.
+Then, some spatial preprecessing, such as vector clipping or raster cropping, is needed.
+Packages from Section \@ref(sec:spatrep) also make these operations possible.
+Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications.
 
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
-
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
-<!-- JN: I am also thinking (unsure yet) about mentioning R as a bridge between other software (e.g. GRASSGIS) -->
-<!-- rgee -->
-<!-- MH: Maybe one short sentence that R allows to connect to other open-source software. We already introduce the topic previously anyhow -->
+Finally, there is a number of tools for landscape ecology implemented in some GIS software, such as ... for GRASS GIS or ... for ... .
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* for ..., ... for ..., and *rgee* for Google Earth Engine.
 
 ## Creating maps
 
