@@ -141,6 +141,7 @@ This is used by some R packages allowing for downloading various environmental s
 <!-- land cover -->
 <!-- rgbif + ?? -->
 <!-- climate data? -->
+<!-- https://github.com/rspatial/geodata/blob/master/R/worldclim.R -->
 <!-- rgee -->
 <!-- look for rOpenSci packages -->
 
@@ -170,8 +171,11 @@ Additionally, they offer many other operations, such as merging or joining of sp
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
-Finally, there is a number of tools for landscape ecology implemented in some GIS software, such as ... for GRASS GIS or ... for ... .
-Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* for ..., ... for ..., and *rgee* for Google Earth Engine.
+Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass}<!--ADD R.LI CITATION-->, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R-->
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
+
+<!--JN: should we mention ArcGIS here and some of its modules?-->
+<!--JN: in the same vain as above: should we mention Google Earth Engine?-->
 
 ## Creating maps
 
@@ -315,3 +319,5 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
 <!-- # Missing packages -->
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
+
+<!-- missing packages: data sources, such as global land cover, worldclim 2.0, etc. -->
