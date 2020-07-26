@@ -137,13 +137,17 @@ Some of them require registration or having appropriate credentials and allows d
 However, many of the sources made their data publicly available either as a direct download or through an API connection.
 This is used by some R packages allowing for downloading various environmental spatial dataset.
 
-<!-- elevatr + ?? - elevation -->
-<!-- land cover -->
-<!-- rgbif + ?? -->
-<!-- climate data? -->
-<!-- https://github.com/rspatial/geodata/blob/master/R/worldclim.R -->
-<!-- rgee -->
-<!-- look for rOpenSci packages -->
+A plethora of land cover products on global, continental, and country scales has been developed, however, most of them cannot be directly downloaded from R. 
+The exception is the National Land Cover Database (NLCD) data for the USA, which can be accessed through the *FedData* package \cite{R-FedData}.
+The *elevatr* package provides a synthesis raster elevation data based on the Amazon Web Services Terrain Tiles \cite{R-elevatr}.
+It uses different elevation products for a given area and selected level of details (zoom/resolution).
+<!-- how to cite (or maybe we should just add a link to?) - https://github.com/tilezen/joerd/blob/master/docs/data-sources.md -->
+The *rgbif* gives access to data from the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}.
+The `get_data()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim version 1.4, while the new in-development package *geodata*<!-- https://github.com/rspatial/geodata/blob/master/R/worldclim.R --> provides an access to WorldClim version 2 data.
+Additionally, the *rgee package* \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
+<!-- it is worth to search for more as there are a lot of changes going on -->
+
+<!--JN: Max, do you want to add something to this list?-->
 
 ## Spatial data processing
 
