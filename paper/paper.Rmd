@@ -116,12 +116,12 @@ Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector
 <!-- are pros/cons of that needed? -->
 <!-- info about GDAL/PROJ? -->
 
-The most prominent package allowing for raster data representation is *raster*.
-A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed, however, it could take several years for this package to be adopted by users.
-Alternatively, *stars* package can be used to read and process raster data.
+The most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
+A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed \cite{R-terra}, however, it could take several years for this package to be adopted by users.
+Alternatively, *stars* package can be used to read and process raster data \cite{Pebesma2019}.
 It is interconnected with the *sf* package, and beside raster support, it provides tools for spatial data cubes.
 
-The *sp* package was a standard for vector data representation for more than 10 years.
+The *sp* package was a standard for vector data representation for more than 10 years \cite{Pebesma2005,Bivand2013}.
 As of 2020, more than 500 R packages directly depends or imports *sp*.
 However, it is now in a maintenance mode only with a recommended successor - the *sf* package.
 <!-- terra new vector representations -->
