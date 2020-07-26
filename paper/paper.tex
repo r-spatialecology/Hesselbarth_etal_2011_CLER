@@ -140,7 +140,8 @@ For more general overviews see e.g.~\cite{Jolma2008,Steiniger2009,Steiniger2009a
 \hypertarget{sec:existing_packages}{%
 \section{Existing packages}\label{sec:existing_packages}}
 
-There are two major platforms to host \emph{R} packages and make them easily accessible to potential users. Firstly, hosting the package on \emph{GitHub} allows users to install it with only one line of code.
+There are two major platforms to host \emph{R} packages and make them easily accessible to potential users.
+Firstly, hosting the package on \emph{GitHub} allows users to install it with only one line of code.
 Additionally, hosting the package on \emph{GitHub} provides many useful tools to communicate between developers and users, such as bug reports \cite{Wickham2015}.
 Secondly, the \emph{Comprehensive R Archive Network} (\emph{CRAN}) provides large visibility to the community, ease of installation and a certain quality standard \cite{Wickham2015}.
 However, at the same time, releasing a \emph{R} package on \emph{CRAN} requires more initial work for the developers compared to \emph{GitHub}.
@@ -158,15 +159,15 @@ Each geometry is connected to a row in an attribute table.
 A few hundred of different spatial data file formats were developed to store data in these formats.
 
 While R has several build-in data structures, including data frames, it has not got any internal support for reading, processing, or visualizing spatial data.
-However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page ????).
+However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10).
 Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector models have several implementations in the R language.
 
-The most prominent package allowing for raster data representation is \emph{raster}.
-A \emph{raster} successor aimed at the simpler interface and improved performance, \emph{terra}, is now being developed, however, it could take several years for this package to be adopted by users.
-Alternatively, \emph{stars} package can be used to read and process raster data.
+The most prominent package allowing for raster data representation is \emph{raster} \cite{Hijmans2019}.
+A \emph{raster} successor aimed at the simpler interface and improved performance, \emph{terra}, is now being developed \cite{R-terra}, however, it could take several years for this package to be adopted by users.
+Alternatively, \emph{stars} package can be used to read and process raster data \cite{Pebesma2019}.
 It is interconnected with the \emph{sf} package, and beside raster support, it provides tools for spatial data cubes.
 
-The \emph{sp} package was a standard for vector data representation for more than 10 years.
+The \emph{sp} package was a standard for vector data representation for more than 10 years \cite{Pebesma2005,Bivand2013}.
 As of 2020, more than 500 R packages directly depends or imports \emph{sp}.
 However, it is now in a maintenance mode only with a recommended successor - the \emph{sf} package.
 
@@ -177,8 +178,41 @@ This can be useful when a given function expects different data representation t
 \hypertarget{spatial-data-download}{%
 \subsection{Spatial data download}\label{spatial-data-download}}
 
-\hypertarget{basic-spatial-data}{%
-\subsection{Basic spatial data}\label{basic-spatial-data}}
+Nowadays, spatial data for many spatial scales is available from abundance of sources.
+Some of them require registration or having appropriate credentials and allows downloading only from the web interface.
+However, many of the sources made their data publicly available either as a direct download or through an API connection.
+This is used by some R packages allowing for downloading various environmental spatial dataset.
+
+A plethora of land cover products on global, continental, and country scales has been developed, however, most of them cannot be directly downloaded from R.
+The exception is the National Land Cover Database (NLCD) data for the USA, which can be accessed through the \emph{FedData} package \cite{R-FedData}.
+The \emph{elevatr} package provides a synthesis raster elevation data based on the Amazon Web Services Terrain Tiles \cite{R-elevatr}.
+It uses different elevation products for a given area and selected level of details (zoom/resolution).
+The \emph{rgbif} gives access to data from the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}.
+The \texttt{get\_data()} function from the \emph{raster} package allows to download climatic and bioclimatic data from WorldClim version 1.4, while the new in-development package \emph{geodata} provides an access to WorldClim version 2 data.
+Additionally, the \emph{rgee package} \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
+
+\hypertarget{spatial-data-processing}{%
+\subsection{Spatial data processing}\label{spatial-data-processing}}
+
+As we mentioned in the previous sections, gathered or obtained data can be represented by different data types and stored in various file formats.
+However, several potential obstacles to applying this data for ecological analysis still exist.
+
+The main issue for many landscape ecology studies is related to projections of the used data.
+It is not only required to have all of the used datasets in the same projection, but also selection of a proper projection is crucial.
+Coordinates in spatial data can represent one of many coordinate reference systems.
+Two main groups of coordinate reference systems (CRS) exist, namely geographical and projected, each having many members.
+In the first one, geographical, positions are specified by latitude and longitude coordinates in degrees.
+However, in most landscape ecology studies, projected CRSs, which use some measurement units (e.g., meters), should be utilized.
+Selected projected CRS should be based on projection that keeps important properties of spatial data intact (e.g., does not distort areas, shapes, distances, angles) and be appropriate for a given study area.
+Gladly, all of the packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations.
+
+Second possible issue with spatial data is when the obtained data extends over a larger area than the study region.
+Then, some spatial preprecessing, such as vector clipping or raster cropping, is needed.
+Packages from Section \ref{sec:spatrep} also make these operations possible.
+Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications.
+
+Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
 
 \hypertarget{creating-maps}{%
 \subsection{Creating maps}\label{creating-maps}}
@@ -189,11 +223,11 @@ Two main types of maps, static maps with full creator control and interactive ma
 
 All of the packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the \texttt{plot()} function.
 However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
-Alternatively, the \emph{mapview} package can be used for quick interactive visualization of spatial data.
+Alternatively, the \emph{mapview} package can be used for quick interactive visualization of spatial data \cite{R-mapview}.
 The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
 This package aims for creating publication-ready maps.
-Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library.
-R's general-purpose plotting package \emph{ggplot2} together with its extension \emph{ggspatial} also offers some capabilities for plotting spatial data.
+Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{R-leaflet}.
+R's general-purpose plotting package \emph{ggplot2} together with its extension \emph{ggspatial} also offers some capabilities for plotting spatial data \cite{Wickham2016a,R-ggspatial}.
 
 \hypertarget{spatial-regression}{%
 \subsection{Spatial regression}\label{spatial-regression}}
@@ -218,7 +252,8 @@ Additionally, the \emph{belg} packages allows to calculate the Boltzmann entropy
 \paragraph{Species distribution modeling}\label{sec:SDM}}
 
 Species distribution modeling (SDM) analysis how landscape patterns (e.g.~habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
-Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing basic concepts of SDM in \emph{R} exists \cite{Guisan2017,Fletcher2019}.
+Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}.
+Additionally, textbooks introducing basic concepts of SDM in \emph{R} exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of \emph{R} packages used for SDMs.
 Popular approaches and packages include generalized linear models using, e.g., the \emph{stats} \cite{RCoreTeam2019} package; generalized additive models using, e.g., the \emph{mgcv} \cite{Wood2017} or \emph{lme4} \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the \emph{rpart} \cite{Therneau2019}, \emph{randomForest} \cite{Liaw2002} or \emph{ranger} \cite{Wright2017} package or multivariate data analysis using , e.g., the \emph{ade4} \cite{Dray2007} or \emph{vegan} \cite{Oksanen2019} package.
