@@ -187,11 +187,11 @@ Two main types of maps, static maps with full creator control and interactive ma
 
 All of the packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the `plot()` function.
 However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
-Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data.
+Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data \cite{R-mapview}.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
 This package aims for creating publication-ready maps.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library.<!--this sentence can be easily removed-->
-R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data.
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.<!--this sentence can be easily removed-->
+R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data \cite{Wickham2016a,R-ggspatial}.
 
 ## Spatial regression
 <!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
