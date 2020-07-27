@@ -86,7 +86,8 @@ For more general overviews see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a
 
 # Existing packages {#sec:existing_packages}
 
-There are two major platforms to host *R* packages and make them easily accessible to potential users. Firstly, hosting the package on *GitHub* allows users to install it with only one line of code. 
+There are two major platforms to host *R* packages and make them easily accessible to potential users.
+Firstly, hosting the package on *GitHub* allows users to install it with only one line of code. 
 Additionally, hosting the package on *GitHub* provides many useful tools to communicate between developers and users, such as bug reports \cite{Wickham2015}.
 Secondly, the *Comprehensive R Archive Network* (*CRAN*) provides large visibility to the community, ease of installation and a certain quality standard \cite{Wickham2015}.
 However, at the same time, releasing a *R* package on *CRAN* requires more initial work for the developers compared to *GitHub*.
@@ -110,17 +111,17 @@ Each geometry is connected to a row in an attribute table.
 A few hundred of different spatial data file formats were developed to store data in these formats.
 
 While R has several build-in data structures, including data frames, it has not got any internal support for reading, processing, or visualizing spatial data.
-However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10). <!--history section-->
+However, there was a notable interest in spatial data analysis since the inception of this language, which is shown in a long R history of packages supporting spatial data (\cite{Lovelace2019}, page 10).
 Comparing to dedicated GIS software (e.g., QGIS, ArcGIS), both raster and vector models have several implementations in the R language.
 <!-- are pros/cons of that needed? -->
 <!-- info about GDAL/PROJ? -->
 
-The most prominent package allowing for raster data representation is *raster*.
-A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed, however, it could take several years for this package to be adopted by users.
-Alternatively, *stars* package can be used to read and process raster data.
+The most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
+A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed \cite{R-terra}, however, it could take several years for this package to be adopted by users.
+Alternatively, *stars* package can be used to read and process raster data \cite{Pebesma2019}.
 It is interconnected with the *sf* package, and beside raster support, it provides tools for spatial data cubes.
 
-The *sp* package was a standard for vector data representation for more than 10 years.
+The *sp* package was a standard for vector data representation for more than 10 years \cite{Pebesma2005,Bivand2013}.
 As of 2020, more than 500 R packages directly depends or imports *sp*.
 However, it is now in a maintenance mode only with a recommended successor - the *sf* package.
 <!-- terra new vector representations -->
@@ -131,31 +132,54 @@ This can be useful when a given function expects different data representation t
 
 ## Spatial data download
 
-<!-- mention different data types/formats/projections/extents/resolutions -->
-<!-- access to spatial data -->
-<!-- rgee -->
+Nowadays, spatial data for many spatial scales is available from abundance of sources.
+Some of them require registration or having appropriate credentials and allows downloading only from the web interface.
+However, many of the sources made their data publicly available either as a direct download or through an API connection.
+This is used by some R packages allowing for downloading various environmental spatial dataset.
+
+A plethora of land cover products on global, continental, and country scales has been developed, however, most of them cannot be directly downloaded from R. 
+The exception is the National Land Cover Database (NLCD) data for the USA, which can be accessed through the *FedData* package \cite{R-FedData}.
+The *elevatr* package provides a synthesis raster elevation data based on the Amazon Web Services Terrain Tiles \cite{R-elevatr}.
+It uses different elevation products for a given area and selected level of details (zoom/resolution).
+<!-- how to cite (or maybe we should just add a link to?) - https://github.com/tilezen/joerd/blob/master/docs/data-sources.md -->
+The *rgbif* gives access to data from the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}.
+The `get_data()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim version 1.4, while the new in-development package *geodata*<!-- https://github.com/rspatial/geodata/blob/master/R/worldclim.R --> provides an access to WorldClim version 2 data.
+Additionally, the *rgee package* \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
+<!-- it is worth to search for more as there are a lot of changes going on -->
+
+<!--JN: Max, do you want to add something to this list?-->
 
 ## Spatial data processing
 
-As we mentioned in the previous sections, obtained data can be represented by different data types and stored in various file formats and read into R using one of the packages from Section \@ref(sec:spatrep).
+As we mentioned in the previous sections, gathered or obtained data can be represented by different data types and stored in various file formats.
+<!-- and read into R using one of the packages from Section \@ref(sec:spatrep). -->
 However, several potential obstacles to applying this data for ecological analysis still exist.
 
-<!-- geographic/projected CRS -->
-<!-- reprojecting -->
-<!-- Different data can also used one of many coordinate reference systems (CRS) -->
+The main issue for many landscape ecology studies is related to projections of the used data.
+It is not only required to have all of the used datasets in the same projection, but also selection of a proper projection is crucial.
+Coordinates in spatial data can represent one of many coordinate reference systems.
+Two main groups of coordinate reference systems (CRS) exist, namely geographical and projected, each having many members.
+In the first one, geographical, positions are specified by latitude and longitude coordinates in degrees.
+<!---->
+However, in most landscape ecology studies, projected CRSs, which use some measurement units (e.g., meters), should be utilized.
+<!-- Projected CRS  -->
+Selected projected CRS should be based on projection that keeps important properties of spatial data intact (e.g., does not distort areas, shapes, distances, angles) and be appropriate for a given study area.
+<!-- Where to find advice on how to select projections-->
+Gladly, all of the packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations.
 
-<!-- different extents -->
-<!-- cropping -->
-
-<!-- the role of data preparation - changing resolution/simplifying, merging/joining -->
+Second possible issue with spatial data is when the obtained data extends over a larger area than the study region.
+Then, some spatial preprecessing, such as vector clipping or raster cropping, is needed.
+Packages from Section \@ref(sec:spatrep) also make these operations possible.
+Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications.
 
 <!--MH: Short paragraph about scale; *grainchanger*; DOI: 10.1111/2041-210X.13177 -->
-
 <!-- MH: landscapetools; DOI: 10.1111/2041-210X.13076 -->
 
-<!-- JN: I am also thinking (unsure yet) about mentioning R as a bridge between other software (e.g. GRASSGIS) -->
-<!-- rgee -->
-<!-- MH: Maybe one short sentence that R allows to connect to other open-source software. We already introduce the topic previously anyhow -->
+Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass}<!--ADD R.LI CITATION-->, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R-->
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
+
+<!--JN: should we mention ArcGIS here and some of its modules?-->
+<!--JN: in the same vain as above: should we mention Google Earth Engine?-->
 
 ## Creating maps
 
@@ -167,14 +191,15 @@ Two main types of maps, static maps with full creator control and interactive ma
 
 All of the packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the `plot()` function.
 However, their defaults are focused on quick visual inspection of the data rather than the creation of complete maps.
-Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data.
+Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data \cite{R-mapview}.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018}.
 This package aims for creating publication-ready maps.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library.<!--this sentence can be easily removed-->
-R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data.
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.<!--this sentence can be easily removed-->
+R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data \cite{Wickham2016a,R-ggspatial}.
 
 ## Spatial regression
 <!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
+<!-- JN: we could wait with this section to after receiving the results of the questionnaire -->
 
 ## Ecological analysis {#sec:ecological_analysis}
 
@@ -197,7 +222,8 @@ Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a
 #### Species distribution modeling {#sec:SDM}
 
 Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
-Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}. Additionally, textbooks introducing  basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
+Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}.
+Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs. 
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package. 
@@ -297,3 +323,5 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
 <!-- # Missing packages -->
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
+
+<!-- missing packages: data sources, such as global land cover, worldclim 2.0, etc. -->
