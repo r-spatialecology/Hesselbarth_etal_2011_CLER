@@ -40,6 +40,8 @@ new_names = c("time", "position", "how_often", "expertise",
 names(x) = new_names
 ```
 
+Number of answers - `r nrow(x)`.
+
 # `r old_names[2]`
 
 ```{r}
