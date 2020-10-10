@@ -43,6 +43,27 @@ editor_options:
   chunk_output_type: console
 ---
 
+
+```{r setup R, include = FALSE}
+# load packages
+library(dplyr)
+library(forcats)
+library(ggplot2)
+library(googlesheets4)
+library(stringr)
+library(tidyr)
+
+answers <- read_sheet("https://docs.google.com/spreadsheets/d/1mV_wZWb4desjdzUWHALIB-uFRCauSTOGSvENsnkiAhI/edit#gid=1189808333")
+
+old_names <- names(answers)
+
+new_names <- c("time", "position", "usage_freq", "expertise", "major_topic",
+               "important_tasks", "data_model", "r_packages", "own_package",
+               "own_package_location", "missing_methods", "usefulness", "comments")
+
+names(answers) <-  new_names
+```
+
 # Introduction {#sec:intro}
 
 ## A short introduction to landscape ecology {#sec:landscape_ecology}
@@ -197,10 +218,6 @@ This package aims for creating publication-ready maps.
 Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.<!--this sentence can be easily removed-->
 R's general-purpose plotting package *ggplot2* together with its extension *ggspatial* also offers some capabilities for plotting spatial data \cite{Wickham2016a,R-ggspatial}.
 
-## Spatial regression
-<!-- MH: Do we really want to include this? Not really a landscape ecology topic but rather (geo) spatial stats I would argue -->
-<!-- JN: we could wait with this section to after receiving the results of the questionnaire -->
-
 ## Ecological analysis {#sec:ecological_analysis}
 
 #### Landscape metrics {#sec:landscape_metrics}
@@ -319,6 +336,107 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
 \end{center}
 
 \end{landscape}
+
+# Survey of R usage by landscape ecology community
+
+```{r participation, include = FALSE}
+digits <- 1
+
+# number of people that took part
+n_people <- nrow(answers)
+
+# current position
+current_position <- dplyr::group_by(answers, position) %>% 
+  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+  dplyr::arrange(-n_rel)
+  
+# how often do you use R?
+usage_freq <- dplyr::group_by(answers, usage_freq) %>% 
+  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+  dplyr::arrange(-n_rel)
+
+# expertise
+expertise <- dplyr::group_by(answers, expertise) %>% 
+  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+  dplyr::arrange(-n_rel)
+```
+
+To better understand how *R* is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the landscape ecology community. 
+In total, the survey was answered by `r n_people` people, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%). Other less frequent answers were "data scientists", "government employees" or "bachelor's and master's degree students". 
+Most people used R either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%) and and about half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while still `r expertise[[2, 2]]`% described themselves as "intermediate" users.
+
+```{r data_model_packages, include = FALSE}
+# data model
+data_model <- dplyr::group_by(answers, data_model) %>% 
+  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+  dplyr::arrange(-n_rel)
+
+# split answers r packages
+r_packages <- unlist(str_split(answers$r_packages, pattern = ","))
+r_packages <- unlist(str_split(r_packages, pattern = ";"))
+r_packages <- unlist(str_split(r_packages, pattern = "\\*"))
+r_packages <- str_trim(r_packages)
+
+# clean some special cases
+r_packages[str_detect(r_packages, pattern = "landscape metrics")] <- "landscapemetrics"
+r_packages[str_detect(r_packages, pattern = "spectre*")] <- "spectre"
+r_packages[str_detect(r_packages, pattern = "map tools")] <- "maptools"
+r_packages[str_detect(r_packages, pattern = "gdal and many more")] <- "rgdal"
+r_packages[str_detect(r_packages, pattern = "I would like to know")] <- "NA"
+r_packages[str_detect(r_packages, pattern = "no")] <- "NA"
+r_packages[str_detect(r_packages, pattern = "currently none")] <- "NA"
+r_packages[!str_detect(r_packages, pattern = "")] <- "NA"
+
+# split last packages
+r_packages <- unlist(str_split(r_packages, pattern = " "))
+
+# remove NA answers
+r_packages <- r_packages[!str_detect(r_packages, pattern = "NA")] 
+
+# make sure all are lower case
+r_packages <- str_to_lower(r_packages)
+
+# create data.frame
+r_packages_df <- tibble(r_package = r_packages) %>%
+  dplyr::group_by(r_package) %>% 
+  dplyr::summarise(n = dplyr::n()) %>% 
+  dplyr::mutate(n_rel = n / sum(n) * 100, 
+                r_package_reclass = dplyr::case_when(n >= 5 ~ r_package, 
+                                                     n < 5 ~ "others")) %>%
+  dplyr::group_by(r_package_reclass) %>% 
+  dplyr::summarise(n_rel = sum(n_rel)) %>% 
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
+                col = dplyr::case_when(r_package_reclass == "others" ~ 0, 
+                                       r_package_reclass != "others" ~ 1), 
+                col = factor(col)) %>% 
+  dplyr::arrange(-n_rel) 
+
+# change ordering
+new_levels <- c("others", rev(r_packages_df$r_package_reclass[-1]))
+
+# reorder levels
+r_packages_df$r_package_reclass <- factor(r_packages_df$r_package_reclass, 
+                                          levels = new_levels)
+```
+Interestingly, most people used the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
+
+```{r used_package, echo = FALSE, fig.align = "center"}
+ggplot(data = r_packages_df) +
+  geom_bar(aes(y = r_package_reclass, x = n_rel, fill = col), stat = "identity") + 
+  geom_text(aes(y = r_package_reclass, x = n_rel, label = label, col = col), 
+            nudge_x = 2.5) + 
+  theme_classic() + 
+  scale_x_continuous(breaks = seq(0, 45, 5), limits = c(0, 45)) + 
+  scale_fill_manual(values = c("grey50", "black")) +
+  scale_colour_manual(values = c("grey50", "black")) +
+  guides(fill = FALSE, colour = FALSE) +
+  labs(x = "Relative value [%]", y = expression(paste(italic(R), " package")))
+```
+
 
 <!-- # Missing packages -->
 

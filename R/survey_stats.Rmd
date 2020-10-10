@@ -16,7 +16,6 @@ options(scipen = 99*99)
 # knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
 
-
 ```{r}
 library(dplyr)
 library(tidyr)
@@ -32,15 +31,14 @@ x = read_sheet("https://docs.google.com/spreadsheets/d/1mV_wZWb4desjdzUWHALIB-uF
 
 old_names = names(x)
 
-new_names = c("time", "position", "how_often", "expertise",
-              "major_topic", "important_tasks", "data_model",
-              "r_packages", "own_package", "own_package_location",
-              "missing_methods", "usefulness", "comments")
+new_names = c("time", "position", "usage_freq", "expertise", "major_topic",
+              "important_tasks", "data_model", "r_packages", "own_package",
+              "own_package_location", "missing_methods", "usefulness", "comments")
 
 names(x) = new_names
 ```
 
-Number of answers - `r nrow(x)`.
+Number of answers: `r nrow(x)`.
 
 # `r old_names[2]`
 
@@ -56,7 +54,7 @@ ggplot(x, aes(y = fct_infreq(position))) +
 
 ```{r}
 # how_often
-ggplot(x, aes(y = fct_infreq(how_often))) +
+ggplot(x, aes(y = fct_infreq(usage_freq))) +
     geom_bar() +
     labs(x = "Count", y = NULL, title = old_names[3])
 ```
