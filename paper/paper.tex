@@ -30,8 +30,9 @@
 %% load any required packages here
 \usepackage{caption}
 \usepackage{ltablex}
-\usepackage{lscape}
+\usepackage{pdflscape}
 \usepackage{multirow}
+\usepackage{placeins}
 
 
 
@@ -298,7 +299,6 @@ Using a wide collection of algorithms, the \emph{NLMR} package \cite{Sciaini2018
 
 \begin{landscape}
 
-\begin{center}
   \begin{table}
     \begin{tabularx}{0.9\linewidth}{XXXX}
       \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included.} \\
@@ -336,7 +336,6 @@ Using a wide collection of algorithms, the \emph{NLMR} package \cite{Sciaini2018
       \hline
     \end{tabularx}
   \end{table}
-\end{center}
 
 \end{landscape}
 
@@ -344,12 +343,36 @@ Using a wide collection of algorithms, the \emph{NLMR} package \cite{Sciaini2018
 \section{Survey of R usage by landscape ecology community}\label{survey-of-r-usage-by-landscape-ecology-community}}
 
 To better understand how \emph{R} is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the landscape ecology community.
-In total, the survey was answered by 94 people, of which the the majority were either ``PhD students'' (33\%), followed by ``Post-Docs'' (26.6\%) and ``Professors'' (12.8\%). Other less frequent answers were ``data scientists'', ``government employees'' or ``bachelor's and master's degree students''.
+In total, the survey was answered by 94 participants, of which the the majority were either ``PhD students'' (33\%), followed by ``Post-Docs'' (26.6\%) and ``Professors'' (12.8\%). Other less frequent answers were ``data scientists'', ``government employees'' or ``bachelor's and master's degree students''.
 Most people used R either ``daily'' (58.5\%) or a ``few times a week'' (34\%) and and about half of all participants described themselves as ``advanced'' user (48.9\%), while still 39.4\% described themselves as ``intermediate'' users.
+Related to this, about half of the participants either implemented their own package (20.2\%), or plan to do so in the future (22.3\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-Interestingly, most people used the raster data model (70.2\%) in comparison to the vector data model (29.8\%).
+Interestingly, most people use the raster data model (70.2\%) in comparison to the vector data model (29.8\%).
+This was also represented in the most used \emph{R} packages (Fig. \ref{fig:fig-packages-tasks} A))
+When asked for the three most used packages, participants of the survey listed 75 packages in total. The \emph{raster} packages was listed the most, followed by the \emph{sf} package.
+Because both the \emph{raster} and the \emph{sf} are designed for basic and advanced data handling and processing of raster and vector data, respectively, it is not surprising that ``(pre-)processing of spatial data'' was the most important workflow task for the majority of the survey participants (Fig. \ref{fig:fig-packages-tasks} B)).
 
-\begin{center}\includegraphics{paper_files/figure-latex/used_package-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics{paper_files/figure-latex/fig-packages-tasks-1} 
+
+}
+
+\caption{A) Most used R packages and B) most important workflow tasks as listed by the participants of the survery. 'others' includes all packages/tasks with less than five total mentions.}\label{fig:fig-packages-tasks}
+\end{figure}
+
+When asked ``How useful do you think is R currently for landscape ecology?'', the vast majority of participants answered with either ``very useful'' or ``useful'' (91.49\%) and only only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (8.51\%; Fig. \ref{fig:fig-usefulness}).
+
+\begin{figure}
+
+{\centering \includegraphics{paper_files/figure-latex/fig-usefulness-1} 
+
+}
+
+\caption{Evaluation of the usefullnes o fR for landscape ecology by the particpants of the survey. Answers were possible on a 5-point scale.}\label{fig:fig-usefulness}
+\end{figure}
+
+\FloatBarrier
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}

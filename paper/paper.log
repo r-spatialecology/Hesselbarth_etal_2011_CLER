@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.11)  10 OCT 2020 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.11)  11 OCT 2020 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-06> (./svjour3.cls
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03> (./svjour3.cls
 Document Class: svjour3 2007/05/08 v3.2 
 LaTeX document class for Springer journals
 Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
@@ -26,53 +26,53 @@ LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
 LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
 LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
 LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
-\logodepth=\dimen134
-\headerboxheight=\dimen135
-\betweenumberspace=\dimen136
-\aftertext=\dimen137
-\headlineindent=\dimen138
-\c@inst=\count168
-\c@auth=\count169
-\instindent=\dimen139
-\authrun=\box45
+\logodepth=\dimen138
+\headerboxheight=\dimen139
+\betweenumberspace=\dimen140
+\aftertext=\dimen141
+\headlineindent=\dimen142
+\c@inst=\count175
+\c@auth=\count176
+\instindent=\dimen143
+\authrun=\box47
 \authorrunning=\toks15
-\titrun=\box46
+\titrun=\box48
 \titlerunning=\toks16
-\combirun=\box47
-\c@lastpage=\count170
-\rubricwidth=\dimen140
-\c@section=\count171
-\c@subsection=\count172
-\c@subsubsection=\count173
-\c@paragraph=\count174
-\c@subparagraph=\count175
-\spthmsep=\dimen141
-\c@theorem=\count176
-\c@case=\count177
-\c@conjecture=\count178
-\c@corollary=\count179
-\c@definition=\count180
-\c@example=\count181
-\c@exercise=\count182
-\c@lemma=\count183
-\c@note=\count184
-\c@problem=\count185
-\c@property=\count186
-\c@proposition=\count187
-\c@question=\count188
-\c@solution=\count189
-\c@remark=\count190
-\c@figure=\count191
-\c@table=\count192
+\combirun=\box49
+\c@lastpage=\count177
+\rubricwidth=\dimen144
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\spthmsep=\dimen145
+\c@theorem=\count183
+\c@case=\count184
+\c@conjecture=\count185
+\c@corollary=\count186
+\c@definition=\count187
+\c@example=\count188
+\c@exercise=\count189
+\c@lemma=\count190
+\c@note=\count191
+\c@problem=\count192
+\c@property=\count193
+\c@proposition=\count194
+\c@question=\count195
+\c@solution=\count196
+\c@remark=\count197
+\c@figure=\count198
+\c@table=\count199
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\figcapgap=\dimen142
-\tabcapgap=\dimen143
-\figgap=\dimen144
-\bibindent=\dimen145
-\@tempcntc=\count193
+\figcapgap=\dimen146
+\tabcapgap=\dimen147
+\figgap=\dimen148
+\bibindent=\dimen149
+\@tempcntc=\count266
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
+Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -80,57 +80,57 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen146
+\ex@=\dimen150
 )) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen147
+\pmbraise@=\dimen151
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count194
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count195
-\leftroot@=\count196
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count197
-\DOTSCASE@=\count198
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box48
-\strutbox@=\box49
-\big@size=\dimen148
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count199
-\c@MaxMatrixCols=\count266
+\inf@bad=\count267
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count268
+\leftroot@=\count269
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count270
+\DOTSCASE@=\count271
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count272
+\c@MaxMatrixCols=\count273
 \dotsspace@=\muskip16
-\c@parentequation=\count267
-\dspbrk@lvl=\count268
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
 \tag@help=\toks18
-\row@=\count269
-\column@=\count270
-\maxfields@=\count271
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
 \andhelp@=\toks19
-\eqnshift@=\dimen149
-\alignsep@=\dimen150
-\tagshift@=\dimen151
-\tagwidth@=\dimen152
-\totwidth@=\dimen153
-\lineht@=\dimen154
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
 \@envbody=\toks20
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -138,12 +138,12 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen155
-\Gin@req@width=\dimen156
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/url/url.sty
@@ -152,7 +152,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 (/usr/local/texlive/2020basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
@@ -181,11 +181,11 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen157
-\Hy@linkcounter=\count272
-\Hy@pagecounter=\count273
+\@linkdim=\dimen161
+\Hy@linkcounter=\count279
+\Hy@pagecounter=\count280
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -195,7 +195,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count274
+\Hy@SavedSpaceFactor=\count281
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -203,18 +203,18 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count275
+\c@Hy@tempcnt=\count282
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen158
+\XeTeXLinkMargin=\dimen162
 (/usr/local/texlive/2020basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/usr/local/texlive/2020basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count276
-\Field@Width=\dimen159
-\Fld@charsize=\dimen160
+\Fld@menulength=\count283
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -224,22 +224,25 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
-(/usr/local/texlive/2020basic/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+(/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
 )
-\Hy@abspage=\count277
-\c@Item=\count278
-\c@Hfootnote=\count279
+\Hy@abspage=\count284
+\c@Item=\count285
+\c@Hfootnote=\count286
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-(/usr/local/texlive/2020basic/texmf-dist/tex/latex/atveryend/atveryend.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
+(/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
 )
-\Fld@listcount=\count280
-\c@bookmark@seq@number=\count281
+\Fld@listcount=\count287
+\c@bookmark@seq@number=\count288
 
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -254,16 +257,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/09/02 v3.5a Customizing captions (AR)
+Package: caption 2020/09/12 v3.5b Customizing captions (AR)
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
-\captionmargin=\dimen161
-\captionmargin@=\dimen162
-\captionwidth=\dimen163
-\caption@tempdima=\dimen164
-\caption@indent=\dimen165
-\caption@parindent=\dimen166
-\caption@hangindent=\dimen167
+Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
+\captionmargin=\dimen165
+\captionmargin@=\dimen166
+\captionwidth=\dimen167
+\caption@tempdima=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\captionstyle \ifx \@ca
@@ -278,8 +281,8 @@ Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count282
-\c@continuedfloat=\count283
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
 Package caption Info: hyperref package is loaded.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/ltablex/ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
@@ -289,83 +292,89 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count284
-\LTcapwidth=\dimen168
-\LT@head=\box50
-\LT@firsthead=\box51
-\LT@foot=\box52
-\LT@lastfoot=\box53
-\LT@cols=\count285
-\LT@rows=\count286
-\c@LT@tables=\count287
-\c@LT@chunks=\count288
+\LTchunksize=\count291
+\LTcapwidth=\dimen172
+\LT@head=\box52
+\LT@firsthead=\box53
+\LT@foot=\box54
+\LT@lastfoot=\box55
+\LT@cols=\count292
+\LT@rows=\count293
+\c@LT@tables=\count294
+\c@LT@chunks=\count295
 \LT@p@ftn=\toks25
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen169
-\ar@mcellbox=\box54
-\extrarowheight=\dimen170
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box56
+\extrarowheight=\dimen174
 \NC@list=\toks26
 \extratabsurround=\skip57
 \backup@length=\skip58
-\ar@cellbox=\box55
+\ar@cellbox=\box57
 )
-\TX@col@width=\dimen171
-\TX@old@table=\dimen172
-\TX@old@col=\dimen173
-\TX@target=\dimen174
-\TX@delta=\dimen175
-\TX@cols=\count289
+\TX@col@width=\dimen175
+\TX@old@table=\dimen176
+\TX@old@col=\dimen177
+\TX@target=\dimen178
+\TX@delta=\dimen179
+\TX@cols=\count296
 \TX@ftn=\toks27
-)) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/usr/local/texlive/2020basic/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip59
-\multirow@cntb=\count290
+\multirow@cntb=\count297
 \multirow@dima=\skip60
-\bigstrutjot=\dimen176
+\bigstrutjot=\dimen180
+) (/usr/local/texlive/2020basic/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
-File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count291
-\l__pdf_internal_box=\box56
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count298
+\l__pdf_internal_box=\box58
 ) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
 (/usr/local/texlive/2020basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen177
-\scratchbox=\box57
-\nofMPsegments=\count293
-\nofMParguments=\count294
+\scratchcounter=\count299
+\scratchdimen=\dimen181
+\scratchbox=\box59
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen178
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen182
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks29
 )
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
@@ -378,8 +387,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/local/texlive/2020basic/texmf-dist/tex/latex/refcount/refcount.sty
@@ -389,11 +397,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count298
+\c@section@level=\count305
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 (./paper.out) (./paper.out)
 \@outlinefile=\write3
 \openout3 = `paper.out'.
@@ -407,10 +415,10 @@ Package caption Info: End \AtBeginDocument code.
 SVJour3 warning: Missing \journalname
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
-(Font)              size <12> substituted on input line 78.
+(Font)              size <12> substituted on input line 79.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--88
+Underfull \hbox (badness 10000) in paragraph at lines 81--89
 
  []
 
@@ -419,7 +427,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--88
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
 [5] [6]
-Overfull \hbox (3.10948pt too wide) in paragraph at lines 282--286
+Overfull \hbox (3.10948pt too wide) in paragraph at lines 283--287
  []\OT1/cmr/m/it/10 Landscape ge-net-ics [] \OT1/cmr/m/n/10 Land-scape ge-net-i
 cs in-ves-ti-gates how char-ac-ter-is-tics of land-
  []
@@ -442,26 +450,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--337
 
 LaTeX Warning: Float too large for page by 13.8496pt on input line 338.
 
-[9
+[9]
+<paper_files/figure-latex/fig-packages-tasks-1.pdf, id=620, 469.755pt x 325.215
+pt>
+File: paper_files/figure-latex/fig-packages-tasks-1.pdf Graphic file (type pdf)
 
-] [10]
-<paper_files/figure-latex/used_package-1.pdf, id=622, 469.755pt x 325.215pt>
-File: paper_files/figure-latex/used_package-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/used_package-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/used_package-1.pdf  used on i
-nput line 352.
+<use paper_files/figure-latex/fig-packages-tasks-1.pdf>
+Package pdftex.def Info: paper_files/figure-latex/fig-packages-tasks-1.pdf  use
+d on input line 357.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (131.75386pt too wide) in paragraph at lines 352--352
- [] 
+Overfull \hbox (131.75386pt too wide) in paragraph at lines 357--358
+ [][] 
  []
 
-(./paper.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<paper_files/figure-latex/fig-usefulness-1.pdf, id=622, 469.755pt x 325.215pt>
+File: paper_files/figure-latex/fig-usefulness-1.pdf Graphic file (type pdf)
+<use paper_files/figure-latex/fig-usefulness-1.pdf>
+Package pdftex.def Info: paper_files/figure-latex/fig-usefulness-1.pdf  used on
+ input line 368.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-[11
+Overfull \hbox (131.75386pt too wide) in paragraph at lines 368--369
+ [][] 
+ []
 
- <./paper_files/figure-latex/used_package-1.pdf>] [12]
+[10
+
+
+] [11 <./paper_files/figure-latex/fig-packages-tasks-1.pdf>] [12 <./paper_files
+/figure-latex/fig-usefulness-1.pdf>] (./paper.bbl [13
+
+]
 Underfull \hbox (badness 1383) in paragraph at lines 147--150
 []\OT1/cmr/m/n/8 GRASS De-vel-op-ment Team.  Ge-o-graphic Re-sources Anal-y-sis
  Sup-port Sys-tem
@@ -479,7 +499,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 208--212
 / elevatr$[]\OT1/cmr/m/n/8 .  R pack-age ver-sion 0.1.3,
  []
 
-[13]
+[14]
 Underfull \hbox (badness 3009) in paragraph at lines 305--311
 \OT1/cmr/m/n/8 y-sis pro-gram for cat-e-gor-i-cal and con-tin-u-ous maps. Com-p
 uter soft-ware pro-
@@ -497,35 +517,28 @@ Underfull \hbox (badness 1769) in paragraph at lines 382--387
 e, D. McGlinn,
  []
 
-[14]
+[15]
 Underfull \hbox (badness 1735) in paragraph at lines 403--407
 []\OT1/cmr/m/n/8 W. Thuiller, D. Georges, R. En-gler, F. Breiner.  Biomod2: En-
 sem-ble plat-
  []
 
-[15])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
-[16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
-(./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
+[16]) [17] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: E26837609A7CC05775D603CBF9A7ACFF;182.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 7890 strings out of 482324
- 123471 string characters out of 5941652
- 423469 words of memory out of 5000000
- 23019 multiletter control sequences out of 15000+600000
+ 7898 strings out of 481365
+ 124719 string characters out of 5916751
+ 453712 words of memory out of 5000000
+ 23966 multiletter control sequences out of 15000+600000
  542520 words of font info for 55 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 43i,10n,43p,928b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,66p,928b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy
 10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb></usr/local/texlive/2020basic/texmf-dist/fonts/type1/public/amsfonts
@@ -539,10 +552,10 @@ pe1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020basic/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020basic/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020basic/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (16 pages, 218009 bytes).
+Output written on paper.pdf (17 pages, 224306 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 155 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 158 named destinations out of 1000 (max. 500000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
