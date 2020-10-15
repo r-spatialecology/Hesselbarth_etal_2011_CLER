@@ -231,10 +231,10 @@ For discrete land cover classes the composition (number and abundance) and confi
 These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}. 
 
 The use of landscape metrics was heavily facilitated by the introduction of the *FRAGSTATS* software \cite{McGarigal2012}, firstly published in 1995 \cite{Kupfer2012,Gustafson2019}.
-However, *FRAGSTATS* is not not open-source software (however it is free to download at the developers' homepage), which restricts transparency, reproducibility, and extensibility.
+However, *FRAGSTATS* is not open-source software (however it is free to download at the developers' homepage), which restricts transparency, reproducibility, and extensibility.
 To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed.
 The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment. 
-Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{Nowosad2019a}.
+Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
 <!-- JN: two notes: -->
 <!-- 1. I am working on a paper supporting the belg package - I plan to submit it in less than a month, so hopefully we could update the reference here -->
 <!-- 2. I also submitted a paper yesterday (2020-07-17) explaining a new package motif, which is aimed on calculations based on spatial signatures. I plan to add a paragraph about this package someplace in this paper. -->
@@ -316,7 +316,7 @@ Using a wide collection of algorithms, the *NLMR* package \cite{Sciaini2018} pro
       & \textit{leaflet} & xxx & xxx \\
       \hline
       \multirow{2}{*}{Landscape metrics} & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
-      & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{Nowosad2019a} \\
+      & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{R-belgpaper} \\
       \hline
       \multirow{5}{*}{}Species distribution modeling (SDM) & \textit{dismo} & xxx & xxx \\
       & \textit{sdm} & xxx & xxx \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.27)  15 OCT 2020 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.27)  15 OCT 2020 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,13 +482,13 @@ etts, Amherst.
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 382--387
+Underfull \hbox (badness 1769) in paragraph at lines 383--388
 []\OT1/cmr/m/n/8 J. Ok-sa-nen, F. Blanchet, M. Friendly, R. Kindt, P. Leg-en-dr
 e, D. McGlinn,
  []
 
 [15]
-Underfull \hbox (badness 1735) in paragraph at lines 403--407
+Underfull \hbox (badness 1735) in paragraph at lines 404--408
 []\OT1/cmr/m/n/8 W. Thuiller, D. Georges, R. En-gler, F. Breiner.  Biomod2: En-
 sem-ble plat-
  []
@@ -510,8 +510,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
  7654 strings out of 482788
- 119516 string characters out of 5955318
- 419115 words of memory out of 5000000
+ 119514 string characters out of 5955318
+ 419114 words of memory out of 5000000
  22736 multiletter control sequences out of 15000+600000
  542520 words of font info for 55 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
@@ -527,10 +527,10 @@ sfonts/cm/cmsy10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 8.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (17 pages, 224313 bytes).
+Output written on paper.pdf (17 pages, 224700 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
+ 765 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
  158 named destinations out of 1000 (max. 500000)
  35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
