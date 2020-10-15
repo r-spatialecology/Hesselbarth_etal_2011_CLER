@@ -373,9 +373,9 @@ own_package <- dplyr::group_by(answers, own_package) %>%
 ```
 
 To better understand how *R* is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the landscape ecology community. 
-In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%). Other less frequent answers were "data scientists", "government employees" or "bachelor's and master's degree students". 
-Most people used R either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%) and and about half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while still `r expertise[[2, 2]]`% described themselves as "intermediate" users. 
-Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%), or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
+In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%). Other, less frequent answers, were "data scientists", "government employees" or "bachelor's and master's degree students". 
+Most people used R either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%) and about half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users. 
+Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
 
 ```{r data-model-packages, include = FALSE}
 # data model
@@ -446,9 +446,10 @@ ggplot_packages <- ggplot(data = r_packages_df) +
 ```
 
 Interestingly, most people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%). 
-This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-packages-tasks) A))
-When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total. The *raster* packages was listed the most, followed by the *sf* package. 
-Because both the *raster* and the *sf* are designed for basic and advanced data handling and processing of raster and vector data, respectively, it is not surprising that "(pre-)processing of spatial data" was the most important workflow task for the majority of the survey participants (Fig. \@ref(fig:fig-packages-tasks) B)). 
+This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-packages-tasks) A).
+When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
+The *raster* package was mentioned the most, followed by the *sf* package. 
+Because both the *raster* and the *sf* are designed for basic and advanced data handling and processing of raster and vector data, respectively, it is not surprising that "(pre-)processing of spatial data" was the most important workflow task for the majority of the survey participants (Fig. \@ref(fig:fig-packages-tasks) B). 
 
 ```{r tasks, include = FALSE}
 # get data 

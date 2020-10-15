@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.27)  15 OCT 2020 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.27)  15 OCT 2020 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -427,10 +427,10 @@ File: paper_files/figure-latex/fig-packages-tasks-1.pdf Graphic file (type pdf)
 
 <use paper_files/figure-latex/fig-packages-tasks-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig-packages-tasks-1.pdf  use
-d on input line 357.
+d on input line 358.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (131.75386pt too wide) in paragraph at lines 357--358
+Overfull \hbox (131.75386pt too wide) in paragraph at lines 358--359
  [][] 
  []
 
@@ -438,10 +438,10 @@ Overfull \hbox (131.75386pt too wide) in paragraph at lines 357--358
 File: paper_files/figure-latex/fig-usefulness-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig-usefulness-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig-usefulness-1.pdf  used on
- input line 368.
+ input line 369.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Overfull \hbox (131.75386pt too wide) in paragraph at lines 368--369
+Overfull \hbox (131.75386pt too wide) in paragraph at lines 369--370
  [][] 
  []
 
@@ -494,19 +494,19 @@ sem-ble plat-
  []
 
 [16])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
 [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: E26837609A7CC05775D603CBF9A7ACFF;182.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
  7654 strings out of 482788
@@ -527,7 +527,7 @@ sfonts/cm/cmsy10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 8.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (17 pages, 224305 bytes).
+Output written on paper.pdf (17 pages, 224313 bytes).
 PDF statistics:
  763 PDF objects out of 1000 (max. 8388607)
  469 compressed objects within 5 object streams
