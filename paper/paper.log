@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.27)  15 OCT 2020 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  19 OCT 2020 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-24> (./svjour3.cls
+L3 programming layer <2020-08-07> (./svjour3.cls
 Document Class: svjour3 2007/05/08 v3.2 
 LaTeX document class for Springer journals
 Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
@@ -71,20 +71,20 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
 \figgap=\dimen144
 \bibindent=\dimen145
 \@tempcntc=\count193
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen146
-)) (/home/jn/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen147
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count194
@@ -124,71 +124,71 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen155
 \Gin@req@width=\dimen156
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/url/url.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen157
 \Hy@linkcounter=\count272
 \Hy@pagecounter=\count273
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count274
@@ -202,9 +202,9 @@ Package hyperref Info: Bookmarks ON on input line 4717.
 \c@Hy@tempcnt=\count275
 LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen158
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -220,7 +220,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
 \Hy@abspage=\count277
@@ -228,27 +228,29 @@ Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 \c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/atveryend/atveryend.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
 \Fld@listcount=\count280
 \c@bookmark@seq@number=\count281
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-(/home/jn/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip52
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/09/12 v3.5b Customizing captions (AR)
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/08/30 v3.5 Customizing captions (AR)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
 \captionmargin=\dimen161
 \captionmargin@=\dimen162
 \captionwidth=\dimen163
@@ -273,9 +275,9 @@ See the caption package documentation for explanation.
 \c@caption@flags=\count282
 \c@continuedfloat=\count283
 Package caption Info: hyperref package is loaded.
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/ltablex/ltablex.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/ltablex/ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
@@ -292,9 +294,9 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \c@LT@tables=\count287
 \c@LT@chunks=\count288
 \LT@p@ftn=\toks25
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen169
 \ar@mcellbox=\box54
@@ -311,22 +313,22 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \TX@delta=\dimen175
 \TX@cols=\count289
 \TX@ftn=\toks27
-)) (/home/jn/.TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip59
 \multirow@cntb=\count290
 \multirow@dima=\skip60
 \bigstrutjot=\dimen176
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/placeins/placeins.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-) (/home/jn/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count291
 \l__pdf_internal_box=\box56
 ) (./paper.aux)
@@ -350,24 +352,39 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count292
+\scratchdimen=\dimen177
+\scratchbox=\box57
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen178
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks29
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box57
+\AtBeginShipoutBox=\box58
 Package hyperref Info: Link coloring OFF on input line 40.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/home/jn/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count298
 )
 LaTeX Info: Redefining \ref on input line 40.
 LaTeX Info: Redefining \pageref on input line 40.
@@ -378,7 +395,7 @@ LaTeX Info: Redefining \nameref on input line 40.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
-(/home/jn/.TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
@@ -392,8 +409,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--89
 
  []
 
-[1{/home/jn/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-
+[1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [
+3] [4]
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
 [5] [6]
@@ -421,37 +438,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--337
 LaTeX Warning: Float too large for page by 13.8496pt on input line 338.
 
 [9]
-<paper_files/figure-latex/fig-packages-tasks-1.pdf, id=620, 469.755pt x 325.215
-pt>
-File: paper_files/figure-latex/fig-packages-tasks-1.pdf Graphic file (type pdf)
+<paper_files/figure-latex/fig-survey-1.pdf, id=627, 458.71375pt x 307.1475pt>
+File: paper_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
+<use paper_files/figure-latex/fig-survey-1.pdf>
+Package pdftex.def Info: paper_files/figure-latex/fig-survey-1.pdf  used on inp
+ut line 367.
+(pdftex.def)             Requested size: 458.71263pt x 307.14674pt.
 
-<use paper_files/figure-latex/fig-packages-tasks-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/fig-packages-tasks-1.pdf  use
-d on input line 358.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (131.75386pt too wide) in paragraph at lines 358--359
- [][] 
- []
-
-<paper_files/figure-latex/fig-usefulness-1.pdf, id=622, 469.755pt x 325.215pt>
-File: paper_files/figure-latex/fig-usefulness-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/fig-usefulness-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/fig-usefulness-1.pdf  used on
- input line 369.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (131.75386pt too wide) in paragraph at lines 369--370
+Overfull \hbox (120.71263pt too wide) in paragraph at lines 367--368
  [][] 
  []
 
 [10
 
 
-] [11 <./paper_files/figure-latex/fig-packages-tasks-1.pdf>] [12 <./paper_files
-/figure-latex/fig-usefulness-1.pdf>] (./paper.bbl [13
-
-]
+] (./paper.bbl [11 <./paper_files/figure-latex/fig-survey-1.pdf>] [12]
 Underfull \hbox (badness 1383) in paragraph at lines 147--150
 []\OT1/cmr/m/n/8 GRASS De-vel-op-ment Team.  Ge-o-graphic Re-sources Anal-y-sis
  Sup-port Sys-tem
@@ -469,7 +470,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 208--212
 / elevatr$[]\OT1/cmr/m/n/8 .  R pack-age ver-sion 0.1.3,
  []
 
-[14]
+[13]
 Underfull \hbox (badness 3009) in paragraph at lines 305--311
 \OT1/cmr/m/n/8 y-sis pro-gram for cat-e-gor-i-cal and con-tin-u-ous maps. Com-p
 uter soft-ware pro-
@@ -487,50 +488,51 @@ Underfull \hbox (badness 1769) in paragraph at lines 383--388
 e, D. McGlinn,
  []
 
-[15]
+[14]
 Underfull \hbox (badness 1735) in paragraph at lines 404--408
 []\OT1/cmr/m/n/8 W. Thuiller, D. Georges, R. En-gler, F. Breiner.  Biomod2: En-
 sem-ble plat-
  []
 
-[16])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
-[17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
+[15])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+[16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: E26837609A7CC05775D603CBF9A7ACFF;182.
+(rerunfilecheck)             Checksum: 433B7B3281D759C6E452C6FC34813043;233.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 389.
  ) 
 Here is how much of TeX's memory you used:
- 7654 strings out of 482788
- 119514 string characters out of 5955318
- 419114 words of memory out of 5000000
- 22736 multiletter control sequences out of 15000+600000
+ 7923 strings out of 480893
+ 123382 string characters out of 5908083
+ 426657 words of memory out of 5000000
+ 23234 multiletter control sequences out of 15000+600000
  542520 words of font info for 55 fonts, out of 8000000 for 9000
- 34 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  43i,10n,43p,928b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
-</home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></ho
-me/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/jn/.
-TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/jn/.TinyTeX
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/jn/.TinyTeX/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/jn/.TinyTeX/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-8.pfb></home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/home/jn/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (17 pages, 224700 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
+b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on paper.pdf (16 pages, 223899 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
+ 763 PDF objects out of 1000 (max. 8388607)
  471 compressed objects within 5 object streams
  158 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

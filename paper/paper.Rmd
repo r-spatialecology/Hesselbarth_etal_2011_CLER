@@ -66,6 +66,8 @@ answers <- results$answers
 old_names <- results$old_names
 
 new_names <- results$new_names
+
+base_size <-  7.5
 ```
 
 # Introduction {#sec:intro}
@@ -372,17 +374,132 @@ own_package <- dplyr::group_by(answers, own_package) %>%
   dplyr::arrange(-n_rel)
 ```
 
-To better understand how *R* is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the landscape ecology community. 
-In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%). Other, less frequent answers, were "data scientists", "government employees" or "bachelor's and master's degree students". 
-Most people used R either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%) and about half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users. 
+To better understand how *R* is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the community. 
+In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%). Other, less frequent answers, were "data scientists", "none of the above", "government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
+
+Most people use *R* either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%) and about half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users. 
 Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
 
-```{r data-model-packages, include = FALSE}
+```{r research-topics, include = FALSE}
+
+major_topics <- unlist(str_split(answers$major_topic, pattern = ","))
+
+major_topics <- str_trim(major_topics)
+
+major_topics <- str_to_lower(major_topics)
+
+major_topics[major_topics == "-"] <- NA
+
+topics_df <- tibble(topics = major_topics) %>%
+  dplyr::group_by(topics) %>%
+  dplyr::summarise(n = dplyr::n()) %>%
+  dplyr::mutate(n_rel = n / sum(n) * 100,
+                topics_reclass = dplyr::case_when(n >= 5 ~ topics,
+                                                  n < 5 ~ "others")) %>%
+  dplyr::group_by(topics_reclass) %>%
+  dplyr::summarise(n_rel = sum(n_rel)) %>% 
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
+                col = dplyr::case_when(topics_reclass == "others" ~ 0, 
+                                       topics_reclass != "others" ~ 1), 
+                col = factor(col)) %>% 
+  dplyr::arrange(-n_rel)
+
+# change ordering
+new_levels <- c("others", rev(topics_df$topics_reclass[!topics_df$topics_reclass == "others"]))
+
+# reorder levels
+topics_df$topics_reclass <- factor(topics_df$topics_reclass, levels = new_levels)
+
+# major_topic
+ggplot_topics <-  ggplot(data = topics_df) +
+  geom_bar(aes(y = topics_reclass, x = n_rel, fill = col), stat = "identity") + 
+  # geom_text(aes(y = topics_reclass, x = n_rel, label = label, col = col),
+  #           nudge_x = 1.25, size = 2.5) +
+  theme_classic(base_size = base_size) +
+  theme(plot.title.position = "plot") +
+  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) + 
+  scale_fill_manual(values = c("grey50", "black")) +
+  scale_colour_manual(values = c("grey50", "black")) +
+  guides(fill = FALSE, colour = FALSE) +
+  labs(x = "Number of task mentioned [%]", y = NULL,
+       title = "Which terms describe your\nmajor research topics the best?")
+
+```
+
+We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity" and "nature conservation" (Fig. \@ref(fig:fig-survey) A)). 
+
+```{r tasks, include = FALSE}
+# get data 
+important_tasks <- unlist(str_split(answers$important_tasks, pattern = ","))
+
+# remove empty space at beginning
+important_tasks <- str_trim(important_tasks)
+
+# make sure all lower case
+important_tasks <- str_to_lower(important_tasks)
+
+# shorten labels
+important_tasks[important_tasks == "(pre-)processing of spatial data"] <- "(pre-)processing data"
+
+important_tasks[important_tasks == "spatial point pattern analysis"] <- "point pattern analysis"
+
+important_tasks[important_tasks == "programming individual based models"] <- "individual based modelling"
+
+important_tasks[important_tasks == "creating neutral landscape models"] <- "neutral landscape models"
+
+important_tasks[important_tasks == "quantifying landscape characteristics (e.g. landscape metrics)"] <- "quantifying landscape characteristics"
+
+# # add line breaks
+# important_tasks <- str_replace_all(important_tasks, pattern = " ", replacement = "\n")
+
+# create data.frame
+tasks_df <- tibble(tasks = important_tasks) %>%
+  dplyr::group_by(tasks) %>% 
+  dplyr::summarise(n = dplyr::n()) %>% 
+  dplyr::mutate(n_rel = n / sum(n) * 100, 
+                tasks_reclass = dplyr::case_when(n >= 5 ~ tasks, 
+                                                 n < 5 ~ "others")) %>%
+  dplyr::group_by(tasks_reclass) %>% 
+  dplyr::summarise(n_rel = sum(n_rel)) %>% 
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
+                col = dplyr::case_when(tasks_reclass == "others" ~ 0, 
+                                       tasks_reclass != "others" ~ 1), 
+                col = factor(col)) %>% 
+  dplyr::arrange(-n_rel)
+
+# change ordering
+new_levels <- c("others", rev(tasks_df$tasks_reclass[!tasks_df$tasks_reclass == "others"]))
+
+# reorder levels
+tasks_df$tasks_reclass <- factor(tasks_df$tasks_reclass, levels = new_levels)
+
+ggplot_tasks <- ggplot(data = tasks_df) +
+  geom_bar(aes(y = tasks_reclass, x = n_rel, fill = col), stat = "identity") + 
+  # geom_text(aes(y = tasks_reclass, x = n_rel, label = label, col = col),
+  #           nudge_x = 1.25, size = 2.5) +
+  theme_classic(base_size = base_size) +
+  theme(plot.title.position = "plot") +
+  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) + 
+  scale_fill_manual(values = c("grey50", "black")) +
+  scale_colour_manual(values = c("grey50", "black")) +
+  guides(fill = FALSE, colour = FALSE) +
+  labs(x = "Number of task mentioned [%]", y = NULL,
+       title = "Which are the most important\ntasks to your workflow?")
+```
+
+Next, we were interested in the most important tasks to the workflow of the participants. Not surprisingly, "(pre-)processing of data", "spatial statistics" and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey) B)). 
+Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the "others" option (all options with less than five total answers were classified as "others").
+
+```{r data-model, include = FALSE}
 # data model
 data_model <- dplyr::group_by(answers, data_model) %>% 
   dplyr::summarise(n_rel = n() / n_people * 100) %>% 
   dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
   dplyr::arrange(-n_rel)
+
+```
+
+````{r packages, include =FALSE}
 
 # split answers r packages
 r_packages <- unlist(str_split(answers$r_packages, pattern = ","))
@@ -435,86 +552,22 @@ ggplot_packages <- ggplot(data = r_packages_df) +
   geom_bar(aes(y = r_package_reclass, x = n_rel, fill = col), stat = "identity") + 
   # geom_text(aes(y = r_package_reclass, x = n_rel, label = label, col = col), 
   #           nudge_x = 2, size = 2.5) + 
-  theme_classic(base_size = 7.5) +
+  theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
   scale_x_continuous(breaks = seq(0, 35, 5), limits = c(0, 35)) + 
   scale_fill_manual(values = c("grey50", "black")) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
   labs(x = "Number of package mentioned [%]", y = NULL,
-       title = "List the three R packages related to landscape\necology you use the most")
+       title = "List the three R packages related\nto landscape ecology you use the most")
 ```
 
-Interestingly, most people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%). 
-This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-packages-tasks) A).
+Interestingly, most people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
+This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey) C)).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
 The *raster* package was mentioned the most, followed by the *sf* package. 
-Because both the *raster* and the *sf* are designed for basic and advanced data handling and processing of raster and vector data, respectively, it is not surprising that "(pre-)processing of spatial data" was the most important workflow task for the majority of the survey participants (Fig. \@ref(fig:fig-packages-tasks) B). 
-
-```{r tasks, include = FALSE}
-# get data 
-important_tasks <- unlist(str_split(answers$important_tasks, pattern = ","))
-
-# remove empty space at beginning
-important_tasks <- str_trim(important_tasks)
-
-# make sure all lower case
-important_tasks <- str_to_lower(important_tasks)
-
-# shorten labels
-important_tasks[important_tasks == "(pre-)processing of spatial data"] <- "(pre-)processing data"
-
-important_tasks[important_tasks == "spatial point pattern analysis"] <- "point pattern analysis"
-
-important_tasks[important_tasks == "programming individual based models"] <- "individual based modelling"
-
-important_tasks[important_tasks == "creating neutral landscape models"] <- "neutral landscape models"
-
-important_tasks[important_tasks == "quantifying landscape characteristics (e.g. landscape metrics)"] <- "quantifying landscape characteristics"
-
-# add line breaks
-important_tasks <- str_replace_all(important_tasks, pattern = " ", replacement = "\n")
-
-# create data.frame
-tasks_df <- tibble(tasks = important_tasks) %>%
-  dplyr::group_by(tasks) %>% 
-  dplyr::summarise(n = dplyr::n()) %>% 
-  dplyr::mutate(n_rel = n / sum(n) * 100, 
-                tasks_reclass = dplyr::case_when(n >= 5 ~ tasks, 
-                                                 n < 5 ~ "others")) %>%
-  dplyr::group_by(tasks_reclass) %>% 
-  dplyr::summarise(n_rel = sum(n_rel)) %>% 
-  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
-                col = dplyr::case_when(tasks_reclass == "others" ~ 0, 
-                                       tasks_reclass != "others" ~ 1), 
-                col = factor(col)) %>% 
-  dplyr::arrange(-n_rel)
-
-# change ordering
-new_levels <- c("others", rev(tasks_df$tasks_reclass[!tasks_df$tasks_reclass == "others"]))
-
-# reorder levels
-tasks_df$tasks_reclass <- factor(tasks_df$tasks_reclass, levels = new_levels)
-
-ggplot_tasks <- ggplot(data = tasks_df) +
-  geom_bar(aes(y = tasks_reclass, x = n_rel, fill = col), stat = "identity") + 
-  # geom_text(aes(y = tasks_reclass, x = n_rel, label = label, col = col), 
-  #           nudge_x = 1.25, size = 2.5) + 
-  theme_classic(base_size = 7.5) +
-  theme(plot.title.position = "plot") +
-  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) + 
-  scale_fill_manual(values = c("grey50", "black")) +
-  scale_colour_manual(values = c("grey50", "black")) +
-  guides(fill = FALSE, colour = FALSE) +
-  labs(x = "Number of task mentioned [%]", y = NULL,
-       title = "Which are the most important tasks to your\nworkflow?")
-```
-
-```{r fig-packages-tasks, echo = FALSE, fig.align="center", fig.cap = "A) Most used R packages and B) most important workflow tasks as listed by the participants of the survery. 'others' includes all packages/tasks with less than five total mentions."}
-
-ggplot_packages + ggplot_tasks + plot_layout(ncol = 2, nrow = 1) + plot_annotation(tag_levels = "A", tag_suffix = ")")
-
-```
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey) C).
+Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; 32.6%).
 
 ```{r usefulness, include = FALSE}
 # create vector with classses
@@ -543,12 +596,8 @@ bad_eval <- dplyr::filter(usefulness_df, usefulness %in% c(3, 2, 1)) %>%
   dplyr::pull(n_rel) %>% 
   sum() %>% 
   round(digits = 2)
-```
 
-When asked "`r old_names[12]`", the vast majority of participants answered with either "very useful" or "useful" (`r good_eval`%) and only only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (`r bad_eval`%; Fig. \@ref(fig:fig-usefulness)).
-
-```{r fig-usefulness, echo = FALSE, fig.align="center", fig.cap = "Evaluation of the usefullnes of R for landscape ecology by the particpants of the survey. Answers were possible on a 5-point scale."}
-ggplot(data = usefulness_df) +
+ggplot_usefulness <- ggplot(data = usefulness_df) +
   geom_bar(aes(x = usefulness_class, y = n_rel), 
            stat = "identity") + 
   theme_classic(base_size = 10) +
@@ -560,9 +609,76 @@ ggplot(data = usefulness_df) +
        y = "Number of participants [%]")
 ```
 
+Lastly, when asked "`r old_names[12]`", the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey) D)).
+
+```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. 'others' includes all answers with less than five total mentions."}
+
+(ggplot_topics | ggplot_tasks | ggplot_packages ) / ggplot_usefulness + 
+  plot_layout(heights = c(2, 3)) +
+  plot_annotation(tag_levels = "A", tag_suffix = ")")
+
+```
+
+
 \FloatBarrier
 
-<!-- # Missing packages -->
+# Missing packages
+
+```{r comments, include = FALSE}
+
+missing_methods <- answers$missing_methods[!is.na(answers$missing_methods)]
+
+missing_methods <- str_to_lower(missing_methods)
+
+# no answer, no missing packages
+id_na <- c("none", "na", "no", "not sure", "not sure right now", "unsure",
+           "i have no additional needs for my current workflow", 
+           "none that i can think of", "i would like to know",
+           "i don't know, sorry!", "r havent fail me yet", 
+           "i'm not missing anything at present.",
+           "have not yet identified any.", "no package missing",
+           "i am currently missing no methods",  
+           "i still have to fully understand what is there", 
+           "não posso responder", "not enough overview to answer this",
+           ";", ".", "?")
+
+length(id_na) / nrow(answers) * 100
+
+missing_methods <- missing_methods[!missing_methods %in% id_na]
+
+# classify answers as good as possible
+
+methods_performance <- missing_methods[c(2, 4, 8, 9, 10, 21, 23, 27, 33, 41, 45, 
+                                         48, 56)]
+perc_performance <- round(length(methods_performance) / nrow(answers) * 100, 1)
+
+methods_viz <- missing_methods[c(3, 7, 13, 22, 29, 33, 41, 57, 58)]
+perc_viz <- round(length(methods_viz) / nrow(answers) * 100, 1)
+
+methods_connectivity <- missing_methods[c(12, 17, 26, 31, 35, 36, 40, 51)]
+perc_connectivity <- round(length(methods_connectivity) / nrow(answers) * 100, 1)
+
+methods_characterisation <- missing_methods[c(7, 20, 24, 39, 42, 47, 59)]
+perc_characterisation <- round(length(methods_characterisation) / nrow(answers) * 100, 1)
+
+methods_tutorial <- missing_methods[c(1, 14, 44, 52, 53)]
+
+methods_datahandling <- missing_methods[c(5, 11, 22,  60, 63)]
+
+methods_gis <- missing_methods[c(43, 50, 55)]
+
+methods_various <- missing_methods[c(6, 11, 15, 16, 18, 19, 22, 25, 28, 30, 32, 
+                                     34, 37, 38, 46, 49, 54, 61, 62, 63, 64)]
+
+```
+
+The survey also included a section in which participants could list methods and tools that are currently missing in *R* and answers to this question were very diverse. 
+
+Overall, `r round(length(id_na) / nrow(answers) * 100, 1)`% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
+There were two most common topics across the answers of the participants . 
+Firstly, many participants (`r perc_performance`%) wished for a better computational performance of *R* in terms of speed and required RAM for larger data.
+Secondly, many participants (`r perc_viz`%) are currently missing advanced and easy-to-apply methods for creating high-quality maps or other visualization-related functionality.
+Fewer participants were missing tools for various connectivity-related issues (`r perc_viz`%) and characterization of landscape characteristics (`r perc_characterisation`%).
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
 
