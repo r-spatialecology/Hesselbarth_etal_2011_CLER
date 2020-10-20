@@ -237,10 +237,12 @@ However, *FRAGSTATS* is not open-source software (however it is free to download
 To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed.
 The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment. 
 Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
-<!-- JN: two notes: -->
-<!-- 1. I am working on a paper supporting the belg package - I plan to submit it in less than a month, so hopefully we could update the reference here -->
-<!-- 2. I also submitted a paper yesterday (2020-07-17) explaining a new package motif, which is aimed on calculations based on spatial signatures. I plan to add a paragraph about this package someplace in this paper. -->
-<!-- MH: Sounds great -->
+
+Most of landscape metrics are a single number depicting specific characteristics of a local landscape.
+Another possibility is to derive spatial signatures -  a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
+Spatial signatures calculated for many landscapes can be compared using one of the existing distance measures.
+This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
+Methods for pattern-based spatial analysis are implemented in the *motif* package \cite{R-motif}.
 
 #### Species distribution modeling {#sec:SDM}
 
