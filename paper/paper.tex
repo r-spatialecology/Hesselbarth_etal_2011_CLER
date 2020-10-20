@@ -246,6 +246,12 @@ To provide a truly open-source solution to calculate landscape metrics, recently
 The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the \emph{R} environment.
 Additionally, the \emph{belg} packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
 
+Most of landscape metrics are a single number depicting specific characteristics of a local landscape.
+Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
+Spatial signatures calculated for many landscapes can be compared using one of the existing distance measures.
+This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
+Methods for pattern-based spatial analysis are implemented in the \emph{motif} package \cite{R-motif}.
+
 \hypertarget{sec:SDM}{%
 \paragraph{Species distribution modeling}\label{sec:SDM}}
 
@@ -301,22 +307,23 @@ Using a wide collection of algorithms, the \emph{NLMR} package \cite{Sciaini2018
 
   \begin{table}
     \begin{tabularx}{0.9\linewidth}{XXXX}
-      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages especially for spatial data and landscape ecology are included.} \\
+      \caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application topic. Only packages focussed on spatial data and landscape ecology are included.} \\
       \hline
       Topic & Package & Description & Source \\
       \hline
       \multirow{5}{*}{Spatial data} & \textit{raster} & Methods for raster data & \cite{Hijmans2019} \\
       & \textit{stars} & Methods for spatiotemporal arrays (raster and vector data cubes) & \cite{Pebesma2019} \\
       & \textit{sp} & Methods for mainly vector data & \cite{Pebesma2005,Bivand2013} \\
-      & \textit{sf} & Methods for vector data as simple features & \cite{Pebesma2018} \\
+      & \textit{sf} & Successor of the sp package. Methods for vector data as simple features & \cite{Pebesma2018} \\
       & \textit{landscapetools} & Utility functions for landscape analysis & \cite{Sciaini2018} \\
       \hline
-      \multirow{3}{*}{Creating maps} & \textit{tmap} & xxx & xxx \\
-      & \textit{mapview} & xxx & xxx \\
-      & \textit{leaflet} & xxx & xxx \\
+      \multirow{3}{*}{Creating maps} & \textit{tmap} & Plotting system for static and interactive maps & \cite{Tennekes2018} \\
+      & \textit{mapview} & Quick, interactive viewing of spatial data & \cite{R-mapview} \\
+      & \textit{leaflet} & Creating interactive web maps & \cite{R-leaflet} \\
       \hline
-      \multirow{2}{*}{Landscape metrics} & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
+      \multirow{3}{*}{}Quantifying landscape characteristics & \textit{landscapemetrics} & Calculates landscape metrics for categorical land cover maps & \cite{Hesselbarth2019a} \\
       & \textit{belg} & Calculates the Boltzmann entropy of a landscape gradient & \cite{R-belgpaper} \\
+      & \textit{motif} & Enables several type of spatial analysis such as search, change detection, and clustering to be performed on categorical maps  & \cite{R-motif} \\
       \hline
       \multirow{5}{*}{}Species distribution modeling (SDM) & \textit{dismo} & xxx & xxx \\
       & \textit{sdm} & xxx & xxx \\
@@ -377,6 +384,7 @@ Lastly, when asked ``How useful do you think is R currently for landscape ecolog
 \section{Missing packages}\label{missing-packages}}
 
 The survey also included a section in which participants could list methods and tools that are currently missing in \emph{R} and answers to this question were very diverse.
+
 Overall, 21.9\% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
 There were two most common topics across the answers of the participants .
 Firstly, many participants (13.5\%) wished for a better computational performance of \emph{R} in terms of speed and required RAM for larger data.

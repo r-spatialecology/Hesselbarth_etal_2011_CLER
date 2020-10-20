@@ -678,7 +678,7 @@ methods_various <- missing_methods[c(6, 11, 15, 16, 18, 19, 22, 25, 28, 30, 32,
 The survey also included a section in which participants could list methods and tools that are currently missing in *R* and answers to this question were very diverse. 
 
 Overall, `r round(length(id_na) / nrow(answers) * 100, 1)`% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
-There were two most common topics across the answers of the participants . 
+There were two most common topics across the answers of the participants. 
 Firstly, many participants (`r perc_performance`%) wished for a better computational performance of *R* in terms of speed and required RAM for larger data.
 Secondly, many participants (`r perc_viz`%) are currently missing advanced and easy-to-apply methods for creating high-quality maps or other visualization-related functionality.
 Fewer participants were missing tools for various connectivity-related issues (`r perc_viz`%) and characterization of landscape characteristics (`r perc_characterisation`%).
@@ -686,3 +686,6 @@ Fewer participants were missing tools for various connectivity-related issues (`
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
 
 <!-- missing packages: data sources, such as global land cover, worldclim 2.0, etc. -->
+
+<!--JN: I think we should answer to some of the comments in the missing packages section: point people to some packages (if possible), mention which of the missing tools are not going to be implemented, and also forward people to methods and tools on how to improve some problems (e.g. speed and required RAM for larger data -> use of Rcpp, use external servers, or read data in chunks, etc.)-->
+
