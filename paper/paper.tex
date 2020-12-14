@@ -29,8 +29,7 @@
 
 %% load any required packages here
 \usepackage{caption}
-\usepackage{ltablex}
-\usepackage{pdflscape}
+\usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{placeins}
 
@@ -130,8 +129,8 @@ The growing popularity of the \emph{R} programming language for spatial data ana
 The growing body of \emph{R} packages related to spatial data processing and analyzing results in a high capability of the \emph{R} programming language for landscape ecology.
 Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review we are going to focus on software implemented in the \emph{R} programming language.
 For more general overviews of open-source software for landscape ecology see e.g.~\cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because additionally to handling spatial data, also further tasks such as statistical modeling, preparation of publication-ready figures and even preparation of complete reports can be done in the same working environment, the \emph{R} programming language can be a very powerful tool.
-Thus, in the first part we present an overview over existing \emph{R} packages for landscape ecology.
+Because additionally to handling spatial data, also further tasks such as statistical modeling, preparation of publication-ready figures and even preparation of complete reports can be done in the same working environment (Fig. \ref{fig:fig-workflow}), the \emph{R} programming language can be a very powerful tool.
+Thus, in the first part we present an overview over existing \emph{R} packages for landscape ecology (Table \ref{tab:packages}).
 In the second part, we present a survey in which we asked the community how they currently use the \emph{R} programming language and to identify topics for which \emph{R} packages are currently missing for landscape ecology.
 
 \hypertarget{sec:existing_packages}{%
@@ -148,12 +147,7 @@ Additionally, the technical quality standard on \emph{CRAN} also facilitates rep
 For more information about \emph{R} package development, see \cite{Wickham2015}.
 
 \begin{figure}
-
-{\centering \includegraphics[width=1\linewidth,height=0.65\textheight]{data/Workflow} 
-
-}
-
-\caption{Exemplary worklow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example *R* packages are listed. Of course, many more packages for the specific tasks exist.}\label{fig:fig-workflow}
+\includegraphics[width=1\linewidth,height=0.3\textheight]{data/Workflow} \caption{Exemplary worklow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. Of course, many more packages for the specific tasks exist.}\label{fig:fig-workflow}
 \end{figure}
 
 \hypertarget{sec:spatrep}{%
@@ -291,16 +285,15 @@ Further functionality for landscape genetics can be found in the \emph{graphs4lg
 \paragraph{Neutral landscape models}\label{sec:NLM}}
 
 Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}.
-Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found (for a comprehensive list, see \cite{Sciaini2018}).
-
-Currently, to our knowledge, only one \emph{R} packages exists that allows the use of neutral landscapes.
-Using a wide collection of algorithms, the \emph{NLMR} package \cite{Sciaini2018} provides framework to simulate neutral landscape rasters.
+Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found across many different \emph{R} packages.
+A comprehensive collections of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the \emph{NLMR} package \cite{Sciaini2018}.
+Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simulate Gaussian fields which could be used as neutral landscape models.
 
 \begin{table}
 
-\caption{Overview of commonly used \textit{R} packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.} 
+\caption{Overview of commonly used R packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.} 
 
-\begin{tabular}{l | r r }
+\begin{tabularx}{\textwidth}{X r r }
 
 \hline
 Task & R package & Reference \\
@@ -348,34 +341,37 @@ Task & R package & Reference \\
 & grainchanger & \cite{Graham2019} \\
 \hline
 
-\end{tabular}
+\end{tabularx}
+
+\label{tab:packages}
+
 \end{table}
 
 \hypertarget{survey-of-r-usage-by-landscape-ecology-community}{%
 \section{Survey of R usage by landscape ecology community}\label{survey-of-r-usage-by-landscape-ecology-community}}
 
-To better understand how \emph{R} is used by the landscape ecology community, we designed a short survey and used mailing lists and social media to reach the community.
+To better understand how \emph{R} is used by the landscape ecology community, we conducted a short survey and used mailing lists and social media to reach the community.
 In total, the survey was answered by 103 participants, of which the the majority were either ``PhD students'' (34\%), followed by ``Post-Docs'' (28.2\%) and ``Professors'' (12.6\%).
-Other, less frequent answers, were ``data scientists,'' ``none of the above,'' ``government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
+Other, less frequent answers, were ``Data scientists'', ``None of the above'', ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
-Most people use \emph{R} either ``daily'' (54.4\%) or a ``few times a week'' (36.9\%) and about half of all participants described themselves as ``advanced'' user (46.6\%), while 40.8\% described themselves as ``intermediate'' users.
+Most people use \emph{R} either ``daily'' (54.4\%) or a ``few times a week'' (36.9\%).
+About half of all participants described themselves as ``advanced'' user (46.6\%), while 40.8\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.4\%) or plan to do so in the future (23.3\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10\% of participants included ``biodiversity,'' followed by ``land use management,'' ``landscape connectivity'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
+We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data,'' ``spatial statistics'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B)).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B)).
 Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
-Interestingly, most people use the raster data model (72.8\%) in comparison to the vector data model (27.2\%).
+Interestingly, more people use the raster data model (72.8\%) in comparison to the vector data model (27.2\%).
 This was also represented in the most used \emph{R} packages (Fig. \ref{fig:fig-survey} C)).
 When asked for the three most used packages, participants of the survey listed 83 packages in total.
 The \emph{raster} package was mentioned the most, followed by the \emph{sf} package.
-Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig.
-\ref{fig:fig-survey} C).
-Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 32.6\%).
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey} C).
+Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 33.4415584\%).
 
-Lastly, when asked ``How useful do you think is R currently for landscape ecology?'' the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only only very few participants evaluated \emph{R} as ``intermediate,'' ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how use \emph{R} us currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
 
 \begin{verbatim}
 ## Warning: Removed 1 rows containing missing values (position_stack).
@@ -397,11 +393,19 @@ Lastly, when asked ``How useful do you think is R currently for landscape ecolog
 
 The survey also included a section in which participants could list methods and tools that are currently missing in \emph{R} and answers to this question were very diverse.
 
-Overall, 20.4\% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
-There were two most common topics across the answers of the participants.
-Firstly, many participants (12.6\%) wished for a better computational performance of \emph{R} in terms of speed and required RAM for larger data.
-Secondly, many participants (8.7\%) are currently missing advanced and easy-to-apply methods for creating high-quality maps or other visualization-related functionality.
-Fewer participants were missing tools for various connectivity-related issues (8.7\%) and characterization of landscape characteristics (6.8\%).
+Overall, 22.3\% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
+There were three most common topics across the answers of the participants.
+Firstly, many participants (13.6\%) wished for a better computational performance of \emph{R} in terms of speed and required RAM, especially for larger data.
+Secondly, participant are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to quantify landscape characteristics (9.7\%).
+Thirdly, many participants (8.7\%) are currently missing advanced and easy-to-apply methods to create high-quality maps or other visualization-related functionality.
+
+\hypertarget{conclusions}{%
+\section{Conclusions}\label{conclusions}}
+
+Since its first introduction in 1995, \emph{R} has come a long way from a statistical programming language to a powerful tool for landscape ecology.
+Today, many \emph{R} packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed for spatial data handling and analysis.
+The highly dynamic development of \emph{R} packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
+However, since the scientific field of landscape ecology constantly changes and improves, also the \emph{R} programming language and its packages need to change and adapt these changes.
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
