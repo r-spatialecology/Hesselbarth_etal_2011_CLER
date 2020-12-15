@@ -119,21 +119,14 @@ Secondly, the *Comprehensive R Archive Network* (*CRAN*) provides a large visibi
 \cite{Wickham2015}.
 For developers, the guaranteed technical quality standard on *CRAN* requires more initial work for compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
 Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e. package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+Thus, most packages can be found on both platforms and many developers use *GitHub* for daily developing and *CRAN* to publish stable releases of the packages.
 For more information about *R* package development, see \cite{Wickham2015}.
 
 ```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary worklow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. Of course, many more packages for the specific tasks exist."}
 include_graphics("data/Workflow.png")
 ```
 
-<!-- MH: What about packages that are not on CRAN anymore, e.g. adehabitat? -->
-
-<!-- JN: if you think this package (or similar) are still useful, maybe we can mention them somewhere is the first part of the paper with annotation about their state, and then also write something more about issues with archived packages in the second part (what's missing in R)... -->
-
-<!-- MH: I would argue to only include packages that are actively maintained. It's already such a huge amount and I guess there is a reason why the packages were archived. Doesnt speak for their popularity -->
-
 ## Spatial data representations {#sec:spatrep}
-
-<!-- MH: Make sure all libraries etc. have reference -->
 
 While *R* has several build-in data structures, including vectors, matrices or lists, the base *R* programming language has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a notable interest in spatial data analysis, support for spatial data is provided by many *R* packages (\cite{Lovelace2019}, page 10).
@@ -146,6 +139,7 @@ The values could represent discrete phenomena, such as a class number of a land 
 The probably most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
 A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed \cite{R-terra}, however, it could take several years for this package to be adopted by users.
 Alternatively, the *stars* package can be used to read and process raster data with a focus on spatial-temporal data cubes \cite{Pebesma2019}.
+Additionally, there are packages that improve some basics raster operations in terms of computational performance or compatibility between raster and vector operations, such as *fasterize* \cite{Ross2020}, *rasterDT* \cite{OBrien2020}, or *exactextractr* \cite{Baston2020}.
 
 The vector data model consists of two main elements i) geometries, such as points, lines, polygons, and ii) attributes and each geometry is connected to a value in an attribute table.
 In many cases, this data model allows a more natural representation of landscape features, however, with the cost of higher computational demands <!--(add reference)-->.
@@ -153,17 +147,17 @@ The *sp* package was the standard for vector data representation for more than 1
 As of 2020, more than 500 *R* packages directly depend or imports *sp*.
 However, more recently *sp* will only be maintained (and not actively developed any more), and the recommended successor is the improved *sf* package \cite{Pebesma2018}.
 
-<!-- JN: terra new vector representations --> 
+<!-- JN: terra new vector representations -->
 
-<!-- MH: I probably would not add terra here. As far as I see, the vector support in terra is basically just support to combine vector with raster data. The main focuse of the package is raster data though -->
+<!-- MH: I probably would not add terra here. As far as I see it, the vector support in terra is basically just support to combine vector with raster data. The main focus of the package is raster data though -->
 
 ## Spatial data download
 
 Nowadays, spatial data for many spatial scales is available from an abundance of online accessible sources.
 A lot of this data is publicly available, either as a direct download or through an API connection, and this can be used by several packages to download the spatial data directly into a *R* session.
-Since public available data is becoming more and more prominent, so are *R* packages to accesses them.
-Packages include the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA, the *elevatr* package to access raster elevation data based on the Amazon Web Services Terrain Tiles \cite{R-elevatr}, the *rgbif* to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, *rnaturalearth* to access the Natural Earth database \cite{South2017}, or *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}.
-Furthermore, the `get_data()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim v1.4, while the new in-development package *geodata* <!--(add reference)--> provides an access to data from WorldClim v2.
+Since public available data is becoming more and more prominent, so are *R* packages to accesses them. Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
+Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows to download data from the Landsat 8, while the *MODIS* package \cite{Mattiuzzi2020} allows to download MODIS products.
+Also, the `get_data()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the  in-development package *geodata* <!--(add reference)-->).
 Additionally, the *rgee* package \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
 
 <!-- JN: how to cite (or maybe we should just add a link to?) - https://github.com/tilezen/joerd/blob/master/docs/data-sources.md -->
@@ -185,10 +179,12 @@ Tools to find an appropriate CRS for a certain region can be found at <https://s
 In used data have different CRS, all packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations.
 
 A second common spatial data processing task is required when the available data extends over a larger area than the study region.
-In this case, the pre-processing of spatial data can include vector clipping or raster cropping. 
+In this case, the pre-processing of spatial data can include vector clipping or raster cropping.
 Related to that, also masking of certain areas of the study region can be required by using e.g. certain spatial filters such as water bodies.
 Packages from Section \@ref(sec:spatrep) also allow for these operations.
-Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications. A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}. Furthermore, *landscapetools* is a collection of various utility functions for the raster data model.
+Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications.
+A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}.
+Furthermore, *landscapetools* is a collection of various utility functions for the raster data model.
 
 Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
 
@@ -196,7 +192,7 @@ Finally, there is a number of tools for landscape ecology implemented in GIS sof
 <!-- MH: I don't think this is really important -->
 
 <!--JN: in the same vain as above: should we mention Google Earth Engine?-->
-<!-- MH: Again, I dont think thats really of relevance  -->
+<!-- MH: Again, I dont think thats really of relevance. I think as it is now its ok  -->
 
 ## Creating maps
 
@@ -206,14 +202,18 @@ It has a role in checking the spatial and value-related quality of data, data ex
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g. changing the displayed values.
 All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function.
 However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
+Advanced plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
 Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data \cite{R-mapview}.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}. 
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.
+Thematic maps, including besides others proportional symbols, chroropleth, or typology, can be created with the *cartography* package \cite{Giraud2016}.
 Also the popular plotting package *ggplot2* \cite{Wickham2016a} has an extension especially designed for plotting spatial data named *ggspatial* \cite{R-ggspatial}.
+
+A slightly different approach of visualizing spatial data is the *rayshader* package \cite{Morgen-Wall2020} which allows to create topographical 2D and 3D maps.
 
 ## Ecological analysis {#sec:ecological_analysis}
 
-#### Landscape metrics {#sec:landscape_metrics}
+#### Quantify landscape characteristics {#sec:landscape_metrics}
 
 One of the most fundamental steps of landscape ecology is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}.
 For discrete land cover classes the composition (number and abundance) and configuration (spatial arrangement) of the landscape is often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
@@ -224,6 +224,8 @@ However, *FRAGSTATS* is not open-source software (however it is free to download
 To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed.
 The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.
 Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
+
+More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}. The *geodiv* package \cite{Smith2020} allows to gradient surface metrics to characterize continuous analysis of landscape features. 
 
 Most of landscape metrics are a single number depicting specific characteristics of a local landscape.
 Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
@@ -240,7 +242,8 @@ Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Gu
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs.
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package.
 Of course, also packages specifically designed for SDM exists.
-This includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020} and *PresenceAbsence* \cite{Freeman2008} packages.
+This includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008} or *zoon* \cite{Golding2018} packages.
+Related to SDM, there are several packages to estimate home ranges and habitat selection, including *adehabitatHR* and *adehabitatHS* \cite{Calenge2006} or *amt \cite{Signer2019}*
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
 
@@ -252,6 +255,7 @@ While structural connectivity focuses only on landscape characteristics (e.g., m
 Given its wide concept, many different measures of connectivity exists \cite{Kindlmann2008}.
 On patch level structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g. amount of suitable habitat) \cite{Kindlmann2008,With2019}.
 Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}).
+Furthermore, the *lconnect* package \cite{Mestre2019} and *Makurhini* package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
 Another way to describe connectivity is based on graph theory with the advantages that also functional connectivity can be included \cite{Kindlmann2008}.
 In graph theory \cite{Laita2011} landscapes are described by nodes (i.e. habitat patches) connected by and functional connections called links \cite{Laita2011}.
 The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
@@ -261,6 +265,7 @@ The resistance surface describes effects of facilitating or hindering characteri
 Least-cost paths can be calculated using the *gdistance* package \cite{vanEtten2017}.
 Absorbing Markov chains that combines random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published *samc* package \cite{Marx2020}.
 
+
 #### Landscape genetics {#sec:landscape_genetics}
 
 Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift and selection \cite{Manel2003}.
@@ -268,71 +273,82 @@ Such insights improve our understanding of metapopulation dynamics, speciation, 
 By explicitly including characteristics of landscape, landscape genetics is a way more realistic way of analysis than, e.g., metapopulation genetics \cite{Holderegger2006}.
 As a result of its interdisciplinary, landscape genetics combines methods from different disciplines including landscape ecology, spatial statistics, geography and population genetics \cite{Storfer2007}.
 
-<!-- MH: Work-in-Progress -->
-
-<!-- MH: General population genetics -->
-
-<!-- MH: Isolation by resistance  -->
-
-<!-- MH: Bayesian Genetic Clustering -->
-
-<!-- MH: Multivariate Ordination Techniques -->
-
 Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also of importance for landscape genetics.
-Further functionality for landscape genetics can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, or *HierDpart* packages \cite{Qin2019}.
+Further functionality for landscape genetics can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
 
 #### Neutral landscape models {#sec:NLM}
 
 Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}.
-Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found across many different *R* packages. 
+Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found across many different *R* packages.
 A comprehensive collections of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the *NLMR* package \cite{Sciaini2018}.
 Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate Gaussian fields which could be used as neutral landscape models.
 
+#### Various
+
+<!-- MH: What about spatial autocorrelation? -->
+
+<!-- MH: SpatialKDE, geoR, gstat, spdep, siland -->
+
+```{=tex}
 \begin{table}
 
-\caption{Overview of commonly used R packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.} 
+\caption{Overview of commonly used R packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.}
 
 \begin{tabularx}{\textwidth}{X r r }
 
 \hline
 Task & R package & Reference \\
 \hline
-\multirow{5}{*}{Spatial data} & raster & \cite{Hijmans2019} \\
+\multirow{8}{*}{Spatial data} & raster & \cite{Hijmans2019} \\
 & terra & \cite{R-terra} \\
 & stars & \cite{Pebesma2019} \\
+& fasterize & \cite{Ross2020} \\
+& rasterDT & \cite{OBrien2020} \\
+& exactextractr & \cite{Baston2020} \\
 & sp & \cite{Pebesma2005,Bivand2013} \\
 & sf & \cite{Pebesma2018} \\
 \hline
-\multirow{6}{*}{Spatial data download} & FedData & \cite{R-FedData} \\
+\multirow{6}{*}{Spatial data download} & rnaturalearth & \cite{South2017} \\
 & elevatr & \cite{R-elevatr} \\
 & rgbif & \cite{R-rgbif} \\
-& rnaturalearth & \cite{South2017} \\
+& BIEN & \cite{Maitner2020} \\
 & marmap & \cite{Pante2013} \\
-& rgee & \cite{R-rgee} \\
+& FedData & \cite{R-FedData} \\
+& getlandsat & \cite{Chamberlain2018} \\
+& MODIS & \cite{Mattiuzzi2020} \\
 \hline
-\multirow{4}{*}{Creating maps} & tmap & \cite{Tennekes2018} \\
+\multirow{7}{*}{Creating maps} & rasterVis & \cite{Lamigueiro2020} \\
 & mapview & \cite{R-mapview} \\
+& tmap & \cite{Tennekes2018} \\
 & leaflet & \cite{R-leaflet} \\
+& cartography & \cite{Giraud2016} \\
 & ggspatial & \cite{Dunnington2020} \\
+& rayshader & \cite{Morgen-Wall2020} \\
 \hline
 \multirow{4}{*}{\shortstack[l]{Quantifying landscape\\characteristics}} & landscapemetrics & \cite{Hesselbarth2019a} \\
 & belg &  \cite{R-belgpaper} \\
 & motif & \cite{R-motif} \\
-& VLSM & xxx \\
+& geodiv & \cite{Smith2020} \\
 \hline
-\multirow{5}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & \cite{Hijmans2017} \\
+\multirow{8}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & \cite{Hijmans2017} \\
 & sdm & \cite{Naimi2016} \\
 & ecospat & \cite{Broennimann2020} \\
 & biomod2 & \cite{Thuiller2020} \\
 & PresenceAbsence & \cite{Freeman2008} \\
+& zoon & \cite{Golding2018} \\
+& adehabitatHR, adehabitatHS & \cite{Calenge2006} \\
+& amt & \cite{Signer2019} \\
 \hline
-\multirow{3}{*}{Connectivity} & grainscape & \cite{Chubaty2020} \\
+\multirow{5}{*}{Connectivity} & lconnect & \cite{Mestre2019} \\
+& Makurhini & \cite{Godinez-Gomez2020} \\
+& grainscape & \cite{Chubaty2020} \\
 & gdistance & \cite{vanEtten2017} \\
 & samc & \cite{Marx2020} \\
 \hline
-\multirow{3}{*}{Landscape genetics} & raphs4lg & \cite{Savary2020} \\
+\multirow{4}{*}{Landscape genetics} & raphs4lg & \cite{Savary2020} \\
 & PopGenReport & \cite{Adamack2014,Gruber2015} \\
 & HierDpart & \cite{Qin2019} \\
+& GeNetIt & \cite{Murphy2010} \\
 \hline
 \multirow{4}{*}{various} & NLMR & \cite{Sciaini2018} \\
 & RandomFields & \cite{Schlather2015} \\
@@ -345,7 +361,7 @@ Task & R package & Reference \\
 \label{tab:packages}
 
 \end{table}
-
+```
 # Survey of R usage by landscape ecology community
 
 ```{r participation, include = FALSE}
@@ -383,7 +399,7 @@ To better understand how *R* is used by the landscape ecology community, we cond
 In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
 Other, less frequent answers, were "Data scientists", "None of the above", "Government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
 
-Most people use *R* either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%). 
+Most people use *R* either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%).
 About half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users.
 Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
 
@@ -574,7 +590,8 @@ Interestingly, more people use the raster data model (`r data_model[[1, 2]]`%) i
 This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey) C)).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
 The *raster* package was mentioned the most, followed by the *sf* package.
-Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey) C).
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig.
+\@ref(fig:fig-survey) C).
 Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r r_packages_df[[1, 2]]`%).
 
 ```{r usefulness, include = FALSE}
@@ -627,9 +644,7 @@ Lastly, when asked how use *R* us currently for landscape ecology, the vast majo
 
 ```
 
-\FloatBarrier
-
-# Missing packages
+The survey also included a section in which participants could list methods and tools that are currently missing in *R* and answers to this question were very diverse.
 
 ```{r comments, include = FALSE}
 
@@ -672,12 +687,10 @@ perc_characterisation <- round(length(methods_characterisation) / nrow(answers) 
 
 ```
 
-The survey also included a section in which participants could list methods and tools that are currently missing in *R* and answers to this question were very diverse.
-
 Overall, `r round(length(id_na) / nrow(answers) * 100, digits)`% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
 There were three most common topics across the answers of the participants.
 Firstly, many participants (`r perc_performance`%) wished for a better computational performance of *R* in terms of speed and required RAM, especially for larger data.
-Secondly, participant are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to  quantify landscape characteristics (`r perc_characterisation`%).
+Secondly, participant are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to quantify landscape characteristics (`r perc_characterisation`%).
 Thirdly, many participants (`r perc_viz`%) are currently missing advanced and easy-to-apply methods to create high-quality maps or other visualization-related functionality.
 
 <!--JN: I think we should answer to some of the comments in the missing packages section: point people to some packages (if possible), mention which of the missing tools are not going to be implemented, and also forward people to methods and tools on how to improve some problems (e.g. speed and required RAM for larger data -> use of Rcpp, use external servers, or read data in chunks, etc.)-->
@@ -686,7 +699,29 @@ Thirdly, many participants (`r perc_viz`%) are currently missing advanced and ea
 
 # Conclusions
 
-Since its first introduction in 1995, *R* has come a long way from a statistical programming language to a powerful tool for landscape ecology. 
+Since its first introduction in 1995, *R* has come a long way from an exclusively statistical programming language to a powerful tool for landscape ecology.
 Today, many *R* packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed for spatial data handling and analysis.
 The highly dynamic development of *R* packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
-However, since the scientific field of landscape ecology constantly changes and improves, also the *R* programming language and its packages need to change and adapt these changes.
+However, since the scientific field of landscape ecology constantly develops and improves, also the *R* programming language and its packages need to change and adapt these changes.
+
+## Acknowledgments
+
+#### Conflict of interest
+
+MHKH and JN are authors of the *landscapemetrics* and *landscapetools* package.
+JN is author of *belg* and *motif* package.
+
+#### Funding
+
+MHKH was supported by the German Research Association (DFG) Research Training Group 1644 'Scaling Problems in Statistics', grant number 152112243.
+<!-- MH: Add UMich Funding? -->
+
+#### Author contributions
+
+MHKH and JN designed the survey form and analyzed the responses of the participants.
+MHKH and JN drafted the manuscript and all authors contributed critically to the manuscript and gave final approval for publication.
+We used the 'sequence--determines--credit' approach (SDC) for the sequence of authors.
+
+#### Human and Animal Rights and Informed Consent
+
+This article does not contain any studies with human or animal subjects performed by any of the authors.
