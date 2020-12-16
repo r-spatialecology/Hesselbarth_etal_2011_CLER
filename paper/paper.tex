@@ -125,6 +125,7 @@ Originally introduced as a statistical programming language, a growing body of p
 This is documented by the growing \emph{CRAN Task Views: Analysis of Spatial Data} \cite{Bivand2019a} and \emph{Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} that currently list almost 300 packages in total.
 Since the task views are maintained manually by just a few people, the actual amount of \emph{R} packages related to spatial data is most likely even higher.
 The growing popularity of the \emph{R} programming language for spatial data analysis and landscape ecology can also be seen by the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
+A recent overview over the progress of \emph{R} to handle spatial data in general can be found e.g.~here \cite{Bivand2020}.
 
 The growing body of \emph{R} packages related to spatial data processing and analyzing results in a high capability of the \emph{R} programming language for landscape ecology.
 Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review we are going to focus on software implemented in the \emph{R} programming language.
@@ -381,16 +382,16 @@ Task & R package & Reference \\
 
 To better understand how \emph{R} is used by the landscape ecology community, we conducted a short survey and used mailing lists and social media to reach the community.
 In total, the survey was answered by 103 participants, of which the the majority were either ``PhD students'' (34\%), followed by ``Post-Docs'' (28.2\%) and ``Professors'' (12.6\%).
-Other, less frequent answers, were ``Data scientists,'' ``None of the above,'' ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
+Other, less frequent answers, were ``Data scientists'', ``None of the above'', ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
 Most people use \emph{R} either ``daily'' (54.4\%) or a ``few times a week'' (36.9\%).
 About half of all participants described themselves as ``advanced'' user (46.6\%), while 40.8\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.4\%) or plan to do so in the future (23.3\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10\% of participants included ``biodiversity,'' followed by ``land use management,'' ``landscape connectivity'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
+We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data,'' ``spatial statistics'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B)).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B)).
 Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
 Interestingly, more people use the raster data model (72.8\%) in comparison to the vector data model (27.2\%).
@@ -401,7 +402,7 @@ Both packages are designed for basic and advanced data handling and processing o
 \ref{fig:fig-survey} C).
 Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 33.4415584\%).
 
-Lastly, when asked how use \emph{R} us currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only only very few participants evaluated \emph{R} as ``intermediate,'' ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how use \emph{R} us currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
 
 \begin{verbatim}
 ## Warning: Removed 1 rows containing missing values (position_stack).
@@ -444,7 +445,7 @@ JN is author of \emph{belg} and \emph{motif} package.
 \hypertarget{funding}{%
 \paragraph{Funding}\label{funding}}
 
-MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics,' grant number 152112243.
+MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics', grant number 152112243.
 
 \hypertarget{author-contributions}{%
 \paragraph{Author contributions}\label{author-contributions}}

@@ -101,6 +101,7 @@ Originally introduced as a statistical programming language, a growing body of p
 This is documented by the growing *CRAN Task Views: Analysis of Spatial Data* \cite{Bivand2019a} and *Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} that currently list almost 300 packages in total.
 Since the task views are maintained manually by just a few people, the actual amount of *R* packages related to spatial data is most likely even higher.
 The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen by the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
+A recent overview over the progress of *R* to handle spatial data in general can be found e.g. here \cite{Bivand2020}.
 
 The growing body of *R* packages related to spatial data processing and analyzing results in a high capability of the *R* programming language for landscape ecology.
 Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review we are going to focus on software implemented in the *R* programming language.
