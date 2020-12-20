@@ -274,25 +274,24 @@ Absorbing Markov chains that combine random walk theory and mortality based on t
 
 #### Landscape genetics {#sec:landscape_genetics}
 
-Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift and selection \cite{Manel2003}.
-Such insights improve our understanding of metapopulation dynamics, speciation, species' distributions and conservation \cite{Storfer2007}.
-By explicitly including characteristics of landscape, landscape genetics is a way more realistic way of analysis than, e.g., metapopulation genetics \cite{Holderegger2006}.
-As a result of its interdisciplinary, landscape genetics combines methods from different disciplines including landscape ecology, spatial statistics, geography and population genetics \cite{Storfer2007}.
+Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift, and selection \cite{Manel2003}.
+Such insights improve our understanding of metapopulation dynamics, speciation, species' distributions, and conservation \cite{Storfer2007}.
+By explicitly including landscape characteristics, landscape genetics is a way more realistic way of analysis than, e.g., metapopulation genetics \cite{Holderegger2006}.
+As a result of its interdisciplinary, landscape genetics combines methods from different disciplines, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
 
-Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also of importance for landscape genetics.
+Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also important for landscape genetics.
 Further functionality for landscape genetics can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
 
 #### Neutral landscape models {#sec:NLM}
 
 Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}.
-Because neutral landscape models are not based on ecological and landscape process, many different generic algorithms to create landscapes can be found across many different *R* packages.
-A comprehensive collections of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the *NLMR* package \cite{Sciaini2018}.
-Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate Gaussian fields which could be used as neutral landscape models.
+Because neutral landscape models are not based on ecological and landscape processes, many different generic algorithms to create landscapes can be found across various *R* packages.
+A comprehensive collection of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the *NLMR* package \cite{Sciaini2018}.
+Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate Gaussian fields, which could be used as neutral landscape models.
 
 #### Various
 
 <!-- MH: What about spatial autocorrelation? -->
-
 <!-- MH: SpatialKDE, geoR, gstat, spdep, siland -->
 
 ```{=tex}
@@ -322,9 +321,9 @@ Task & R package & Reference \\
 & FedData & \cite{R-FedData} \\
 & getlandsat & \cite{Chamberlain2018} \\
 & MODIS & \cite{Mattiuzzi2020} \\
+& sen2r & \cite{R-sen2r} \\
 \hline
-\multirow{7}{*}{Creating maps} & rasterVis & \cite{Lamigueiro2020} \\
-& mapview & \cite{R-mapview} \\
+\multirow{7}{*}{Creating maps} & mapview & \cite{R-mapview} \\
 & tmap & \cite{Tennekes2018} \\
 & leaflet & \cite{R-leaflet} \\
 & cartography & \cite{Giraud2016} \\
@@ -401,12 +400,12 @@ own_package <- dplyr::group_by(answers, own_package) %>%
   dplyr::arrange(-n_rel)
 ```
 
-To better understand how *R* is used by the landscape ecology community, we conducted a short survey and used mailing lists and social media to reach the community.
+To better understand how the landscape ecology community uses* R*, we conducted a short survey and used mailing lists and social media to reach the community.
 In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
-Other, less frequent answers, were "Data scientists", "None of the above", "Government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
+Other, less frequent answers were "Data scientists", "None of the above", "Government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
 
 Most people use *R* either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%).
-About half of all participants described themselves as "advanced" user (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users.
+Almost half of all participants described themselves as "advanced" users (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users.
 Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
 
 ```{r research-topics, include = FALSE}
