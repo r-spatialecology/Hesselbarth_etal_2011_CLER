@@ -629,21 +629,22 @@ bad_eval <- dplyr::filter(usefulness_df, usefulness %in% c(3, 2, 1)) %>%
 ggplot_usefulness <- ggplot(data = usefulness_df) +
   geom_bar(aes(x = usefulness_class, y = n_rel), 
            stat = "identity") + 
-  theme_classic(base_size = 10) +
+  theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
-  scale_y_continuous(breaks = seq(0, 60, 10), limits = c(0, 60)) + 
+  # scale_x_continuous(breaks = seq(0, 60, 10), limits = c(0, 60)) +
   guides(fill = FALSE, colour = FALSE) +
   labs(x = NULL,
-       title = "How useful do you think is R currently for landscape ecology?", 
-       y = "Number of participants [%]")
+       title = "How useful do you think is R currently\nfor landscape ecology?", 
+       y = "Number of participants [%]") +
+  coord_flip()
 ```
 
 Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey) D)).
 
-```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. 'others' includes all answers with less than five total mentions.", warning=FALSE}
+```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. The 'others' category includes all answers with less than five total mentions.", warning=FALSE, out.width="100%"}
 
-(ggplot_topics | ggplot_tasks | ggplot_packages ) / ggplot_usefulness + 
-  plot_layout(heights = c(2, 3)) +
+(ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) + 
+  # plot_layout(heights = c(2, 3)) +
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 
 ```
