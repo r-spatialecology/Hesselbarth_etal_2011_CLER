@@ -221,23 +221,25 @@ A slightly different approach to visualizing spatial data is adapted by the *ray
 
 #### Quantify landscape characteristics {#sec:landscape_metrics}
 
-One of the most fundamental steps of landscape ecology is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}.
-For discrete land cover classes the composition (number and abundance) and configuration (spatial arrangement) of the landscape is often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
+One of the most fundamental steps of landscape ecology analyses is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}.
+For discrete land cover classes, the composition (number and abundance) and configuration (spatial arrangement) of the landscape are often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
 These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
 
-The use of landscape metrics was heavily facilitated by the introduction of the *FRAGSTATS* software \cite{McGarigal2012}, firstly published in 1995 \cite{Kupfer2012,Gustafson2019}.
-However, *FRAGSTATS* is not open-source software (however it is free to download at the developers' homepage), which restricts transparency, reproducibility, and extensibility.
-To provide a truly open-source solution to calculate landscape metrics, recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed.
-The package allows to calculate the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.
-Additionally, the *belg* packages allows to calculate the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
+The introduction of the *FRAGSTATS* in 1995 heavily facilitated the use of landscape metrics software \cite{McGarigal2012,Kupfer2012,Gustafson2019}.
+However, while *FRAGSTATS* is free to download at the developers' homepage, it is not open-source software. 
+This restricts its transparency, reproducibility, and extensibility.
+Recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed to provide a truly open-source solution to calculate landscape metrics.
+The package allows calculating the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.
 
-More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}. The *geodiv* package \cite{Smith2020} allows to gradient surface metrics to characterize continuous analysis of landscape features. 
+More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}.
+The *geodiv* package \cite{Smith2020} allows to calculate gradient surface metrics to characterize continuous analysis of landscape features. 
+Additionally, the *belg* package allows calculating the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
 
-Most of landscape metrics are a single number depicting specific characteristics of a local landscape.
+Most landscape metrics are a single number depicting specific characteristics of a local landscape.
 Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
 Spatial signatures calculated for many landscapes can be compared using one of the existing distance measures.
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
-Methods for pattern-based spatial analysis are implemented in the *motif* package \cite{R-motif}.
+All of the methods mentioned above are implemented in the *motif* package \cite{R-motif}.
 
 #### Species distribution modeling {#sec:SDM}
 
