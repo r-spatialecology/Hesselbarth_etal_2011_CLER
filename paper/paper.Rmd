@@ -138,24 +138,25 @@ include_graphics("data/Workflow.png")
 
 ## Spatial data representations {#sec:spatrep}
 
-While *R* has several build-in data structures, including vectors, matrices or lists, the base *R* programming language has no internal support for reading, processing, or visualizing spatial data.
-However, because there is a notable interest in spatial data analysis, support for spatial data is provided by many *R* packages (\cite{Lovelace2019}, page 10).
-Most spatial data belong to one of two contrasting data models, namely spatial raster and spatial vectors, and both data models have several implementations in the *R* language.
-Importantly, basically all *R* packages for spatial data use the external *GDAL* and *PROJ* libraries, which allow for e.g. reading and writing of hundreds of spatial data formats, and coordinates transformation.
-Additionally, *R*, *GDAL* and *PROJ* allow to convert between data models and specific implementations, which can be useful if given methods only exist for a specific data model or implementation.
+While *R* has several build-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
+However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many *R* packages (\cite{Lovelace2019}, page 10).
+Most spatial data belong to two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
+Importantly, main *R* packages for spatial data use the external *GDAL* and *PROJ* libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
+<!--JN: references??-->
+Additionally, *R* allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
 
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
 The values could represent discrete phenomena, such as a class number of a land cover category, or continuous phenomena, such as elevation values.
-The probably most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
-A *raster* successor aimed at the simpler interface and improved performance, *terra*, is now being developed \cite{R-terra}, however, it could take several years for this package to be adopted by users.
-Alternatively, the *stars* package can be used to read and process raster data with a focus on spatial-temporal data cubes \cite{Pebesma2019}.
+Currently, the most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
+A *raster* successor, *terra*,  aimed at the simpler interface and improved performance is now being developed \cite{R-terra}; however, it could take several years for this package to be adopted by other developers and users.
+Alternatively, the *stars* package can be used to read and process raster data focusing on spatial-temporal data cubes \cite{Pebesma2019}.
 Additionally, there are packages that improve some basics raster operations in terms of computational performance or compatibility between raster and vector operations, such as *fasterize* \cite{Ross2020}, *rasterDT* \cite{OBrien2020}, or *exactextractr* \cite{Baston2020}.
 
-The vector data model consists of two main elements i) geometries, such as points, lines, polygons, and ii) attributes and each geometry is connected to a value in an attribute table.
-In many cases, this data model allows a more natural representation of landscape features, however, with the cost of higher computational demands <!--(add reference)-->.
-The *sp* package was the standard for vector data representation for more than 10 years \cite{Pebesma2005,Bivand2013}.
+The vector data model consists of two main elements i) geometries (such as points, lines, polygons) and ii) attributes, where each geometry is connected to a row in the attribute table.
+In many cases, this data model allows a more realistic representation of landscape features, however, with the cost of higher computational demands <!--(add reference)-->.
+The *sp* package was the standard for vector data representation for more than ten years \cite{Pebesma2005,Bivand2013}.
 As of 2020, more than 500 *R* packages directly depend or imports *sp*.
-However, more recently *sp* will only be maintained (and not actively developed any more), and the recommended successor is the improved *sf* package \cite{Pebesma2018}.
+However, *sp* is not actively developed anymore, and its recommended successor is the *sf* package \cite{Pebesma2018}.
 
 <!-- JN: terra new vector representations -->
 
