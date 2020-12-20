@@ -164,16 +164,13 @@ However, *sp* is not actively developed anymore, and its recommended successor i
 
 ## Spatial data download
 
-Nowadays, spatial data for many spatial scales is available from an abundance of online accessible sources.
-A lot of this data is publicly available, either as a direct download or through an API connection, and this can be used by several packages to download the spatial data directly into a *R* session.
-Since public available data is becoming more and more prominent, so are *R* packages to accesses them. Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
-Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows to download data from the Landsat 8, while the *MODIS* package \cite{Mattiuzzi2020} allows to download MODIS products.
-Also, the `get_data()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the  in-development package *geodata* <!--(add reference)-->).
+Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
+A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an *R* session.
+Since publicly available data is becoming more prominent, so are *R* packages to access them.
+Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
+Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows to download data from the Landsat 8, the *MODIS* package \cite{Mattiuzzi2020} to download MODIS products, and *sen2r* \cite{R-sen2r} to download  Sentinel-2 optical images.
+Also, the `getData()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package *geodata* <!--(add reference) https://github.com/rspatial/geodata-->).
 Additionally, the *rgee* package \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
-
-<!-- JN: how to cite (or maybe we should just add a link to?) - https://github.com/tilezen/joerd/blob/master/docs/data-sources.md -->
-
-<!-- MH: I dont really get it. For which package do we need this link? -->
 
 ## Spatial data processing
 
