@@ -243,14 +243,13 @@ All of the methods mentioned above are implemented in the *motif* package \cite{
 
 #### Species distribution modeling {#sec:SDM}
 
-Species distribution modeling (SDM) analysis how landscape patterns (e.g. habitat suitability, resources availability, etc.) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
-Originated in the 1970s, SDM has experienced numerous methodological advancement and a numerous body of literature exists today \cite{Zimmermann2010}.
+Species distribution modeling (SDM) examine how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
+Originated in the 1970s, SDM has experienced numerous methodological advancement, and a numerous body of literature exists today \cite{Zimmermann2010}.
 Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs.
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package.
-Of course, also packages specifically designed for SDM exists.
-This includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008} or *zoon* \cite{Golding2018} packages.
+Also, packages specifically designed for SDM exists, including includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages.
 Related to SDM, there are several packages to estimate home ranges and habitat selection, including *adehabitatHR* and *adehabitatHS* \cite{Calenge2006} or *amt \cite{Signer2019}*
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
