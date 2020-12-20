@@ -204,14 +204,18 @@ It has a role in checking the spatial and value-related quality of data, data ex
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g. changing the displayed values.
 All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function.
 However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
-Advanced plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
-Alternatively, the *mapview* package can be used for quick interactive visualization of spatial data \cite{R-mapview}.
-The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.
-Thematic maps, including besides others proportional symbols, chroropleth, or typology, can be created with the *cartography* package \cite{Giraud2016}.
-Also the popular plotting package *ggplot2* \cite{Wickham2016a} has an extension especially designed for plotting spatial data named *ggspatial* \cite{R-ggspatial}.
 
-A slightly different approach of visualizing spatial data is the *rayshader* package \cite{Morgen-Wall2020} which allows to create topographical 2D and 3D maps.
+The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
+Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
+Also the popular plotting package *ggplot2* \cite{Wickham2016a} has an extension especially designed for plotting spatial data named *ggspatial* \cite{R-ggspatial}.
+<!-- Advanced plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}. -->
+<!-- JN: I do not know if we should add rasterVis here... -->
+Quick interactive visualization of spatial data can be done with the *mapview* package\cite{R-mapview}.
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.
+
+A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
+
+<!--JN: idea - a figure comparing viz of several packages-->
 
 ## Ecological analysis {#sec:ecological_analysis}
 
