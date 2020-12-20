@@ -187,12 +187,12 @@ Tools to find an appropriate CRS for a certain region can be found at <https://s
 All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing to unify spatial projections when the used data have different CRS.
 
 A second common spatial data processing task is required when the available data extends over a larger area than the study region.
-In this case, the pre-processing of spatial data can include vector clipping or raster cropping.
-Related to that, also masking of certain areas of the study region can be required by using e.g. certain spatial filters such as water bodies.
+In this case, the pre-processing of spatial data should include vector clipping or raster cropping.
+Related to that, masking certain areas of the study region can be required by using, e.g., certain spatial filters such as water bodies.
 Packages from Section \@ref(sec:spatrep) also allow for these operations.
-Additionally, they offer many other operations, such as merging or joining of spatial data, extraction of values from one dataset into another, raster resolution changes, or vector data simplifications.
+Additionally, they offer many other operations, such as merging or joining spatial data, extracting values from one dataset into another, raster resolution changes, or vector data simplifications.
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}.
-Furthermore, *landscapetools* is a collection of various utility functions for the raster data model.
+Furthermore, *landscapetools* is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
 Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
 
