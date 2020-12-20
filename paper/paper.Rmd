@@ -454,7 +454,7 @@ ggplot_topics <-  ggplot(data = topics_df) +
 
 ```
 
-We asked the participants to select which terms describe their research topics the best and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity" and "nature conservation" (Fig. \@ref(fig:fig-survey) A)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey) A)).
 
 ```{r tasks, include = FALSE}
 # get data 
@@ -516,7 +516,7 @@ ggplot_tasks <- ggplot(data = tasks_df) +
 ```
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, "(pre-)processing of data", "spatial statistics" and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey) B)).
+Not surprisingly, "(pre-)processing of data", "spatial statistics", and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey) B)).
 Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the "others" option (all options with less than five total answers were classified as "others").
 
 ```{r data-model, include = FALSE}
@@ -595,9 +595,8 @@ Interestingly, more people use the raster data model (`r data_model[[1, 2]]`%) i
 This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey) C)).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
 The *raster* package was mentioned the most, followed by the *sf* package.
-Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig.
-\@ref(fig:fig-survey) C).
-Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r r_packages_df[[1, 2]]`%).
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey) C).
+Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r round(r_packages_df[[1, 2]], 2)`%).
 
 ```{r usefulness, include = FALSE}
 # create vector with classses
@@ -639,9 +638,9 @@ ggplot_usefulness <- ggplot(data = usefulness_df) +
        y = "Number of participants [%]")
 ```
 
-Lastly, when asked how use *R* us currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey) D)).
+Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey) D)).
 
-```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. 'others' includes all answers with less than five total mentions."}
+```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. 'others' includes all answers with less than five total mentions.", warning=FALSE}
 
 (ggplot_topics | ggplot_tasks | ggplot_packages ) / ggplot_usefulness + 
   plot_layout(heights = c(2, 3)) +
@@ -649,7 +648,7 @@ Lastly, when asked how use *R* us currently for landscape ecology, the vast majo
 
 ```
 
-The survey also included a section in which participants could list methods and tools that are currently missing in *R* and answers to this question were very diverse.
+The survey also included a section in which participants could list methods and tools currently missing in *R* and answers to this question were very diverse.
 
 ```{r comments, include = FALSE}
 
@@ -695,7 +694,7 @@ perc_characterisation <- round(length(methods_characterisation) / nrow(answers) 
 Overall, `r round(length(id_na) / nrow(answers) * 100, digits)`% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
 There were three most common topics across the answers of the participants.
 Firstly, many participants (`r perc_performance`%) wished for a better computational performance of *R* in terms of speed and required RAM, especially for larger data.
-Secondly, participant are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to quantify landscape characteristics (`r perc_characterisation`%).
+Secondly, participants are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to quantify landscape characteristics (`r perc_characterisation`%).
 Thirdly, many participants (`r perc_viz`%) are currently missing advanced and easy-to-apply methods to create high-quality maps or other visualization-related functionality.
 
 <!--JN: I think we should answer to some of the comments in the missing packages section: point people to some packages (if possible), mention which of the missing tools are not going to be implemented, and also forward people to methods and tools on how to improve some problems (e.g. speed and required RAM for larger data -> use of Rcpp, use external servers, or read data in chunks, etc.)-->
@@ -704,10 +703,17 @@ Thirdly, many participants (`r perc_viz`%) are currently missing advanced and ea
 
 # Conclusions
 
-Since its first introduction in 1995, *R* has come a long way from an exclusively statistical programming language to a powerful tool for landscape ecology.
-Today, many *R* packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed for spatial data handling and analysis.
+<!--intro-->
+Since its first introduction in 1995, *R* has come a long way from an exclusively statistical programming language to a powerful landscape ecology tool.
+Today, many *R* packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed at spatial data handling and analysis.
 The highly dynamic development of *R* packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
-However, since the scientific field of landscape ecology constantly develops and improves, also the *R* programming language and its packages need to change and adapt these changes.
+However, since landscape ecology constantly develops and improves, the *R* programming language and its packages need to change and adapt to these changes.
+
+<!--a paragraph summarizing possibilities-->
+
+<!--a paragraph summarizing the survey-->
+
+<!--a paragraph about missing features/future work-->
 
 ## Acknowledgments
 
