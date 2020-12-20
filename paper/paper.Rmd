@@ -74,41 +74,47 @@ base_size <- 7.5
 
 ## A short introduction to landscape ecology {#sec:landscape_ecology}
 
-Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and simultaneously how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
-In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+<!-- JN: my first thought was - "do we even need this kind of introduction in the 'Current Landscape Ecology Reports' journal"; however, after a while, I like it a lot. It could be very helpful for people from other fields. -->
 
-While human activities have altered the landscapes for millenniums \cite{Ellis2011,Ellis2015}, in the past centuries the effects of humans on landscapes have increased to an unknown high, known as the the Anthropocene \cite{Crutzen2002}.
+Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
+In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+
+While human activities have altered the landscapes for millenniums \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
 Today, almost all landscapes are directly or indirectly influenced by human activities \cite{Vitousek1997}.
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important \cite{With2019}.
 
-Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes will vary spatially \cite{With2019}.
+Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes vary spatially \cite{With2019}.
 To this, the importance of scale was already raised decades ago \cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance until today \cite{Simova2012,Estes2018}.
-Thus, in contrast to many other sub-disciplines of ecology, landscape ecology emphasizes especially spatial patterns to a high degree \cite{Risser1984}.
+Thus, in contrast to many other sub-disciplines of ecology, landscape ecology emphasizes spatial patterns to a high degree \cite{Risser1984}.
 Consequently, the field of landscape ecology relies on software to preprocess, modify, model, analyze, and visualize spatial data.
 
 ## Open-source software and *R* {#sec:open_source}
 
 Software to manage and analyze data becomes increasingly important in modern scientific research \cite{Wilson2014} and many scientific studies would not have been possible without open-source software \cite{Prlic2012}.
-Open-source software includes all software which is released under licenses that allow to freely use, modify and distribute the software \cite{St.Laurent2008}.
-Open-source software development has many advantages, such as fast innovation, transparency, and reliability as well as longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
+Open-source software includes all software that is released under licenses that allow to use, modify and distribute the software \cite{St.Laurent2008}.
+Open-source software development has many advantages, such as fast innovation, transparency, reliability, and longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
 Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the used methodology of a study \cite{Prlic2012,Powers2019}.
+<!--JN: I like the second argument above. We can also add that the use of open-source software democratize scientific research (as opposed to the closed+expensive software) -->
 Furthermore, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} by customizing existing software to their specific needs \cite{Steiniger2009}.
-Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost which allows to use the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
+Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows using the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
 
-One successful example of an open-source project is the *R* programming language and its extensions (also called packages) \cite{RCoreTeam2019}.
-Firstly introduced in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
-Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006}.
-This is documented by the growing *CRAN Task Views: Analysis of Spatial Data* \cite{Bivand2019a} and *Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} that currently list almost 300 packages in total.
+One successful example of an open-source project is the *R* programming language, and its extensions called packages \cite{RCoreTeam2019}.
+Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
+<!--language is older (1991?), but in 1995 it was officially released for the first time-->
+Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006,Lovelace2019}.
+The expanding CRAN Task Views document this: *Analysis of Spatial Data* \cite{Bivand2019a} and *Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} currently list about 300 packages in total.
 Since the task views are maintained manually by just a few people, the actual amount of *R* packages related to spatial data is most likely even higher.
-The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen by the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
-A recent overview over the progress of *R* to handle spatial data in general can be found e.g. here \cite{Bivand2020}.
+The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
+<!--JN: should we cite Pebesma2019a as it is a work in progress? -->
+<!--JN: also - maybe we should cite http://book.ecosens.org/RSEbook/?-->
+A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
 
-The growing body of *R* packages related to spatial data processing and analyzing results in a high capability of the *R* programming language for landscape ecology.
-Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review we are going to focus on software implemented in the *R* programming language.
-For more general overviews of open-source software for landscape ecology see e.g. \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because additionally to handling spatial data, also further tasks such as statistical modeling, preparation of publication-ready figures and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
-Thus, in the first part we present an overview over existing *R* packages for landscape ecology (Table \@ref(tab:packages)).
-In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are currently missing for landscape ecology.
+The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
+Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review, we focus on software implemented in the *R* programming language.
+For more general overviews of open-source software for landscape ecology see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
+Because in addition to handling spatial data, also tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
+Thus, in the first part, we present an overview of existing *R* packages for landscape ecology (Table \@ref(tab:packages)).
+In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are presently missing for landscape ecology.
 
 # Existing packages {#sec:existing_packages}
 
