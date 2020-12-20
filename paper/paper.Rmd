@@ -118,20 +118,23 @@ In the second part, we present a survey in which we asked the community how they
 
 # Existing packages {#sec:existing_packages}
 
-Since most *R* packages are developed and maintained by the community, this shows how open-source software development can facilitate innovation, reproducibility and reuse of code.
-There are two major online platforms to host *R* packages and make them accessible to potential users.
-Firstly, *GitHub* allows to host source code under version control and users can install packages with one line using the *remotes* \cite{Hester2020} package.
-Additionally, hosting the package on *GitHub* provides many useful features to collaborate and communicate between developers as well as users \cite{Wickham2015}, or integrated unit testing.
-Secondly, the *Comprehensive R Archive Network* (*CRAN*) provides a large visibility to the community, ease of installation and a technical quality standard, including checks for common problems on all major operating systems.
-\cite{Wickham2015}.
-For developers, the guaranteed technical quality standard on *CRAN* requires more initial work for compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e. package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
-Thus, most packages can be found on both platforms and many developers use *GitHub* for daily developing and *CRAN* to publish stable releases of the packages.
+Most *R* packages are developed and maintained by the community, which shows how open-source software development can facilitate innovation, reproducibility, and reuse of code.
+There are three major online platforms to host *R* packages and make them accessible to potential users: CRAN, GitHub, and Bioconductor.
+The last one focuses on tools for the analysis of genomic data; therefore, we focus on only the former two in this review.
+CRAN (the *Comprehensive R Archive Network*) provides large visibility to the community, ease of installation, and a technical quality standard, including checks for common problems on all major operating systems \cite{Wickham2015}.
+*GitHub* hosts source code under version control, and allows users to install packages with one line of code using the *remotes* \cite{Hester2020} package.
+Additionally, hosting the package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
+
+The guaranteed technical quality standard on *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
+Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
 For more information about *R* package development, see \cite{Wickham2015}.
 
-```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary worklow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. Of course, many more packages for the specific tasks exist."}
+```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary workflow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. ."}
 include_graphics("data/Workflow.png")
 ```
+
+<!--JN: the above figure is nice; we should update it when everything else is done-->
 
 ## Spatial data representations {#sec:spatrep}
 
