@@ -259,19 +259,18 @@ Related to SDM, there are several packages to estimate home ranges and habitat s
 Connectivity is one of the core elements of landscape structure \cite{Taylor1993} and thus one of the core concepts of landscape ecology \cite{With2019}.
 Landscape connectivity describes how landscape characteristics facilitate or hinder the movement of species \cite{Tischendorf2000} or other aspects of mobility, such as dispersal, gene or nutrient flow \cite{With2019}.
 While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species \cite{Tischendorf2000,With2019}.
-Given its wide concept, many different measures of connectivity exists \cite{Kindlmann2008}.
-On patch level structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g. amount of suitable habitat) \cite{Kindlmann2008,With2019}.
+Given its broad concept, many different measures of connectivity exist \cite{Kindlmann2008}.
+On patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
 Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}).
 Furthermore, the *lconnect* package \cite{Mestre2019} and *Makurhini* package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
-Another way to describe connectivity is based on graph theory with the advantages that also functional connectivity can be included \cite{Kindlmann2008}.
-In graph theory \cite{Laita2011} landscapes are described by nodes (i.e. habitat patches) connected by and functional connections called links \cite{Laita2011}.
+Another way to describe connectivity is based on graph theory with the advantage that functional connectivity can also be included \cite{Kindlmann2008}.
+In graph theory \cite{Laita2011}, landscapes are described by nodes (i.e., habitat patches) connected by and functional connections called links (or edges) \cite{Laita2011}.
 The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
-More general, the *igraph* packages \cite{Csardi2006} provides functionality related to graph theory.
-Resistance surfaces and least-cost paths are another tool to model functional connectivity.
-The resistance surface describes effects of facilitating or hindering characteristics of the landscape for an organism moving within it \cite{Adriaensen2003}.
+More general, the *igraph* package \cite{Csardi2006} provides functionality related to graph theory.
+Resistance surfaces and least-cost paths are other tools to model functional connectivity.
+The resistance surface describes the effects of facilitating or hindering the landscape's characteristics for an organism moving within it \cite{Adriaensen2003}.
 Least-cost paths can be calculated using the *gdistance* package \cite{vanEtten2017}.
-Absorbing Markov chains that combines random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published *samc* package \cite{Marx2020}.
-
+Absorbing Markov chains that combine random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published *samc* package \cite{Marx2020}.
 
 #### Landscape genetics {#sec:landscape_genetics}
 
