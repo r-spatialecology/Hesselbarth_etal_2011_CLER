@@ -175,16 +175,16 @@ Additionally, the *rgee* package \cite{R-rgee} gives access to an extensive cata
 ## Spatial data processing
 
 Coordinate references systems (CRS) describe how spatial data is projected from the earth's three-dimensional surface to a two-dimensional surface as required for spatial analysis or creating maps <!-- (add reference) -->.
-This is also referred to as the projection of the data and is often a first barrier in spatial data analysis.
-It is not only required to have all of the used data in the same projection, but also selection of a proper projection is crucial.
-This is of importance because the projection into a two-dimensional surface unavoidable leads to distortion and different CRS are optimized for different regions of the world and scales <!-- (add reference) -->.
-Coordinates in spatial data can represent one of many coordinate reference systems.
-Two main groups of CRS exist, namely geographical and projected, each having many members.
+This is also referred to as the spatial projection and is often the first barrier in spatial data analysis.
+It is not only required to have all of the used data in the same projection, but also to select a proper CRS.
+This is of importance because the projection into a two-dimensional surface unavoidable leads to distortion, and different CRS are optimized for different properties, regions of the world, and scales <!-- (add reference) -->.
+Coordinates in spatial data represent one of many coordinate reference systems.
+Two main groups of CRS, namely geographical and projected, exist, with each having many members.
 In the first one, geographical, positions are specified by latitude and longitude coordinates in degrees.
-However, in most landscape ecology studies, projected CRSs, which use some measurement units (e.g., meters), should be utilized.
-Selected projected CRS should be based on projection that keeps important properties of spatial data intact (e.g., does not distort areas, shapes, distances, angles) and be appropriate for a given study area.
+However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
+The selection of projected CRS should be based on the property of spatial data that we want to keep intact (e.g., does not distort areas, shapes, distances, or angles) and be appropriate for a given study area.
 Tools to find an appropriate CRS for a certain region can be found at <https://spatialreference.org>, <https://epsg.org>, or <http://epsg.io>.
-In used data have different CRS, all packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations.
+All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing to unify spatial projections when the used data have different CRS.
 
 A second common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data can include vector clipping or raster cropping.
@@ -195,12 +195,6 @@ A comprehensive collection of methods to aggregate raster values to a coarser re
 Furthermore, *landscapetools* is a collection of various utility functions for the raster data model.
 
 Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
-
-<!--JN: should we mention ArcGIS here and some of its modules?-->
-<!-- MH: I don't think this is really important -->
-
-<!--JN: in the same vain as above: should we mention Google Earth Engine?-->
-<!-- MH: Again, I dont think thats really of relevance. I think as it is now its ok  -->
 
 ## Creating maps
 
