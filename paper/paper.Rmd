@@ -1,5 +1,5 @@
 ---
-title: Open source landscape ecology tools
+title: Open-source tools in R for landscape ecology
 # subtitle: Do you have a subtitle? If so, write it here
 # titlerunning: Open source landscape ecology tools
 # authorrunning: Short form of author list if too long for running head
