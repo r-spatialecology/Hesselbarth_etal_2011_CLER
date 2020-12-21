@@ -75,6 +75,7 @@ base_size <- 7.5
 ## A short introduction to landscape ecology {#sec:landscape_ecology}
 
 <!-- JN: my first thought was - "do we even need this kind of introduction in the 'Current Landscape Ecology Reports' journal"; however, after a while, I like it a lot. It could be very helpful for people from other fields. -->
+<!-- MH: Yeah, I kind of like it. It sets the stage I think. Also, I hope the paper will be read by people that are not really familiar with landscape ecology as a field and just came across some spatial data -->
 
 Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
 In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
@@ -94,19 +95,22 @@ Software to manage and analyze data becomes increasingly important in modern sci
 Open-source software includes all software that is released under licenses that allow to use, modify and distribute the software \cite{St.Laurent2008}.
 Open-source software development has many advantages, such as fast innovation, transparency, reliability, and longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
 Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the used methodology of a study \cite{Prlic2012,Powers2019}.
-<!--JN: I like the second argument above. We can also add that the use of open-source software democratize scientific research (as opposed to the closed+expensive software) -->
 Furthermore, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} by customizing existing software to their specific needs \cite{Steiniger2009}.
 Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows using the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
+This democratize scientific research as free-of-cost software removes one gatekeeper for researches without access to proprietary software.
 
 One successful example of an open-source project is the *R* programming language, and its extensions called packages \cite{RCoreTeam2019}.
 Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
-<!--language is older (1991?), but in 1995 it was officially released for the first time-->
+<!--JN: language is older (1991?), but in 1995 it was officially released for the first time-->
+<!-- MH: Since we write "released" I think it's ok to use 1995? Especially since this was most likely the time a broader audience used it? -->
 Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006,Lovelace2019}.
 The expanding CRAN Task Views document this: *Analysis of Spatial Data* \cite{Bivand2019a} and *Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} currently list about 300 packages in total.
 Since the task views are maintained manually by just a few people, the actual amount of *R* packages related to spatial data is most likely even higher.
 The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Fletcher2019,Lovelace2019,Pebesma2019a}.
 <!--JN: should we cite Pebesma2019a as it is a work in progress? -->
+<!-- MH: I think this does not speak against citing it, but also happy to remove it -->
 <!--JN: also - maybe we should cite http://book.ecosens.org/RSEbook/?-->
+<!-- MH: I dont know it, but sure if it fits -->
 A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
 
 The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
@@ -159,7 +163,6 @@ As of 2020, more than 500 *R* packages directly depend or imports *sp*.
 However, *sp* is not actively developed anymore, and its recommended successor is the *sf* package \cite{Pebesma2018}.
 
 <!-- JN: terra new vector representations -->
-
 <!-- MH: I probably would not add terra here. As far as I see it, the vector support in terra is basically just support to combine vector with raster data. The main focus of the package is raster data though -->
 
 ## Spatial data download
@@ -216,6 +219,7 @@ Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascri
 A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
 <!--JN: idea - a figure comparing viz of several packages-->
+<!-- MH: I like the idea: Maybe one base plot, one fancy map (tmap) and a screenshot of an interactive map? -->
 
 ## Ecological analysis {#sec:ecological_analysis}
 
