@@ -127,10 +127,10 @@ There are three major online platforms to host *R* packages and make them access
 The last one focuses on tools for the analysis of genomic data; therefore, we focus on only the former two in this review.
 CRAN (the *Comprehensive R Archive Network*) provides large visibility to the community, ease of installation, and a technical quality standard, including checks for common problems on all major operating systems \cite{Wickham2015}.
 *GitHub* hosts source code under version control, and allows users to install packages with one line of code using the *remotes* \cite{Hester2020} package.
-Additionally, hosting the package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
+Additionally, hosting a package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
 
 The guaranteed technical quality standard on *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}. CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
 Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
 For more information about *R* package development, see \cite{Wickham2015}.
 
@@ -144,7 +144,7 @@ include_graphics("data/Workflow.png")
 
 While *R* has several build-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many *R* packages (\cite{Lovelace2019}, page 10).
-Most spatial data belong to two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
+Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
 Importantly, main *R* packages for spatial data use the external *GDAL* and *PROJ* libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
 <!--JN: references??-->
 Additionally, *R* allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
