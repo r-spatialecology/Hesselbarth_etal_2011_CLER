@@ -45,12 +45,12 @@ end of the article.} }
 
 
 
-\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  \ldots{} \and  }
+\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Johannes M. Signer \and  Laura J. Graham \and  }
 
 
 \institute{
         Maximillian H.K. Hesselbarth \at
-     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany \\
+     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, 48109, USA \\
      \email{\href{mailto:mhk.hesselbarth@gmail.com}{\nolinkurl{mhk.hesselbarth@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
@@ -59,9 +59,14 @@ end of the article.} }
      \email{\href{mailto:nowosad.jakub@gmail.com}{\nolinkurl{nowosad.jakub@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
-        \ldots{} \at
-     \ldots{} \\
-     \email{\ldots{}}  %  \\
+        Johannes M. Signer \at
+     Department of Wildlife Sciences, University of Göttingen, Büsgenweg 3, 37077 Göttingen, Germany \\
+     \email{\href{mailto:j.m.signer@gmail.com}{\nolinkurl{j.m.signer@gmail.com}}}  %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+    \and
+        Laura J. Graham \at
+     Geography and Environment, University of Southampton, Highfield Rd, Southampton SO17 1BJ, United Kingdom \\
+     \email{\href{mailto:l.graham@bham.ac.uk}{\nolinkurl{l.graham@bham.ac.uk}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
     }
@@ -76,10 +81,10 @@ end of the article.} }
 max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 \\
 \keywords{
-        keyword 1 \and
-        keyword 2 \and
-        keyword 3 \and
-        keyword 4 \and
+        spatial data \and
+        statistical programming language \and
+        R packages \and
+        reproducibility \and
         \ldots{} \and
     }
 
@@ -143,11 +148,13 @@ There are three major online platforms to host \emph{R} packages and make them a
 The last one focuses on tools for the analysis of genomic data; therefore, we focus on only the former two in this review.
 CRAN (the \emph{Comprehensive R Archive Network}) provides large visibility to the community, ease of installation, and a technical quality standard, including checks for common problems on all major operating systems \cite{Wickham2015}.
 \emph{GitHub} hosts source code under version control, and allows users to install packages with one line of code using the \emph{remotes} \cite{Hester2020} package.
-Additionally, hosting the package on \emph{GitHub} provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
+Additionally, hosting a package on \emph{GitHub} provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
 
 The guaranteed technical quality standard on \emph{CRAN} requires more initial work for developers compared to \emph{GitHub}, while it ensures for users that the package can be installed on their machine.
 Additionally, the technical quality standard on \emph{CRAN} also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of \emph{R} packages, i.e., package \emph{x} requires and uses code from package \emph{y} \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
 Thus, most packages can be found on both platforms, and many developers use \emph{GitHub} for regular development and \emph{CRAN} to publish stable releases of the packages.
+Furthermore, communities like \emph{rOpenSci} also provide a peer review process for code quality.
 For more information about \emph{R} package development, see \cite{Wickham2015}.
 
 \begin{figure}
@@ -159,7 +166,7 @@ For more information about \emph{R} package development, see \cite{Wickham2015}.
 
 While \emph{R} has several build-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \emph{R} packages (\cite{Lovelace2019}, page 10).
-Most spatial data belong to two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \emph{R} language.
+Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \emph{R} language.
 Importantly, main \emph{R} packages for spatial data use the external \emph{GDAL} and \emph{PROJ} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
 Additionally, \emph{R} allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
 

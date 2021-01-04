@@ -9,19 +9,24 @@ thanks: |
     end of the article.
 authors: 
 - name: Maximillian H.K. Hesselbarth
-  address: Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
+  address: 
+    Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
+    Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, 48109, USA
   email: mhk.hesselbarth@gmail.com
 - name: Jakub Nowosad
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
   email: nowosad.jakub@gmail.com
-- name: ...
-  address: ...
-  email: ...
+- name: Johannes M. Signer
+  address: Department of Wildlife Sciences, University of Göttingen, Büsgenweg 3, 37077 Göttingen, Germany
+  email: j.m.signer@gmail.com
+- name: Laura J. Graham
+  address: Geography and Environment, University of Southampton, Highfield Rd, Southampton SO17 1BJ, United Kingdom
+  email: l.graham@bham.ac.uk
 keywords:
-- keyword 1
-- keyword 2
-- keyword 3
-- keyword 4
+- spatial data
+- statistical programming language
+- R packages
+- reproducibility
 - ...
 abstract: |
   max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
@@ -130,8 +135,10 @@ CRAN (the *Comprehensive R Archive Network*) provides large visibility to the co
 Additionally, hosting a package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
 
 The guaranteed technical quality standard on *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}. CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
+Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}. 
+CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
 Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
+Furthermore, communities like *rOpenSci* also provide a peer review process for code quality.
 For more information about *R* package development, see \cite{Wickham2015}.
 
 ```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary workflow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. ."}
