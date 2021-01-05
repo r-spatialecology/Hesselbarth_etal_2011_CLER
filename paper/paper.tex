@@ -65,7 +65,7 @@ end of the article.} }
 %             \emph{Present address:} of F. Author  %  if needed
     \and
         Laura J. Graham \at
-     Geography and Environment, University of Southampton, Highfield Rd, Southampton SO17 1BJ, United Kingdom \\
+     Geography, Earth \& Environmental Sciences, University of Birmingham, Edgbaston, Birmingham B15 2TT, United Kingdom \\
      \email{\href{mailto:l.graham@bham.ac.uk}{\nolinkurl{l.graham@bham.ac.uk}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
@@ -105,7 +105,7 @@ max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract 
 Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
 In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
-While human activities have altered the landscapes for millenniums \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
+While human activities have altered the landscapes for millennia \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
 Today, almost all landscapes are directly or indirectly influenced by human activities \cite{Vitousek1997}.
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important \cite{With2019}.
 
@@ -122,8 +122,8 @@ Open-source software includes all software that is released under licenses that 
 Open-source software development has many advantages, such as fast innovation, transparency, reliability, and longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
 Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the used methodology of a study \cite{Prlic2012,Powers2019}.
 Furthermore, open-source software allows other scientists to reuse code and not ``reinvent the wheel'' \cite{Prlic2012} by customizing existing software to their specific needs \cite{Steiniger2009}.
-Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows using the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
-This democratize scientific research as free-of-cost software removes one gatekeeper for researches without access to proprietary software.
+Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows use of the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
+This democratizes scientific research as free-of-cost software removes one gatekeeper for researchers without access to proprietary software.
 
 One successful example of an open-source project is the \emph{R} programming language, and its extensions called packages \cite{RCoreTeam2019}.
 Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
@@ -136,7 +136,7 @@ A recent overview over the progress of \emph{R} to handle spatial data in genera
 The growing body of \emph{R} packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
 Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review, we focus on software implemented in the \emph{R} programming language.
 For more general overviews of open-source software for landscape ecology see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because in addition to handling spatial data, also tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \ref{fig:fig-workflow}), the \emph{R} programming language can be a very powerful tool.
+Because in addition to handling spatial data, tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \ref{fig:fig-workflow}), the \emph{R} programming language can be a very powerful tool.
 Thus, in the first part, we present an overview of existing \emph{R} packages for landscape ecology (Table \ref{tab:packages}).
 In the second part, we present a survey in which we asked the community how they currently use the \emph{R} programming language and to identify topics for which \emph{R} packages are presently missing for landscape ecology.
 
@@ -175,7 +175,7 @@ The values could represent discrete phenomena, such as a class number of a land 
 Currently, the most prominent package allowing for raster data representation is \emph{raster} \cite{Hijmans2019}.
 A \emph{raster} successor, \emph{terra}, aimed at the simpler interface and improved performance is now being developed \cite{R-terra}; however, it could take several years for this package to be adopted by other developers and users.
 Alternatively, the \emph{stars} package can be used to read and process raster data focusing on spatial-temporal data cubes \cite{Pebesma2019}.
-Additionally, there are packages that improve some basics raster operations in terms of computational performance or compatibility between raster and vector operations, such as \emph{fasterize} \cite{Ross2020}, \emph{rasterDT} \cite{OBrien2020}, or \emph{exactextractr} \cite{Baston2020}.
+Additionally, there are packages that improve some basic raster operations in terms of computational performance or compatibility between raster and vector operations, such as \emph{fasterize} \cite{Ross2020}, \emph{rasterDT} \cite{OBrien2020}, or \emph{exactextractr} \cite{Baston2020}.
 
 The vector data model consists of two main elements i) geometries (such as points, lines, polygons) and ii) attributes, where each geometry is connected to a row in the attribute table.
 In many cases, this data model allows a more realistic representation of landscape features, however, with the cost of higher computational demands .
@@ -189,9 +189,9 @@ However, \emph{sp} is not actively developed anymore, and its recommended succes
 Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
 A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \emph{R} session.
 Since publicly available data is becoming more prominent, so are \emph{R} packages to access them.
-Packages include \emph{rnaturalearth} \cite{South2017} to access the Natural Earth database, the \emph{elevatr} package to access raster elevation data \cite{R-elevatr}, the \emph{rgbif} to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the \emph{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \emph{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \emph{FedData} package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
-Furthermore, the \emph{getlandsat} package \cite{Chamberlain2018} allows to download data from the Landsat 8, the \emph{MODIS} package \cite{Mattiuzzi2020} to download MODIS products, and \emph{sen2r} \cite{R-sen2r} to download Sentinel-2 optical images.
-Also, the \texttt{getData()} function from the \emph{raster} package allows to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package \emph{geodata} ).
+Packages include \emph{rnaturalearth} \cite{South2017} to access the Natural Earth database, the \emph{elevatr} package to access raster elevation data \cite{R-elevatr}, the \emph{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the \emph{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \emph{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \emph{FedData} package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
+Furthermore, the \emph{getlandsat} package \cite{Chamberlain2018} allows users to download data from the Landsat 8, the \emph{MODIS} package \cite{Mattiuzzi2020} to download MODIS products, and \emph{sen2r} \cite{R-sen2r} to download Sentinel-2 optical images.
+Also, the \texttt{getData()} function from the \emph{raster} package allows users to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package \emph{geodata} ).
 Additionally, the \emph{rgee} package \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
 
 \hypertarget{spatial-data-processing}{%
@@ -207,17 +207,17 @@ In the first one, geographical, positions are specified by latitude and longitud
 However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
 The selection of projected CRS should be based on the property of spatial data that we want to keep intact (e.g., does not distort areas, shapes, distances, or angles) and be appropriate for a given study area.
 Tools to find an appropriate CRS for a certain region can be found at \url{https://spatialreference.org}, \url{https://epsg.org}, or \url{http://epsg.io}.
-All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing to unify spatial projections when the used data have different CRS.
+All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
 A second common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data should include vector clipping or raster cropping.
-Related to that, masking certain areas of the study region can be required by using, e.g., certain spatial filters such as water bodies.
+Related to that, masking certain areas of the study region using spatial filters (e.g.~water bodies, urban areas) can be required.
 Packages from Section \ref{sec:spatrep} also allow for these operations.
 Additionally, they offer many other operations, such as merging or joining spatial data, extracting values from one dataset into another, raster resolution changes, or vector data simplifications.
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the \emph{grainchanger} package \cite{Graham2019}.
 Furthermore, \emph{landscapetools} is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
-Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine. Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
+Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine. Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
 
 \hypertarget{creating-maps}{%
 \subsection{Creating maps}\label{creating-maps}}
@@ -232,6 +232,7 @@ However, the generic functions are focused on quick visual inspection of the dat
 The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
 Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
 Also the popular plotting package \emph{ggplot2} \cite{Wickham2016a} has an extension especially designed for plotting spatial data named \emph{ggspatial} \cite{R-ggspatial}.
+
 Quick interactive visualization of spatial data can be done with the \emph{mapview} package\cite{R-mapview}.
 Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{R-leaflet}.
 
@@ -245,28 +246,28 @@ A slightly different approach to visualizing spatial data is adapted by the \emp
 
 One of the most fundamental steps of landscape ecology analyses is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}.
 For discrete land cover classes, the composition (number and abundance) and configuration (spatial arrangement) of the landscape are often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
-These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
+These metrics allow the comparison of different landscapes, quantification of temporal and spatial landscape changes and investigation of interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
 
 The introduction of the \emph{FRAGSTATS} in 1995 heavily facilitated the use of landscape metrics software \cite{McGarigal2012,Kupfer2012,Gustafson2019}.
 However, while \emph{FRAGSTATS} is free to download at the developers' homepage, it is not open-source software.
 This restricts its transparency, reproducibility, and extensibility.
 Recently the \emph{landscapemetrics} package \cite{Hesselbarth2019a} was developed to provide a truly open-source solution to calculate landscape metrics.
-The package allows calculating the most widely used landscape metrics in a transparent and reproducible workflow within the \emph{R} environment.
+The package allows calculation of the most widely used landscape metrics in a transparent and reproducible workflow within the \emph{R} environment.
 
 More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}.
-The \emph{geodiv} package \cite{Smith2020} allows to calculate gradient surface metrics to characterize continuous analysis of landscape features.
-Additionally, the \emph{belg} package allows calculating the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
+The \emph{geodiv} package \cite{Smith2020} allows calculation of gradient surface metrics to facilitate continuous analysis of landscape features.
+Additionally, the \emph{belg} package allows calculation of the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
 
-Most landscape metrics are a single number depicting specific characteristics of a local landscape.
+Most landscape metrics are a represented by a single number depicting specific characteristics of a local landscape.
 Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
-Spatial signatures calculated for many landscapes can be compared using one of the existing distance measures.
+Spatial signatures calculated for many landscapes can be compared using one of a set of existing distance measures (e.g.~Euclidian, Manhattan, Mahlanobis).
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the \emph{motif} package \cite{R-motif}.
 
 \hypertarget{sec:SDM}{%
 \paragraph{Species distribution modeling}\label{sec:SDM}}
 
-Species distribution modeling (SDM) examine how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
+Species distribution modeling (SDM) examines how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species' distributions, mainly to infer ecological processes and predict future species' distributions \cite{Wiersma2011}.
 Originated in the 1970s, SDM has experienced numerous methodological advancement, and a numerous body of literature exists today \cite{Zimmermann2010}.
 Additionally, textbooks introducing basic concepts of SDM in \emph{R} exists \cite{Guisan2017,Fletcher2019}.
 
@@ -280,30 +281,30 @@ Related to SDM, there are several packages to estimate home ranges and habitat s
 
 Connectivity is one of the core elements of landscape structure \cite{Taylor1993} and thus one of the core concepts of landscape ecology \cite{With2019}.
 Landscape connectivity describes how landscape characteristics facilitate or hinder the movement of species \cite{Tischendorf2000} or other aspects of mobility, such as dispersal, gene or nutrient flow \cite{With2019}.
-While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species \cite{Tischendorf2000,With2019}.
+While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species such as habitat associations and dispersal distances \cite{Tischendorf2000,With2019}.
 Given its broad concept, many different measures of connectivity exist \cite{Kindlmann2008}.
-On patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
+At the patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
 Such measures are provided within the \emph{landscapemetrics} package (see \ref{sec:landscape_metrics}).
 Furthermore, the \emph{lconnect} package \cite{Mestre2019} and \emph{Makurhini} package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
 Another way to describe connectivity is based on graph theory with the advantage that functional connectivity can also be included \cite{Kindlmann2008}.
 In graph theory \cite{Laita2011}, landscapes are described by nodes (i.e., habitat patches) connected by and functional connections called links (or edges) \cite{Laita2011}.
 The \emph{grainscape} package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
-More general, the \emph{igraph} package \cite{Csardi2006} provides functionality related to graph theory.
-Resistance surfaces and least-cost paths are other tools to model functional connectivity.
+More generally, the \emph{igraph} package \cite{Csardi2006} provides functionality for graph theoretic analyses.
+Resistance surfaces and least-cost paths are other tools to model functional connectivity which include attributes of the matrix.
 The resistance surface describes the effects of facilitating or hindering the landscape's characteristics for an organism moving within it \cite{Adriaensen2003}.
 Least-cost paths can be calculated using the \emph{gdistance} package \cite{vanEtten2017}.
-Absorbing Markov chains that combine random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published \emph{samc} package \cite{Marx2020}.
+Absorbing Markov chains quantify landscape connectivity as the combination of movement and mortality based on the landscape characteristics \cite{Fletcher2019a}, and is provided by the recently published \emph{samc} package \cite{Marx2020}.
 
 \hypertarget{sec:landscape_genetics}{%
 \paragraph{Landscape genetics}\label{sec:landscape_genetics}}
 
 Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift, and selection \cite{Manel2003}.
 Such insights improve our understanding of metapopulation dynamics, speciation, species' distributions, and conservation \cite{Storfer2007}.
-By explicitly including landscape characteristics, landscape genetics is a way more realistic way of analysis than, e.g., metapopulation genetics \cite{Holderegger2006}.
-As a result of its interdisciplinary, landscape genetics combines methods from different disciplines, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
+By explicitly including landscape characteristics, landscape genetics provides a more detailed analysis than more abstract concepts (e.g., metapopulation genetics) \cite{Holderegger2006}.
+As a result of its interdisciplinarity, landscape genetics draws together methods from multiple fields, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
 
 Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also important for landscape genetics.
-Further functionality for landscape genetics can be found in the \emph{graphs4lg} \cite{Savary2020}, \emph{PopGenReport} \cite{Adamack2014,Gruber2015}, \emph{HierDpart} packages \cite{Qin2019}, or \emph{GeNetIt} \cite{Murphy2010}.
+Further functionality for landscape genetics such as \ldots{} can be found in the \emph{graphs4lg} \cite{Savary2020}, \emph{PopGenReport} \cite{Adamack2014,Gruber2015}, \emph{HierDpart} packages \cite{Qin2019}, or \emph{GeNetIt} \cite{Murphy2010}.
 
 \hypertarget{sec:NLM}{%
 \paragraph{Neutral landscape models}\label{sec:NLM}}

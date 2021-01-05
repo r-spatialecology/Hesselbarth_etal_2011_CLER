@@ -3,13 +3,13 @@ title: Open-source tools in R for landscape ecology
 # subtitle: Do you have a subtitle? If so, write it here
 # titlerunning: Open source landscape ecology tools
 # authorrunning: Short form of author list if too long for running head
-thanks: | 
-    Grants or other notes about the article that should go on the front 
+thanks: |
+    Grants or other notes about the article that should go on the front
     page should be placed here. General acknowledgments should be placed at the
     end of the article.
-authors: 
+authors:
 - name: Maximillian H.K. Hesselbarth
-  address: 
+  address:
     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
     Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, 48109, USA
   email: mhk.hesselbarth@gmail.com
@@ -20,7 +20,7 @@ authors:
   address: Department of Wildlife Sciences, University of Göttingen, Büsgenweg 3, 37077 Göttingen, Germany
   email: j.m.signer@gmail.com
 - name: Laura J. Graham
-  address: Geography and Environment, University of Southampton, Highfield Rd, Southampton SO17 1BJ, United Kingdom
+  address: Geography, Earth & Environmental Sciences, University of Birmingham, Edgbaston, Birmingham B15 2TT, United Kingdom
   email: l.graham@bham.ac.uk
 keywords:
 - spatial data
@@ -32,7 +32,7 @@ abstract: |
   max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
-preamble: | 
+preamble: |
   \usepackage{caption}
   \usepackage{tabularx}
   \usepackage{multirow}
@@ -42,9 +42,9 @@ output:
     base_format: rticles::springer_article
     number_sections: yes
     citation_package: default
-editor_options: 
+editor_options:
   chunk_output_type: console
-  markdown: 
+  markdown:
     wrap: sentence
 ---
 
@@ -85,7 +85,7 @@ base_size <- 7.5
 Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
 In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
-While human activities have altered the landscapes for millenniums \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
+While human activities have altered the landscapes for millennia \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
 Today, almost all landscapes are directly or indirectly influenced by human activities \cite{Vitousek1997}.
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important \cite{With2019}.
 
@@ -101,8 +101,8 @@ Open-source software includes all software that is released under licenses that 
 Open-source software development has many advantages, such as fast innovation, transparency, reliability, and longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
 Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the used methodology of a study \cite{Prlic2012,Powers2019}.
 Furthermore, open-source software allows other scientists to reuse code and not "reinvent the wheel" \cite{Prlic2012} by customizing existing software to their specific needs \cite{Steiniger2009}.
-Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows using the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
-This democratize scientific research as free-of-cost software removes one gatekeeper for researches without access to proprietary software.
+Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows use of the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
+This democratizes scientific research as free-of-cost software removes one gatekeeper for researchers without access to proprietary software.
 
 One successful example of an open-source project is the *R* programming language, and its extensions called packages \cite{RCoreTeam2019}.
 Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
@@ -120,8 +120,9 @@ A recent overview over the progress of *R* to handle spatial data in general can
 
 The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
 Even though many other open-source tools for landscape ecology exist \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017}, in this review, we focus on software implemented in the *R* programming language.
+<!-- LJG: Do we need something about python capabilities for landscape ecology too? -->
 For more general overviews of open-source software for landscape ecology see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because in addition to handling spatial data, also tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
+Because in addition to handling spatial data, tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
 Thus, in the first part, we present an overview of existing *R* packages for landscape ecology (Table \@ref(tab:packages)).
 In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are presently missing for landscape ecology.
 
@@ -135,11 +136,13 @@ CRAN (the *Comprehensive R Archive Network*) provides large visibility to the co
 Additionally, hosting a package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing.
 
 The guaranteed technical quality standard on *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}. 
+Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
 CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
 Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
 Furthermore, communities like *rOpenSci* also provide a peer review process for code quality.
 For more information about *R* package development, see \cite{Wickham2015}.
+
+<!-- LJG: I think that we might need to add a caveat about R packages around the fact that it's continual update by the community can lead to breaking changes (see http://datacolada.org/95) -->
 
 ```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary workflow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, a few example R packages are listed. ."}
 include_graphics("data/Workflow.png")
@@ -149,7 +152,7 @@ include_graphics("data/Workflow.png")
 
 ## Spatial data representations {#sec:spatrep}
 
-While *R* has several build-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
+While *R* has several built-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many *R* packages (\cite{Lovelace2019}, page 10).
 Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
 Importantly, main *R* packages for spatial data use the external *GDAL* and *PROJ* libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
@@ -161,7 +164,7 @@ The values could represent discrete phenomena, such as a class number of a land 
 Currently, the most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
 A *raster* successor, *terra*,  aimed at the simpler interface and improved performance is now being developed \cite{R-terra}; however, it could take several years for this package to be adopted by other developers and users.
 Alternatively, the *stars* package can be used to read and process raster data focusing on spatial-temporal data cubes \cite{Pebesma2019}.
-Additionally, there are packages that improve some basics raster operations in terms of computational performance or compatibility between raster and vector operations, such as *fasterize* \cite{Ross2020}, *rasterDT* \cite{OBrien2020}, or *exactextractr* \cite{Baston2020}.
+Additionally, there are packages that improve some basic raster operations in terms of computational performance or compatibility between raster and vector operations, such as *fasterize* \cite{Ross2020}, *rasterDT* \cite{OBrien2020}, or *exactextractr* \cite{Baston2020}.
 
 The vector data model consists of two main elements i) geometries (such as points, lines, polygons) and ii) attributes, where each geometry is connected to a row in the attribute table.
 In many cases, this data model allows a more realistic representation of landscape features, however, with the cost of higher computational demands <!--(add reference)-->.
@@ -177,9 +180,9 @@ However, *sp* is not actively developed anymore, and its recommended successor i
 Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
 A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an *R* session.
 Since publicly available data is becoming more prominent, so are *R* packages to access them.
-Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
-Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows to download data from the Landsat 8, the *MODIS* package \cite{Mattiuzzi2020} to download MODIS products, and *sen2r* \cite{R-sen2r} to download  Sentinel-2 optical images.
-Also, the `getData()` function from the *raster* package allows to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package *geodata* <!--(add reference) https://github.com/rspatial/geodata-->).
+Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
+Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows users to download data from the Landsat 8, the *MODIS* package \cite{Mattiuzzi2020} to download MODIS products, and *sen2r* \cite{R-sen2r} to download Sentinel-2 optical images.
+Also, the `getData()` function from the *raster* package allows users to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package *geodata* <!--(add reference) https://github.com/rspatial/geodata-->).
 Additionally, the *rgee* package \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
 
 ## Spatial data processing
@@ -194,17 +197,17 @@ In the first one, geographical, positions are specified by latitude and longitud
 However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
 The selection of projected CRS should be based on the property of spatial data that we want to keep intact (e.g., does not distort areas, shapes, distances, or angles) and be appropriate for a given study area.
 Tools to find an appropriate CRS for a certain region can be found at <https://spatialreference.org>, <https://epsg.org>, or <http://epsg.io>.
-All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing to unify spatial projections when the used data have different CRS.
+All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
 A second common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data should include vector clipping or raster cropping.
-Related to that, masking certain areas of the study region can be required by using, e.g., certain spatial filters such as water bodies.
+Related to that, masking certain areas of the study region using spatial filters (e.g. water bodies, urban areas) can be required.
 Packages from Section \@ref(sec:spatrep) also allow for these operations.
 Additionally, they offer many other operations, such as merging or joining spatial data, extracting values from one dataset into another, raster resolution changes, or vector data simplifications.
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}.
 Furthermore, *landscapetools* is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
-Finally, there is a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
+Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
 
 ## Creating maps
 
@@ -220,6 +223,8 @@ Static thematic maps, including proportional symbols, choropleth, or typology ma
 Also the popular plotting package *ggplot2* \cite{Wickham2016a} has an extension especially designed for plotting spatial data named *ggspatial* \cite{R-ggspatial}.
 <!-- Advanced plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}. -->
 <!-- JN: I do not know if we should add rasterVis here... -->
+<!-- LJG: out of interest why not? -->
+
 Quick interactive visualization of spatial data can be done with the *mapview* package\cite{R-mapview}.
 Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.
 
@@ -227,6 +232,7 @@ A slightly different approach to visualizing spatial data is adapted by the *ray
 
 <!--JN: idea - a figure comparing viz of several packages-->
 <!-- MH: I like the idea: Maybe one base plot, one fancy map (tmap) and a screenshot of an interactive map? -->
+<!-- LJG: great idea - happy to be assigned some maps to make! -->
 
 ## Ecological analysis {#sec:ecological_analysis}
 
@@ -234,64 +240,71 @@ A slightly different approach to visualizing spatial data is adapted by the *ray
 
 One of the most fundamental steps of landscape ecology analyses is to describe and quantify landscape characteristics \cite{Turner2005,Lausch2015}.
 For discrete land cover classes, the composition (number and abundance) and configuration (spatial arrangement) of the landscape are often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
-These metrics allow to compare different landscapes, quantify temporal and spatial landscape changes and investigate interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
+These metrics allow the comparison of different landscapes, quantification of temporal and spatial landscape changes and investigation of interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
 
 The introduction of the *FRAGSTATS* in 1995 heavily facilitated the use of landscape metrics software \cite{McGarigal2012,Kupfer2012,Gustafson2019}.
-However, while *FRAGSTATS* is free to download at the developers' homepage, it is not open-source software. 
+However, while *FRAGSTATS* is free to download at the developers' homepage, it is not open-source software.
 This restricts its transparency, reproducibility, and extensibility.
 Recently the *landscapemetrics* package \cite{Hesselbarth2019a} was developed to provide a truly open-source solution to calculate landscape metrics.
-The package allows calculating the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.
+The package allows calculation of the most widely used landscape metrics in a transparent and reproducible workflow within the *R* environment.
 
 More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}.
-The *geodiv* package \cite{Smith2020} allows to calculate gradient surface metrics to characterize continuous analysis of landscape features. 
-Additionally, the *belg* package allows calculating the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
+The *geodiv* package \cite{Smith2020} allows calculation of gradient surface metrics to facilitate continuous analysis of landscape features.
+Additionally, the *belg* package allows calculation of the Boltzmann entropy of a landscape gradient \cite{R-belgpaper}.
 
-Most landscape metrics are a single number depicting specific characteristics of a local landscape.
+Most landscape metrics are a represented by a single number depicting specific characteristics of a local landscape.
 Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
-Spatial signatures calculated for many landscapes can be compared using one of the existing distance measures.
+Spatial signatures calculated for many landscapes can be compared using one of a set of existing distance measures (e.g. Euclidian, Manhattan, Mahlanobis).
+<!-- LJG added some examples, but not 100% if they're the distances you're thinking of -->
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the *motif* package \cite{R-motif}.
 
 #### Species distribution modeling {#sec:SDM}
 
-Species distribution modeling (SDM) examine how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species distribution, mainly to infer ecological processes and predict future species distributions \cite{Wiersma2011}.
+Species distribution modeling (SDM) examines how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species' distributions, mainly to infer ecological processes and predict future species' distributions \cite{Wiersma2011}.
 Originated in the 1970s, SDM has experienced numerous methodological advancement, and a numerous body of literature exists today \cite{Zimmermann2010}.
+<!-- LJG: I'd use a more up to date reference. How about Norberg et al. 2019? https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecm.1370 -->
 Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2019}.
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs.
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package.
 Also, packages specifically designed for SDM exists, including includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages.
+<!-- These packages [check!] allow the user to create ensemble models of SDMs based on different underlying model structures such as Maxent, regression trees, and generalized linear or additive models.
+This is considered the gold standard in contemporary SDM \cite(Araujo2007).-->
 Related to SDM, there are several packages to estimate home ranges and habitat selection, including *adehabitatHR* and *adehabitatHS* \cite{Calenge2006} or *amt \cite{Signer2019}*
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
+<!-- LJG: maxent can be applied through biomod2 - I think it's worth mentioning because it's pretty much the most widely used SDM (whether this is a good thing or not is another question)-->
+<!-- LJG: Another thought - it's generally accepted within SDM that ensemble models are superior to using single models. I know that biomod and zoon facilitate this. Can have a look at the other ones to see if they do. Have added a potential sentence as a comment -->
 
 #### Connectivity {#sec:connectivity}
 
 Connectivity is one of the core elements of landscape structure \cite{Taylor1993} and thus one of the core concepts of landscape ecology \cite{With2019}.
 Landscape connectivity describes how landscape characteristics facilitate or hinder the movement of species \cite{Tischendorf2000} or other aspects of mobility, such as dispersal, gene or nutrient flow \cite{With2019}.
-While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species \cite{Tischendorf2000,With2019}.
+While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species such as habitat associations and dispersal distances \cite{Tischendorf2000,With2019}.
 Given its broad concept, many different measures of connectivity exist \cite{Kindlmann2008}.
-On patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
+At the patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
 Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}).
 Furthermore, the *lconnect* package \cite{Mestre2019} and *Makurhini* package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
 Another way to describe connectivity is based on graph theory with the advantage that functional connectivity can also be included \cite{Kindlmann2008}.
 In graph theory \cite{Laita2011}, landscapes are described by nodes (i.e., habitat patches) connected by and functional connections called links (or edges) \cite{Laita2011}.
 The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
-More general, the *igraph* package \cite{Csardi2006} provides functionality related to graph theory.
-Resistance surfaces and least-cost paths are other tools to model functional connectivity.
+More generally, the *igraph* package \cite{Csardi2006} provides functionality for graph theoretic analyses.
+Resistance surfaces and least-cost paths are other tools to model functional connectivity which include attributes of the matrix.
 The resistance surface describes the effects of facilitating or hindering the landscape's characteristics for an organism moving within it \cite{Adriaensen2003}.
 Least-cost paths can be calculated using the *gdistance* package \cite{vanEtten2017}.
-Absorbing Markov chains that combine random walk theory and mortality based on the landscape characteristics \cite{Fletcher2019a} and is provided by the recently published *samc* package \cite{Marx2020}.
+Absorbing Markov chains quantify landscape connectivity as the combination of movement and mortality based on the landscape characteristics \cite{Fletcher2019a}, and is provided by the recently published *samc* package \cite{Marx2020}.
 
 #### Landscape genetics {#sec:landscape_genetics}
 
 Landscape genetics investigates how characteristics of landscapes interact with gene flow, genetic drift, and selection \cite{Manel2003}.
 Such insights improve our understanding of metapopulation dynamics, speciation, species' distributions, and conservation \cite{Storfer2007}.
-By explicitly including landscape characteristics, landscape genetics is a way more realistic way of analysis than, e.g., metapopulation genetics \cite{Holderegger2006}.
-As a result of its interdisciplinary, landscape genetics combines methods from different disciplines, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
+By explicitly including landscape characteristics, landscape genetics provides a more detailed analysis than more abstract concepts (e.g., metapopulation genetics) \cite{Holderegger2006}.
+As a result of its interdisciplinarity, landscape genetics draws together methods from multiple fields, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
 
 Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:landscape_genetics}) are also important for landscape genetics.
-Further functionality for landscape genetics can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
+<!-- LJG: this might be me forgetting how refs in markdown work, but should the ref above be to the connectivity section? -->
+Further functionality for landscape genetics such as ... <!-- LJG: I think a little more info needed here - happy to dig through the packages to add in, but thought I'd leave for now incase anyone knows off top of their heads -->can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
 
 #### Neutral landscape models {#sec:NLM}
 
@@ -387,27 +400,27 @@ digits <- 1
 n_people <- nrow(answers)
 
 # current position
-current_position <- dplyr::group_by(answers, position) %>% 
-  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
-  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+current_position <- dplyr::group_by(answers, position) %>%
+  dplyr::summarise(n_rel = n() / n_people * 100) %>%
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
-  
+
 # how often do you use R?
-usage_freq <- dplyr::group_by(answers, usage_freq) %>% 
-  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
-  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+usage_freq <- dplyr::group_by(answers, usage_freq) %>%
+  dplyr::summarise(n_rel = n() / n_people * 100) %>%
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
 
 # expertise
-expertise <- dplyr::group_by(answers, expertise) %>% 
-  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
-  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+expertise <- dplyr::group_by(answers, expertise) %>%
+  dplyr::summarise(n_rel = n() / n_people * 100) %>%
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
 
 # own package
-own_package <- dplyr::group_by(answers, own_package) %>% 
-  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
-  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+own_package <- dplyr::group_by(answers, own_package) %>%
+  dplyr::summarise(n_rel = n() / n_people * 100) %>%
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
 ```
 
@@ -436,11 +449,11 @@ topics_df <- tibble(topics = major_topics) %>%
                 topics_reclass = dplyr::case_when(n >= 5 ~ topics,
                                                   n < 5 ~ "others")) %>%
   dplyr::group_by(topics_reclass) %>%
-  dplyr::summarise(n_rel = sum(n_rel)) %>% 
-  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
-                col = dplyr::case_when(topics_reclass == "others" ~ 0, 
-                                       topics_reclass != "others" ~ 1), 
-                col = factor(col)) %>% 
+  dplyr::summarise(n_rel = sum(n_rel)) %>%
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"),
+                col = dplyr::case_when(topics_reclass == "others" ~ 0,
+                                       topics_reclass != "others" ~ 1),
+                col = factor(col)) %>%
   dplyr::arrange(-n_rel)
 
 # change ordering
@@ -451,12 +464,12 @@ topics_df$topics_reclass <- factor(topics_df$topics_reclass, levels = new_levels
 
 # major_topic
 ggplot_topics <-  ggplot(data = topics_df) +
-  geom_bar(aes(y = topics_reclass, x = n_rel, fill = col), stat = "identity") + 
+  geom_bar(aes(y = topics_reclass, x = n_rel, fill = col), stat = "identity") +
   # geom_text(aes(y = topics_reclass, x = n_rel, label = label, col = col),
   #           nudge_x = 1.25, size = 2.5) +
   theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
-  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) + 
+  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) +
   scale_fill_manual(values = c("grey50", "black")) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
@@ -468,7 +481,7 @@ ggplot_topics <-  ggplot(data = topics_df) +
 We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey) A)).
 
 ```{r tasks, include = FALSE}
-# get data 
+# get data
 important_tasks <- unlist(str_split(answers$important_tasks, pattern = ","))
 
 # remove empty space at beginning
@@ -493,17 +506,17 @@ important_tasks[important_tasks == "quantifying landscape characteristics (e.g. 
 
 # create data.frame
 tasks_df <- tibble(tasks = important_tasks) %>%
-  dplyr::group_by(tasks) %>% 
-  dplyr::summarise(n = dplyr::n()) %>% 
-  dplyr::mutate(n_rel = n / sum(n) * 100, 
-                tasks_reclass = dplyr::case_when(n >= 5 ~ tasks, 
+  dplyr::group_by(tasks) %>%
+  dplyr::summarise(n = dplyr::n()) %>%
+  dplyr::mutate(n_rel = n / sum(n) * 100,
+                tasks_reclass = dplyr::case_when(n >= 5 ~ tasks,
                                                  n < 5 ~ "others")) %>%
-  dplyr::group_by(tasks_reclass) %>% 
-  dplyr::summarise(n_rel = sum(n_rel)) %>% 
-  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
-                col = dplyr::case_when(tasks_reclass == "others" ~ 0, 
-                                       tasks_reclass != "others" ~ 1), 
-                col = factor(col)) %>% 
+  dplyr::group_by(tasks_reclass) %>%
+  dplyr::summarise(n_rel = sum(n_rel)) %>%
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"),
+                col = dplyr::case_when(tasks_reclass == "others" ~ 0,
+                                       tasks_reclass != "others" ~ 1),
+                col = factor(col)) %>%
   dplyr::arrange(-n_rel)
 
 # change ordering
@@ -513,12 +526,12 @@ new_levels <- c("others", rev(tasks_df$tasks_reclass[!tasks_df$tasks_reclass == 
 tasks_df$tasks_reclass <- factor(tasks_df$tasks_reclass, levels = new_levels)
 
 ggplot_tasks <- ggplot(data = tasks_df) +
-  geom_bar(aes(y = tasks_reclass, x = n_rel, fill = col), stat = "identity") + 
+  geom_bar(aes(y = tasks_reclass, x = n_rel, fill = col), stat = "identity") +
   # geom_text(aes(y = tasks_reclass, x = n_rel, label = label, col = col),
   #           nudge_x = 1.25, size = 2.5) +
   theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
-  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) + 
+  scale_x_continuous(breaks = seq(0, 20, 5), limits = c(0, 20)) +
   scale_fill_manual(values = c("grey50", "black")) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
@@ -532,9 +545,9 @@ Interestingly, the available options seemed to describe the most important task 
 
 ```{r data-model, include = FALSE}
 # data model
-data_model <- dplyr::group_by(answers, data_model) %>% 
-  dplyr::summarise(n_rel = n() / n_people * 100) %>% 
-  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>% 
+data_model <- dplyr::group_by(answers, data_model) %>%
+  dplyr::summarise(n_rel = n() / n_people * 100) %>%
+  dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
 
 ```
@@ -561,40 +574,40 @@ r_packages[!str_detect(r_packages, pattern = "")] <- "NA"
 r_packages <- unlist(str_split(r_packages, pattern = " "))
 
 # remove NA answers
-r_packages <- r_packages[!str_detect(r_packages, pattern = "NA")] 
+r_packages <- r_packages[!str_detect(r_packages, pattern = "NA")]
 
 # make sure all are lower case
 r_packages <- str_to_lower(r_packages)
 
 # create data.frame
 r_packages_df <- tibble(r_package = r_packages) %>%
-  dplyr::group_by(r_package) %>% 
-  dplyr::summarise(n = dplyr::n()) %>% 
-  dplyr::mutate(n_rel = n / sum(n) * 100, 
-                r_package_reclass = dplyr::case_when(n >= 5 ~ r_package, 
+  dplyr::group_by(r_package) %>%
+  dplyr::summarise(n = dplyr::n()) %>%
+  dplyr::mutate(n_rel = n / sum(n) * 100,
+                r_package_reclass = dplyr::case_when(n >= 5 ~ r_package,
                                                      n < 5 ~ "others")) %>%
-  dplyr::group_by(r_package_reclass) %>% 
-  dplyr::summarise(n_rel = sum(n_rel)) %>% 
-  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
-                col = dplyr::case_when(r_package_reclass == "others" ~ 0, 
-                                       r_package_reclass != "others" ~ 1), 
-                col = factor(col)) %>% 
-  dplyr::arrange(-n_rel) 
+  dplyr::group_by(r_package_reclass) %>%
+  dplyr::summarise(n_rel = sum(n_rel)) %>%
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"),
+                col = dplyr::case_when(r_package_reclass == "others" ~ 0,
+                                       r_package_reclass != "others" ~ 1),
+                col = factor(col)) %>%
+  dplyr::arrange(-n_rel)
 
 # change ordering
 new_levels <- c("others", rev(r_packages_df$r_package_reclass[-1]))
 
 # reorder levels
-r_packages_df$r_package_reclass <- factor(r_packages_df$r_package_reclass, 
+r_packages_df$r_package_reclass <- factor(r_packages_df$r_package_reclass,
                                           levels = new_levels)
 
 ggplot_packages <- ggplot(data = r_packages_df) +
-  geom_bar(aes(y = r_package_reclass, x = n_rel, fill = col), stat = "identity") + 
-  # geom_text(aes(y = r_package_reclass, x = n_rel, label = label, col = col), 
-  #           nudge_x = 2, size = 2.5) + 
+  geom_bar(aes(y = r_package_reclass, x = n_rel, fill = col), stat = "identity") +
+  # geom_text(aes(y = r_package_reclass, x = n_rel, label = label, col = col),
+  #           nudge_x = 2, size = 2.5) +
   theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
-  scale_x_continuous(breaks = seq(0, 35, 5), limits = c(0, 35)) + 
+  scale_x_continuous(breaks = seq(0, 35, 5), limits = c(0, 35)) +
   scale_fill_manual(values = c("grey50", "black")) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
@@ -612,40 +625,40 @@ Nevertheless, the large availability and usage of different *R* packages across 
 ```{r usefulness, include = FALSE}
 # create vector with classses
 
-classes <- c("very useful", "useful", "intermediate", 
+classes <- c("very useful", "useful", "intermediate",
              "not useful", "not useful at all")
 
 # create data.frame
-usefulness_df <- dplyr::group_by(answers, usefulness) %>% 
-  dplyr::summarise(n = dplyr::n()) %>% 
+usefulness_df <- dplyr::group_by(answers, usefulness) %>%
+  dplyr::summarise(n = dplyr::n()) %>%
   dplyr::mutate(n_rel = n / sum(n) * 100) %>%
-  tibble::add_row(usefulness = 1, n = 0, n_rel = 0) %>% 
-  dplyr::arrange(-usefulness) %>% 
-  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"), 
+  tibble::add_row(usefulness = 1, n = 0, n_rel = 0) %>%
+  dplyr::arrange(-usefulness) %>%
+  dplyr::mutate(label = paste0(round(n_rel, digits = 1), "%"),
                 usefulness_class = classes,
                 usefulness_class = factor(usefulness_class,
-                                          levels = rev(classes))) %>% 
+                                          levels = rev(classes))) %>%
   dplyr::arrange(-n_rel)
 
-good_eval <- dplyr::filter(usefulness_df, usefulness %in% c(5, 4)) %>% 
-  dplyr::pull(n_rel) %>% 
-  sum() %>% 
+good_eval <- dplyr::filter(usefulness_df, usefulness %in% c(5, 4)) %>%
+  dplyr::pull(n_rel) %>%
+  sum() %>%
   round(digits = 2)
 
-bad_eval <- dplyr::filter(usefulness_df, usefulness %in% c(3, 2, 1)) %>% 
-  dplyr::pull(n_rel) %>% 
-  sum() %>% 
+bad_eval <- dplyr::filter(usefulness_df, usefulness %in% c(3, 2, 1)) %>%
+  dplyr::pull(n_rel) %>%
+  sum() %>%
   round(digits = 2)
 
 ggplot_usefulness <- ggplot(data = usefulness_df) +
-  geom_bar(aes(x = usefulness_class, y = n_rel), 
-           stat = "identity") + 
+  geom_bar(aes(x = usefulness_class, y = n_rel),
+           stat = "identity") +
   theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
   # scale_x_continuous(breaks = seq(0, 60, 10), limits = c(0, 60)) +
   guides(fill = FALSE, colour = FALSE) +
   labs(x = NULL,
-       title = "How useful do you think is R currently\nfor landscape ecology?", 
+       title = "How useful do you think is R currently\nfor landscape ecology?",
        y = "Number of participants [%]") +
   coord_flip()
 ```
@@ -654,7 +667,7 @@ Lastly, when asked how useful *R* is currently for landscape ecology, the vast m
 
 ```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include A) which terms describe major reserach topics the best, B) the most important workflow task, C) the most used R packages and D) the overall usefulnes or R for landscape ecology. The 'others' category includes all answers with less than five total mentions.", warning=FALSE, out.width="100%"}
 
-(ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) + 
+(ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) +
   # plot_layout(heights = c(2, 3)) +
   plot_annotation(tag_levels = "A", tag_suffix = ")")
 
@@ -669,12 +682,12 @@ missing_methods <- answers$missing_methods[!is.na(answers$missing_methods)]
 missing_methods <- str_to_lower(missing_methods)
 
 # no answer, no missing packages
-id_na <- c("not sure", "not sure right now",  
-           "i have no additional needs for my current workflow", "none that i can think of", 
-           "i would like to know", "none", "i still have to fully understand what is there", 
-           "i don't know, sorry!", "r havent fail me yet", "na", 
-           "i'm not missing anything at present.", "não posso responder", 
-           "no", "unsure", "have not yet identified any.", "no package missing", 
+id_na <- c("not sure", "not sure right now",
+           "i have no additional needs for my current workflow", "none that i can think of",
+           "i would like to know", "none", "i still have to fully understand what is there",
+           "i don't know, sorry!", "r havent fail me yet", "na",
+           "i'm not missing anything at present.", "não posso responder",
+           "no", "unsure", "have not yet identified any.", "no package missing",
            "not enough overview to answer this", "?", "i am currently missing no methods",
            ";", "nothing yet", "i'm thinking", "nil")
 
@@ -684,7 +697,7 @@ length(id_na) / nrow(answers) * 100
 missing_methods <- missing_methods[!missing_methods %in% id_na]
 
 # classify answers as good as possible
-methods_performance <- missing_methods[c(2, 4, 8, 9, 10, 21, 23, 27, 30, 33, 41, 45, 
+methods_performance <- missing_methods[c(2, 4, 8, 9, 10, 21, 23, 27, 30, 33, 41, 45,
                                          48, 56)]
 
 perc_performance <- round(length(methods_performance) / nrow(answers) * 100, 1)
@@ -698,7 +711,7 @@ methods_characterisation <- missing_methods[c(7, 14, 20, 24, 39, 42, 47, 51, 59,
 perc_characterisation <- round(length(methods_characterisation) / nrow(answers) * 100, 1)
 
 # methods_connectivity <- missing_methods[c(12, 17, 26, 31, 35, 36, 40, 51)]
-# 
+#
 # perc_connectivity <- round(length(methods_connectivity) / nrow(answers) * 100, 1)
 
 ```
