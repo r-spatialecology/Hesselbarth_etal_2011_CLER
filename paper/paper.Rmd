@@ -3,11 +3,11 @@ title: Open-source tools in R for landscape ecology
 # subtitle: Do you have a subtitle? If so, write it here
 # titlerunning: Open source landscape ecology tools
 # authorrunning: Short form of author list if too long for running head
-thanks: |
-    Grants or other notes about the article that should go on the front
-    page should be placed here. General acknowledgments should be placed at the
-    end of the article.
-authors:
+# thanks: |
+#    Grants or other notes about the article that should go on the front
+#    page should be placed here. General acknowledgments should be placed at the
+#    end of the article.
+authors: 
 - name: Maximillian H.K. Hesselbarth
   address:
     Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
@@ -37,6 +37,7 @@ preamble: |
   \usepackage{tabularx}
   \usepackage{multirow}
   \usepackage{placeins}
+  \usepackage[modulo]{lineno}
 output:
   bookdown::pdf_book:
     base_format: rticles::springer_article
@@ -72,6 +73,8 @@ new_names <- results$new_names
 
 base_size <- 7.5
 ```
+
+\linenumbers
 
 # Introduction {#sec:intro}
 
