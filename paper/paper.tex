@@ -44,7 +44,7 @@
 
 
 
-\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Johannes M. Signer \and  Laura J. Graham \and  }
+\author{  Maximillian H.K. Hesselbarth \and  Jakub Nowosad \and  Johannes Signer \and  Laura J. Graham \and  }
 
 
 \institute{
@@ -58,9 +58,9 @@
      \email{\href{mailto:nowosad.jakub@gmail.com}{\nolinkurl{nowosad.jakub@gmail.com}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
-        Johannes M. Signer \at
-     Department of Wildlife Sciences, University of Göttingen, Büsgenweg 3, 37077 Göttingen, Germany \\
-     \email{\href{mailto:j.m.signer@gmail.com}{\nolinkurl{j.m.signer@gmail.com}}}  %  \\
+        Johannes Signer \at
+     Wildlife Sciences, Faculty of Forestry and Forest Ecology, University of Goettingen, Büsgenweg 3, 37077 Göttingen, Germany \\
+     \email{\href{mailto:jsigner@uni-goettingen.de}{\nolinkurl{jsigner@uni-goettingen.de}}}  %  \\
 %             \emph{Present address:} of F. Author  %  if needed
     \and
         Laura J. Graham \at
@@ -170,7 +170,7 @@ For more information about \emph{R} package development in general, see \cite{Wi
 While \emph{R} has several built-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \emph{R} packages (\cite{Lovelace2019}, page 10).
 Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \emph{R} language.
-Importantly, main \emph{R} packages for spatial data use the external \emph{GDAL} and \emph{PROJ} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
+Importantly, main \emph{R} packages for spatial data use the external \emph{GDAL} \cite{GDAL} and \emph{PROJ} \cite{PROJ} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
 Additionally, \emph{R} allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
 
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
@@ -220,13 +220,13 @@ Additionally, they offer many other operations, such as merging or joining spati
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the \emph{grainchanger} package \cite{Graham2019}.
 Furthermore, \emph{landscapetools} is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
-Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine. Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
+Finally, there are a number of tools for landscape ecology implemented in GIS software, such as \texttt{r.li} or \texttt{r.pi} for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine. Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
 
 \hypertarget{creating-maps}{%
 \subsection{Creating maps}\label{creating-maps}}
 
 Creating maps is essential when working with spatial data.
-It has a role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
+Maps play an important role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
 \emph{R} allows to create two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g.~changing the displayed values.
 All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function.
@@ -450,7 +450,7 @@ However, since landscape ecology constantly develops and improves, the \emph{R} 
 \paragraph{Conflict of interest}\label{conflict-of-interest}}
 
 MHKH and JN are authors of the \emph{landscapemetrics} and \emph{landscapetools} package.
-JN is author of \emph{belg} and \emph{motif} package.
+JN is author of \emph{belg} and \emph{motif} package. JS is author of the \emph{amt} package.
 
 \hypertarget{funding}{%
 \paragraph{Funding}\label{funding}}
