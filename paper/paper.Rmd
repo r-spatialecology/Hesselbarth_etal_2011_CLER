@@ -10,8 +10,8 @@ title: Open-source tools in R for landscape ecology
 authors: 
 - name: Maximillian H.K. Hesselbarth
   address:
-    Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
-    Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, 48109, USA
+    a) Department of Ecosystem Modelling, University of Goettingen, Buesgenweg 4, 37077 Goettingen, Germany
+    b) Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, 48109, USA
   email: mhk.hesselbarth@gmail.com
 - name: Jakub Nowosad
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
@@ -426,7 +426,7 @@ own_package <- dplyr::group_by(answers, own_package) %>%
   dplyr::arrange(-n_rel)
 ```
 
-To better understand how the landscape ecology community uses* R*, we conducted a short survey and used mailing lists and social media to reach the community.
+To better understand how the landscape ecology community uses *R*, we conducted a short survey and used mailing lists and social media to reach the community.
 In total, the survey was answered by `r n_people` participants, of which the the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
 Other, less frequent answers were "Data scientists", "None of the above", "Government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
 
@@ -749,7 +749,7 @@ However, since landscape ecology constantly develops and improves, the *R* progr
 #### Conflict of interest
 
 MHKH and JN are authors of the *landscapemetrics* and *landscapetools* package.
-JN is author of *belg* and *motif* package. JS is author of the *amt* package. 
+JN is author of *belg* and *motif* package. JS is author of the *amt* package. LJG is author of the *grainchanger* package.
 <!-- MH: I wasn't sure if we need to list this here, but it kind of felt like a not completely stupid idea. What do you think? -->
 <!-- JS: I don't think its critical, but surely it doesn't do any arm listing this here -->
 
@@ -761,7 +761,7 @@ MHKH was supported by the German Research Association (DFG) Research Training Gr
 #### Author contributions
 
 MHKH and JN designed the survey form and analyzed the responses of the participants.
-MHKH and JN drafted the manuscript and all authors contributed critically to the manuscript and gave final approval for publication.
+MHKH and JN drafted the manuscript with contributions of JS and LJG and all authors contributed critically to the manuscript and gave final approval for publication.
 We used the 'sequence--determines--credit' approach (SDC) for the sequence of authors.
 
 #### Human and Animal Rights and Informed Consent
