@@ -13,7 +13,10 @@ precipitation <- raster::getData("worldclim", lon = 3, lat = 38,
 switzerland <- rnaturalearth::ne_countries(country = "switzerland", returnclass = "sf")
 
 # crop and mask
-precipitation_ch <- raster:::crop(precipitation, switzerland)
+precipitation_ch <- raster::crop(precipitation, switzerland)
+precipitation_ch <- raster::mask(precipitation_ch, switzerland)
+plot(precipitation_ch[[1]])
+
 
 precipitation_ch_mean <- raster::calc(x = precipitation_ch, fun = mean)
 
