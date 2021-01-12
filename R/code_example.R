@@ -1,5 +1,4 @@
 library(ggplot2)
-library(cowplot)
 library(sf)
 library(raster)
 library(rnaturalearth)
@@ -9,23 +8,38 @@ library(tmap)
 precipitation <- raster::getData("worldclim", lon = 3, lat = 38,
                                  res = 0.5, var = "prec", path = "R/")
 
-# get admin boundaries of switzerland
-switzerland <- rnaturalearth::ne_countries(country = "switzerland", returnclass = "sf")
+# calculate total precipitation
+precipitation_sum <- raster::calc(x = precipitation, fun = sum)
 
-# crop and mask
-precipitation_ch <- raster:::crop(precipitation, switzerland)
+# reproject to geographical CRS
+precipitation_sum <- raster::projectRaster(precipitation_sum, crs = "+init=epsg:21781")
 
-precipitation_ch_mean <- raster::calc(x = precipitation_ch, fun = mean)
+# get admin boundaries of Switzerland
+switzerland <- rnaturalearth::ne_countries(country = "switzerland",
+                                           returnclass = "sf")
 
-plot(precipitation_ch_mean)
+# reproject to geographical CRS
+switzerland <- sf::st_transform(x = switzerland, crs = "epsg:21781")
+
+# crop and mask with buffer
+precipitation_sum_ch <- raster:::crop(x = precipitation_sum,
+                                      y = sf::st_buffer(x = switzerland, dist = 5000))
+
+# create base plot
+# pdf(file = "R/Figures/base_plot.pdf")
+
+plot(precipitation_sum_ch)
 
 plot(switzerland$geometry, add = TRUE)
 
-plot_base <- recordPlot()
+# dev.off()
 
-precipitation_ch_class <- raster::cut(precipitation_ch_mean, breaks = 5)
+# reclassify into 5 classes
+precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
 
-plot_gg <- ggplot(raster::as.data.frame(precipitation_ch_class, xy = TRUE)) +
+# create ggplot
+# MH: Why is this on long/lat? Coordinates seem to be okay?
+plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     geom_raster(aes(x = x, y = y, fill = factor(layer))) +
     geom_sf(data = switzerland, fill = NA, col = "white") +
     scale_fill_viridis_d(name = "Precipitation\nclassified") +
@@ -33,5 +47,12 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_ch_class, xy = TRUE)) +
     labs(x = "", y = "") +
     theme_classic()
 
-cowplot::plot_grid(plot_base, plot_gg,
-                   rel_widths = c(1, 1))
+ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
+
+# create interactive tmap (take screenshot for paper)
+tmap_mode("view")
+
+tm_shape(precipitation_class_ch) +
+    tm_raster() +
+    tm_shape(switzerland) +
+    tm_borders()
