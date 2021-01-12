@@ -1,4 +1,4 @@
-# Make sure survery data is up-to date
+# Make sure survey data is up-to date
 
 library(googlesheets4)
 
