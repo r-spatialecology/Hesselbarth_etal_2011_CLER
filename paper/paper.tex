@@ -267,6 +267,24 @@ Spatial signatures calculated for many landscapes can be compared using one of a
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the \emph{motif} package \cite{R-motif}.
 
+\hypertarget{geostatistics}{%
+\paragraph{Geostatistics}\label{geostatistics}}
+
+Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyse patterns in continuous data (e.g.~normalised difference vegetation index, disturbance intensity, topography).
+In landscape ecology, geostatistics has three key uses: (1) detecting and correcting for spatial autocorrelation; (2) quantifying and comparing landscape pattern; (3) interpolating data.
+
+Point pattern analysis is one such method.
+This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
+The \emph{spatstat} packge contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics.
+
+Distance-based methods allow us to detect and correct for spatial autocorrelation in data.
+It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modelling.
+The \emph{spdep} package has methods for quantifying multiple metrics of spatial autocorrelation, and to correct for these in a spatial autoregressive model.
+The \emph{rinla} and \emph{inlabru} packages also provide functionality for modelling of spatially structured data.
+
+Finally, with variograms and correlograms, the spatial structure of continuous landscapes can be quantified and compared.
+R packages \emph{geoR} and \emph{gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+
 \hypertarget{sec:SDM}{%
 \paragraph{Species distribution modeling}\label{sec:SDM}}
 
@@ -316,9 +334,6 @@ Neutral landscape models are used to create structured landscapes in the absence
 Because neutral landscape models are not based on ecological and landscape processes, many different generic algorithms to create landscapes can be found across various \emph{R} packages.
 A comprehensive collection of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the \emph{NLMR} package \cite{Sciaini2018}.
 Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simulate Gaussian fields, which could be used as neutral landscape models.
-
-\hypertarget{geostatistics}{%
-\paragraph{Geostatistics}\label{geostatistics}}
 
 \begin{table}
 
@@ -468,7 +483,6 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
-
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}

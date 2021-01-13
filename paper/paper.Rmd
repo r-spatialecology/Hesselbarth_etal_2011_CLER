@@ -260,6 +260,23 @@ Spatial signatures calculated for many landscapes can be compared using one of a
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the *motif* package \cite{R-motif}.
 
+#### Geostatistics
+
+Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyse patterns in continuous data (e.g. normalised difference vegetation index, disturbance intensity, topography). 
+In landscape ecology, geostatistics has three key uses: (1) detecting and correcting for spatial autocorrelation; (2) quantifying and comparing landscape pattern; (3) interpolating data. 
+
+Point pattern analysis is one such method. 
+This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
+The *spatstat* packge contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics. 
+
+Distance-based methods allow us to detect and correct for spatial autocorrelation in data.
+It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modelling. 
+The *spdep* package has methods for quantifying multiple metrics of spatial autocorrelation, and to correct for these in a spatial autoregressive model.
+The *rinla* and *inlabru* packages also provide functionality for modelling of spatially structured data. 
+
+Finally, with variograms and correlograms, the spatial structure of continuous landscapes can be quantified and compared. 
+R packages *geoR* and *gstat* provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging. 
+
 #### Species distribution modeling {#sec:SDM}
 
 Species distribution modeling (SDM) examines how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species' distributions, mainly to infer ecological processes and predict future species' distributions \cite{Wiersma2011}.
@@ -315,10 +332,6 @@ Because neutral landscape models are not based on ecological and landscape proce
 A comprehensive collection of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the *NLMR* package \cite{Sciaini2018}.
 Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate Gaussian fields, which could be used as neutral landscape models.
 
-#### Geostatistics
-
-<!-- MH: What about spatial autocorrelation? -->
-<!-- MH: SpatialKDE, geoR, gstat, spdep, siland -->
 
 ```{=tex}
 \begin{table}
