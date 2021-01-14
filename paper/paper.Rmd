@@ -288,7 +288,11 @@ Popular approaches and packages include generalized linear models using, e.g., t
 Also, packages specifically designed for SDM exists, including includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages.
 <!-- These packages [check!] allow the user to create ensemble models of SDMs based on different underlying model structures such as Maxent, regression trees, and generalized linear or additive models.
 This is considered the gold standard in contemporary SDM \cite(Araujo2007).-->
-Related to SDM, there are several packages to estimate home ranges and habitat selection, including *adehabitatHR* and *adehabitatHS* \cite{Calenge2006} or *amt \cite{Signer2019}*
+
+Related to SDMs, there are growing number of R packages to analyze data from tracked animals, to study their movement characteristics, space use and interaction with other animals and the environment.
+These analyses often use results of landscape ecological analyses as explanatory variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
+Widely used R packages include *ctmm* \cite{calabrese2016} and *adehabitatHR* \cite{Calenge2006} for home-range estimation, *moveHMM* \cite{michelot2016} for the classification of behavioral states, and *amt* \cite{Signer2019} for habitat selection.
+A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{joo2020}.
 
 <!-- Another widely used SDM approach uses the concept of maximum entropy \cite{Phillips2006,Fletcher2019}. However, currently the *maxent* package is not available on *CRAN* anymore. -->
 <!-- LJG: maxent can be applied through biomod2 - I think it's worth mentioning because it's pretty much the most widely used SDM (whether this is a good thing or not is another question)-->
