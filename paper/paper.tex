@@ -100,20 +100,38 @@ max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract 
 \hypertarget{sec:intro}{%
 \section{Introduction}\label{sec:intro}}
 
+Glossary
+
+\begin{tabularx}{\textwidth}{XX}
+
+\hline
+
+CRAN & Comprehensive R Archive Network \\
+CRS & Coordinate references systems \\
+GIS & Geographical information system \\
+NLM & Neutral landscape model \\
+raster & Cell grid based data model \\
+R packages & Software extension to R programming language \\
+SDM & Species distribution modelling \\
+vector & Points and lines based data model \\
+
+\hline
+
+\end{tabularx}
+
 \hypertarget{sec:landscape_ecology}{%
 \subsection{A short introduction to landscape ecology}\label{sec:landscape_ecology}}
 
-Landscape ecology focuses on how ecological processes are influenced and modified by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
-In this context, landscape ecology considers, besides others, i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchange within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
-
-While human activities have altered the landscapes for millennia \cite{Ellis2011,Ellis2015}, in the past centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
+While human activities have altered the landscapes for millennia \cite{Ellis2011,Ellis2015}, in the recent centuries, the effects of humans on landscapes have increased to an unknown high, known as the Anthropocene \cite{Crutzen2002}.
 Today, almost all landscapes are directly or indirectly influenced by human activities \cite{Vitousek1997}.
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important \cite{With2019}.
 
+Landscape ecology focuses on how ecological processes are influenced by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
+In this context, landscape ecology predominantly focuses on i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchanges within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) and can guide how to to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+
 Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes vary spatially \cite{With2019}.
-To this, the importance of scale was already raised decades ago \cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance until today \cite{Simova2012,Estes2018}.
-Thus, in contrast to many other sub-disciplines of ecology, landscape ecology emphasizes spatial patterns to a high degree \cite{Risser1984}.
-Consequently, the field of landscape ecology relies on software to preprocess, modify, model, analyze, and visualize spatial data.
+The importance of scale was already raised decades ago \cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance today \cite{Simova2012,Estes2018}.
+Thus, landscape ecology emphasizes spatial patterns to a high degree \cite{Risser1984} and consequently relies on software to preprocess, modify, model, analyze, and visualize spatial data.
 
 \hypertarget{sec:open_source}{%
 \subsection{\texorpdfstring{Open-source software and \emph{R}}{Open-source software and R}}\label{sec:open_source}}
@@ -121,16 +139,16 @@ Consequently, the field of landscape ecology relies on software to preprocess, m
 Software to manage and analyze data becomes increasingly important in modern scientific research \cite{Wilson2014} and many scientific studies would not have been possible without open-source software \cite{Prlic2012}.
 Open-source software includes all software that is released under licenses that allow to use, modify and distribute the software \cite{St.Laurent2008}.
 Open-source software development has many advantages, such as fast innovation, transparency, reliability, and longevity, mainly due to many diverse contributors \cite{vonKrogh2006,St.Laurent2008}.
-Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the used methodology of a study \cite{Prlic2012,Powers2019}.
+Additionally, the use of open-source software facilitates (computational) reproducibility and can allow a better understanding of the methodology of a study \cite{Prlic2012,Powers2019}.
 Furthermore, open-source software allows other scientists to reuse code and not ``reinvent the wheel'' \cite{Prlic2012} by customizing existing software to their specific needs \cite{Steiniger2009}.
-Last but not least, even though not strictly necessary by definition \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, which allows use of the software without any costs in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
+Importantly, though not strictly necessary by definition of open-source \cite{Steiniger2009,Steiniger2009a}, most open-source software is also free-of-cost, in contrast to often expensive proprietary software \cite{vonKrogh2006,Steiniger2009,Steiniger2009a}.
 This democratizes scientific research as free-of-cost software removes one gatekeeper for researchers without access to proprietary software.
 
 One successful example of an open-source project is the \emph{R} programming language, and its extensions called packages \cite{RCoreTeam2019}.
 Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
 Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the \emph{R} programming language \cite{Bivand2006,Lovelace2019}.
 The expanding CRAN Task Views document this: \emph{Analysis of Spatial Data} \cite{Bivand2019a} and \emph{Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} currently list about 300 packages in total.
-Since the task views are maintained manually by just a few people, the actual amount of \emph{R} packages related to spatial data is most likely even higher.
+Since the task views are maintained manually by just a few people, the actual amount of \emph{R} packages related to spatial data is most likely higher.
 The growing popularity of the \emph{R} programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Wegmann2016,Fletcher2019,Lovelace2019,Pebesma2019a}.
 A recent overview over the progress of \emph{R} to handle spatial data in general can be found in \cite{Bivand2020}.
 
@@ -156,7 +174,7 @@ Additionally, the technical quality standard on \emph{CRAN} also facilitates rep
 CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
 Thus, most packages can be found on both platforms, and many developers use \emph{GitHub} for regular development and \emph{CRAN} to publish stable releases of the packages.
 Furthermore, communities like \emph{rOpenSci} also provide a peer review process for code quality.
-However, while the package environment has many advantages, its highly dynamic characterstic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
+However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
 Packages that deal with such issue include \emph{groundhog} \cite{Simonsohn2021}, \emph{packrat} \cite{Ushey2018}, or \emph{renv} \cite{Ushey2020}.
 For more information about \emph{R} package development in general, see \cite{Wickham2015}.
 
@@ -168,7 +186,7 @@ For more information about \emph{R} package development in general, see \cite{Wi
 \subsection{Spatial data representations}\label{sec:spatrep}}
 
 While \emph{R} has several built-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
-However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \emph{R} packages (\cite{Lovelace2019}, page 10).
+However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \emph{R} packages (\cite{Lovelace2019}, page 10, Table \ref{tab:packages}).
 Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \emph{R} language.
 Importantly, main \emph{R} packages for spatial data use the external \emph{GDAL} \cite{GDAL} and \emph{PROJ} \cite{PROJ} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
 Additionally, \emph{R} allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
@@ -206,13 +224,13 @@ It is not only required to have all of the used data in the same projection, but
 This is of importance because the projection into a two-dimensional surface unavoidable leads to distortion, and different CRS are optimized for different properties, regions of the world, and scales .
 Coordinates in spatial data represent one of many coordinate reference systems.
 Two main groups of CRS, namely geographical and projected, exist, with each having many members.
-In the first one, geographical, positions are specified by latitude and longitude coordinates in degrees.
+Using geographical CRS, positions are specified by latitude and longitude coordinates in degrees.
 However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
 The selection of projected CRS should be based on the property of spatial data that we want to keep intact (e.g., does not distort areas, shapes, distances, or angles) and be appropriate for a given study area.
 Tools to find an appropriate CRS for a certain region can be found at \url{https://spatialreference.org}, \url{https://epsg.org}, or \url{http://epsg.io}.
 All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
-A second common spatial data processing task is required when the available data extends over a larger area than the study region.
+Another common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data should include vector clipping or raster cropping.
 Related to that, masking certain areas of the study region using spatial filters (e.g.~water bodies, urban areas) can be required.
 Packages from Section \ref{sec:spatrep} also allow for these operations.
@@ -227,7 +245,7 @@ Finally, there are a number of tools for landscape ecology implemented in GIS so
 
 Creating maps is essential when working with spatial data.
 Maps play an important role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
-\emph{R} allows to create two major types of maps.
+\emph{R} allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g.~changing the displayed values.
 All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function.
 However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
@@ -270,12 +288,13 @@ All of the methods mentioned above are implemented in the \emph{motif} package \
 \hypertarget{geostatistics}{%
 \paragraph{Geostatistics}\label{geostatistics}}
 
-Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyse patterns in continuous data (e.g.~normalised difference vegetation index, disturbance intensity, topography).
+Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g.~normalized difference vegetation index, disturbance intensity, topography).
 In landscape ecology, geostatistics has three key uses: (1) detecting and correcting for spatial autocorrelation; (2) quantifying and comparing landscape pattern; (3) interpolating data.
 
 Point pattern analysis is one such method.
 This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
-The \emph{spatstat} packge contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics.
+The \emph{spatstat} package contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics.
+A comprehensive text book covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
 
 Distance-based methods allow us to detect and correct for spatial autocorrelation in data.
 It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modelling.
@@ -296,7 +315,7 @@ Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletc
 Popular approaches and packages include generalized linear models using, e.g., the \emph{stats} \cite{RCoreTeam2019} package; generalized additive models using, e.g., the \emph{mgcv} \cite{Wood2017} or \emph{lme4} \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the \emph{rpart} \cite{Therneau2019}, \emph{randomForest} \cite{Liaw2002} or \emph{ranger} \cite{Wright2017} package or multivariate data analysis using , e.g., the \emph{ade4} \cite{Dray2007} or \emph{vegan} \cite{Oksanen2019} package.
 Also, packages specifically designed for SDM exists, including includes the \emph{dismo} \cite{Hijmans2017}, \emph{sdm} \cite{Naimi2016}, \emph{ecospat} \cite{Broennimann2020}, \emph{biomod2} \cite{Thuiller2020}, \emph{PresenceAbsence} \cite{Freeman2008}, or \emph{zoon} \cite{Golding2018} packages.
 
-Related to SDMs, there are growing number of R packages to analyze data from tracked animals, to study their movement characteristics, space use and interaction with other animals and the environment.
+Related to SDMs, there are growing number of \emph{R} packages to analyze data from tracked animals, to study their movement characteristics, space use and interaction with other animals and the environment.
 These analyses often use results of landscape ecological analyses as explanatory variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
 Widely used R packages include \emph{ctmm} \cite{calabrese2016} and \emph{adehabitatHR} \cite{Calenge2006} for home-range estimation, \emph{moveHMM} \cite{michelot2016} for the classification of behavioral states, and \emph{amt} \cite{Signer2019} for habitat selection.
 A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{joo2020}.
@@ -343,66 +362,66 @@ Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simu
 
 \caption{Overview of commonly used R packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.}
 
-\begin{tabularx}{\textwidth}{X r r }
+\begin{tabularx}{450pt}{lrrr}
 
 \hline
-Task & R package & Reference \\
+Task & R package & Describtion & Reference \\
 \hline
-\multirow{8}{*}{Spatial data} & raster & \cite{Hijmans2019} \\
-& terra & \cite{R-terra} \\
-& stars & \cite{Pebesma2019} \\
-& fasterize & \cite{Ross2020} \\
-& rasterDT & \cite{OBrien2020} \\
-& exactextractr & \cite{Baston2020} \\
-& sp & \cite{Pebesma2005,Bivand2013} \\
-& sf & \cite{Pebesma2018} \\
+\multirow{8}{*}{Spatial data} & raster & Raster data handling and analysis & \cite{Hijmans2019} \\
+& terra & Basic data handling and analysis & \cite{R-terra} \\
+& stars & Spatiotemporal raster data & \cite{Pebesma2019} \\
+& fasterize & Polygon to raster conversion & \cite{Ross2020} \\
+& rasterDT & Faster alternatives for some raster functions & \cite{OBrien2020} \\
+& exactextractr & Summarize raster values over polygonal areas & \cite{Baston2020} \\
+& sp & Vector data handling and analysis & \cite{Pebesma2005,Bivand2013} \\
+& sf & Vector data handling and analysis & \cite{Pebesma2018} \\
 \hline
-\multirow{6}{*}{Spatial data download} & rnaturalearth & \cite{South2017} \\
-& elevatr & \cite{R-elevatr} \\
-& rgbif & \cite{R-rgbif} \\
-& BIEN & \cite{Maitner2020} \\
-& marmap & \cite{Pante2013} \\
-& FedData & \cite{R-FedData} \\
-& getlandsat & \cite{Chamberlain2018} \\
-& MODIS & \cite{Mattiuzzi2020} \\
-& sen2r & \cite{R-sen2r} \\
+\multirow{6}{*}{Spatial data download} & rnaturalearth & Download region and country data & \cite{South2017} \\
+& elevatr & Download elevation data & \cite{R-elevatr} \\
+& rgbif & Download biodiversity data & \cite{R-rgbif} \\
+& BIEN & Download plant diversity, function and distribution data & \cite{Maitner2020} \\
+& marmap & Download and manipulate bathymetric data & \cite{Pante2013} \\
+& FedData & Download US federal data & \cite{R-FedData} \\
+& getlandsat & Download satellite data from Landsat 8 & \cite{Chamberlain2018} \\
+& MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
+& sen2r & Download satellite data from Sentinel & \cite{R-sen2r} \\
 \hline
-\multirow{7}{*}{Creating maps} & mapview & \cite{R-mapview} \\
-& tmap & \cite{Tennekes2018} \\
-& leaflet & \cite{R-leaflet} \\
-& cartography & \cite{Giraud2016} \\
-& ggspatial & \cite{Dunnington2020} \\
-& rayshader & \cite{Morgen-Wall2020} \\
+\multirow{7}{*}{Creating maps} & mapview & Interactive viewing of spatial data & \cite{R-mapview} \\
+& tmap & Create thematic maps & \cite{Tennekes2018} \\
+& leaflet & Create interactive web maps & \cite{R-leaflet} \\
+& cartography & Create cartographic maps & \cite{Giraud2016} \\
+& ggspatial & Spatial extension for ggplot2 & \cite{Dunnington2020} \\
+& rayshader & Create 2D and 3D data visualizations & \cite{Morgen-Wall2020} \\
 \hline
-\multirow{4}{*}{\shortstack[l]{Quantifying landscape\\characteristics}} & landscapemetrics & \cite{Hesselbarth2019a} \\
-& belg &  \cite{R-belgpaper} \\
-& motif & \cite{R-motif} \\
-& geodiv & \cite{Smith2020} \\
+\multirow{4}{*}{\shortstack[l]{Quantifying landscape\\characteristics}} & landscapemetrics & Quantify categorical landscape patterns & \cite{Hesselbarth2019a} \\
+& belg & Calculates the Boltzmann entropy & \cite{R-belgpaper} \\
+& motif & Not on CRAN? & \cite{R-motif} \\
+& geodiv & Quantify continuous landscape patterns & \cite{Smith2020} \\
 \hline
-\multirow{8}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & \cite{Hijmans2017} \\
-& sdm & \cite{Naimi2016} \\
-& ecospat & \cite{Broennimann2020} \\
-& biomod2 & \cite{Thuiller2020} \\
-& PresenceAbsence & \cite{Freeman2008} \\
-& zoon & \cite{Golding2018} \\
-& adehabitatHR, adehabitatHS & \cite{Calenge2006} \\
-& amt & \cite{Signer2019} \\
+\multirow{8}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & Add describtion & \cite{Hijmans2017} \\
+& sdm & Add describtion & \cite{Naimi2016} \\
+& ecospat & Add describtion & \cite{Broennimann2020} \\
+& biomod2 & Add describtion & \cite{Thuiller2020} \\
+& PresenceAbsence & Add describtion & \cite{Freeman2008} \\
+& zoon & Add describtion & \cite{Golding2018} \\
+& adehabitatHR, adehabitatHS & Add describtion & \cite{Calenge2006} \\
+& amt &  Add describtion &\cite{Signer2019} \\
 \hline
-\multirow{5}{*}{Connectivity} & lconnect & \cite{Mestre2019} \\
-& Makurhini & \cite{Godinez-Gomez2020} \\
-& grainscape & \cite{Chubaty2020} \\
-& gdistance & \cite{vanEtten2017} \\
-& samc & \cite{Marx2020} \\
+\multirow{5}{*}{Connectivity} & lconnect & Add describtion & \cite{Mestre2019} \\
+& Makurhini & Add describtion & \cite{Godinez-Gomez2020} \\
+& grainscape & Add describtion & \cite{Chubaty2020} \\
+& gdistance & Add describtion & \cite{vanEtten2017} \\
+& samc & Add describtion & \cite{Marx2020} \\
 \hline
-\multirow{4}{*}{Landscape genetics} & raphs4lg & \cite{Savary2020} \\
-& PopGenReport & \cite{Adamack2014,Gruber2015} \\
-& HierDpart & \cite{Qin2019} \\
-& GeNetIt & \cite{Murphy2010} \\
+\multirow{4}{*}{Landscape genetics} & raphs4lg & Add describtion & \cite{Savary2020} \\
+& PopGenReport & Add describtion & \cite{Adamack2014,Gruber2015} \\
+& HierDpart & Add describtion & \cite{Qin2019} \\
+& GeNetIt & Add describtion & \cite{Murphy2010} \\
 \hline
-\multirow{4}{*}{various} & NLMR & \cite{Sciaini2018} \\
-& RandomFields & \cite{Schlather2015} \\
-& landscapetools & \cite{Sciaini2018}  \\
-& grainchanger & \cite{Graham2019} \\
+\multirow{4}{*}{various} & NLMR & Simulate neutral landscape models & \cite{Sciaini2018} \\
+& RandomFields & Add describtion & \cite{Schlather2015} \\
+& landscapetools & Utility functions for raster data & \cite{Sciaini2018}  \\
+& grainchanger & Data aggregation methods for raster data & \cite{Graham2019} \\
 \hline
 
 \end{tabularx}
@@ -414,8 +433,8 @@ Task & R package & Reference \\
 \hypertarget{survey-of-r-usage-by-landscape-ecology-community}{%
 \section{Survey of R usage by landscape ecology community}\label{survey-of-r-usage-by-landscape-ecology-community}}
 
-To better understand how the landscape ecology community uses \emph{R}, we conducted a short survey and used mailing lists and social media to reach the community.
-In total, the survey was answered by 103 participants, of which the the majority were either ``PhD students'' (34\%), followed by ``Post-Docs'' (28.2\%) and ``Professors'' (12.6\%).
+To better understand how the landscape ecology community uses \emph{R}, we conducted a short survey using mailing lists and social media to reach the community.
+In total, the survey was answered by 103 participants, of which the majority were either ``PhD students'' (34\%), followed by ``Post-Docs'' (28.2\%) and ``Professors'' (12.6\%).
 Other, less frequent answers were ``Data scientists'', ``None of the above'', ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
 Most people use \emph{R} either ``daily'' (54.4\%) or a ``few times a week'' (36.9\%).
@@ -425,7 +444,7 @@ Related to this, about half of the participants either implemented their own pac
 We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B)).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
 Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
 Interestingly, more people use the raster data model (72.8\%) in comparison to the vector data model (27.2\%).
@@ -435,7 +454,7 @@ The \emph{raster} package was mentioned the most, followed by the \emph{sf} pack
 Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey} C).
 Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 33.44\%).
 
-Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
 
 \begin{figure}
 
@@ -465,6 +484,8 @@ However, since landscape ecology constantly develops and improves, the \emph{R} 
 \hypertarget{acknowledgments}{%
 \subsection{Acknowledgments}\label{acknowledgments}}
 
+We are thankful to all members of the `Coastal Ecology and Conservation Lab' at University of Michigan for comments on an early draft of the manuscript.
+
 \hypertarget{conflict-of-interest}{%
 \paragraph{Conflict of interest}\label{conflict-of-interest}}
 
@@ -487,6 +508,7 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
+
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
