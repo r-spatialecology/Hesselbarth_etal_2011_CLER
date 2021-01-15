@@ -100,18 +100,26 @@ max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract 
 \hypertarget{sec:intro}{%
 \section{Introduction}\label{sec:intro}}
 
-Glossary
-
-\begin{tabularx}{\textwidth}{XX}
+\begin{tabularx}{450pt}{lX}
 
 \hline
 
+\multicolumn{2}{c}{Glossary} \\
+
+\hline
+
+API & Application programming interface \\
+cell & Smallest, rectangular unit of raster data model \\
 CRAN & Comprehensive R Archive Network \\
 CRS & Coordinate references systems \\
 GIS & Geographical information system \\
+landscapes & Mosaics of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
+open-source software & Software released under licenses that allow to use, modify and distribute it \\
+patch & Neighboring cells with same value \\
 raster & Cell grid based data model \\
-R packages & Software extension to R programming language \\
+resolution & Size in meter or degree of one cell \\
+R packages & User-created software extension to R programming language \\
 SDM & Species distribution modelling \\
 vector & Points and lines based data model \\
 
@@ -147,7 +155,7 @@ This democratizes scientific research as free-of-cost software removes one gatek
 One successful example of an open-source project is the \emph{R} programming language, and its extensions called packages \cite{RCoreTeam2019}.
 Firstly released in 1995 \cite{Smith2016}, today the programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
 Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the \emph{R} programming language \cite{Bivand2006,Lovelace2019}.
-The expanding CRAN Task Views document this: \emph{Analysis of Spatial Data} \cite{Bivand2019a} and \emph{Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} currently list about 300 packages in total.
+The expanding CRAN Task Views (lists of packages related to a certain topic) document this: \emph{Analysis of Spatial Data} \cite{Bivand2019a} and \emph{Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} currently list about 300 packages in total.
 Since the task views are maintained manually by just a few people, the actual amount of \emph{R} packages related to spatial data is most likely higher.
 The growing popularity of the \emph{R} programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Wegmann2016,Fletcher2019,Lovelace2019,Pebesma2019a}.
 A recent overview over the progress of \emph{R} to handle spatial data in general can be found in \cite{Bivand2020}.
@@ -210,7 +218,7 @@ However, \emph{sp} is not actively developed anymore, and its recommended succes
 Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
 A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \emph{R} session.
 Since publicly available data is becoming more prominent, so are \emph{R} packages to access them.
-Packages include \emph{rnaturalearth} \cite{South2017} to access the Natural Earth database, the \emph{elevatr} package to access raster elevation data \cite{R-elevatr}, the \emph{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the \emph{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \emph{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \emph{FedData} package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
+Packages include \emph{rnaturalearth} \cite{South2017} to access the Natural Earth database to downlad region and country data, the \emph{elevatr} package to access raster elevation data \cite{R-elevatr}, the \emph{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the \emph{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \emph{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \emph{FedData} package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
 Furthermore, the \emph{getlandsat} package \cite{Chamberlain2018} allows users to download data from the Landsat 8, the \emph{MODIS} package \cite{Mattiuzzi2020} to download MODIS products, and \emph{sen2r} \cite{R-sen2r} to download Sentinel-2 optical images.
 Also, the \texttt{getData()} function from the \emph{raster} package allows users to download climatic and bioclimatic data from WorldClim v1.4 (for WorldClim v2, see the in-development package \emph{geodata} ).
 Additionally, the \emph{rgee} package \cite{R-rgee} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
@@ -289,7 +297,7 @@ All of the methods mentioned above are implemented in the \emph{motif} package \
 \paragraph{Geostatistics}\label{geostatistics}}
 
 Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g.~normalized difference vegetation index, disturbance intensity, topography).
-In landscape ecology, geostatistics has three key uses: (1) detecting and correcting for spatial autocorrelation; (2) quantifying and comparing landscape pattern; (3) interpolating data.
+In landscape ecology, geostatistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape pattern; iii) interpolating data.
 
 Point pattern analysis is one such method.
 This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
@@ -362,14 +370,14 @@ Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simu
 
 \caption{Overview of commonly used R packages for landscape ecology. Packages are sorted by their major application task. Only packages focused on spatial data and landscape ecology are included.}
 
-\begin{tabularx}{450pt}{lrrr}
+\begin{tabularx}{450pt}{lrXr}
 
 \hline
 Task & R package & Describtion & Reference \\
 \hline
 \multirow{8}{*}{Spatial data} & raster & Raster data handling and analysis & \cite{Hijmans2019} \\
-& terra & Basic data handling and analysis & \cite{R-terra} \\
-& stars & Spatiotemporal raster data & \cite{Pebesma2019} \\
+& terra & Raster (and some vector) data handling and analysis & \cite{R-terra} \\
+& stars & Spatiotemporal raster data handling and analysis & \cite{Pebesma2019} \\
 & fasterize & Polygon to raster conversion & \cite{Ross2020} \\
 & rasterDT & Faster alternatives for some raster functions & \cite{OBrien2020} \\
 & exactextractr & Summarize raster values over polygonal areas & \cite{Baston2020} \\
@@ -381,7 +389,7 @@ Task & R package & Describtion & Reference \\
 & rgbif & Download biodiversity data & \cite{R-rgbif} \\
 & BIEN & Download plant diversity, function and distribution data & \cite{Maitner2020} \\
 & marmap & Download and manipulate bathymetric data & \cite{Pante2013} \\
-& FedData & Download US federal data & \cite{R-FedData} \\
+& FedData & Download geospatial data from US federal sources & \cite{R-FedData} \\
 & getlandsat & Download satellite data from Landsat 8 & \cite{Chamberlain2018} \\
 & MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
 & sen2r & Download satellite data from Sentinel & \cite{R-sen2r} \\
@@ -394,32 +402,32 @@ Task & R package & Describtion & Reference \\
 & rayshader & Create 2D and 3D data visualizations & \cite{Morgen-Wall2020} \\
 \hline
 \multirow{4}{*}{\shortstack[l]{Quantifying landscape\\characteristics}} & landscapemetrics & Quantify categorical landscape patterns & \cite{Hesselbarth2019a} \\
-& belg & Calculates the Boltzmann entropy & \cite{R-belgpaper} \\
-& motif & Not on CRAN? & \cite{R-motif} \\
+& belg & Calculate the Boltzmann entropy & \cite{R-belgpaper} \\
+& motif & Pattern-based spatial analysis & \cite{R-motif} \\
 & geodiv & Quantify continuous landscape patterns & \cite{Smith2020} \\
 \hline
-\multirow{8}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & Add describtion & \cite{Hijmans2017} \\
-& sdm & Add describtion & \cite{Naimi2016} \\
-& ecospat & Add describtion & \cite{Broennimann2020} \\
-& biomod2 & Add describtion & \cite{Thuiller2020} \\
-& PresenceAbsence & Add describtion & \cite{Freeman2008} \\
-& zoon & Add describtion & \cite{Golding2018} \\
-& adehabitatHR, adehabitatHS & Add describtion & \cite{Calenge2006} \\
-& amt &  Add describtion &\cite{Signer2019} \\
+\multirow{8}{*}{\shortstack[l]{Species distribution\\modeling}} & dismo & Methods for species distribution modeling & \cite{Hijmans2017} \\
+& sdm & Species distribution models using individual and community-based approaches & \cite{Naimi2016} \\
+& ecospat & Species distribution, niche quantification and community assembly & \cite{Broennimann2020} \\
+& biomod2 & Species distribution modeling, ensemble of models and ensemble forecasting & \cite{Thuiller2020} \\
+& PresenceAbsence & Evaluating of presence-absence models & \cite{Freeman2008} \\
+& zoon & Reproducible and remixable species distribution modelling & \cite{Golding2018} \\
+& adehabitatHR, adehabitatHS & Home range and habitat selection modelling & \cite{Calenge2006} \\
+& amt & Manage and analyze animal movement data &\cite{Signer2019} \\
 \hline
-\multirow{5}{*}{Connectivity} & lconnect & Add describtion & \cite{Mestre2019} \\
-& Makurhini & Add describtion & \cite{Godinez-Gomez2020} \\
-& grainscape & Add describtion & \cite{Chubaty2020} \\
-& gdistance & Add describtion & \cite{vanEtten2017} \\
-& samc & Add describtion & \cite{Marx2020} \\
+\multirow{5}{*}{Connectivity} & lconnect & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
+& Makurhini & Calculate fragmentation and landscape connectivity indices & \cite{Godinez-Gomez2020} \\
+& grainscape & Calculate minimum planar graph and grains of connectivity models & \cite{Chubaty2020} \\
+& gdistance & Distances and routes on geographical grids & \cite{vanEtten2017} \\
+& samc & Functions for working with absorbing Markov chains & \cite{Marx2020} \\
 \hline
-\multirow{4}{*}{Landscape genetics} & raphs4lg & Add describtion & \cite{Savary2020} \\
-& PopGenReport & Add describtion & \cite{Adamack2014,Gruber2015} \\
-& HierDpart & Add describtion & \cite{Qin2019} \\
-& GeNetIt & Add describtion & \cite{Murphy2010} \\
+\multirow{4}{*}{Landscape genetics} & graph4lg & Build graphs for landscape genetics analysis & \cite{Savary2020} \\
+& PopGenReport & Framework to analyse population genetic data & \cite{Adamack2014,Gruber2015} \\
+& HierDpart & Calculating and decomposing hierarchical diversity metrics & \cite{Qin2019} \\
+& GeNetIt & Spatial graph-theoretic genetic gravity models & \cite{Murphy2010} \\
 \hline
 \multirow{4}{*}{various} & NLMR & Simulate neutral landscape models & \cite{Sciaini2018} \\
-& RandomFields & Add describtion & \cite{Schlather2015} \\
+& RandomFields & Simulation and analysis of random fields & \cite{Schlather2015} \\
 & landscapetools & Utility functions for raster data & \cite{Sciaini2018}  \\
 & grainchanger & Data aggregation methods for raster data & \cite{Graham2019} \\
 \hline
