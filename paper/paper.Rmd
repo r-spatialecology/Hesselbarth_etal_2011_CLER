@@ -91,15 +91,15 @@ cell & Smallest, rectangular unit of raster data model \\
 CRAN & Comprehensive R Archive Network \\
 CRS & Coordinate references systems \\
 GIS & Geographical information system \\
-landscapes & Mosaics of land covers, ecosystems, habitat types, land uses \\
+landscape & A mosaic of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
 open-source software & Software released under licenses that allow to use, modify and distribute it \\
 patch & Neighboring cells with same value \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
-R packages & User-created software extension to R programming language \\
-SDM & Species distribution modelling \\
-vector & Points and lines based data model \\
+R package & User-created software extension to R programming language \\
+SDM & Species distribution modeling \\
+vector & Points, lines, and polygons-based data model \\
 
 \hline
 
