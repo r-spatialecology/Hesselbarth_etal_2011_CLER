@@ -30,8 +30,7 @@ precipitation_sum_ch <- raster:::crop(x = precipitation_sum,
 # pdf(file = "R/Figures/base_plot.pdf")
 
 plot(precipitation_sum_ch)
-
-plot(switzerland$geometry, add = TRUE)
+plot(st_geometry(switzerland), add = TRUE)
 
 # dev.off()
 
@@ -67,3 +66,24 @@ plot_tm = tm_shape(precipitation_class_ch) +
 tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
 plot_tml = tmap_leaflet(plot_tm)
 mapview::mapshot(plot_tml, file = "R/Figures/tmap2.pdf")
+
+
+
+# combine plots -----------------------------------------------------------
+# https://wilkelab.org/cowplot/articles/mixing_plot_frameworks.html
+library(cowplot)
+tmap_mode("plot")
+
+# prep
+tm_grob = tmap_grob(plot_tm)
+
+p1 = function() {
+    plot(precipitation_class_ch)
+    plot(st_geometry(switzerland), add = TRUE)
+}
+
+plot_all = plot_grid(p1, plot_gg, tm_grob,
+          nrow = 1, labels = "auto")
+
+ggsave("R/Figures/plot_all.pdf",
+       width = 12, height = 4)
