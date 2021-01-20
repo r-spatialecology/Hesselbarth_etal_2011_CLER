@@ -11,16 +11,12 @@ precipitation <- raster::getData("worldclim", lon = 3, lat = 38,
 # calculate total precipitation
 precipitation_sum <- raster::calc(x = precipitation, fun = sum)
 
-# crop and mask
-precipitation_ch <- raster::crop(precipitation, switzerland)
-precipitation_ch <- raster::mask(precipitation_ch, switzerland)
-plot(precipitation_ch[[1]])
-
 # reproject to geographical CRS
 precipitation_sum <- raster::projectRaster(precipitation_sum, crs = "+init=epsg:21781")
 
 # get admin boundaries of Switzerland
-switzerland <- rnaturalearth::ne_countries(country = "switzerland",
+switzerland <- rnaturalearth::ne_countries(scale = 50,
+                                           country = "switzerland",
                                            returnclass = "sf")
 
 # reproject to geographical CRS
@@ -55,9 +51,19 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
 ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
 
 # create interactive tmap (take screenshot for paper)
+# tmap_mode("plot")
 tmap_mode("view")
 
-tm_shape(precipitation_class_ch) +
-    tm_raster() +
+plot_tm = tm_shape(precipitation_class_ch) +
+    tm_graticules() +
+    tm_raster(title = "Precipitation\nclassified", style = "cont",
+              palette = "viridis") +
     tm_shape(switzerland) +
-    tm_borders()
+    tm_borders(lwd = 2, col = "white") +
+    tm_scale_bar(breaks = c(0, 25, 50),
+                 bg.color = "white") +
+    tm_layout(legend.outside = TRUE)
+
+tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
+plot_tml = tmap_leaflet(plot_tm)
+mapview::mapshot(plot_tml, file = "R/Figures/tmap2.pdf")
