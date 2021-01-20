@@ -287,23 +287,27 @@ Spatial signatures calculated for many landscapes can be compared using one of a
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the *motif* package \cite{R-motif}.
 
-#### Geostatistics
+#### Spatial statistics
 
-Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g. normalized difference vegetation index, disturbance intensity, topography). 
-In landscape ecology, geostatistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape pattern; iii) interpolating data. 
+<!--JN: I would rather say that geostatistics is a subbranch of spatial statistics (e.g. https://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch16.pdf). 
+However, we can revert my changes if you want-->
+
+Spatial statistics are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g., normalized difference vegetation index, disturbance intensity, topography). 
+In landscape ecology, spatial statistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape patterns; iii) interpolating data. 
 
 Point pattern analysis is one such method. 
 This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
-The *spatstat* package contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics. 
-A comprehensive text book covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
+The *spatstat* package \cite{R-spatstat} contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modeling fitting, inference, and diagnostics. 
+A comprehensive textbook covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
 
 Distance-based methods allow us to detect and correct for spatial autocorrelation in data.
-It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modelling. 
-The *spdep* package has methods for quantifying multiple metrics of spatial autocorrelation, and to correct for these in a spatial autoregressive model.
-The *rinla* and *inlabru* packages also provide functionality for modelling of spatially structured data. 
+It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modeling. 
+The *spdep* package \cite{Bivand2013} has methods for quantifying multiple metrics of spatial autocorrelation and correcting these in a spatial autoregressive model.
+The *rinla* \cite{rue2009approximate} (\url{https://www.r-inla.org}) and *inlabru* \cite{R-inlabru} packages also provide functionality for modeling of spatially structured data. 
 
-Finally, with variograms and correlograms, the spatial structure of continuous landscapes can be quantified and compared. 
-R packages *geoR* and *gstat* provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging. 
+Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms. 
+R packages *geoR* \cite{R-geoR} and *gstat* \cite{R-gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+Geostatistics also allows for spatial data simulations.
 
 #### Species distribution modeling {#sec:SDM}
 
