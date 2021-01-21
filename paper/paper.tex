@@ -84,6 +84,7 @@ max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract 
         statistical programming language \and
         R packages \and
         reproducibility \and
+        scientific software \and
         \ldots{} \and
     }
 
@@ -113,15 +114,15 @@ cell & Smallest, rectangular unit of raster data model \\
 CRAN & Comprehensive R Archive Network \\
 CRS & Coordinate references systems \\
 GIS & Geographical information system \\
-landscapes & Mosaics of land covers, ecosystems, habitat types, land uses \\
+landscape & A mosaic of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
 open-source software & Software released under licenses that allow to use, modify and distribute it \\
 patch & Neighboring cells with same value \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
-R packages & User-created software extension to R programming language \\
-SDM & Species distribution modelling \\
-vector & Points and lines based data model \\
+R package & User-created software extension to R programming language \\
+SDM & Species distribution modeling \\
+vector & Points, lines, and polygons-based data model \\
 
 \hline
 
@@ -293,24 +294,25 @@ Spatial signatures calculated for many landscapes can be compared using one of a
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the methods mentioned above are implemented in the \emph{motif} package \cite{R-motif}.
 
-\hypertarget{geostatistics}{%
-\paragraph{Geostatistics}\label{geostatistics}}
+\hypertarget{spatial-statistics}{%
+\paragraph{Spatial statistics}\label{spatial-statistics}}
 
-Geostatistics, or spatial statistics, are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g.~normalized difference vegetation index, disturbance intensity, topography).
-In landscape ecology, geostatistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape pattern; iii) interpolating data.
+Spatial statistics are complimentary to landscape metrics, and can be used to analyze patterns in continuous data (e.g., normalized difference vegetation index, disturbance intensity, topography).
+In landscape ecology, spatial statistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape patterns; iii) interpolating data.
 
 Point pattern analysis is one such method.
 This uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
-The \emph{spatstat} package contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modelling fitting, inference and diagnostics.
-A comprehensive text book covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
+The \emph{spatstat} package \cite{R-spatstat} contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modeling fitting, inference, and diagnostics.
+A comprehensive textbook covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
 
 Distance-based methods allow us to detect and correct for spatial autocorrelation in data.
-It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modelling.
-The \emph{spdep} package has methods for quantifying multiple metrics of spatial autocorrelation, and to correct for these in a spatial autoregressive model.
-The \emph{rinla} and \emph{inlabru} packages also provide functionality for modelling of spatially structured data.
+It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modeling.
+The \emph{spdep} package \cite{Bivand2013} has methods for quantifying multiple metrics of spatial autocorrelation and correcting these in a spatial autoregressive model.
+The \emph{rinla} \cite{rue2009approximate} (\url{https://www.r-inla.org}) and \emph{inlabru} \cite{R-inlabru} packages also provide functionality for modeling of spatially structured data.
 
-Finally, with variograms and correlograms, the spatial structure of continuous landscapes can be quantified and compared.
-R packages \emph{geoR} and \emph{gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms.
+R packages \emph{geoR} \cite{R-geoR} and \emph{gstat} \cite{R-gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+Geostatistics also allows for spatial data simulations.
 
 \hypertarget{sec:SDM}{%
 \paragraph{Species distribution modeling}\label{sec:SDM}}
@@ -414,6 +416,8 @@ Task & R package & Describtion & Reference \\
 & zoon & Reproducible and remixable species distribution modelling & \cite{Golding2018} \\
 & adehabitatHR, adehabitatHS & Home range and habitat selection modelling & \cite{Calenge2006} \\
 & amt & Manage and analyze animal movement data &\cite{Signer2019} \\
+& ctmm & Fit continuous time movement models &\cite{calabrese2016} \\
+& moveHMM & Fit hidden Markov models to movement data &\cite{michelot2016} \\
 \hline
 \multirow{5}{*}{Connectivity} & lconnect & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
 & Makurhini & Calculate fragmentation and landscape connectivity indices & \cite{Godinez-Gomez2020} \\
@@ -516,7 +520,6 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
-
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}

@@ -418,6 +418,8 @@ Task & R package & Describtion & Reference \\
 & zoon & Reproducible and remixable species distribution modelling & \cite{Golding2018} \\
 & adehabitatHR, adehabitatHS & Home range and habitat selection modelling & \cite{Calenge2006} \\
 & amt & Manage and analyze animal movement data &\cite{Signer2019} \\
+& ctmm & Fit continuous time movement models &\cite{calabrese2016} \\
+& moveHMM & Fit hidden Markov models to movement data &\cite{michelot2016} \\
 \hline
 \multirow{5}{*}{Connectivity} & lconnect & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
 & Makurhini & Calculate fragmentation and landscape connectivity indices & \cite{Godinez-Gomez2020} \\
