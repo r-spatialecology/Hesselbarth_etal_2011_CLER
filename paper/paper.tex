@@ -136,7 +136,7 @@ Today, almost all landscapes are directly or indirectly influenced by human acti
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important for science, conservation, or management \cite{With2019}.
 
 Landscape ecology focuses on how ecological processes are influenced by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
-In this context, landscape ecology predominantly focuses on i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchanges within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) and can guide how to to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+In this context, landscape ecology predominantly focuses on i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchanges within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) and can guide how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
 Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes can vary spatially \cite{With2019}.
 The importance of scale was already raised decades ago \cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance today \cite{Simova2012,Estes2018}.
@@ -162,10 +162,11 @@ The growing popularity of the \emph{R} programming language for spatial data ana
 A recent overview over the progress of \emph{R} to handle spatial data in general can be found in \cite{Bivand2020}.
 
 The growing body of \emph{R} packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
-Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g.~Python) for landscape ecology exist, in this review, we focus on software implemented in the \emph{R} programming language.
+Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g.~Python) for landscape ecology exist, in this review we focus on software implemented in the \emph{R} programming language.
 For more general overviews of open-source software for landscape ecology see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because in addition to handling spatial data, tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \ref{fig:fig-workflow}), the \emph{R} programming language can be a very powerful tool.
-Thus, in the first part, we present an overview of existing \emph{R} packages for landscape ecology (Table \ref{tab:packages}).
+The \emph{R} programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the \emph{R} environment (Fig. \ref{fig:fig-workflow}).
+
+Thus, in the first part of this article, we present an overview of existing \emph{R} packages for landscape ecology and closely related fields (Table \ref{tab:packages}).
 In the second part, we present a survey in which we asked the community how they currently use the \emph{R} programming language and to identify topics for which \emph{R} packages are presently missing for landscape ecology.
 
 \hypertarget{sec:existing_packages}{%
@@ -179,8 +180,8 @@ CRAN (the \emph{Comprehensive R Archive Network}) provides large visibility to t
 Additionally, hosting a package on \emph{GitHub} provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing (i.e.~testing if functions return an expected value).
 
 The guaranteed technical quality standard on \emph{CRAN} requires more initial work for developers compared to \emph{GitHub}, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on \emph{CRAN} also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of \emph{R} packages, i.e., package \emph{x} requires and uses code from package \emph{y} \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
-CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
+Additionally, the technical quality standard on \emph{CRAN} also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of \emph{R} packages, i.e., package \emph{x} requires and uses code from package \emph{y} .
+CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability and reproducibility of code.
 Thus, most packages can be found on both platforms, and many developers use \emph{GitHub} for regular development and \emph{CRAN} to publish stable releases of the packages.
 Furthermore, online communities like \emph{rOpenSci} also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
@@ -218,7 +219,7 @@ Besides many advantages and strength of the \emph{sf} package in terms of spatia
 \subsection{Spatial data download}\label{spatial-data-download}}
 
 Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
-A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \emph{R} session.
+A lot of this data are publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \emph{R} session.
 Since publicly available data is becoming more prominent, so are \emph{R} packages to access them.
 Packages include \emph{rnaturalearth} \cite{South2017} to access the Natural Earth database to download region and country data, the \emph{elevatr} package to access raster elevation data \cite{R-elevatr}, the \emph{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the \emph{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \emph{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \emph{FedData} package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
 Furthermore, the \emph{getlandsat} package \cite{Chamberlain2018} allows users to download Landsat 8 satellite data, the \emph{MODIS} package \cite{Mattiuzzi2020} to download MODIS products, and \emph{sen2r} \cite{R-sen2r} to download Sentinel-2 optical images.
@@ -237,6 +238,7 @@ Two main groups of CRS, namely geographical and projected, exist, with each havi
 Using geographical CRS, positions are specified by latitude and longitude coordinates in degrees.
 However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
 The selection of projected CRS should be based on the property of spatial data that needs to be kept intact (e.g., no distortion of areas, shapes, distances, or angles) and be appropriate for a given study area.
+A common way to refer to different CRS is to used codes developed by the European Petrol Survey Group (EPSG).
 Tools to find an appropriate CRS for a certain region can be found at \url{https://spatialreference.org}, \url{https://epsg.org}, or \url{http://epsg.io}.
 All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
@@ -248,7 +250,8 @@ Additionally, they offer many other operations, such as merging or joining spati
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the \emph{grainchanger} package \cite{Graham2019}.
 Furthermore, \emph{landscapetools} is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
-Finally, there are a number of tools for landscape ecology implemented in GIS software, such as \texttt{r.li} or \texttt{r.pi} for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine. Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
+Finally, there are a number of tools for landscape ecology implemented in GIS software, such as \texttt{r.li} or \texttt{r.pi} for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as \emph{rgrass7} \cite{R-grass7} for GRASS GIS, \emph{RSAGA} \cite{R-RSAGA} for SAGA GIS, and \emph{rgee} \cite{R-rgee} for Google Earth Engine.
 
 \hypertarget{creating-maps}{%
 \subsection{Creating maps}\label{creating-maps}}
@@ -325,8 +328,8 @@ Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletc
 Popular approaches and packages include generalized linear models using, e.g., the \emph{stats} \cite{RCoreTeam2019} package; generalized additive models using, e.g., the \emph{mgcv} \cite{Wood2017} or \emph{lme4} \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the \emph{rpart} \cite{Therneau2019}, \emph{randomForest} \cite{Liaw2002} or \emph{ranger} \cite{Wright2017} package or multivariate data analysis using , e.g., the \emph{ade4} \cite{Dray2007} or \emph{vegan} \cite{Oksanen2019} package.
 Also, packages specifically designed for SDM exists, including includes the \emph{dismo} \cite{Hijmans2017}, \emph{sdm} \cite{Naimi2016}, \emph{ecospat} \cite{Broennimann2020}, \emph{biomod2} \cite{Thuiller2020}, \emph{PresenceAbsence} \cite{Freeman2008}, or \emph{zoon} \cite{Golding2018} packages.
 
-Related to SDMs, there are growing number of \emph{R} packages to analyze data from tracked animals, to study their movement characteristics, space use and interaction with other animals and the environment.
-These analyses often use results of landscape ecological analyses as explanatory variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
+Related to SDMs, there are a growing number of \emph{R} packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
+These analyses often use results of landscape ecological analyses as predictor variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
 Widely used \emph{R} packages include \emph{ctmm} \cite{calabrese2016} and \emph{adehabitatHR} \cite{Calenge2006} for home-range estimation, \emph{moveHMM} \cite{michelot2016} for the classification of behavioral states, and \emph{amt} \cite{Signer2019} for habitat selection.
 A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{joo2020}.
 
@@ -454,16 +457,16 @@ Task & R package & Describtion & Reference \\
 
 To better understand how the landscape ecology community uses \emph{R}, we conducted a short survey using mailing lists and social media to reach the community.
 In total, the survey was answered by 103 participants, of which the majority were either ``PhD students'' (34\%), followed by ``Post-Docs'' (28.2\%) and ``Professors'' (12.6\%).
-Other, less frequent answers were ``Data scientists,'' ``None of the above,'' ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
+Other, less frequent answers were ``Data scientists'', ``None of the above'', ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
 Most people use \emph{R} either ``daily'' (54.4\%) or a ``few times a week'' (36.9\%).
 Almost half of all participants described themselves as ``advanced'' users (46.6\%), while 40.8\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.4\%) or plan to do so in the future (23.3\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity,'' followed by ``land use management,'' ``landscape connectivity,'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data,'' ``spatial statistics,'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
 Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
 Interestingly, more people use the raster data model (72.8\%) in comparison to the vector data model (27.2\%).
@@ -473,7 +476,7 @@ The \emph{raster} package was mentioned the most, followed by the \emph{sf} pack
 Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey} C).
 Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 33.44\%).
 
-Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only very few participants evaluated \emph{R} as ``intermediate,'' ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 91.26\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 8.74\%; Fig. \ref{fig:fig-survey} D)).
 
 \begin{figure}
 
@@ -525,7 +528,7 @@ JN is author of \emph{belg} and \emph{motif} package. JS is author of the \emph{
 \hypertarget{funding}{%
 \paragraph{Funding}\label{funding}}
 
-MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics,' grant number 152112243.
+MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics', grant number 152112243.
 
 \hypertarget{author-contributions}{%
 \paragraph{Author contributions}\label{author-contributions}}
@@ -538,7 +541,6 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
-
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}

@@ -110,7 +110,7 @@ Today, almost all landscapes are directly or indirectly influenced by human acti
 Thus, understanding the complex interactions between landscapes and ecological processes becomes increasingly important for science, conservation, or management \cite{With2019}.
 
 Landscape ecology focuses on how ecological processes are influenced by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
-In this context, landscape ecology predominantly focuses on i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchanges within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) and can guide how to to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
+In this context, landscape ecology predominantly focuses on i) spatial and temporal dynamics of heterogeneous landscapes, ii) interactions, fluxes, and exchanges within these landscapes, iii) how the landscapes influence ecological processes (and vice versa), and lastly, iv) and can guide how to manage these heterogeneous landscapes \cite{Risser1984,Turner1989}.
 
 Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995}, spatial context is important and ecological processes can vary spatially \cite{With2019}.
 The importance of scale was already raised decades ago \cite{Wiens1989,Levin1992,Jelinski1996} and is still of relevance today \cite{Simova2012,Estes2018}.
@@ -135,10 +135,14 @@ The growing popularity of the *R* programming language for spatial data analysis
 A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
 
 The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
-Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g. Python) for landscape ecology exist, in this review, we focus on software implemented in the *R* programming language.
+Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g. Python) for landscape ecology exist, in this review we focus on software implemented in the *R* programming language.
 For more general overviews of open-source software for landscape ecology see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
-Because in addition to handling spatial data, tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
-Thus, in the first part, we present an overview of existing *R* packages for landscape ecology (Table \@ref(tab:packages)).
+<!-- In addition to handling spatial data, tasks such as statistical modeling, creation of publication-ready figures, and even preparation of complete reports can be done in the same working environment (Fig. \@ref(fig:fig-workflow)), the *R* programming language can be a very powerful tool.
+-->
+<!-- JS: I tried to reorganize the previous sentence -->
+The *R* programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the *R* environment (Fig. \@ref(fig:fig-workflow)).
+
+Thus, in the first part of this article, we present an overview of existing *R* packages for landscape ecology and closely related fields (Table \@ref(tab:packages)).
 In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are presently missing for landscape ecology.
 
 # Existing packages {#sec:existing_packages}
@@ -151,9 +155,11 @@ CRAN (the *Comprehensive R Archive Network*) provides large visibility to the co
 Additionally, hosting a package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing (i.e. testing if functions return an expected value).
 
 The guaranteed technical quality standard on *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* \cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}.
+Additionally, the technical quality standard on *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y* <!--\cite{vonKrogh2006,St.Laurent2008,Steiniger2009,Prlic2012,Powers2019}-->.
+<!-- JS: ..the technical quality standard on *CRAN* also... on or of CRAN? not sure here-->
 <!-- MH: Not sure if these references belong here? -->
-CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability of code.
+<!-- JS: I think not. I commented the rerences out, so you can delete if you agree -->
+CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability and reproducibility of code.
 Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
 Furthermore, online communities like *rOpenSci* also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
@@ -190,8 +196,9 @@ Besides many advantages and strength of the *sf* package in terms of spatial dat
 
 ## Spatial data download
 
+<!--JS: for or at many scales? -->
 Nowadays, spatial data for many scales is available from an abundance of online-accessible sources.
-A lot of this data is publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an *R* session.
+A lot of this data are publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an *R* session.
 Since publicly available data is becoming more prominent, so are *R* packages to access them.
 Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database to download region and country data, the *elevatr* package to access raster elevation data \cite{R-elevatr}, the *rgbif* package to access the Global Biodiversity Information Facility (GBIF) portal \cite{R-rgbif}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{R-FedData} to access the National Land Cover Database (NLCD) data for the USA.
 Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows users to download Landsat 8 satellite data, the *MODIS* package \cite{Mattiuzzi2020} to download MODIS products, and *sen2r* \cite{R-sen2r} to download Sentinel-2 optical images.
@@ -209,6 +216,8 @@ Two main groups of CRS, namely geographical and projected, exist, with each havi
 Using geographical CRS, positions are specified by latitude and longitude coordinates in degrees.
 However, most landscape ecology studies should utilize projected CRSs, which use some measurement units (e.g., meters).
 The selection of projected CRS should be based on the property of spatial data that needs to be kept intact (e.g., no distortion of areas, shapes, distances, or angles) and be appropriate for a given study area.
+<!-- JS: added a sentense to EPSG codes here -->
+A common way to refer to different CRS is to used codes developed by the European Petrol Survey Group (EPSG).
 Tools to find an appropriate CRS for a certain region can be found at <https://spatialreference.org>, <https://epsg.org>, or <http://epsg.io>.
 All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
@@ -220,7 +229,9 @@ Additionally, they offer many other operations, such as merging or joining spati
 A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}.
 Furthermore, *landscapetools* is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
-Finally, there are a number of tools for landscape ecology implemented in GIS software, such as `r.li` or `r.pi` for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
+Finally, there are a number of tools for landscape ecology implemented in GIS software, such as `r.li` or `r.pi` for GRASS GIS \cite{wegmann2018r,neteler2012grass,Porta2017}, terrain analysis methods in SAGA GIS \cite{gmd-8-1991-2015}, or morphological operations for Google Earth Engine.<!--https://github.com/r-spatial/rgee/blob/examples/image/morphological_operations.R--> 
+<!-- JS: consider remove Gladly -->
+Gladly, it is possible to control several GIS software directly from R using dedicated packages, such as *rgrass7* \cite{R-grass7} for GRASS GIS, *RSAGA* \cite{R-RSAGA} for SAGA GIS, and *rgee* \cite{R-rgee} for Google Earth Engine.
 
 ## Creating maps
 
@@ -241,7 +252,6 @@ Also the popular plotting package *ggplot2* \cite{Wickham2016a} has an extension
 
 Quick interactive visualization of spatial data can be done with the *mapview* package\cite{R-mapview}.
 Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{R-leaflet}.
-<!--- JS: I wonder if we should also cite js library? However, doing a quick google, I was not able to find a correct citation -->
 
 A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
@@ -305,8 +315,8 @@ Also, packages specifically designed for SDM exists, including includes the *dis
 <!-- These packages [check!] allow the user to create ensemble models of SDMs based on different underlying model structures such as Maxent, regression trees, and generalized linear or additive models.
 This is considered the gold standard in contemporary SDM \cite(Araujo2007).-->
 
-Related to SDMs, there are growing number of *R* packages to analyze data from tracked animals, to study their movement characteristics, space use and interaction with other animals and the environment.
-These analyses often use results of landscape ecological analyses as explanatory variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
+Related to SDMs, there are a growing number of *R* packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
+These analyses often use results of landscape ecological analyses as predictor variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
 Widely used *R* packages include *ctmm* \cite{calabrese2016} and *adehabitatHR* \cite{Calenge2006} for home-range estimation, *moveHMM* \cite{michelot2016} for the classification of behavioral states, and *amt* \cite{Signer2019} for habitat selection.
 A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{joo2020}.
 
@@ -344,6 +354,7 @@ Since describing connectivity between two locations is one of the fundamental st
 Further functionality for landscape genetics such as ... <!-- LJG: I think a little more info needed here - happy to dig through the packages to add in, but thought I'd leave for now incase anyone knows off top of their heads -->can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
 
 <!-- MH: Johannes, do you have more insights into the packages here? See comment LJG in L307 -->
+<!-- JS: No not really, I havent worked landscape genetics for some time -->
 
 #### Neutral landscape models {#sec:NLM}
 
