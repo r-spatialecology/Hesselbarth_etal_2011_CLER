@@ -17,7 +17,9 @@ authors:
   address: Wildlife Sciences, Faculty of Forestry and Forest Ecology, University of Goettingen, Büsgenweg 3, 37077 Göttingen, Germany
   email: jsigner@uni-goettingen.de
 - name: Laura J. Graham
-  address: Geography, Earth & Environmental Sciences, University of Birmingham, Edgbaston, Birmingham B15 2TT, United Kingdom
+  address: 
+    a) Geography, Earth & Environmental Sciences, University of Birmingham, Edgbaston, Birmingham B15 2TT, United Kingdom
+    b) Biodiversity, Ecology & Conservation Group, IIASA, Vienna, Austria 
   email: l.graham@bham.ac.uk
 keywords:
 - spatial data
@@ -27,7 +29,7 @@ keywords:
 - scientific software
 - ...
 abstract: |
-  max. (200 words) Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract Abstract
+  Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. In this we find that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 preamble: |
@@ -84,10 +86,10 @@ base_size <- 7.5
 
 \hline
 
-API & Application programming interface \\
+API & Application programming interface. A set of protocols for sending and retrieving information from a server \\
 cell & Smallest, rectangular unit of raster data model \\
-CRAN & Comprehensive R Archive Network \\
-CRS & Coordinate references systems \\
+CRAN & Comprehensive R Archive Network. A repository for R packages \\
+CRS & Coordinate references systems. A coordinate-based local, regional or global system used to locate geographical entities \\
 GIS & Geographical information system \\
 landscape & Mosaic of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
@@ -96,7 +98,7 @@ patch & Neighboring cells with same value \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
 R package & User-created software extension to R programming language \\
-SDM & Species distribution modeling \\
+SDM & Species distribution modelling \\
 vector & Points, lines, and polygons-based data model \\
 
 \hline
@@ -174,7 +176,7 @@ include_graphics("data/Workflow.png")
 
 ## Spatial data representations {#sec:spatrep}
 
-While *R* has several built-in data structures, including vectors, matrices, data.frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
+While *R* has several built-in data structures, including vectors, matrices, data frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 However, because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many *R* packages (\cite{Lovelace2019}, page 10, Table \@ref(tab:packages)).
 Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
 Importantly, main *R* packages for spatial data use the external *GDAL* \cite{GDAL} and *PROJ* \cite{PROJ} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
@@ -311,7 +313,7 @@ Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Gu
 
 Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2019}, there is also a large number of *R* packages used for SDMs.
 Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package.
-Also, packages specifically designed for SDM exists, including includes the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages.
+Also, packages specifically designed for SDM exist, including the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages. Additionally, packages such as *ENMeval* \cite{R-enmeval} provide functionality for model tuning and evaluation. 
 <!-- These packages [check!] allow the user to create ensemble models of SDMs based on different underlying model structures such as Maxent, regression trees, and generalized linear or additive models.
 This is considered the gold standard in contemporary SDM \cite(Araujo2007).-->
 
@@ -351,7 +353,7 @@ By explicitly including landscape characteristics, landscape genetics provides a
 As a result of its interdisciplinarity, landscape genetics draws together methods from multiple fields, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
 
 Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:connectivity}) are also important for landscape genetics.
-Further functionality for landscape genetics such as ... <!-- LJG: I think a little more info needed here - happy to dig through the packages to add in, but thought I'd leave for now incase anyone knows off top of their heads -->can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
+Further functionality for landscape genetics such as quantifying and analysing population genetic structure, and hierarchical decomposition analysis can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
 
 <!-- MH: Johannes, do you have more insights into the packages here? See comment LJG in L307 -->
 <!-- JS: No not really, I havent worked landscape genetics for some time -->
@@ -418,6 +420,7 @@ Task & R package & Describtion & Reference \\
 & biomod2 & Species distribution modeling, ensemble of models and ensemble forecasting & \cite{Thuiller2020} \\
 & PresenceAbsence & Evaluating of presence-absence models & \cite{Freeman2008} \\
 & zoon & Reproducible and remixable species distribution modelling & \cite{Golding2018} \\
+& ENMeval & Model tuning and evaluation & \cite{R-enmeval} \\
 & adehabitatHR, adehabitatHS & Home range and habitat selection modelling & \cite{Calenge2006} \\
 & amt & Manage and analyze animal movement data &\cite{Signer2019} \\
 & ctmm & Fit continuous time movement models &\cite{calabrese2016} \\
@@ -596,7 +599,7 @@ ggplot_tasks <- ggplot(data = tasks_df) +
 
 Next, we were interested in the most important tasks to the workflow of the participants.
 Not surprisingly, "(pre-)processing of data", "spatial statistics", and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey) B).
-Interestingly, the available options seemed to describe the most important task to the workflow quite well since only very few participants selected the "others" option (all options with less than five total answers were classified as "others").
+The available options seemed to describe the most important task to the workflow quite well since only very few participants selected the "others" option (all options with less than five total answers were classified as "others").
 
 ```{r data-model, include = FALSE}
 # data model
@@ -670,7 +673,7 @@ ggplot_packages <- ggplot(data = r_packages_df) +
        title = "List the three R packages related\nto landscape ecology you use the most")
 ```
 
-Interestingly, more people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
+More people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
 This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey) C)).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
 The *raster* package was mentioned the most, followed by the *sf* package.
@@ -790,12 +793,12 @@ The highly dynamic development of *R* packages for landscape ecology also shows 
 However, since landscape ecology constantly develops and improves, the *R* programming language and its packages need to change and adapt to these changes.
 
 <!--a paragraph summarizing possibilities-->
-A comprehensive collection of *R* software package exist to handle the most common tasks and fields of landscape ecology. 
+A comprehensive collection of *R* software packages exist to handle the most common tasks and fields of landscape ecology. 
 Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, *R* allows for transparent and reproducible workflows.
-Additionally, this also allows to easily interchange, modify, or adapt methods from other related and unrelated fields.
+Additionally, this also allows users to easily interchange, modify, or adapt methods from other related and unrelated fields.
 
 <!--a paragraph summarizing the survey-->
-The survey revealed that overall the landscape ecology community is well pleased with the capabilities of the *R* programming language for landscape ecology. 
+The survey revealed that overall the landscape ecology community is satisfied with the capabilities of the *R* programming language for landscape ecology. 
 Furthermore, the survey showed the highly dynamic development of *R* packages by the community itself, showing that avaiable tools are constantly updated.
 
 <!--a paragraph about missing features/future work-->
