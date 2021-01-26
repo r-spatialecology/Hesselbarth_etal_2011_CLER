@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.13)  26 JAN 2021 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.13)  26 JAN 2021 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,57 +486,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--89
 
 [1{c:/Users/grahamlz/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/
 pdftex.map}]
-Overfull \hbox (112.0pt too wide) in paragraph at lines 129--130
+Overfull \hbox (112.0pt too wide) in paragraph at lines 133--134
 [] 
  []
 
 [2] [3]
-<data/Workflow.png, id=212, 511.9125pt x 270.25969pt>
+<data/Workflow.png, id=210, 511.9125pt x 270.25969pt>
 File: data/Workflow.png Graphic file (type png)
 <use data/Workflow.png>
-Package pdftex.def Info: data/Workflow.png  used on input line 192.
+Package pdftex.def Info: data/Workflow.png  used on input line 196.
 (pdftex.def)             Requested size: 337.99608pt x 165.60045pt.
 [4]
-Underfull \vbox (badness 1742) has occurred while \output is active []
+Underfull \vbox (badness 2158) has occurred while \output is active []
 
-[5 <./data/Workflow.png>] [6]
-Overfull \hbox (0.56142pt too wide) in paragraph at lines 270--272
+[5 <./data/Workflow.png>] [6] [7]
+Overfull \hbox (0.56142pt too wide) in paragraph at lines 274--276
 []\OT1/cmr/m/n/10 Quick in-ter-ac-tive vi-su-al-iza-tion of spa-tial data can b
 e done with the \OT1/cmr/m/it/10 mapview
  []
 
-[7]
-<data/plot_all.pdf, id=368, 867.24pt x 289.08pt>
+<data/plot_all.pdf, id=365, 867.24pt x 289.08pt>
 File: data/plot_all.pdf Graphic file (type pdf)
 <use data/plot_all.pdf>
-Package pdftex.def Info: data/plot_all.pdf  used on input line 276.
+Package pdftex.def Info: data/plot_all.pdf  used on input line 280.
 (pdftex.def)             Requested size: 337.99728pt x 276.00508pt.
 [8 <./data/plot_all.pdf>] [9] [10]
-Overfull \hbox (3.10948pt too wide) in paragraph at lines 358--362
+Overfull \hbox (3.10948pt too wide) in paragraph at lines 362--366
  []\OT1/cmr/m/it/10 Landscape ge-net-ics [] \OT1/cmr/m/n/10 Land-scape ge-net-i
 cs in-ves-ti-gates how char-ac-ter-is-tics of land-
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 450--450
+Underfull \hbox (badness 1377) in paragraph at lines 454--454
 []|\OT1/cmr/m/n/8 Download geospa-tial data from US fed-eral
  []
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 450--450
+Underfull \hbox (badness 2582) in paragraph at lines 454--454
 []|\OT1/cmr/m/n/8 Species dis-tri-bu-tion mod-el-ing, en-sem-ble of
  []
 
 
-Overfull \hbox (112.0pt too wide) in paragraph at lines 450--451
+Overfull \hbox (112.0pt too wide) in paragraph at lines 454--455
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 182.41577pt on input line 454.
+LaTeX Warning: Float too large for page by 182.41577pt on input line 458.
 
 [11] [12]
-Overfull \hbox (8.08397pt too wide) in paragraph at lines 463--466
+Overfull \hbox (8.08397pt too wide) in paragraph at lines 467--470
 \OT1/cmr/m/n/10 Al-most half of all par-tic-i-pants de-scribed them-selves as `
 `ad-vanced'' users (46.6%),
  []
@@ -545,7 +544,7 @@ Overfull \hbox (8.08397pt too wide) in paragraph at lines 463--466
 File: paper_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig-survey-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig-survey-1.pdf  used on inp
-ut line 484.
+ut line 488.
 (pdftex.def)             Requested size: 338.0pt x 234.00078pt.
 [13] [14 <./paper_files/figure-latex/fig-survey-1.pdf>] (./paper.bbl [15]
 Underfull \hbox (badness 1383) in paragraph at lines 156--159
@@ -565,7 +564,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--193
 /m/it/8 <$\OT1/cmr/m/n/8 https://CRAN.R-
  []
 
-
+[17]
 Underfull \hbox (badness 1776) in paragraph at lines 284--288
 []\OT1/cmr/m/n/8 J. Hol-lis-ter, Tarak Shah, \OT1/cmr/m/it/8 el-e-vatr: Ac-cess
  El-e-va-tion Data from Var-i-ous APIs
@@ -577,7 +576,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 284--288
 / elevatr$[]\OT1/cmr/m/n/8 .  R pack-age ver-sion 0.1.3,
  []
 
-[17] [18]
+[18]
 Underfull \hbox (badness 3009) in paragraph at lines 444--450
 \OT1/cmr/m/n/8 y-sis pro-gram for cat-e-gor-i-cal and con-tin-u-ous maps. Com-p
 uter soft-ware pro-
@@ -612,7 +611,7 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  7852 strings out of 481252
  126032 string characters out of 5913865
- 471213 words of memory out of 5000000
+ 472526 words of memory out of 5000000
  24437 multiletter control sequences out of 15000+600000
  411162 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -633,7 +632,7 @@ ti10.pfb><c:/Users/grahamlz/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti8.pfb><c:/Users/grahamlz/AppData/Roaming/TinyTeX/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/Users/grahamlz/AppData/Roaming/Ti
 nyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (22 pages, 361012 bytes).
+Output written on paper.pdf (22 pages, 361144 bytes).
 PDF statistics:
  1252 PDF objects out of 1440 (max. 8388607)
  717 compressed objects within 8 object streams
