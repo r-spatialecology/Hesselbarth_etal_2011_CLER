@@ -10,7 +10,7 @@ authors:
   address: Institute of Geoecology and Geoinformation, Adam Mickiewicz University, Krygowskiego 10, 61-680 Poznan, Poland
   email: nowosad.jakub@gmail.com
 - name: Johannes Signer
-  address: Wildlife Sciences, Faculty of Forestry and Forest Ecology, University of Goettingen, Büsgenweg 3, 37077 Göttingen, Germany
+  address: Wildlife Sciences, Faculty of Forestry and Forest Ecology, University of Goettingen, Buesgenweg 3, 37077 Goettingen, Germany
   email: jsigner@uni-goettingen.de
 - name: Laura J. Graham
   address: 
