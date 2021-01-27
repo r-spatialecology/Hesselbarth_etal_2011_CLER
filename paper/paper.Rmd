@@ -1,9 +1,5 @@
 ---
 title: Open-source tools in R for landscape ecology
-# subtitle: Do you have a subtitle? If so, write it here
-# titlerunning: Open source landscape ecology tools
-# authorrunning: Short form of author list if too long for running head
-# thanks: |
 authors: 
 - name: Maximillian H.K. Hesselbarth
   address:
@@ -27,9 +23,8 @@ keywords:
 - R packages
 - reproducibility
 - scientific software
-- ...
 abstract: |
-  Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. In this we find that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
+  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** In this we find that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 preamble: |
