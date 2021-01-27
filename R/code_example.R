@@ -24,19 +24,17 @@ switzerland <- rnaturalearth::ne_countries(scale = 50,
 switzerland <- sf::st_transform(x = switzerland, crs = "epsg:21781")
 
 # crop and mask with buffer
-precipitation_sum_ch <- raster:::crop(x = precipitation_sum,
-                                      y = sf::st_buffer(x = switzerland, dist = 5000))
+precipitation_sum_ch <- raster::crop(x = precipitation_sum,
+                                     y = sf::st_buffer(x = switzerland, dist = 5000))
 
 # reclassify into 5 classes
 precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
 
 # create base plot
 # pdf(file = "R/Figures/base_plot.pdf")
-
 plot(precipitation_class_ch, col = viridis(5))
 plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
 plot(st_geometry(switzerland), add = TRUE)
-
 # dev.off()
 
 
@@ -53,39 +51,43 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     labs(x = "", y = "") +
     theme_classic() +
     theme(legend.position = "bottom")
-
-ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
+# ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
 
 # create interactive tmap (take screenshot for paper)
 # tmap_mode("plot")
-tmap_mode("view")
+# tmap_mode("view")
 
 plot_tm = tm_shape(precipitation_class_ch) +
     tm_graticules() +
-    tm_raster(title = "Precipitation\nclassified", style = "cont",
-              palette = "viridis") +
+    tm_raster(title = "Precipitation\nclassified",
+              style = "cat",
+              palette = "viridis",
+              legend.is.portrait = FALSE) +
     tm_shape(switzerland) +
     tm_borders(lwd = 2, col = "white") +
     tm_scale_bar(breaks = c(0, 25, 50),
                  bg.color = "white") +
-    tm_layout(legend.outside = TRUE)
+    tm_layout(legend.outside = TRUE,
+              legend.outside.position = "bottom")
 
-tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
-plot_tml = tmap_leaflet(plot_tm)
-mapview::mapshot(plot_tml, file = "R/Figures/tmap2.pdf")
+# tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
+# plot_tml = tmap_leaflet(plot_tm)
+# mapview::mapshot(plot_tml, file = "R/Figures/tmap2.pdf")
 
 
 
 # combine plots -----------------------------------------------------------
 # https://wilkelab.org/cowplot/articles/mixing_plot_frameworks.html
 library(cowplot)
+library(grid)
 tmap_mode("plot")
 
 # prep
 tm_grob = tmap_grob(plot_tm)
 
 p1 = function() {
-    plot(precipitation_class_ch)
+    plot(precipitation_class_ch, col = viridis(5))
+    plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
     plot(st_geometry(switzerland), add = TRUE)
 }
 
@@ -93,4 +95,5 @@ plot_all = plot_grid(p1, plot_gg, tm_grob,
           nrow = 1, labels = "auto")
 
 ggsave("R/Figures/plot_all.pdf",
-       width = 12, height = 4)
+       width = 14, height = 3.85)
+
