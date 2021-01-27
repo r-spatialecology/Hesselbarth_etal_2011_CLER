@@ -579,7 +579,6 @@ data_model <- dplyr::group_by(answers, data_model) %>%
   dplyr::summarise(n_rel = n() / n_people * 100) %>%
   dplyr::mutate(n_rel = round(n_rel, digits = digits)) %>%
   dplyr::arrange(-n_rel)
-
 ```
 
 ```{r packages, include =FALSE}
@@ -609,6 +608,9 @@ r_packages <- r_packages[!str_detect(r_packages, pattern = "NA")]
 # make sure all are lower case
 r_packages <- str_to_lower(r_packages)
 
+# remove escape characters
+r_packages <- str_remove_all(r_packages, pattern = "\"")
+
 # create data.frame
 r_packages_df <- tibble(r_package = r_packages) %>%
   dplyr::group_by(r_package) %>%
@@ -637,7 +639,7 @@ ggplot_packages <- ggplot(data = r_packages_df) +
   #           nudge_x = 2, size = 2.5) +
   theme_classic(base_size = base_size) +
   theme(plot.title.position = "plot") +
-  scale_x_continuous(breaks = seq(0, 35, 5), limits = c(0, 35)) +
+  scale_x_continuous(breaks = seq(0, 35, 5), limits = c(0, 36)) +
   scale_fill_manual(values = c("grey50", "black")) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
@@ -719,7 +721,8 @@ id_na <- c("not sure", "not sure right now",
            "i'm not missing anything at present.", "não posso responder",
            "no", "unsure", "have not yet identified any.", "no package missing",
            "not enough overview to answer this", "?", "i am currently missing no methods",
-           ";", "nothing yet", "i'm thinking", "nil")
+           ";", "nothing yet", "i'm thinking", "nil", "none", 
+           "nothing really but prefer to do programming in python", "i dont miss any")
 
 
 length(id_na) / nrow(answers) * 100

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  27 JAN 2021 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  27 JAN 2021 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -454,7 +454,7 @@ LaTeX Warning: Float too large for page by 179.91576pt on input line 459.
 [11] [12]
 Overfull \hbox (8.08397pt too wide) in paragraph at lines 468--471
 \OT1/cmr/m/n/10 Al-most half of all par-tic-i-pants de-scribed them-selves as `
-`ad-vanced'' users (46.6%),
+`ad-vanced'' users (46.8%),
  []
 
 <paper_files/figure-latex/fig-survey-1.pdf, id=1046, 451.6875pt x 307.1475pt>
@@ -553,7 +553,7 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on paper.pdf (22 pages, 363799 bytes).
+Output written on paper.pdf (22 pages, 363821 bytes).
 PDF statistics:
  1277 PDF objects out of 1440 (max. 8388607)
  729 compressed objects within 8 object streams
