@@ -264,19 +264,21 @@ Creating maps is essential when working with spatial data.
 Maps play an important role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
 \emph{R} allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g.~changing the displayed values.
-All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function.
+All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function (Fig. \ref{fig:fig-map}a).
 However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
 
 Further plotting methods for raster objects can be found in the \emph{rasterVis} package \cite{Lamigueiro2020}.
-Also the popular plotting package \emph{ggplot2} \cite{Wickham2016a} has an extension especially designed for plotting spatial data named \emph{ggspatial} \cite{R-ggspatial}.
+Also the popular plotting package \emph{ggplot2} \cite{Wickham2016a} (Fig. \ref{fig:fig-map}b) has an extension especially designed for plotting spatial data named \emph{ggspatial} \cite{R-ggspatial}.
 Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
 The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
 Quick interactive visualization of spatial data can be done with the \emph{mapview} package\cite{R-mapview}.
-Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{R-leaflet}.
+Both, \emph{tmap} (Fig. \ref{fig:fig-map}c) and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{R-leaflet}.
 A slightly different approach to visualizing spatial data is adapted by the \emph{rayshader} package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
+
+
 \begin{figure}
-\includegraphics[width=1\linewidth,height=0.5\textheight]{data/plot_all} \caption{Comparison of different options to create maps using a) base plot, b) ggplot2, and c) tmap. All maps show the total annual precipitation of Switzerland. Data was downloaded with the raster (precipitation data) and rnaturalearth (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
+\includegraphics[width=1\linewidth,height=0.5\textheight]{data/plot_all} \caption{Comparison of different options to create maps using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
 \end{figure}
 
 \hypertarget{sec:ecological_analysis}{%
@@ -469,20 +471,20 @@ Most people use \emph{R} either ``daily'' (53.2\%) or a ``few times a week'' (36
 Almost half of all participants described themselves as ``advanced'' users (46.8\%), while 40.4\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.1\%) or plan to do so in the future (22\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey}a)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey}b).
 The available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
 More people use the raster data model (72.5\%) in comparison to the vector data model (27.5\%).
-This was also represented in the most used \emph{R} packages (Fig. \ref{fig:fig-survey} C)).
+This was also represented in the most used \emph{R} packages (Fig. \ref{fig:fig-survey}c).
 When asked for the three most used packages, participants of the survey listed 93 packages in total.
 The \emph{raster} package was mentioned the most, followed by the \emph{sf} package.
-Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey} C).
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey}c.
 Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 35.87\%).
 
-Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey}d)).
 
 \begin{figure}
 
