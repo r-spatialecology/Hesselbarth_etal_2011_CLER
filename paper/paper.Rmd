@@ -24,7 +24,7 @@ keywords:
 - reproducibility
 - scientific software
 abstract: |
-  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** In this we find that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
+  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** We found that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually further develop the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 preamble: |
@@ -96,7 +96,7 @@ PROJ & Open source generic coordinate transformation software \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
 *R* package & User-created software extension to *R* programming language \\
-SDM & Species distribution modelling \\
+SDM & Species distribution modeling \\
 Simple Features & A set of standards that specify a common storage and access model of geographic features \\
 vector & Points, lines, and polygons-based data model \\
 

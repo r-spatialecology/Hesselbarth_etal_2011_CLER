@@ -77,7 +77,7 @@
 \maketitle
 
 \begin{abstract}
-\textbf{Purpose of review} Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the \emph{R} programming language provides a wealth of community developed tools for landscape ecology. \textbf{Recent findings} In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of \emph{R} users within the landscape ecology community. \textbf{Summary} In this we find that landscape ecologists are generally satisfied with the functionality available within \emph{R}, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools.
+\textbf{Purpose of review} Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the \emph{R} programming language provides a wealth of community developed tools for landscape ecology. \textbf{Recent findings} In this paper, we outline existing packages for downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of \emph{R} users within the landscape ecology community. \textbf{Summary} We found that landscape ecologists are generally satisfied with the functionality available within \emph{R}, and that as a community they are continually further develop the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools.
 \\
 \keywords{
         spatial data \and
@@ -123,7 +123,7 @@ PROJ & Open source generic coordinate transformation software \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
 *R* package & User-created software extension to *R* programming language \\
-SDM & Species distribution modelling \\
+SDM & Species distribution modeling \\
 Simple Features & A set of standards that specify a common storage and access model of geographic features \\
 vector & Points, lines, and polygons-based data model \\
 
@@ -217,7 +217,7 @@ The \emph{sp} package was the standard for vector data representation for more t
 As of 2020, more than 500 \emph{R} packages directly depend or imports \emph{sp}.
 However, \emph{sp} is not actively developed anymore, and its recommended successor is the \emph{sf} package \cite{Pebesma2018}.
 Besides many advantages and strength of the \emph{sf} package in terms of spatial data handling, it also integrates into the widely used \emph{tidyverse} packages \cite{Wickham2019a}.
-\emph{sf} builds on the idea of ``simple features,'' a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
+\emph{sf} builds on the idea of ``simple features'', a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
 
 \hypertarget{spatial-data-download}{%
 \subsection{Spatial data download}\label{spatial-data-download}}
@@ -463,16 +463,16 @@ Task & R package & Describtion & Reference \\
 
 To better understand how the landscape ecology community uses \emph{R}, we conducted a short survey using mailing lists and social media to reach the community.
 In total, the survey was answered by 109 participants, of which the majority were either ``PhD students'' (33\%), followed by ``Post-Docs'' (26.6\%) and ``Professors'' (14.7\%).
-Other, less frequent answers were ``Data scientists,'' ``None of the above,'' ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
+Other, less frequent answers were ``Data scientists'', ``None of the above'', ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
 Most people use \emph{R} either ``daily'' (53.2\%) or a ``few times a week'' (36.7\%).
 Almost half of all participants described themselves as ``advanced'' users (46.8\%), while 40.4\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.1\%) or plan to do so in the future (22\%) and most of these packages are hosted on \emph{GitHub} and/or \emph{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity,'' followed by ``land use management,'' ``landscape connectivity,'' and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey} A)).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, ``(pre-)processing of data,'' ``spatial statistics,'' and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
+Not surprisingly, ``(pre-)processing of data'', ``spatial statistics'', and ``creating maps'' were the most selected options (Fig. \ref{fig:fig-survey} B).
 The available options seemed to describe the most important task to the workflow quite well since only very few participants selected the ``others'' option (all options with less than five total answers were classified as ``others'').
 
 More people use the raster data model (72.5\%) in comparison to the vector data model (27.5\%).
@@ -482,7 +482,7 @@ The \emph{raster} package was mentioned the most, followed by the \emph{sf} pack
 Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey} C).
 Nevertheless, the large availability and usage of different \emph{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 35.87\%).
 
-Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \emph{R} as ``intermediate,'' ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey} D)).
+Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey} D)).
 
 \begin{figure}
 
@@ -535,7 +535,7 @@ JN is author of \emph{belg} and \emph{motif} package. JS is author of the \emph{
 \hypertarget{funding}{%
 \paragraph{Funding}\label{funding}}
 
-MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics,' grant number 152112243.
+MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics', grant number 152112243.
 
 \hypertarget{author-contributions}{%
 \paragraph{Author contributions}\label{author-contributions}}
@@ -548,7 +548,6 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
-
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
