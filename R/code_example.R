@@ -3,6 +3,7 @@ library(sf)
 library(raster)
 library(rnaturalearth)
 library(tmap)
+library(viridis)
 
 # get precipitation data
 precipitation <- raster::getData("worldclim", lon = 3, lat = 38,
@@ -26,26 +27,32 @@ switzerland <- sf::st_transform(x = switzerland, crs = "epsg:21781")
 precipitation_sum_ch <- raster:::crop(x = precipitation_sum,
                                       y = sf::st_buffer(x = switzerland, dist = 5000))
 
+# reclassify into 5 classes
+precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
+
 # create base plot
 # pdf(file = "R/Figures/base_plot.pdf")
 
-plot(precipitation_sum_ch)
+plot(precipitation_class_ch, col = viridis(5))
+plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
 plot(st_geometry(switzerland), add = TRUE)
 
 # dev.off()
 
-# reclassify into 5 classes
-precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
 
 # create ggplot
 # MH: Why is this on long/lat? Coordinates seem to be okay?
+# JS: We could keep coords by adding:
+# `coord_sf(datum = st_crs(switzerland))`
+# but I actually like long/lat better, it looks cleaner
 plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     geom_raster(aes(x = x, y = y, fill = factor(layer))) +
     geom_sf(data = switzerland, fill = NA, col = "white") +
     scale_fill_viridis_d(name = "Precipitation\nclassified") +
     coord_sf() +
     labs(x = "", y = "") +
-    theme_classic()
+    theme_classic() +
+    theme(legend.position = "bottom")
 
 ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
 
