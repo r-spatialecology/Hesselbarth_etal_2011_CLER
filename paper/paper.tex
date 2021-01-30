@@ -82,7 +82,7 @@
 \keywords{
         spatial data \and
         statistical programming language \and
-        R packages \and
+        \emph{R} packages \and
         reproducibility \and
         scientific software \and
     }
@@ -110,7 +110,7 @@
 
 API & Application programming interface. A set of protocols for sending and retrieving information from a server \\
 cell & Smallest, rectangular unit of raster data model \\
-CRAN & Comprehensive R Archive Network. A repository for *R* package \\
+CRAN & Comprehensive R Archive Network. A repository for \textit{R} packages. \\
 CRS & Coordinate references systems. A coordinate-based local, regional or global system used to locate geographical entities \\
 EPSG & Public registry of geodetic datums, spatial reference systems, Earth ellipsoids, coordinate transformations and related units of measurement \\
 GDAL & Open source translator library for raster and vector geospatial data formats \\
@@ -122,7 +122,7 @@ patch & Neighboring cells with same value \\
 PROJ & Open source generic coordinate transformation software \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
-*R* package & User-created software extension to *R* programming language \\
+\textit{R} package & User-created software extension to \textit{R} programming language \\
 SDM & Species distribution modeling \\
 Simple Features & A set of standards that specify a common storage and access model of geographic features \\
 vector & Points, lines, and polygons-based data model \\
@@ -191,8 +191,10 @@ However, while the package environment has many advantages, its highly dynamic c
 Packages that deal with such issue include \emph{groundhog} \cite{Simonsohn2021}, \emph{packrat} \cite{Ushey2018}, or \emph{renv} \cite{Ushey2020}.
 For more information about \emph{R} package development in general, see \cite{Wickham2015}.
 
+
+
 \begin{figure}
-\includegraphics[width=1\linewidth,height=0.3\textheight]{data/Workflow} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, some example R packages are listed.}\label{fig:fig-workflow}
+\includegraphics[width=1\linewidth,height=0.3\textheight]{data/Workflow} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the \emph{R} programming language. For all major tasks, some example \emph{R} packages are listed.}\label{fig:fig-workflow}
 \end{figure}
 
 \hypertarget{sec:spatrep}{%
@@ -319,7 +321,7 @@ The \emph{spdep} package \cite{Bivand2013} has methods for quantifying multiple 
 The \emph{rinla} \cite{rue2009approximate} (\url{https://www.r-inla.org}) and \emph{inlabru} \cite{R-inlabru} packages also provide functionality for modeling of spatially structured data.
 
 Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms.
-R packages \emph{geoR} \cite{R-geoR} and \emph{gstat} \cite{R-gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+\emph{R} packages \emph{geoR} \cite{R-geoR} and \emph{gstat} \cite{R-gstat} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
 Geostatistics also allows for spatial data simulations.
 
 \hypertarget{sec:SDM}{%
@@ -337,7 +339,7 @@ Additionally, packages such as \emph{ENMeval} \cite{R-enmeval} provide functiona
 Related to SDMs, there is a growing number of \emph{R} packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
 These analyses often use results of landscape ecological analyses as predictor variables to explain variation in space use \cite{signer2015}, behavioral states \cite{langrock2012}, or habitat selection \cite{fieberg2020}.
 Widely used \emph{R} packages include \emph{ctmm} \cite{calabrese2016} and \emph{adehabitatHR} \cite{Calenge2006} for home-range estimation, \emph{moveHMM} \cite{michelot2016} for the classification of behavioral states, and \emph{amt} \cite{Signer2019} for habitat selection.
-A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{joo2020}.
+A recent and very comprehensive overview of \emph{R} packages for the analysis of animal movement data is given by \cite{joo2020}.
 
 \hypertarget{sec:connectivity}{%
 \paragraph{Connectivity}\label{sec:connectivity}}
@@ -379,12 +381,12 @@ Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simu
 
 \begin{table}
 
-\caption{Overview of commonly used R packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
+\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
 
 \begin{tabularx}{450pt}{lrXr}
 
 \hline
-Task & R package & Describtion & Reference \\
+Task & \textit{R} package & Describtion & Reference \\
 \hline
 \multirow{8}{*}{Spatial data} & raster & Raster data handling and analysis & \cite{Hijmans2019} \\
 & terra & Raster (and some vector) data handling and analysis & \cite{R-terra} \\
@@ -486,13 +488,15 @@ Nevertheless, the large availability and usage of different \emph{R} packages ac
 
 Lastly, when asked how useful \emph{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \emph{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey}d)).
 
+
+
 \begin{figure}
 
 {\centering \includegraphics[width=1\linewidth]{paper_files/figure-latex/fig-survey-1} 
 
 }
 
-\caption{Results of the online survey about open-source software tools in R for landscape ecology. Results include a) which terms describe major reserach topics the best, b) the most important workflow task, c) the most used R packages and d) the overall usefulnes or R for landscape ecology. The 'others' category includes all answers with less than five total mentions.}\label{fig:fig-survey}
+\caption{Results of the online survey about open-source software tools in \emph{R} for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used \emph{R} packages and d) the overall usefulness or \emph{R} for landscape ecology. The `others' category includes all answers with less than five total mentions.}\label{fig:fig-survey}
 \end{figure}
 
 The survey also included a section in which participants could list methods and tools currently missing in \emph{R} and answers to this question were very diverse.
@@ -550,6 +554,7 @@ We used the `sequence--determines--credit' approach (SDC) for the sequence of au
 \paragraph{Human and Animal Rights and Informed Consent}\label{human-and-animal-rights-and-informed-consent}}
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
+
 
 \bibliographystyle{spphys}
 \bibliography{bibliography.bib}
