@@ -1,3 +1,16 @@
+
+#---------------------------------------------------#
+#                                                   #
+#   Code to reproduce Fig. 2 in                     #
+#   "Open-source tools in R for landscape ecology"  #
+#                                                   #
+#   Code created by MHKH, JN, JS and LJG            #
+#                                                   #
+#   Contact: mhk.hesselbarth@gmail.com              #
+#                                                   #
+#---------------------------------------------------#
+
+# load libraries
 library(ggplot2)
 library(sf)
 library(raster)
@@ -31,18 +44,16 @@ precipitation_sum_ch <- raster::crop(x = precipitation_sum,
 precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
 
 # create base plot
+
 # pdf(file = "R/Figures/base_plot.pdf")
-plot(precipitation_class_ch, col = viridis(5))
+
+plot(precipitation_class_ch, col = viridis::viridis(5))
 plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
 plot(st_geometry(switzerland), add = TRUE)
+
 # dev.off()
 
-
 # create ggplot
-# MH: Why is this on long/lat? Coordinates seem to be okay?
-# JS: We could keep coords by adding:
-# `coord_sf(datum = st_crs(switzerland))`
-# but I actually like long/lat better, it looks cleaner
 plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     geom_raster(aes(x = x, y = y, fill = factor(layer))) +
     geom_sf(data = switzerland, fill = NA, col = "white") +
@@ -51,13 +62,10 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     labs(x = "", y = "") +
     theme_classic() +
     theme(legend.position = "bottom")
+
 # ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
 
-# create interactive tmap (take screenshot for paper)
-# tmap_mode("plot")
-# tmap_mode("view")
-
-plot_tm = tm_shape(precipitation_class_ch) +
+plot_tm <- tm_shape(precipitation_class_ch) +
     tm_graticules() +
     tm_raster(title = "Precipitation\nclassified",
               style = "cat",
@@ -71,29 +79,4 @@ plot_tm = tm_shape(precipitation_class_ch) +
               legend.outside.position = "bottom")
 
 # tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
-# plot_tml = tmap_leaflet(plot_tm)
-# mapview::mapshot(plot_tml, file = "R/Figures/tmap2.pdf")
-
-
-
-# combine plots -----------------------------------------------------------
-# https://wilkelab.org/cowplot/articles/mixing_plot_frameworks.html
-library(cowplot)
-library(grid)
-tmap_mode("plot")
-
-# prep
-tm_grob = tmap_grob(plot_tm)
-
-p1 = function() {
-    plot(precipitation_class_ch, col = viridis(5))
-    plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
-    plot(st_geometry(switzerland), add = TRUE)
-}
-
-plot_all = plot_grid(p1, plot_gg, tm_grob,
-          nrow = 1, labels = "auto")
-
-ggsave("R/Figures/plot_all.pdf",
-       width = 14, height = 3.85)
 
