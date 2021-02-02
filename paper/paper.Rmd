@@ -20,11 +20,11 @@ authors:
 keywords:
 - spatial data
 - statistical programming language
-- R packages
+- "*R* packages"
 - reproducibility
 - scientific software
 abstract: |
-  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for the downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** In this we find that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually updating the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
+  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** We found that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually further develop the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 preamble: |
@@ -83,7 +83,7 @@ base_size <- 7.5
 
 API & Application programming interface. A set of protocols for sending and retrieving information from a server \\
 cell & Smallest, rectangular unit of raster data model \\
-CRAN & Comprehensive R Archive Network. A repository for *R* package \\
+CRAN & Comprehensive \textit{R} Archive Network. A repository for \textit{R} package \\
 CRS & Coordinate references systems. A coordinate-based local, regional or global system used to locate geographical entities \\
 EPSG & Public registry of geodetic datums, spatial reference systems, Earth ellipsoids, coordinate transformations and related units of measurement \\
 GDAL & Open source translator library for raster and vector geospatial data formats \\
@@ -95,7 +95,7 @@ patch & Neighboring cells with same value \\
 PROJ & Open source generic coordinate transformation software \\
 raster & Cell grid based data model \\
 resolution & Size in meter or degree of one cell \\
-R package & User-created software extension to R programming language \\
+\textit{R} package & User-created software extension to \textit{R} programming language \\
 SDM & Species distribution modelling \\
 Simple Features & A set of standards that specify a common storage and access model of geographic features \\
 vector & Points, lines, and polygons-based data model \\
@@ -161,7 +161,8 @@ However, while the package environment has many advantages, its highly dynamic c
 Packages that deal with such issue include *groundhog* \cite{Simonsohn2021}, *packrat* \cite{Ushey2018}, or *renv* \cite{Ushey2020}.
 For more information about *R* package development in general, see \cite{Wickham2015}.
 
-```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "Exemplary workflow of spatial data analyses for landscape ecology using the R programming language. For all major tasks, some example R packages are listed."}
+(ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed.
+```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "(ref:fig1cap)"}
 include_graphics("data/Workflow.png")
 ```
 
@@ -230,18 +231,19 @@ Creating maps is essential when working with spatial data.
 Maps play an important role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
 *R* allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g. changing the displayed values.
-All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function.
+All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function (Fig. \@ref(fig:fig-map)a).
 However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
 
 Further plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
-Also the popular plotting package *ggplot2* \cite{Wickham2016} has an extension especially designed for plotting spatial data named *ggspatial* \cite{Dunnington2020}.
+Also the popular plotting package *ggplot2* \cite{Wickham2016} (Fig. \@ref(fig:fig-map)b) has an extension especially designed for plotting spatial data named *ggspatial* \cite{Dunnington2020}.
 Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
 Quick interactive visualization of spatial data can be done with the *mapview* package\cite{Appelhans2020}.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{Cheng2021}.
+Both, *tmap* (Fig. \@ref(fig:fig-map)c) and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{Cheng2021}.
 A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
-```{r fig-map, echo = FALSE, out.width="100%", out.height="50%", fig.cap = "Comparison of different options to create maps using a) base plot, b) ggplot2, and c) tmap. All maps show the total annual precipitation of Switzerland. Data was downloaded with the raster (precipitation data) and rnaturalearth (country borders) package. The code to create the maps can be found in the Appendix."}
+(ref:capfigmap) Comparison of different options to create maps using a) base plot, b) *ggplot2* package, and c) *tmap* package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the *raster* package (precipitation data) and *rnaturalearth* package (country borders) package. The code to create the maps can be found in the Appendix.
+```{r fig-map, echo = FALSE, out.width="100%", out.height="50%", fig.cap = "(ref:capfigmap)"}
 include_graphics("data/plot_all.pdf")
 ```
 
@@ -282,7 +284,7 @@ The *spdep* package \cite{Bivand2013} has methods for quantifying multiple metri
 The *rinla* \cite{Rue2009} (\url{https://www.r-inla.org}) and *inlabru* \cite{Bachl2019} packages also provide functionality for modeling of spatially structured data. 
 
 Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms. 
-R packages *geoR* \cite{Diggle2007} and *gstat* \cite{Pebesma2004} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+*R* packages *geoR* \cite{Diggle2007} and *gstat* \cite{Pebesma2004} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
 Geostatistics also allows for spatial data simulations.
 <!-- MH: I am not sure if I understand the last sentence, but is it worth to reference the NLM section here? -->
 
@@ -300,7 +302,7 @@ Additionally, packages such as *ENMeval* \cite{Muscarella2014} provide functiona
 Related to SDMs, there is a growing number of *R* packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
 These analyses often use results of landscape ecological analyses as predictor variables to explain variation in space use \cite{Signer2015}, behavioral states \cite{Langrock2012}, or habitat selection \cite{Fieberg2020}.
 Widely used *R* packages include *ctmm* \cite{Calabrese2016} and *adehabitatHR* \cite{Calenge2006} for home-range estimation, *moveHMM* \cite{Michelot2016} for the classification of behavioral states, and *amt* \cite{Signer2019} for habitat selection.
-A recent and very comprehensive overview of R packages for the analysis of animal movement data is given by \cite{Joo2020}.
+A recent and very comprehensive overview of *R* packages for the analysis of animal movement data is given by \cite{Joo2020}.
 
 #### Connectivity {#sec:connectivity}
 
@@ -340,12 +342,12 @@ Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate 
 ```{=tex}
 \begin{table}
 
-\caption{Overview of commonly used R packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
+\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
 
 \begin{tabularx}{450pt}{lrXr}
 
 \hline
-Task & R package & Describtion & Reference \\
+Task & \textit{R} package & Describtion & Reference \\
 \hline
 \multirow{8}{*}{Spatial data} & raster & Raster data handling and analysis & \cite{Hijmans2019} \\
 & terra & Raster (and some vector) data handling and analysis & \cite{Hijmans2021} \\
@@ -421,7 +423,7 @@ Task & R package & Describtion & Reference \\
 
 \end{table}
 ```
-# Survey of R usage by landscape ecology community
+# Survey of *R* usage by landscape ecology community
 
 ```{r participation, include = FALSE}
 digits <- 1
@@ -508,7 +510,7 @@ ggplot_topics <-  ggplot(data = topics_df) +
 
 ```
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey) A)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey)a)).
 
 ```{r tasks, include = FALSE}
 # get data
@@ -570,7 +572,7 @@ ggplot_tasks <- ggplot(data = tasks_df) +
 ```
 
 Next, we were interested in the most important tasks to the workflow of the participants.
-Not surprisingly, "(pre-)processing of data", "spatial statistics", and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey) B).
+Not surprisingly, "(pre-)processing of data", "spatial statistics", and "creating maps" were the most selected options (Fig. \@ref(fig:fig-survey)b).
 The available options seemed to describe the most important task to the workflow quite well since only very few participants selected the "others" option (all options with less than five total answers were classified as "others").
 
 ```{r data-model, include = FALSE}
@@ -644,14 +646,14 @@ ggplot_packages <- ggplot(data = r_packages_df) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
   labs(x = "Number of package mentioned [%]", y = NULL,
-       title = "List the three R packages related\nto landscape ecology you use the most")
+       title = "List the three*R packages related\nto landscape ecology you use the most")
 ```
 
 More people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
-This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey) C)).
+This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey)c).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
 The *raster* package was mentioned the most, followed by the *sf* package.
-Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey) C).
+Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey)c.
 Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r round(r_packages_df[[1, 2]], 2)`%).
 
 ```{r usefulness, include = FALSE}
@@ -695,9 +697,11 @@ ggplot_usefulness <- ggplot(data = usefulness_df) +
   coord_flip()
 ```
 
-Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey) D)).
+Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d)).
 
-```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "Results of the online survey about open-source software tools in R for landscape ecology. Results include a) which terms describe major reserach topics the best, b) the most important workflow task, c) the most used R packages and d) the overall usefulnes or R for landscape ecology. The 'others' category includes all answers with less than five total mentions.", warning=FALSE, out.width="100%"}
+(ref:fig3cap) Results of the online survey about open-source software tools in *R* for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used *R* packages and d) the overall usefulness or *R* for landscape ecology. The 'others' category includes all answers with less than five total mentions.
+
+```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "(ref:fig3cap)", warning=FALSE, out.width="100%"}
 
 (ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) +
   # plot_layout(heights = c(2, 3)) +
