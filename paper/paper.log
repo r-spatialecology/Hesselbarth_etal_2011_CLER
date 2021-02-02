@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  2 FEB 2021 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.2)  2 FEB 2021 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -457,7 +457,7 @@ Overfull \hbox (8.08397pt too wide) in paragraph at lines 472--475
 `ad-vanced'' users (46.8%),
  []
 
-<paper_files/figure-latex/fig-survey-1.pdf, id=1049, 451.6875pt x 307.1475pt>
+<paper_files/figure-latex/fig-survey-1.pdf, id=1051, 451.6875pt x 307.1475pt>
 File: paper_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig-survey-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig-survey-1.pdf  used on inp
@@ -593,10 +593,10 @@ exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texliv
 e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on paper.pdf (22 pages, 383184 bytes).
+Output written on paper.pdf (22 pages, 383275 bytes).
 PDF statistics:
- 1331 PDF objects out of 1440 (max. 8388607)
- 776 compressed objects within 8 object streams
+ 1333 PDF objects out of 1440 (max. 8388607)
+ 777 compressed objects within 8 object streams
  224 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -262,10 +262,8 @@ The *geodiv* package \cite{Smith2020} allows calculation of gradient surface met
 Additionally, the *belg* package allows calculation of the Boltzmann entropy of a landscape gradient \cite{Nowosad2020}.
 
 Most landscape metrics are a represented by a single number depicting specific characteristics of a local landscape.
-Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram.
-<!-- MH: Do we have a reference here @Jakub? -->
+Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram \cite{Nowosad2021}.
 Spatial signatures calculated for many landscapes can be compared using one of a set of existing distance measures (e.g. Euclidian, Manhattan, Mahlanobis).
-<!-- LJG added some examples, but not 100% if they're the distances you're thinking of -->
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
 All of the spatial signatures methods mentioned above are implemented in the *motif* package \cite{Nowosad2021}.
 
@@ -286,7 +284,6 @@ The *rinla* \cite{Rue2009} (\url{https://www.r-inla.org}) and *inlabru* \cite{Ba
 Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms. 
 *R* packages *geoR* \cite{Diggle2007} and *gstat* \cite{Pebesma2004} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
 Geostatistics also allows for spatial data simulations.
-<!-- MH: I am not sure if I understand the last sentence, but is it worth to reference the NLM section here? -->
 
 #### Species distribution modeling {#sec:SDM}
 
@@ -761,22 +758,18 @@ Thirdly, many participants (`r perc_viz`%) are currently missing advanced and ea
 
 # Conclusions
 
-<!--intro-->
 Since its first introduction in 1995, *R* has come a long way from an exclusively statistical programming language to a powerful landscape ecology tool.
 Today, many *R* packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed at spatial data handling and analysis.
 The highly dynamic development of *R* packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
 However, since landscape ecology constantly develops and improves, the *R* programming language and its packages need to change and adapt to these changes.
 
-<!--a paragraph summarizing possibilities-->
 A comprehensive collection of *R* software packages exist to handle the most common tasks of landscape ecology. 
 Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, *R* allows for transparent and reproducible workflows.
 Additionally, this also allows users to easily interchange, modify, or adapt methods from other related and unrelated fields.
 
-<!--a paragraph summarizing the survey-->
 The survey revealed that the landscape ecology community is overall satisfied with the capabilities of the *R* programming language for landscape ecology. 
 Furthermore, the survey showed the that many members of the landscape ecology community actively develop *R* packages themselves, demonstrating that tools are constantly added and updated.
 
-<!--a paragraph about missing features/future work-->
 Landscape ecology combines many different research topics and methodological approaches and most of them heavily rely on spatial data.
 While the *R* programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the *R* programming language has to face. 
 Furthermore, as the individual fields collected under the umbrella of landscape ecology develop, so need the *R* packages related to those fields.
@@ -784,9 +777,7 @@ But as the development of *R* packages over the past years clearly demonstrated,
 
 ## Acknowledgments
 
-<!-- MH: Make sure to update all sections  -->
-
-We are thankful to all members of the 'Coastal Ecology and Conservation Lab' at University of Michigan for comments on an early draft of the manuscript.
+We are thankful to all members of the 'Coastal Ecology and Conservation Lab' at the University of Michigan for comments on an early draft of the manuscript.
 
 #### Conflict of interest
 
@@ -794,8 +785,6 @@ MHKH and JN are authors of the *landscapemetrics* and *landscapetools* package.
 JN is author of *belg* and *motif* package. JS is author of the *amt* package. LJG is author of the *grainchanger* package.
 
 #### Funding
-
-<!-- MH: Add UMich Funding? -->
 
 MHKH was supported by the German Research Association (DFG) Research Training Group 1644 'Scaling Problems in Statistics', grant number 152112243.
 
