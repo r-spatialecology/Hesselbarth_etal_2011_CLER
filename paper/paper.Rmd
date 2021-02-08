@@ -73,7 +73,7 @@ base_size <- 7.5
 
 # Introduction {#sec:intro}
 
-\begin{tabularx}{450pt}{lX}
+\begin{tabularx}{1.15\textwidth}{lX}
 
 \hline
 
@@ -162,8 +162,8 @@ Packages that deal with such issue include *groundhog* \cite{Simonsohn2021}, *pa
 For more information about *R* package development in general, see \cite{Wickham2015}.
 
 (ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed.
-```{r fig-workflow, echo = FALSE, out.width="100%", out.height="30%", fig.cap = "(ref:fig1cap)"}
-include_graphics("data/Workflow.png")
+```{r fig-workflow, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:fig1cap)"}
+include_graphics("data/Figure_1.pdf")
 ```
 
 ## Spatial data representations {#sec:spatrep}
@@ -243,9 +243,11 @@ Both, *tmap* (Fig. \@ref(fig:fig-map)c) and *mapview* build upon the *leaflet* p
 A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
 (ref:capfigmap) Comparison of different options to create maps using a) base plot, b) *ggplot2* package, and c) *tmap* package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the *raster* package (precipitation data) and *rnaturalearth* package (country borders) package. The code to create the maps can be found in the Appendix.
-```{r fig-map, echo = FALSE, out.width="100%", out.height="50%", fig.cap = "(ref:capfigmap)"}
-include_graphics("data/plot_all.pdf")
+```{r fig-map, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:capfigmap)"}
+include_graphics("data/Figure_2.pdf")
 ```
+
+\FloatBarrier
 
 ## Ecological analysis {#sec:ecological_analysis}
 
@@ -341,7 +343,7 @@ Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate 
 
 \caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
 
-\begin{tabularx}{450pt}{lrXr}
+\begin{tabularx}{1.35\linewidth}{lrXr}
 
 \hline
 Task & \textit{R} package & Describtion & Reference \\
@@ -420,6 +422,9 @@ Task & \textit{R} package & Describtion & Reference \\
 
 \end{table}
 ```
+
+\FloatBarrier
+
 # Survey of *R* usage by landscape ecology community
 
 ```{r participation, include = FALSE}
@@ -453,7 +458,9 @@ own_package <- dplyr::group_by(answers, own_package) %>%
   dplyr::arrange(-n_rel)
 ```
 
-To better understand how the landscape ecology community uses *R*, we conducted a short survey using mailing lists and social media to reach the community.
+To better understand how the landscape ecology community uses *R*, we conducted a short survey using mailing lists and social media to reach the community. 
+All raw data and scripts to analyze the data can be found at [https://github.com/r-spatialecology/Hesselbarth_et_al_CLER](https://github.com/r-spatialecology/Hesselbarth_et_al_CLER).
+
 In total, the survey was answered by `r n_people` participants, of which the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
 Other, less frequent answers were "Data scientists", "None of the above", "Government employees" "Master's degree student" and "Bachelor's degree student" (in decreasing order).
 
@@ -697,8 +704,7 @@ ggplot_usefulness <- ggplot(data = usefulness_df) +
 Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d)).
 
 (ref:fig3cap) Results of the online survey about open-source software tools in *R* for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used *R* packages and d) the overall usefulness or *R* for landscape ecology. The 'others' category includes all answers with less than five total mentions.
-
-```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "(ref:fig3cap)", warning=FALSE, out.width="100%"}
+```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "(ref:fig3cap)", warning=FALSE, out.width="\\textwidth"}
 
 (ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) +
   # plot_layout(heights = c(2, 3)) +
@@ -763,7 +769,7 @@ Today, many *R* packages, mainly developed by the community itself, provide a va
 The highly dynamic development of *R* packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
 However, since landscape ecology constantly develops and improves, the *R* programming language and its packages need to change and adapt to these changes.
 
-A comprehensive collection of *R* software packages exist to handle the most common tasks of landscape ecology. 
+A comprehensive collection of *R* software packages exists to handle the most common tasks of landscape ecology. 
 Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, *R* allows for transparent and reproducible workflows.
 Additionally, this also allows users to easily interchange, modify, or adapt methods from other related and unrelated fields.
 
@@ -774,6 +780,8 @@ Landscape ecology combines many different research topics and methodological app
 While the *R* programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the *R* programming language has to face. 
 Furthermore, as the individual fields collected under the umbrella of landscape ecology develop, so need the *R* packages related to those fields.
 But as the development of *R* packages over the past years clearly demonstrated, the landscape ecology community is ready to face these challenges.
+
+\FloatBarrier
 
 ## Acknowledgments
 
@@ -786,7 +794,11 @@ JN is author of *belg* and *motif* package. JS is author of the *amt* package. L
 
 #### Funding
 
-MHKH was supported by the German Research Association (DFG) Research Training Group 1644 'Scaling Problems in Statistics', grant number 152112243.
+No funding was received by the authors for this research and publication.
+
+####  Availability of data and material (data transparency)
+
+All raw data and scripts to analyze the data can be found at [https://github.com/r-spatialecology/Hesselbarth_et_al_CLER](https://github.com/r-spatialecology/Hesselbarth_et_al_CLER).
 
 #### Author contributions
 

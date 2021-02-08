@@ -100,7 +100,7 @@
 \hypertarget{sec:intro}{%
 \section{Introduction}\label{sec:intro}}
 
-\begin{tabularx}{450pt}{lX}
+\begin{tabularx}{1.15\textwidth}{lX}
 
 \hline
 
@@ -194,7 +194,7 @@ For more information about \emph{R} package development in general, see \cite{Wi
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth,height=0.3\textheight]{data/Workflow} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the \emph{R} programming language. For all major tasks, some example \emph{R} packages are listed.}\label{fig:fig-workflow}
+\includegraphics[width=\linewidth]{data/Figure_1} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the \emph{R} programming language. For all major tasks, some example \emph{R} packages are listed.}\label{fig:fig-workflow}
 \end{figure}
 
 \hypertarget{sec:spatrep}{%
@@ -280,8 +280,10 @@ A slightly different approach to visualizing spatial data is adapted by the \emp
 
 
 \begin{figure}
-\includegraphics[width=1\linewidth,height=0.5\textheight]{data/plot_all} \caption{Comparison of different options to create maps using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
+\includegraphics[width=\linewidth]{data/Figure_2} \caption{Comparison of different options to create maps using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
 \end{figure}
+
+\FloatBarrier
 
 \hypertarget{sec:ecological_analysis}{%
 \subsection{Ecological analysis}\label{sec:ecological_analysis}}
@@ -383,7 +385,7 @@ Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simu
 
 \caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
 
-\begin{tabularx}{450pt}{lrXr}
+\begin{tabularx}{1.35\linewidth}{lrXr}
 
 \hline
 Task & \textit{R} package & Describtion & Reference \\
@@ -462,10 +464,14 @@ Task & \textit{R} package & Describtion & Reference \\
 
 \end{table}
 
+\FloatBarrier
+
 \hypertarget{survey-of-r-usage-by-landscape-ecology-community}{%
 \section{\texorpdfstring{Survey of \emph{R} usage by landscape ecology community}{Survey of R usage by landscape ecology community}}\label{survey-of-r-usage-by-landscape-ecology-community}}
 
 To better understand how the landscape ecology community uses \emph{R}, we conducted a short survey using mailing lists and social media to reach the community.
+All raw data and scripts to analyze the data can be found at \url{https://github.com/r-spatialecology/Hesselbarth_et_al_CLER}.
+
 In total, the survey was answered by 109 participants, of which the majority were either ``PhD students'' (33\%), followed by ``Post-Docs'' (26.6\%) and ``Professors'' (14.7\%).
 Other, less frequent answers were ``Data scientists,'' ``None of the above,'' ``Government employees'' ``Master's degree student'' and ``Bachelor's degree student'' (in decreasing order).
 
@@ -492,7 +498,7 @@ Lastly, when asked how useful \emph{R} is currently for landscape ecology, the v
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{paper_files/figure-latex/fig-survey-1} 
+{\centering \includegraphics[width=\textwidth]{paper_files/figure-latex/fig-survey-1} 
 
 }
 
@@ -515,7 +521,7 @@ Today, many \emph{R} packages, mainly developed by the community itself, provide
 The highly dynamic development of \emph{R} packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
 However, since landscape ecology constantly develops and improves, the \emph{R} programming language and its packages need to change and adapt to these changes.
 
-A comprehensive collection of \emph{R} software packages exist to handle the most common tasks of landscape ecology.
+A comprehensive collection of \emph{R} software packages exists to handle the most common tasks of landscape ecology.
 Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, \emph{R} allows for transparent and reproducible workflows.
 Additionally, this also allows users to easily interchange, modify, or adapt methods from other related and unrelated fields.
 
@@ -526,6 +532,8 @@ Landscape ecology combines many different research topics and methodological app
 While the \emph{R} programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the \emph{R} programming language has to face.
 Furthermore, as the individual fields collected under the umbrella of landscape ecology develop, so need the \emph{R} packages related to those fields.
 But as the development of \emph{R} packages over the past years clearly demonstrated, the landscape ecology community is ready to face these challenges.
+
+\FloatBarrier
 
 \hypertarget{acknowledgments}{%
 \subsection{Acknowledgments}\label{acknowledgments}}
@@ -541,7 +549,12 @@ JN is author of \emph{belg} and \emph{motif} package. JS is author of the \emph{
 \hypertarget{funding}{%
 \paragraph{Funding}\label{funding}}
 
-MHKH was supported by the German Research Association (DFG) Research Training Group 1644 `Scaling Problems in Statistics,' grant number 152112243.
+No funding was received by the authors for this research and publication.
+
+\hypertarget{availability-of-data-and-material-data-transparency}{%
+\paragraph{Availability of data and material (data transparency)}\label{availability-of-data-and-material-data-transparency}}
+
+All raw data and scripts to analyze the data can be found at \url{https://github.com/r-spatialecology/Hesselbarth_et_al_CLER}.
 
 \hypertarget{author-contributions}{%
 \paragraph{Author contributions}\label{author-contributions}}
