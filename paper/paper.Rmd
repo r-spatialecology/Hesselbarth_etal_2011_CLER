@@ -800,8 +800,6 @@ LJG was supported by the Natural Environment Research Council (NERC) grant *A co
 
 All raw data and scripts to analyze the data can be found at [https://github.com/r-spatialecology/Hesselbarth_et_al_CLER](https://github.com/r-spatialecology/Hesselbarth_et_al_CLER).
 
-LJG was supported by the Natural Environment Research Council (NERC) grant *A complex-systems approach to improve understanding of the biodiversity-landscape structure relationship*, grant number NE/T009373/1. 
-
 #### Author contributions
 
 MHKH and JN designed the survey form and analyzed the responses of the participants.
