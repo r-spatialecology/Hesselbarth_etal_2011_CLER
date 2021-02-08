@@ -788,6 +788,8 @@ JN is author of *belg* and *motif* package. JS is author of the *amt* package. L
 
 MHKH was supported by the German Research Association (DFG) Research Training Group 1644 'Scaling Problems in Statistics', grant number 152112243.
 
+LJG was supported by the Natural Environment Research Council (NERC) grant *A complex-systems approach to improve understanding of the biodiversity-landscape structure relationship*, grant number NE/T009373/1. 
+
 #### Author contributions
 
 MHKH and JN designed the survey form and analyzed the responses of the participants.
