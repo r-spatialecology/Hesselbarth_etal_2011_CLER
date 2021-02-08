@@ -795,6 +795,7 @@ JN is author of *belg* and *motif* package. JS is author of the *amt* package. L
 #### Funding
 
 LJG was supported by the Natural Environment Research Council (NERC) grant *A complex-systems approach to improve understanding of the biodiversity-landscape structure relationship*, grant number NE/T009373/1. 
+All other authors did not receive any funding for this research.
 
 ####  Availability of data and material (data transparency)
 
