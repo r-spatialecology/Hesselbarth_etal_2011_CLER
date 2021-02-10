@@ -650,7 +650,7 @@ ggplot_packages <- ggplot(data = r_packages_df) +
   scale_colour_manual(values = c("grey50", "black")) +
   guides(fill = FALSE, colour = FALSE) +
   labs(x = "Number of package mentioned [%]", y = NULL,
-       title = "List the three*R packages related\nto landscape ecology you use the most")
+       title = "List the three R packages related\nto landscape ecology you use the most")
 ```
 
 More people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
