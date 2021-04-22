@@ -1,0 +1,165 @@
+---
+title: "Comments for the author"
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Section Editor
+
+Thank you for this submission.
+I, and the two reviewers, all agree that this has the potential to be a very useful piece for the community and likely will be highly cited.
+Both reviewers offer some constructive suggestions -- Reviewer 2's are fairly minor.
+Reviewer 1's are more in-depth, but I strongly suggest you implement R1's suggestions.
+I concur with the view that you may not need to define landscape ecology given the target journal.
+I think adding some of the detail that R1 asks for in terms of descriptions of the packages and recommendations would be a very useful thing to add.
+Both reviewers also commented about the survey.
+I am less concerned about your addressing those issues, as I do not see the survey as being core to the paper -- although some interpretation of the questions that R1 asks would be worth reflecting on, and a little more detail on the survey reach, as asked by R2 would be good to include.
+
+In my own read of the paper, I wondered if the development of some sort of typology of the available tools (as Rayfield et al. 2011 did for connectivity tools) would be useful.
+I also suggest you consider some "boxes" that give point-by-point information.
+I would love to see a "Where to start" box for total beginners and then maybe a second one with "Tips for developers".
+In addition, can you please better explain the tidyverse to the readers?
+It would also be useful if you could just elaborate a little bit in the annotated references for some of the key papers, as has been done for most of the papers published in this journal.
+
+I hope you find these comments helpful.
+With a little more revision, I am quite confident that the paper can be accepted in Current Landscape Ecology reports.
+Thank you, and I look forward to receiving a revised manuscript!
+
+**Reference:** Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
+
+## Reviewer 1
+
+I think the idea of a review of R tools for landscape ecology workflows is a great one, but this manuscript suffers a bit from lack of clarity of purpose.
+If it's for landscape ecologists, as the choice of journal suggests, defining landscape ecology seems unnecessary, but a bit more information on R in general and why a landscape ecologist might choose R rather than some other tool would be useful.
+
+I'm reading this manuscript from the perspective of a very experienced user of R for geospatial analyses, and who has spent a lot of time teaching students and post-docs how to do so.
+I am familiar with nearly all of the packages mentioned, and even I found the lists of packages with little explanation or information overwhelming.
+Why would I use one or another?
+Do they have good documentation?
+What capabilities might I need from other software?
+Have you used all the packages mentioned, or simply compiled lists?
+
+And, mentioned but not elaborated on: How would I combine these into an effective workflow, making my landscape ecology research easier and more reproducible?
+
+1.1 I am a bit impressed but also surprised that you chose to define landscape ecology without using the word "pattern."
+
+"it has no internal support for reading, processing, or visualizing spatial data"
+This is misleading - these capabilities are part of well-developed and maintained packages, consonant with the R philosophy and structure.
+
+Because of the lack of clear objective and audience, the manuscript is a mix of overexplanation and complex concepts dropped without adequate explanation.
+Some examples of underexplained concepts:
+
+"Packages that deal with such issue include groundhog [42], packrat [43], or renv [44]. For more information about R package development in general, see [40]."
+How do they do so?
+Why does it matter?
+
+"also integrates into the widely used tidyverse packages"
+Which are what, and why should the reader care?
+
+"Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS [69,70,37], terrain analysis methods in SAGA GIS [71], or morphological operations for Google Earth Engine. It is possible to control several GIS software directly from R using dedicated packages, such as rgrass7 [72] for GRASS GIS, RSAGA [73] for SAGA GIS, and rgee [66] for Google Earth Engine."
+This should be expanded on.
+How can R fit into a workflow using these GIS tools, and why would you want to?
+
+The section on CRS and projections should discuss the recent major changes to PROJ and thus to R packages relying on it.
+A lot of the information that appears online is now obsolete.
+
+In some places the formatting is problematic, such as automatic hyphenation of R package names resulting in "random-Forest" instead of "randomForest".
+
+Table 1 is very useful, but does not contain all the packages mentioned in the text.
+
+Survey: do you think the survey results reflect the true state of affairs, or do they reflect lack of training/knowledge/the fragmented nature of the R community?
+
+"However, since landscape ecology constantly develops and improves, the R programming language and its packages need to change and adapt to these changes."
+That is indeed a strength of the R community, though the way it is stated here implies that this is not true.
+Instead, the problem is that there are so many packages, and constantly more being added.
+
+"Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, R allows for transparent and reproducible workflows."
+
+But the authors do not mention any tools for facililitating reproducibility.
+This is a huge part of why R should be more widely used, and should be expanded upon.
+
+Furthermore, the survey showed the that many members of the landscape ecology community actively develop R packages themselves, demonstrating that tools are constantly added and updated.
+Yes, agreed.
+So why imply not, as called out above?
+
+"While the R programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the R programming language has to face."
+Which are?
+I know, but the casual reader may not.
+How could the R core team improve capabilities?
+What efforts are underway?
+How do existing packages, notably raster and terra, deal with this?
+Are there tools to help parallelize landscape ecology workflows?
+This problem statement without any discussion or resolution might turn landscape ecologists away from R as a tool.
+
+There *are* reasons one might choose tools other than R, or alongside R.
+This review doesn't really articulate what the pros and cons are.
+
+The reference section gives no journal names.
+That can't be right.
+
+I took a look at a 2019 review of R packages for a particular discipline that was cited in this paper (Joo et al, J. Animal Ecology).
+Beyond simply listing packages, the authors looked at their documentation, whether they were actively maintained, and suggested how those packages might fit into a workflow.
+Their Figure 1 provides an illustration of the workflow, and helps to put the package list in their Table 1 into a sensible context.
+Something similar would work well here, and help to make sense of the overwhelming possibilities.
+
+Can you give any recommendations?
+There are a LOT of packages dealing with all aspects of landscape ecology, including aspects not covered here.
+How can landscape ecologists learn of existing packages and new developments?
+How can they choose among similar packages?
+
+How can they put together packages to develop a reproducible workflow, and how can they document and share that?
+
+The script provided in the appendix is both not useful for experienced R users, and not well-enough documented for novices.
+
+The viridis package appears here, but is never mentioned or explained.
+ggplot graphics are used, but that is a large and complex field.
+While the caption to the associated Figure 2 mentions base vs ggplot graphics, and a subsequent paragraph goes into more detail, the distinction isn't really clear.
+
+I would like to see a really useful review of R tools for landscape ecologists.
+There's a lot of potential there, and something that covers both the basic concepts of using R and getting information and the current state of the relevant packages would be of great utility.
+
+## Reviewer 2
+
+The manuscript "Open-source tools in R for landscape ecology" by Maximillian H.K. Hesselbarth, Jakub Nowosad, Johannes Signer and Laura J. Graham (CLER-D-21-00001) is a brief but complete review of the current R packages for landscape ecology studies and their functionality.
+The manuscript is well structured as it describes the typical workflow of any landscape ecology study, and details most of the existing R packages to perform these tasks.
+I consider this information very useful for those ecologists initiating into the landscape ecology field that would like to analyze landscape data through R.
+Finally, the manuscript shows the results of a simple survey to the landscape ecology community that evidence the usage of R for their studies, and exhibit the main points that the community would like to improve for their landscape ecology studies.
+
+I have revised the manuscript and I believe is almost ready for publication.
+I have a few comments and suggestions that I believe would clarify some parts of the manuscript, which I detail below.
+
+L16: Can't understand the phrase, please clarify: "and lastly, iv) and can guide how to manage these heterogeneous landscapes".
+
+L42: "today the programming language".
+Replace "the" with "this".
+
+L64: Replace "for landscape ecology" with "for landscape ecology studies".
+
+L76: Replace "therefore, we focus on only the former two in this review" with "therefore, in this review we focus on only the former two".
+
+L81: Perhaps you can also mention the package devtools .
+Although I see that the package remotes is based in devtools.
+
+L241: "Most landscape metrics are a represented by...".
+Remove "a".
+
+L348: "many different generic algorithms to create landscapes can be found across various R packages".
+Replace "various" with "a couple" as you mention only two packages in the next sentences.
+
+L355: Please expand in how you reach the "landscape ecology community".
+Did you mail colleagues you already knew?
+Did you send the survey to scientists of different parts of the world?
+For instance, I personally believe that results may differ depending on the age, or on the country or continent in which the scientist works.
+I only suggest to expand on how representative is the survey population of the landscape ecology community, and clarify the scope of it.
+
+L357: The link is broken.
+
+L361: Correct the commas, as they are inside the quotation marks.
+
+L375: Correct the commas, as they are inside the quotation marks.
