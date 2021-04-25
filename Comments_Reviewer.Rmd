@@ -31,12 +31,17 @@ I hope you find these comments helpful.
 With a little more revision, I am quite confident that the paper can be accepted in Current Landscape Ecology reports.
 Thank you, and I look forward to receiving a revised manuscript!
 
-**Reference:** Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
+*Reference:* Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
 
 ## Reviewer 1
 
 I think the idea of a review of R tools for landscape ecology workflows is a great one, but this manuscript suffers a bit from lack of clarity of purpose.
 If it's for landscape ecologists, as the choice of journal suggests, defining landscape ecology seems unnecessary, but a bit more information on R in general and why a landscape ecologist might choose R rather than some other tool would be useful.
+
+**Reply**: Thank you for the general encouraging words about the manuscript. 
+We agree that a definition of landscape ecology is not needed given the target audience of the journal. 
+Thus, we shortened the introduction. 
+\textcolor{red}{Maybe move section of powerful R to introduction? But, comprehensive comparison with other software outside of scope} \vskip 0.5cm
 
 I'm reading this manuscript from the perspective of a very experienced user of R for geospatial analyses, and who has spent a lot of time teaching students and post-docs how to do so.
 I am familiar with nearly all of the packages mentioned, and even I found the lists of packages with little explanation or information overwhelming.
@@ -44,6 +49,15 @@ Why would I use one or another?
 Do they have good documentation?
 What capabilities might I need from other software?
 Have you used all the packages mentioned, or simply compiled lists?
+
+**Reply**: All authors of the manuscript are experienced R users with many years of experience using the programming language. 
+Additionally, all authors even contributed several packages to the community themselves. 
+Given the different background of all authors, collectively probably most packages were used by at least one of the authors, but probably not all. 
+Nevertheless, we also believe that this is not necessarily important for this review. 
+Furthermore, we agree with the reviewer that more specific recommendation which package to use could be useful, however, we also think that this is very difficult. 
+Reasons for this include, besides others, personal preferences of the users or analysis specific circumstances. 
+Lastly, the review should be as neutral as possible without favoring one package over another because pros and cons of package differ between users and all were developed with a specific idea in mind.
+\textcolor{red}{Refer to new how to get started box} \vskip 0.5cm
 
 And, mentioned but not elaborated on: How would I combine these into an effective workflow, making my landscape ecology research easier and more reproducible?
 
@@ -144,6 +158,8 @@ I took a look at a 2019 review of R packages for a particular discipline that wa
 Beyond simply listing packages, the authors looked at their documentation, whether they were actively maintained, and suggested how those packages might fit into a workflow.
 Their Figure 1 provides an illustration of the workflow, and helps to put the package list in their Table 1 into a sensible context.
 Something similar would work well here, and help to make sense of the overwhelming possibilities.
+
+**Reply**: We agree with the reviewer that Figure 1 of Joo et al. places the packages nicely into a context. We tried to achieve something similar with our Figure 1 as well, but obviously failed to achieve this goal. Thus, we tried to improve Figure 1 in the revised version of the manuscript to highlight better how the packages could be placed in a workflow. Also, we added an explanation that only packages were included that were available on CRAN at the time of preparation of the manuscript, which ensures at least that packages are maintained to fulfill all technical requirements by CRAN. \vskip 0.5cm
 
 Can you give any recommendations?
 There are a LOT of packages dealing with all aspects of landscape ecology, including aspects not covered here.
