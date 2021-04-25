@@ -81,7 +81,7 @@ In some places the formatting is problematic, such as automatic hyphenation of R
 
 Table 1 is very useful, but does not contain all the packages mentioned in the text.
 
-**Reply**: Thank you for checking the table so extensively. We made sure all packages should be included now. \textcolor{red}{Check again all packages are there} \vskip 0.5cm
+**Reply**: Thank you for checking the table so extensively. We made sure all packages should be included now. We also added the information to the table caption that not all packages from the manuscript are included but only packages specifically designed for spatial data and landscape ecology. \vskip 0.5cm
 
 Survey: do you think the survey results reflect the true state of affairs, or do they reflect lack of training/knowledge/the fragmented nature of the R community?
 
