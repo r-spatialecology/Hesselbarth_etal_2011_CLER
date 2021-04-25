@@ -277,21 +277,23 @@ Maps play an important role in checking the spatial and value-related quality of
 \emph{R} allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g.~changing the displayed values.
 All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function (Fig. \ref{fig:fig-map}a).
-However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
+However, the generic functions are focused on quick visual inspection of the data (Fig. \ref{fig:fig-map}a), rather than the creating complete maps \textcolor{blue}{as they do not directly support additional map elements (e.g., scale bar, north arrow) nor multiples maps.}
 
-Further plotting methods for raster objects can be found in the \emph{rasterVis} package \cite{Lamigueiro2020}.
-Also the popular plotting package \emph{ggplot2} \cite{Wickham2016} (Fig. \ref{fig:fig-map}b) has an extension especially designed for plotting spatial data named \emph{ggspatial} \cite{Dunnington2020}.
-\textbackslash textcolor\{blue\}\{Fore more information about \emph{ggplot2} in general see \cite{Wickham2016}.
-Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
-The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
+The popular plotting package \emph{ggplot2} (Fig. \ref{fig:fig-map}b) \textcolor{blue}{can also visualize spatial data and is build on a layered grammar of graphics, which allows to create maps by combining individual graphical elements (e.g., raster and vector elements) \cite{Wickham2016}.
+Additionally, there is an extension especially designed to plot spatial data named *ggspatial*, which provides additional map elements \cite{Dunnington2020}.
+For more information about *ggplot2* in general, see \cite{Wickham2016}}.
+The \emph{tmap} package provides a provides a coherent plotting system intended for drawing maps (Fig. \ref{fig:fig-map}c) \cite{Tennekes2018}.
+\textcolor{blue}{This package operates in two modes, static and interactive, which means that the same code can be used to create static or interactive maps.}
 Quick interactive visualization of spatial data can be done with the \emph{mapview} package\cite{Appelhans2020}.
-Both, \emph{tmap} (Fig. \ref{fig:fig-map}c) and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{Cheng2021}.
+Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{Cheng2021}.
+Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
+Further plotting methods for raster objects can be found in the \emph{rasterVis} package \cite{Lamigueiro2020}.
 A slightly different approach to visualizing spatial data is adapted by the \emph{rayshader} package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{data/Figure_2} \caption{Comparison of different options to create maps using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
+\includegraphics[width=\linewidth]{data/Figure_2} \caption{Comparison of different options to create maps of the total annual precipitation in Switzerland using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All three approaches result in similar-looking outputs, but their syntax and capabilities differ. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
 \end{figure}
 
 \FloatBarrier
