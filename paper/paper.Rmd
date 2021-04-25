@@ -34,6 +34,7 @@ preamble: |
   \usepackage{placeins}
   \usepackage[modulo]{lineno}
   \usepackage{xcolor}
+  \usepackage[none]{hyphenat}
 output:
   bookdown::pdf_book:
     base_format: rticles::springer_article
@@ -138,6 +139,7 @@ The growing popularity of the *R* programming language for spatial data analysis
 A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
 
 Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g. Python) for landscape ecology exist, in this review we focus on software implemented in the *R* programming language.
+\textcolor{blue}{We acknowledges that there are reasons and circumstances to also use other software tools and progamming languages, however, a comprehensive discussion of pro and cons is outside the scope of this manuscript.}
 For more general overviews of open-source software for \textcolor{blue}{landscape ecology studies} see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
 The *R* programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the *R* environment (Fig. \@ref(fig:fig-workflow)).
 The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
@@ -162,6 +164,7 @@ Thus, most packages can be found on both platforms, and many developers use *Git
 Furthermore, online communities like *rOpenSci* also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
 Packages that deal with such issue include *groundhog* \cite{Simonsohn2021}, *packrat* \cite{Ushey2018}, or *renv* \cite{Ushey2020}.
+\textcolor{blue}{These packages facilitate reproduciability to a high degree by preserving the project enviroment, including specific package versions, used for an analysis.}
 For more information about *R* package development in general, see \cite{Wickham2015}.
 
 (ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed.
@@ -191,6 +194,8 @@ The *sp* package was the standard for vector data representation for more than t
 As of 2020, more than 500 *R* packages directly depend or imports *sp*.
 However, *sp* is not actively developed anymore, and its recommended successor is the *sf* package \cite{Pebesma2018}.
 Besides many advantages and strength of the *sf* package in terms of spatial data handling, it also integrates into the widely used *tidyverse* packages \cite{Wickham2019}.
+\textcolor{blue}{The *tidyverse* is a collection of *R* packages developed for almost all major tasks of any data science project. 
+Because all *tidyverse* packages follow the same data philosophy structures, one strength of the *tidyverse* is its high consistency of usage across its packages \cite{Wickham2019}.}
 *sf* builds on the idea of "simple features", a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
 
 ## Spatial data download
@@ -228,6 +233,7 @@ Furthermore, *landscapetools* is a collection of various utility functions for t
 
 Finally, there are a number of tools for landscape ecology implemented in GIS software, such as `r.li` or `r.pi` for GRASS GIS \cite{Wegmann2018,Neteler2012,Porta2017}, terrain analysis methods in SAGA GIS \cite{Conrad2015}, or morphological operations for Google Earth Engine.
 It is possible to control several GIS software directly from *R* using dedicated packages, such as *rgrass7* \cite{Bivand2021} for GRASS GIS, *RSAGA* \cite{Brenning2018} for SAGA GIS, and *rgee* \cite{Aybar2020} for Google Earth Engine.
+\textcolor{blue}{By being able to access these GIS software directly from within *R*, these packages can allow to create easily reproducibale and sharable *R* scripts, even if functionality is currently only available in the corresponding GIS software.}
 
 ## Creating maps
 
@@ -240,7 +246,7 @@ However, the generic functions are focused on quick visual inspection of the dat
 
 Further plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
 Also the popular plotting package *ggplot2* \cite{Wickham2016} (Fig. \@ref(fig:fig-map)b) has an extension especially designed for plotting spatial data named *ggspatial* \cite{Dunnington2020}. 
-\textcolor{blue}{Fore more information about **ggplot2** in general see \cite{Wickham2016}.
+\textcolor{blue}{Fore more information about *ggplot2* in general see \cite{Wickham2016}.
 Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
 The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
 Quick interactive visualization of spatial data can be done with the *mapview* package\cite{Appelhans2020}.
@@ -346,7 +352,9 @@ Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate 
 ```{=tex}
 \begin{table}
 
-\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
+\captionsetup{width=2\linewidth}
+
+\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task. The table only includes packages specifically desinged for spatial data or landscape ecology.}
 
 \begin{tabularx}{1.35\linewidth}{lrXr}
 
@@ -371,6 +379,10 @@ Task & \textit{R} package & Describtion & Reference \\
 & getlandsat & Download satellite data from Landsat 8 & \cite{Chamberlain2018} \\
 & MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
 & sen2r & Download satellite data from Sentinel & \cite{Ranghetti2020} \\
+\hline
+\multirow{3}{*}{Bridge stuff} & rgrass7 & Interface between GRASS7 and R  & \cite{Bivand2021} \\
+& RSAGA & Interface between SAGA and R & \cite{Brenning2018} \\
+& rgee &  Download data from Google Earth Engine & \cite{Aybar2020} \\
 \hline
 \multirow{7}{*}{Creating maps} & rasterVis & Vizualuzation of raster data & \cite{Lamigueiro2020} \\
 & ggspatial & Spatial extension for ggplot2 & \cite{Dunnington2020} \\

@@ -31,10 +31,7 @@ I hope you find these comments helpful.
 With a little more revision, I am quite confident that the paper can be accepted in Current Landscape Ecology reports.
 Thank you, and I look forward to receiving a revised manuscript!
 
-**Reference:** Rayfield B, MJ Fortin, A Fall.
-2011.
-Connectivity for conservation: a framework to classify network measures.
-Ecology 92(4): 847-858.
+**Reference:** Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
 
 ## Reviewer 1
 
@@ -62,17 +59,29 @@ Some examples of underexplained concepts:
 "Packages that deal with such issue include groundhog [42], packrat [43], or renv [44]. For more information about R package development in general, see [40]." How do they do so?
 Why does it matter?
 
+**Reply**: We agree that it was not clear enough how these package could help woth reproducibility, thus we added a more detailed explanation. \vskip 0.5cm
+
 "also integrates into the widely used tidyverse packages" Which are what, and why should the reader care?
+
+**Reply**: Thank you for pointing out that any further explanation is missing. We added a brief explanation of what the tidyverse is and why using it can be beneficial. \vskip 0.5cm
 
 "Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS [69,70,37], terrain analysis methods in SAGA GIS [71], or morphological operations for Google Earth Engine. It is possible to control several GIS software directly from R using dedicated packages, such as rgrass7 [72] for GRASS GIS, RSAGA [73] for SAGA GIS, and rgee [66] for Google Earth Engine." This should be expanded on.
 How can R fit into a workflow using these GIS tools, and why would you want to?
 
+**Reply**: We added an explanation how these package allow to incorporate functionality currently only available in GIS software into reproducible and shareable R scripts \vskip 0.5cm
+
 The section on CRS and projections should discuss the recent major changes to PROJ and thus to R packages relying on it.
 A lot of the information that appears online is now obsolete.
 
+**Reply**: @Jakub? \vskip 0.5cm
+
 In some places the formatting is problematic, such as automatic hyphenation of R package names resulting in "random-Forest" instead of "randomForest".
 
+**Reply**: We agree that this is problematic and we weren't even aware this is happeing so thanks for pointing it out. We deactivated the automatic hyphenation by LaTeX. \vskip 0.5cm
+
 Table 1 is very useful, but does not contain all the packages mentioned in the text.
+
+**Reply**: Thank you for checking the table so extensively. We made sure all packages should be included now. \textcolor{red}{Check again all packages are there} \vskip 0.5cm
 
 Survey: do you think the survey results reflect the true state of affairs, or do they reflect lack of training/knowledge/the fragmented nature of the R community?
 
@@ -107,6 +116,8 @@ This problem statement without any discussion or resolution might turn landscape
 
 There *are* reasons one might choose tools other than R, or alongside R.
 This review doesn't really articulate what the pros and cons are.
+
+**Reply**: We agree with the reviewer that there are many reasons to use other software or programming languages. Nevertheless, we think that the scope of this review is not to discuss pro and cons between the different tools, but rather to focus on R. At the same time, we believe that the manuscript does give many arguments why R might be a good solution for many tasks. \vskip 0.5cm
 
 The reference section gives no journal names.
 That can't be right.
