@@ -37,7 +37,8 @@ precipitation_sum <- raster::calc(x = precipitation, fun = sum)
 
 # Next, we need to ensure that all spatial data has the same coordinate reference system.
 # To achieve this we reproject the downloaded data to the CRS epsg:21781.
-precipitation_sum <- raster::projectRaster(precipitation_sum, crs = "+init=epsg:21781")
+precipitation_sum <- raster::projectRaster(precipitation_sum, crs = "EPSG:21781")
+
 
 # Next, we download administrational boundaries of Switzerland as vector data from
 # the naturalearth database. Again, we need to specify the resolution of the data
@@ -50,7 +51,7 @@ switzerland <- rnaturalearth::ne_countries(scale = 50,
 # To plot the precipitation data together with the administrational boundaries,
 # we also need to reproject the boundaries to the same coordinate reference system
 # epsg:21781.
-switzerland <- sf::st_transform(x = switzerland, crs = "epsg:21781")
+switzerland <- sf::st_transform(x = switzerland, crs = "EPSG:21781")
 
 # Because the precipitation data includes not just Switzerland but whole Europe,
 # we want to crop the raster data by including only cells that are within the the
