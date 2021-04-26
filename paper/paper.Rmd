@@ -32,6 +32,7 @@ preamble: |
   \usepackage{tabularx}
   \usepackage{multirow}
   \usepackage{placeins}
+  \usepackage{float}
   \usepackage[modulo]{lineno}
   \usepackage{xcolor}
   \usepackage[none]{hyphenat}
@@ -77,7 +78,7 @@ base_size <- 7.5
 
 \FloatBarrier
 
-\begin{table}
+\begin{table}[H]
 
 \small
 
@@ -112,7 +113,6 @@ vector & Points, lines, and polygons-based spatial data model \\
 
 \end{tabularx}
 \end{table}
-
 
 Landscape ecology focuses on how ecological processes are influenced by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
 Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995a}, spatial context is important and ecological processes can vary spatially \cite{With2019}.
@@ -221,6 +221,12 @@ The selection of projected CRS should be based on the property of spatial data t
 A common way to refer to different CRS is to used codes developed by the European Petrol Survey Group (EPSG).
 Tools to find an appropriate CRS for a certain region can be found at <https://spatialreference.org>, <https://epsg.org>, or <http://epsg.io>.
 All packages from Section \@ref(sec:spatrep) have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
+
+\textcolor{blue}{Until 2020, spatial \textit{R} objects stored information about their CRS using Proj4 string representations, and these strings could also be used for CRS transformations.
+However, the major changes in upstream software, namely PROJ6 and GDAL3, limited the capabilities of the Proj4 strings and started to use a new representation called WKT2-2019 for CRS storing.
+Thus, spatial objects saved with degraded Proj4 string representation to \textit{R} file formats could be incorrectly read, and special attention should be given to check their correctness.
+Proj4 string representation is also not recommended to set or transform CRS and instead the previously introduced EPSG codes should be used.
+A more detailed explanation of the recent CRS changes can be found in \cite{Bivand2020}.}
 
 Another common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data should include vector clipping or raster cropping.

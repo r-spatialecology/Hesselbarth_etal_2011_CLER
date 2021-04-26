@@ -118,7 +118,8 @@ How can R fit into a workflow using these GIS tools, and why would you want to?
 The section on CRS and projections should discuss the recent major changes to PROJ and thus to R packages relying on it.
 A lot of the information that appears online is now obsolete.
 
-**Reply**: @Jakub? \vskip 0.5cm
+**Reply**: We added an explanation of the recent changes to PROJ and make users aware to pay attention if old Proj4 strings are used. 
+Furthermore, we advise to use ESPG codes for CRS. \vskip 0.5cm
 
 In some places the formatting is problematic, such as automatic hyphenation of R package names resulting in "random-Forest" instead of "randomForest".
 

@@ -32,6 +32,7 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{placeins}
+\usepackage{float}
 \usepackage[modulo]{lineno}
 \usepackage{xcolor}
 \usepackage[none]{hyphenat}
@@ -104,7 +105,7 @@
 
 \FloatBarrier
 
-\begin{table}
+\begin{table}[H]
 
 \small
 
@@ -119,21 +120,21 @@
 API & Application programming interface. A set of protocols for sending and retrieving information from a server \\
 cell & Smallest, rectangular unit of raster data model \\
 CRAN & Comprehensive \textit{R} Archive Network. A repository for \textit{R} package \\
-CRS & Coordinate references systems. A coordinate-based local, regional or global system used to locate geographical entities \\
+CRS & Coordinate references system. A coordinate-based local, regional or global system used to locate geographical entities \\
 EPSG & Public registry of geodetic datums, spatial reference systems, Earth ellipsoids, coordinate transformations and related units of measurement \\
-GDAL & Open source translator library for raster and vector geospatial data formats \\
-GIS & Geographical information system \\
+GDAL & Open source translator library for raster and vector spatial data formats \\
+GIS & Geographic information system \\
 landscape & Mosaic of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
 open-source software & Software released under licenses that allow to use, modify and distribute it \\
 patch & Neighboring cells with same value \\
-PROJ & Open source generic coordinate transformation software \\
-raster & Cell grid based data model \\
+PROJ & Open-source generic coordinate transformation software \\
+raster & Cell grid based spatial data model \\
 resolution & Size in meter or degree of one cell \\
 \textit{R} package & User-created software extension to \textit{R} programming language \\
-SDM & Species distribution modelling \\
-Simple Features & A set of standards that specify a common storage and access model of geographic features \\
-vector & Points, lines, and polygons-based data model \\
+SDM & Species distribution modeling \\
+Simple Features & A set of standards that specify a common storage and access model of spatial vector data \\
+vector & Points, lines, and polygons-based spatial data model \\
 
 \hline
 
@@ -252,6 +253,12 @@ The selection of projected CRS should be based on the property of spatial data t
 A common way to refer to different CRS is to used codes developed by the European Petrol Survey Group (EPSG).
 Tools to find an appropriate CRS for a certain region can be found at \url{https://spatialreference.org}, \url{https://epsg.org}, or \url{http://epsg.io}.
 All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
+
+\textcolor{blue}{Until 2020, spatial \textit{R} objects stored information about their CRS using Proj4 string representations, and these strings could also be used for CRS transformations.
+However, the major changes in upstream software, namely PROJ6 and GDAL3, limited the capabilities of the Proj4 strings and started to use a new representation called WKT2-2019 for CRS storing.
+Thus, spatial objects saved with degraded Proj4 string representation to \textit{R} file formats could be incorrectly read, and special attention should be given to check their correctness.
+Proj4 string representation is also not recommended to set or transform CRS and instead the previously introduced EPSG codes should be used.
+A more detailed explanation of the recent CRS changes can be found in \cite{Bivand2020}.}
 
 Another common spatial data processing task is required when the available data extends over a larger area than the study region.
 In this case, the pre-processing of spatial data should include vector clipping or raster cropping.
