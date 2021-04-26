@@ -21,17 +21,40 @@ I think adding some of the detail that R1 asks for in terms of descriptions of t
 Both reviewers also commented about the survey.
 I am less concerned about your addressing those issues, as I do not see the survey as being core to the paper -- although some interpretation of the questions that R1 asks would be worth reflecting on, and a little more detail on the survey reach, as asked by R2 would be good to include.
 
+**Reply**: Thank you very much for considering the manuscript for publication. 
+We appreciate the reviewers comments and think they all help to improve the manuscript.
+We agree with reviewer 1 that the definition of landscape ecology could be shortened given the target audience of the journal. 
+Thus, the introduction now puts a stronger focus on advantages of open-source software and especially R. 
+Furthermore, we added explanations for all packages that were missing in the original submission as suggested by reviewer 1.
+However, we think that given recommendations which packages to use is very difficult for several reasons. 
+First, packages have different advantages and disadvantages that differ depending on e.g., the research question, the available data, or the personal preferences of the users.
+Second, we believe that trying out several packages for similar task can actually beneficial and strengthen trust in the method.
+But, by modifying Figure 1 and adding Box 1 we hope to give some more guidelines on how to organize an analysis.
+We agree that the survey is not the core of the paper, nevertheless, the comments by both reviewers are very valuable and improve the conclusions we can draw from it. 
+Thus, we added some explanation about the survey reach and what this means for the results of the survey. \vskip 0.5cm
+
 In my own read of the paper, I wondered if the development of some sort of typology of the available tools (as Rayfield et al. 2011 did for connectivity tools) would be useful.
 I also suggest you consider some "boxes" that give point-by-point information.
 I would love to see a "Where to start" box for total beginners and then maybe a second one with "Tips for developers".
 In addition, can you please better explain the tidyverse to the readers?
 It would also be useful if you could just elaborate a little bit in the annotated references for some of the key papers, as has been done for most of the papers published in this journal.
 
+**Reply**: We agree that the of Rayfield et al. 2011 is great, but we also want to point out that it was developed for a more specific topic (i.e., connectivity), while this manuscript deals with the whole field of landscape ecology.
+Thus, we believe that a similar typology for all packages included in this manuscript would be too complicated to be of actual help.
+Thank you for this great idea to add boxes. 
+We added a box "Where to start" to give some major steps how to approach landscape ecology in R for novice users. 
+We hope this will also at least partly address the issue raised by reviewer 1 about recommendations.
+We also thought about a second box for mode advanced users and even developers, but decided that the target audience of the paper are most likely novice to intermediate R users and not developers and the topic of developing own packages specifically for the landscape ecology community could maybe be a future manuscript.
+Also, we added a short explanation of the tidyverse and its strength.
+Lastly, we provide more information about the annotated references.
+\vskip 0.5cm
+
 I hope you find these comments helpful.
 With a little more revision, I am quite confident that the paper can be accepted in Current Landscape Ecology reports.
 Thank you, and I look forward to receiving a revised manuscript!
 
-*Reference:* Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
+**Reply**: Again, thank you very much for the appreciated and valuable suggestions for improving the manuscript and we hope that the revised manuscript improved compared to the previous version with help of the reviewers. 
+All changes to the manuscript are indicated by the blue color. \vskip 0.5cm 
 
 ## Reviewer 1
 
@@ -39,9 +62,9 @@ I think the idea of a review of R tools for landscape ecology workflows is a gre
 If it's for landscape ecologists, as the choice of journal suggests, defining landscape ecology seems unnecessary, but a bit more information on R in general and why a landscape ecologist might choose R rather than some other tool would be useful.
 
 **Reply**: Thank you for the general encouraging words about the manuscript. 
-We agree that a definition of landscape ecology is not needed given the target audience of the journal. 
-Thus, we shortened the introduction. 
-\textcolor{red}{Maybe move section of powerful R to introduction? But, comprehensive comparison with other software outside of scope} \vskip 0.5cm
+We agree that such a long definition of landscape ecology is not needed given the target audience of the journal. 
+Thus, we shortened the introduction related to landscape ecology in general and rearranged other sections of the introduction.
+Most of the introduction now introduces the advantages and strength of open-source software and in particular R. While all of the authors are enthusiastic R users, we think that a comprehensive discussion of R vs. other open-source software is outside of the scope of this paper and more important not expedient in general since other software might work better for other people (e.g., Python). \vskip 0.5cm
 
 I'm reading this manuscript from the perspective of a very experienced user of R for geospatial analyses, and who has spent a lot of time teaching students and post-docs how to do so.
 I am familiar with nearly all of the packages mentioned, and even I found the lists of packages with little explanation or information overwhelming.
@@ -61,7 +84,11 @@ But, we think that our new "Box 1: Where to start" hopefully can assist novice u
 
 And, mentioned but not elaborated on: How would I combine these into an effective workflow, making my landscape ecology research easier and more reproducible?
 
+**Reply**: We hope that the modified Figure 1, the added Box 1 and some added explanation in the conclusions explain how using R can facilitate a reproducible workflow in landcape ecology. \vskip 0.5cm
+
 1.1 I am a bit impressed but also surprised that you chose to define landscape ecology without using the word "pattern."
+
+**Reply**: While there are certainly many ways to define landscape ecology, we agree that pattern is a central term and included it in the introduction. \vskip 0.5cm
 
 "it has no internal support for reading, processing, or visualizing spatial data" This is misleading - these capabilities are part of well-developed and maintained packages, consonant with the R philosophy and structure.
 
@@ -70,6 +97,8 @@ We tried to reword the statement in a way that makes clear base R does not have 
 
 Because of the lack of clear objective and audience, the manuscript is a mix of overexplanation and complex concepts dropped without adequate explanation.
 Some examples of underexplained concepts:
+
+**Reply**: Thank you for this valuable remark. We tried to add additional explanations to concepts which might be underexplained to especially novice users which hopefully increases the value of the manuscript. \vskip 0.5cm
 
 "Packages that deal with such issue include groundhog [42], packrat [43], or renv [44]. For more information about R package development in general, see [40]." How do they do so?
 Why does it matter?
@@ -99,7 +128,8 @@ We deactivated the automatic hyphenation by LaTeX. \vskip 0.5cm
 Table 1 is very useful, but does not contain all the packages mentioned in the text.
 
 **Reply**: Thank you for checking the table so extensively. 
-We made sure all packages should be included now. We also added the information to the table caption that not all packages from the manuscript are included but only packages specifically designed for spatial data and landscape ecology. \vskip 0.5cm
+We made sure all packages should be included now. 
+We also added the information to the table caption that not all packages from the manuscript are included but only packages specifically designed for spatial data and landscape ecology. \vskip 0.5cm
 
 Survey: do you think the survey results reflect the true state of affairs, or do they reflect lack of training/knowledge/the fragmented nature of the R community?
 
@@ -138,7 +168,7 @@ This problem statement without any discussion or resolution might turn landscape
 
 **Reply**: We added some explanation that raster and terra already provide solutions to this issue by processing only chunks that can be stored in memory. 
 Additionally, we added some information about parallel processing as another possible solution to these issues. 
-However, we believe that discussing underlying issues of R memory management is outside the scope if this paper. \vskip 0.5cm
+However, we believe that discussing underlying issues of R's memory management is outside the scope if this paper. \vskip 0.5cm
 
 There *are* reasons one might choose tools other than R, or alongside R.
 This review doesn't really articulate what the pros and cons are.
@@ -166,7 +196,14 @@ There are a LOT of packages dealing with all aspects of landscape ecology, inclu
 How can landscape ecologists learn of existing packages and new developments?
 How can they choose among similar packages?
 
+**Reply**: We are aware that there a many packages listed in this manuscript which might be overwhelming, especially given that some packages cover similar tasks. 
+We hope that especially Box 1, but also the restructured Figure 1 help landscape ecologists to find suitable packages. 
+Furthermore, we think that the structure in Table 1 actually helps to find packages related to specific task. 
+Lastly, we think that trying out similar packages for the same task can actually be beneficial, as also added to Box 1. \vskip 0.5cm
+
 How can they put together packages to develop a reproducible workflow, and how can they document and share that?
+
+**Reply**: We hope that the modified Figure 1, the added Box 1 and some added explanation in the conclusions explain how using R can facilitate a reproducible workflow in landcape ecology. \vskip 0.5cm
 
 The script provided in the appendix is both not useful for experienced R users, and not well-enough documented for novices.
 
@@ -200,7 +237,8 @@ I have revised the manuscript and I believe is almost ready for publication.
 I have a few comments and suggestions that I believe would clarify some parts of the manuscript, which I detail below.
 
 **Reply**: Thank you very much for the kind and encouraging words about the manuscript.
-We are happy to hear that the reviewer thinks the manuscript might be useful for ecologists that would like to analyze data through R. \vskip 0.5cm
+We are happy to hear that the reviewer thinks the manuscript might be useful for landscape ecologists that would like to analyze data through R. 
+We hope by including the appreciated and valuable comments by two reviewers we even increased the usefulness of the manuscript. \vskip 0.5cm
 
 L16: Can't understand the phrase, please clarify: "and lastly, iv) and can guide how to manage these heterogeneous landscapes".
 
