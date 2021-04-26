@@ -282,7 +282,7 @@ I only suggest to expand on how representative is the survey population of the l
 **Reply**: We strongly agree with the reviewer that this information would be very valuable to judge the representation of the survey.
 However, unfortunately such questions were not included.
 We also acknowledge that the survey is most likely not representative for all skill levels of *R* users because we assume that by using mailing list and social media more advanced users were more likely to take part in the survey.
-We added and clearified those shortcomings of the survey. \vskip 0.5cm
+We added and clarified those shortcomings of the survey. \vskip 0.5cm
 
 L357: The link is broken.
 

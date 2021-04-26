@@ -24,7 +24,7 @@ keywords:
 - reproducibility
 - scientific software
 abstract: |
-  **Purpose of review** Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the *R* programming language provides a wealth of community developed tools for landscape ecology. **Recent findings** In this paper, we outline existing packages for downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of *R* users within the landscape ecology community. **Summary** We found that landscape ecologists are generally satisfied with the functionality available within *R*, and that as a community they are continually further develop the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
+  \textbf{Purpose of review} Landscape ecology, the study of the complex interactions between landscapes and ecological processes, has hugely benefited from the increase in widely available open source software in recent years. In particular, the \textit{R} programming language provides a wealth of community developed tools for landscape ecology. \textbf{Recent findings} In this paper, we outline existing packages for downloading, processing and visualisation of spatial data, as well as those specifically developed for ecological analysis. Additionally, we outline the results of a survey of \textit{R} users within the landscape ecology community. \textbf{Summary} We found that landscape ecologists are generally satisfied with the functionality available within \textit{R}, and that as a community they are continually further develop the functionality available. Suggested future developments include improvement of computation performance; additional methods for landscape characterisation such as surface metrics; and advanced, accessible visualisation tools. 
 bibliography: bibliography.bib
 bibstyle: spphys # bibstyle options spbasic(default), spphys, spmpsci
 preamble: |
@@ -75,6 +75,12 @@ base_size <- 7.5
 
 # Introduction {#sec:intro}
 
+\FloatBarrier
+
+\begin{table}
+
+\small
+
 \begin{tabularx}{1.15\textwidth}{lX}
 
 \hline
@@ -105,6 +111,8 @@ vector & Points, lines, and polygons-based data model \\
 \hline
 
 \end{tabularx}
+\end{table}
+
 
 Landscape ecology focuses on how ecological processes are influenced by the heterogeneous landscapes they occur in and how the ecological processes themselves influence the landscapes \cite{Turner1989,Turner2005,With2019}.
 Because landscapes are defined as mosaics of different land covers, ecosystems, habitat types, or land uses \cite{Forman1986,Forman1995,Wiens1995a}, spatial context is important and ecological processes can vary spatially \cite{With2019}.
@@ -119,85 +127,85 @@ Importantly, though not strictly necessary by definition of open-source \cite{St
 This democratizes scientific research as free-of-cost software removes one gatekeeper for researchers without access to proprietary software.
 For more general overviews of open-source software for \textcolor{blue}{landscape ecology studies} see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
 
-One successful example of an open-source project is the *R* programming language, and its extensions called packages \cite{RCoreTeam2019}. 
-\textcolor{blue}{Packages allow to easily share code and make functionality and documentation available to users and by that extent the capability of the *R* programming language \cite{Wickham2015}}.
+One successful example of an open-source project is the \textit{R} programming language, and its extensions called packages \cite{RCoreTeam2019}. 
+\textcolor{blue}{Packages allow to easily share code and make functionality and documentation available to users and by that extent the capability of the \textit{R} programming language \cite{Wickham2015}}.
 Firstly released in 1995 \cite{Smith2016}, today \textcolor{blue}{this} programming language is among the most popular programming languages, especially in ecology \cite{Lai2019}.
-Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the *R* programming language \cite{Bivand2006,Lovelace2019}.
-Thus, the *R* programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the *R* environment (Fig. \@ref(fig:fig-workflow)).
+Originally introduced as a statistical programming language, a growing body of packages designed to analyze spatial data subsequently emerged for the \textit{R} programming language \cite{Bivand2006,Lovelace2019}.
+Thus, the \textit{R} programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the \textit{R} environment (Fig. \@ref(fig:fig-workflow)).
 
-The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
-The expanding CRAN Task Views (curated lists of packages related to a certain topic) document this: *Analysis of Spatial Data* \cite{Bivand2019a} and *Handling and Analyzing Spatio-Temporal Data* \cite{Pebesma2020} currently list about 300 packages in total.
-Since the task views are maintained manually by just a few people, the actual amount of *R* packages related to spatial data is most likely higher.
-The growing popularity of the *R* programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Wegmann2016,Fletcher2018,Lovelace2019,Pebesma2019a}.
-A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
+The growing body of \textit{R} packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
+The expanding CRAN Task Views (curated lists of packages related to a certain topic) document this: \textit{Analysis of Spatial Data} \cite{Bivand2019a} and \textit{Handling and Analyzing Spatio-Temporal Data} \cite{Pebesma2020} currently list about 300 packages in total.
+Since the task views are maintained manually by just a few people, the actual amount of \textit{R} packages related to spatial data is most likely higher.
+The growing popularity of the \textit{R} programming language for spatial data analysis and landscape ecology can also be seen with the increasing number of related textbooks \cite{Wegmann2016,Fletcher2018,Lovelace2019,Pebesma2019a}.
+A recent overview over the progress of \textit{R} to handle spatial data in general can be found in \cite{Bivand2020}.
 
-Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g., Python) for landscape ecology exist, in this review we focus on software implemented in the *R* programming language.
+Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g., Python) for landscape ecology exist, in this review we focus on software implemented in the \textit{R} programming language.
 \textcolor{blue}{We acknowledges that there are reasons and circumstances to also use other software tools and progamming languages, however, a comprehensive discussion of pro and cons is outside the scope of this manuscript.}
-Thus, in the first part of this article, we present an overview of existing *R* packages for landscape ecology and closely related fields (Table \@ref(tab:packages)).
-\textcolor{blue}{We included only packages that were available on the official *R* package archive network CRAN at the time the manuscript was prepared. 
+Thus, in the first part of this article, we present an overview of existing \textit{R} packages for landscape ecology and closely related fields (Table \@ref(tab:packages)).
+\textcolor{blue}{We included only packages that were available on the official \textit{R} package archive network CRAN at the time the manuscript was prepared. 
 This ensures that all included packages were at least maintained to fulfill CRAN's technical quality standards.}
-In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are presently missing for landscape ecology.
+In the second part, we present a survey in which we asked the community how they currently use the \textit{R} programming language and to identify topics for which \textit{R} packages are presently missing for landscape ecology.
 
 # Existing packages {#sec:existing_packages}
 
-Most *R* packages are developed and maintained by the community, which shows how open-source software development can facilitate innovation, reproducibility, and reuse of code.
-There are three major online platforms to host *R* packages and make them accessible to potential users: CRAN, GitHub, and Bioconductor.
-The last one focuses on tools for the analysis of genomic data; \textcolor{blue}{therefore, in this review we focus on only the former two".}
+Most \textit{R} packages are developed and maintained by the community, which shows how open-source software development can facilitate innovation, reproducibility, and reuse of code.
+There are three major online platforms to host \textit{R} packages and make them accessible to potential users: CRAN, GitHub, and Bioconductor.
+The last one focuses on tools for the analysis of genomic data; \textcolor{blue}{therefore, in this review we focus on only the former two.}
 
-CRAN (the *Comprehensive R Archive Network*) provides large visibility to the community, ease of installation, and a technical quality standard, including checks for common problems on all major operating systems \cite{Wickham2015}.
-*GitHub* hosts source code under version control, and allows users to install packages with one line of code using the *remotes* \cite{Hester2020} package.
-Additionally, hosting a package on *GitHub* provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing (i.e. testing if functions return an expected value).
+CRAN (the \textit{Comprehensive R Archive Network}) provides large visibility to the community, ease of installation, and a technical quality standard, including checks for common problems on all major operating systems \cite{Wickham2015}.
+\textit{GitHub} hosts source code under version control, and allows users to install packages with one line of code using the \textit{remotes} \cite{Hester2020} package.
+Additionally, hosting a package on \textit{GitHub} provides many useful features to collaborate and communicate between developers and users \cite{Wickham2015}, or integrated unit testing (i.e. testing if functions return an expected value).
 
-The guaranteed technical quality standard of *CRAN* requires more initial work for developers compared to *GitHub*, while it ensures for users that the package can be installed on their machine.
-Additionally, the technical quality standard of *CRAN* also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of *R* packages, i.e., package *x* requires and uses code from package *y*.
+The guaranteed technical quality standard of \textit{CRAN} requires more initial work for developers compared to \textit{GitHub}, while it ensures for users that the package can be installed on their machine.
+Additionally, the technical quality standard of \textit{CRAN} also facilitates reproducibility and reuse of code, as shown by many reverse dependencies of \textit{R} packages, i.e., package \textit{x} requires and uses code from package \textit{y}.
 CRAN also provides archived versions of outdated or orphaned packages and thus ensuring long term availability and reproducibility of code.
-Thus, most packages can be found on both platforms, and many developers use *GitHub* for regular development and *CRAN* to publish stable releases of the packages.
-Furthermore, online communities like *rOpenSci* also provide a peer-review process for code quality.
+Thus, most packages can be found on both platforms, and many developers use \textit{GitHub} for regular development and \textit{CRAN} to publish stable releases of the packages.
+Furthermore, online communities like \textit{rOpenSci} also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
-Packages that deal with such issue include *groundhog* \cite{Simonsohn2021}, *packrat* \cite{Ushey2018}, or *renv* \cite{Ushey2020}.
+Packages that deal with such issue include \textit{groundhog} \cite{Simonsohn2021}, \textit{packrat} \cite{Ushey2018}, or \textit{renv} \cite{Ushey2020}.
 \textcolor{blue}{These packages facilitate reproduciability to a high degree by preserving the project enviroment, including specific package versions, used for an analysis.}
-For more information about *R* package development in general, see \cite{Wickham2015}.
+For more information about \textit{R} package development in general, see \cite{Wickham2015}.
 
-(ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed. For more packages related to the specific task, see Table \@ref(tab:packages).
+(ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the \textit{R} programming language. For all major tasks, some example \textit{R} packages are listed. For more packages related to the specific task, see Table \@ref(tab:packages).
 ```{r fig-workflow, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:fig1cap)"}
 include_graphics("data/Figure_1.pdf")
 ```
 
 ## Spatial data representations {#sec:spatrep}
 
-While \textcolor{blue}{base *R*} has several built-in data structures, including vectors, matrices, data frames, and lists, it has no internal support for reading, processing, or visualizing spatial data. 
-\textcolor{blue}{However, as discussed previously, one strength and core idea of the *R* programming language are its expandability by pacakges.} 
-Because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many *R* packages (\cite{Lovelace2019}, page 10, Table \@ref(tab:packages)).
-Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the *R* language.
-Importantly, main *R* packages for spatial data use the external *GDAL* \cite{GDAL/OGRcontributors2020} and *PROJ* \cite{PROJcontributors2021} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
-Additionally, *R* allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
+While \textcolor{blue}{base \textit{R}} has several built-in data structures, including vectors, matrices, data frames, and lists, it has no internal support for reading, processing, or visualizing spatial data. 
+\textcolor{blue}{However, as discussed previously, one strength and core idea of the \textit{R} programming language are its expandability by pacakges.} 
+Because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \textit{R} packages (\cite{Lovelace2019}, page 10, Table \@ref(tab:packages)).
+Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \textit{R} language.
+Importantly, main \textit{R} packages for spatial data use the external \textit{GDAL} \cite{GDAL/OGRcontributors2020} and \textit{PROJ} \cite{PROJcontributors2021} libraries, which allow for reading and writing of hundreds of spatial data formats, and coordinates transformation.
+Additionally, \textit{R} allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
 
 In the raster data model, surfaces are divided into cells, where each cell stores a numeric value.
 The values could represent discrete phenomena, such as a class number of a land cover category, or continuous phenomena, such as elevation values.
-Currently, the most prominent package allowing for raster data representation is *raster* \cite{Hijmans2019}.
-A *raster* successor, *terra*, aimed at the simpler interface and improved performance is being developed \cite{Hijmans2021}, however, it could take several years for this package to be adopted by other developers and users.
-Alternatively, the *stars* package can be used to read and process raster data focusing on spatial-temporal data cubes \cite{Pebesma2019}.
-Additionally, there are packages that improve some basic raster operations in terms of computational performance or compatibility between raster and vector operations, such as *fasterize* \cite{Ross2020}, *rasterDT* \cite{OBrien2020}, or *exactextractr* \cite{Baston2020}.
+Currently, the most prominent package allowing for raster data representation is \textit{raster} \cite{Hijmans2019}.
+A \textit{raster} successor, \textit{terra}, aimed at the simpler interface and improved performance is being developed \cite{Hijmans2021}, however, it could take several years for this package to be adopted by other developers and users.
+Alternatively, the \textit{stars} package can be used to read and process raster data focusing on spatial-temporal data cubes \cite{Pebesma2019}.
+Additionally, there are packages that improve some basic raster operations in terms of computational performance or compatibility between raster and vector operations, such as \textit{fasterize} \cite{Ross2020}, \textit{rasterDT} \cite{OBrien2020}, or \textit{exactextractr} \cite{Baston2020}.
 
 The vector data model consists of two main elements i) geometries (such as points, lines, polygons) and ii) attributes, where each geometry is connected to a row in the attribute table.
 In many cases, this data model allows a more realistic representation of landscape features, however, with the cost of higher computational demands \cite{Lovelace2019}.
-The *sp* package was the standard for vector data representation for more than ten years \cite{Pebesma2005,Bivand2013}.
-As of 2020, more than 500 *R* packages directly depend or imports *sp*.
-However, *sp* is not actively developed anymore, and its recommended successor is the *sf* package \cite{Pebesma2018}.
-Besides many advantages and strength of the *sf* package in terms of spatial data handling, it also integrates into the widely used *tidyverse* packages \cite{Wickham2019}.
-\textcolor{blue}{The *tidyverse* is a collection of *R* packages developed for almost all major tasks of any data science project. 
-Because all *tidyverse* packages follow the same data philosophy structures, one strength of the *tidyverse* is its high consistency of usage across its packages \cite{Wickham2019}.}
-*sf* builds on the idea of "simple features", a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
+The \textit{sp} package was the standard for vector data representation for more than ten years \cite{Pebesma2005,Bivand2013}.
+As of 2020, more than 500 \textit{R} packages directly depend or imports \textit{sp}.
+However, \textit{sp} is not actively developed anymore, and its recommended successor is the \textit{sf} package \cite{Pebesma2018}.
+Besides many advantages and strength of the \textit{sf} package in terms of spatial data handling, it also integrates into the widely used \textit{tidyverse} packages \cite{Wickham2019}.
+\textcolor{blue}{The \textit{tidyverse} is a collection of \textit{R} packages developed for almost all major tasks of any data science project. 
+Because all \textit{tidyverse} packages follow the same data philosophy structures, one strength of the \textit{tidyverse} is its high consistency of usage across its packages \cite{Wickham2019}.}
+\textit{sf} builds on the idea of "simple features", a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
 
 ## Spatial data download
 
 Nowadays, spatial data at many scales is available from an abundance of online-accessible sources.
-A lot of this data are publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an *R* session.
-Since publicly available data is becoming more prominent, so are *R* packages to access them.
-Packages include *rnaturalearth* \cite{South2017} to access the Natural Earth database to download region and country data, the *elevatr* package to access raster elevation data \cite{Hollister2020}, the *rgbif* package to access the Global Biodiversity Information Facility (GBIF) portal \cite{Chamberlain2017}, the *BIEN* package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the *marmap* to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the *FedData* package \cite{Bocinsky2019} to access the National Land Cover Database (NLCD) data for the USA.
-Furthermore, the *getlandsat* package \cite{Chamberlain2018} allows users to download Landsat 8 satellite data, the *MODIS* package \cite{Mattiuzzi2020} to download MODIS products, and *sen2r* \cite{Ranghetti2020} to download Sentinel-2 optical images.
-Also, the `getData()` function from the *raster* package allows users to download climatic and bioclimatic data from WorldClim v1.4.
-Additionally, the *rgee* package \cite{Aybar2020} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
+A lot of this data are publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \textit{R} session.
+Since publicly available data is becoming more prominent, so are \textit{R} packages to access them.
+Packages include \textit{rnaturalearth} \cite{South2017} to access the Natural Earth database to download region and country data, the \textit{elevatr} package to access raster elevation data \cite{Hollister2020}, the \textit{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{Chamberlain2017}, the \textit{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \textit{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \textit{FedData} package \cite{Bocinsky2019} to access the National Land Cover Database (NLCD) data for the USA.
+Furthermore, the \textit{getlandsat} package \cite{Chamberlain2018} allows users to download Landsat 8 satellite data, the \textit{MODIS} package \cite{Mattiuzzi2020} to download MODIS products, and \textit{sen2r} \cite{Ranghetti2020} to download Sentinel-2 optical images.
+Also, the `getData()` function from the \textit{raster} package allows users to download climatic and bioclimatic data from WorldClim v1.4.
+Additionally, the \textit{rgee} package \cite{Aybar2020} gives access to an extensive catalog of data from Google Earth Engine, including climate data, land cover maps, and satellite imagery.
 
 ## Spatial data processing
 
@@ -219,14 +227,19 @@ In this case, the pre-processing of spatial data should include vector clipping 
 Related to that, masking certain areas of the study region using spatial filters (e.g. water bodies, urban areas) can be required.
 Packages from Section \@ref(sec:spatrep) also allow for these operations.
 Additionally, they offer many other operations, such as merging or joining spatial data, extracting values from one dataset into another, raster resolution changes, or vector data simplifications.
-A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the *grainchanger* package \cite{Graham2019}.
-Furthermore, *landscapetools* is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
+A comprehensive collection of methods to aggregate raster values to a coarser resolution can also be found in the \textit{grainchanger} package \cite{Graham2019}.
+Furthermore, \textit{landscapetools} is a collection of various utility functions for the raster data model \cite{Sciaini2018}.
 
 Finally, there are a number of tools for landscape ecology implemented in GIS software, such as `r.li` or `r.pi` for GRASS GIS \cite{Wegmann2018,Neteler2012,Porta2017}, terrain analysis methods in SAGA GIS \cite{Conrad2015}, or morphological operations for Google Earth Engine.
-It is possible to control several GIS software directly from *R* using dedicated packages, such as *rgrass7* \cite{Bivand2021} for GRASS GIS, *RSAGA* \cite{Brenning2018} for SAGA GIS, and *rgee* \cite{Aybar2020} for Google Earth Engine.
-\textcolor{blue}{By being able to access these GIS software directly from within *R*, these packages can allow to create easily reproducibale and sharable *R* scripts, even if functionality is currently only available in the corresponding GIS software.}
+It is possible to control several GIS software directly from \textit{R} using dedicated packages, such as \textit{rgrass7} \cite{Bivand2021} for GRASS GIS, \textit{RSAGA} \cite{Brenning2018} for SAGA GIS, and \textit{rgee} \cite{Aybar2020} for Google Earth Engine.
+\textcolor{blue}{By being able to access these GIS software directly from within \textit{R}, these packages can allow to create easily reproducible and sharable \textit{R} scripts, even if functionality is currently only available in the corresponding GIS software.}
+
+\begin{table}
+
+\small
 
 \begin{tabularx}{1\textwidth}{|X|}
+
 \hline
 \multicolumn{1}{|c|}{\textbf{Box 1: Where to start}} \\
 
@@ -258,28 +271,29 @@ Help for both packages can be found on the corresponding homepages \url{https://
 
 \hline
 \end{tabularx}
+\end{table}
 
 ## Creating maps
 
 Creating maps is essential when working with spatial data.
 Maps play an important role in checking the spatial and value-related quality of data, data exploration, and finally communicating results.
-*R* allows two major types of maps.
+\textit{R} allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g. changing the displayed values.
 All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function (Fig. \@ref(fig:fig-map)a).
 However, the generic functions are focused on quick visual inspection of the data (Fig. \@ref(fig:fig-map)a), rather than the creating complete maps \textcolor{blue}{as they do not directly support additional map elements (e.g., scale bar, north arrow) nor multiples maps.}
 
-The popular plotting package *ggplot2* (Fig. \@ref(fig:fig-map)b) \textcolor{blue}{can also visualize spatial data and is build on a layered grammar of graphics, which allows to create maps by combining individual graphical elements (e.g., raster and vector elements) \cite{Wickham2016}.
-Additionally, there is an extension especially designed to plot spatial data named *ggspatial*, which provides additional map elements \cite{Dunnington2020}.
-For more information about *ggplot2* in general, see \cite{Wickham2016}}.
-The *tmap* package provides a provides a coherent plotting system intended for drawing maps (Fig. \@ref(fig:fig-map)c) \cite{Tennekes2018}. 
+The popular plotting package \textit{ggplot2} (Fig. \@ref(fig:fig-map)b) \textcolor{blue}{can also visualize spatial data and is build on a layered grammar of graphics, which allows to create maps by combining individual graphical elements (e.g., raster and vector elements) \cite{Wickham2016}.
+Additionally, there is an extension especially designed to plot spatial data named \textit{ggspatial}, which provides additional map elements \cite{Dunnington2020}.
+For more information about \textit{ggplot2} in general, see \cite{Wickham2016}}.
+The \textit{tmap} package provides a provides a coherent plotting system intended for drawing maps (Fig. \@ref(fig:fig-map)c) \cite{Tennekes2018}. 
 \textcolor{blue}{This package operates in two modes, static and interactive, which means that the same code can be used to create static or interactive maps.}
-Quick interactive visualization of spatial data can be done with the *mapview* package\cite{Appelhans2020}.
-Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{Cheng2021}.
-Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
-Further plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
-A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
+Quick interactive visualization of spatial data can be done with the \textit{mapview} package\cite{Appelhans2020}.
+Both, \textit{tmap} and \textit{mapview} build upon the \textit{leaflet} package and leaflet javascript library \cite{Cheng2021}.
+Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \textit{cartography} package \cite{Giraud2016}.
+Further plotting methods for raster objects can be found in the \textit{rasterVis} package \cite{Lamigueiro2020}.
+A slightly different approach to visualizing spatial data is adapted by the \textit{rayshader} package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
-(ref:capfigmap) Comparison of different options to create maps of the total annual precipitation in Switzerland using a) base plot, b) *ggplot2* package, and c) *tmap* package. All three approaches result in similar-looking outputs, but their syntax and capabilities differ. All maps show the total annual precipitation of Switzerland. Data were downloaded with the *raster* package (precipitation data) and *rnaturalearth* package (country borders) package. The code to create the maps can be found in the Appendix.
+(ref:capfigmap) Comparison of different options to create maps of the total annual precipitation in Switzerland using a) base plot, b) \textit{ggplot2} package, and c) \textit{tmap} package. All three approaches result in similar-looking outputs, but their syntax and capabilities differ. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \textit{raster} package (precipitation data) and \textit{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.
 ```{r fig-map, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:capfigmap)"}
 include_graphics("data/Figure_2.pdf")
 ```
@@ -294,17 +308,17 @@ One of the most fundamental steps of landscape ecology analyses is to describe a
 For discrete land cover classes, the composition (number and abundance) and configuration (spatial arrangement) of the landscape are often described using landscape metrics \cite{Gustafson1998,Uuemaa2009,Uuemaa2013,Gustafson2019}.
 These metrics allow the comparison of different landscapes, quantification of temporal and spatial landscape changes and investigation of interactions between landscape characteristics and ecological processes \cite{Uuemaa2009}.
 
-The introduction of the *FRAGSTATS* in 1995 heavily facilitated the use of landscape metrics software \cite{McGarigal2012,Kupfer2012,Gustafson2019} and the *landscapemetrics* package \cite{Hesselbarth2019} allows to calculate the most widely used landscape metrics in within the *R* environment.
+The introduction of the \textit{FRAGSTATS} in 1995 heavily facilitated the use of landscape metrics software \cite{McGarigal2012,Kupfer2012,Gustafson2019} and the \textit{landscapemetrics} package \cite{Hesselbarth2019} allows to calculate the most widely used landscape metrics in within the \textit{R} environment.
 
 More recently, surface metrics were suggested as an alternative to landscape metrics for continuous raster data \cite{McGarigal2009}.
-The *geodiv* package \cite{Smith2020} allows calculation of gradient surface metrics to facilitate continuous analysis of landscape features.
-Additionally, the *belg* package allows calculation of the Boltzmann entropy of a landscape gradient \cite{Nowosad2020}.
+The \textit{geodiv} package \cite{Smith2020} allows calculation of gradient surface metrics to facilitate continuous analysis of landscape features.
+Additionally, the \textit{belg} package allows calculation of the Boltzmann entropy of a landscape gradient \cite{Nowosad2020}.
 
 Most landscape metrics are represented by a single number depicting specific characteristics of a local landscape.
 Another possibility is to derive spatial signatures - a multi-value representation of landscape composition and configuration, such as a co-occurrence histogram \cite{Nowosad2021}.
 Spatial signatures calculated for many landscapes can be compared using one of a set of existing distance measures (e.g. Euclidian, Manhattan, Mahlanobis).
 This enables several types of spatial analysis on categorical raster data, such as searching for similar landscapes, detecting changes between landscape patterns, and spatial clustering of landscapes based on their composition and configuration.
-All of the spatial signatures methods mentioned above are implemented in the *motif* package \cite{Nowosad2021}.
+All of the spatial signatures methods mentioned above are implemented in the \textit{motif} package \cite{Nowosad2021}.
 
 #### Spatial statistics
 
@@ -312,33 +326,33 @@ Spatial statistics are complimentary to landscape metrics, and can be used to an
 In landscape ecology, spatial statistics has three key uses: i) detecting and correcting for spatial autocorrelation; ii) quantifying and comparing landscape patterns; iii) interpolating data. 
 
 Point pattern analysis uses event-level data, such as locations of individuals, and links the spatial pattern to the ecological process.
-The *spatstat* package \cite{Baddeley2005} contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modeling fitting, inference, and diagnostics. 
+The \textit{spatstat} package \cite{Baddeley2005} contains functionality for point pattern analysis, including exploratory analysis; simulation of point process models; and modeling fitting, inference, and diagnostics. 
 A comprehensive textbook covering both theoretical background as well as applied examples can be found here \cite{Baddeley2015}.
 
 Distance-based methods allow to detect and correct for spatial autocorrelation in data.
 It is key to do so as landscape data are highly spatially autocorrelated, and this non-independence can affect inferences from statistical modeling. 
-The *spdep* package \cite{Bivand2013} has methods for quantifying multiple metrics of spatial autocorrelation and correcting these in a spatial autoregressive model.
-The *rinla* \cite{Rue2009} (\url{https://www.r-inla.org}) and *inlabru* \cite{Bachl2019} packages also provide functionality for modeling of spatially structured data. 
+The \textit{spdep} package \cite{Bivand2013} has methods for quantifying multiple metrics of spatial autocorrelation and correcting these in a spatial autoregressive model.
+The \textit{rinla} \cite{Rue2009} (\url{https://www.r-inla.org}) and \textit{inlabru} \cite{Bachl2019} packages also provide functionality for modeling of spatially structured data. 
 
 Finally, the spatial structure of continuous landscapes can be quantified and compared with geostatistical tools, such as variograms and correlograms. 
-*R* packages *geoR* \cite{Diggle2007} and *gstat* \cite{Pebesma2004} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
+\textit{R} packages \textit{geoR} \cite{Diggle2007} and \textit{gstat} \cite{Pebesma2004} provide functionality for this type of analysis, as well as interpolation methods, known as (co-)kriging.
 Geostatistics also allows for spatial data simulations.
 
 #### Species distribution modeling {#sec:SDM}
 
 Species distribution modeling (SDM) examines how landscape patterns (e.g., habitat suitability or resources availability) influence and determine the patterns of species' distributions, mainly to infer ecological processes and predict future species' distributions \cite{Wiersma2011}.
 Originated in the 1970s, SDM has experienced numerous methodological advancement, and a numerous body of literature exists today \cite{Zimmermann2010,Norberg2019}.
-Additionally, textbooks introducing basic concepts of SDM in *R* exists \cite{Guisan2017,Fletcher2018}.
+Additionally, textbooks introducing basic concepts of SDM in \textit{R} exists \cite{Guisan2017,Fletcher2018}.
 
-Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2018}, there is also a large number of *R* packages used for SDMs.
-Popular approaches and packages include generalized linear models using, e.g., the *stats* \cite{RCoreTeam2019} package; generalized additive models using, e.g., the *mgcv* \cite{Wood2017} or *lme4* \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the *rpart* \cite{Therneau2019}, *randomForest* \cite{Liaw2002} or *ranger* \cite{Wright2017} package or multivariate data analysis using , e.g., the *ade4* \cite{Dray2007} or *vegan* \cite{Oksanen2019} package.
-Also, packages specifically designed for SDM exist, including the *dismo* \cite{Hijmans2017}, *sdm* \cite{Naimi2016}, *ecospat* \cite{Broennimann2020}, *biomod2* \cite{Thuiller2020}, *PresenceAbsence* \cite{Freeman2008}, or *zoon* \cite{Golding2018} packages. 
-Additionally, packages such as *ENMeval* \cite{Muscarella2014} provide functionality for model tuning and evaluation. 
+Because the used modeling approaches are diverse \cite{Hooten2011,Kerr2011,Fletcher2018}, there is also a large number of \textit{R} packages used for SDMs.
+Popular approaches and packages include generalized linear models using, e.g., the \textit{stats} \cite{RCoreTeam2019} package; generalized additive models using, e.g., the \textit{mgcv} \cite{Wood2017} or \textit{lme4} \cite{Bates2015} package; classification and regression trees (CART) using, e.g., the \textit{rpart} \cite{Therneau2019}, \textit{randomForest} \cite{Liaw2002} or \textit{ranger} \cite{Wright2017} package or multivariate data analysis using , e.g., the \textit{ade4} \cite{Dray2007} or \textit{vegan} \cite{Oksanen2019} package.
+Also, packages specifically designed for SDM exist, including the \textit{dismo} \cite{Hijmans2017}, \textit{sdm} \cite{Naimi2016}, \textit{ecospat} \cite{Broennimann2020}, \textit{biomod2} \cite{Thuiller2020}, \textit{PresenceAbsence} \cite{Freeman2008}, or \textit{zoon} \cite{Golding2018} packages. 
+Additionally, packages such as \textit{ENMeval} \cite{Muscarella2014} provide functionality for model tuning and evaluation. 
 
-Related to SDMs, there is a growing number of *R* packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
+Related to SDMs, there is a growing number of \textit{R} packages to analyze data from tracked animals, to study their movement characteristics, space use, and interaction with other animals and the environment.
 These analyses often use results of landscape ecological analyses as predictor variables to explain variation in space use \cite{Signer2015}, behavioral states \cite{Langrock2012}, or habitat selection \cite{Fieberg2020}.
-Widely used *R* packages include *ctmm* \cite{Calabrese2016} and *adehabitatHR* \cite{Calenge2006} for home-range estimation, *moveHMM* \cite{Michelot2016} for the classification of behavioral states, and *amt* \cite{Signer2019} for habitat selection.
-A recent and very comprehensive overview of *R* packages for the analysis of animal movement data is given by \cite{Joo2020}.
+Widely used \textit{R} packages include \textit{ctmm} \cite{Calabrese2016} and \textit{adehabitatHR} \cite{Calenge2006} for home-range estimation, \textit{moveHMM} \cite{Michelot2016} for the classification of behavioral states, and \textit{amt} \cite{Signer2019} for habitat selection.
+A recent and very comprehensive overview of \textit{R} packages for the analysis of animal movement data is given by \cite{Joo2020}.
 
 #### Connectivity {#sec:connectivity}
 
@@ -347,16 +361,16 @@ Landscape connectivity describes how landscape characteristics facilitate or hin
 While structural connectivity focuses only on landscape characteristics (e.g., movement corridors, barriers), functional connectivity also includes behavior characteristics of the species such as habitat associations and dispersal distances \cite{Tischendorf2000,With2019}.
 Given its broad concept, many different measures of connectivity exist \cite{Kindlmann2008}.
 At the patch level, structural connectivity can be measured using nearest-neighbor distances or characterizations of the patch neighborhood (e.g., amount of suitable habitat) \cite{Kindlmann2008,With2019}.
-Such measures are provided within the *landscapemetrics* package (see \ref{sec:landscape_metrics}).
-Furthermore, the *lconnect* package \cite{Mestre2019} and *Makurhini* package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
+Such measures are provided within the \textit{landscapemetrics} package (see \ref{sec:landscape_metrics}).
+Furthermore, the \textit{lconnect} package \cite{Mestre2019} and \textit{Makurhini} package \cite{Godinez-Gomez2020} provide several landscape connectivity metrics.
 Another way to describe connectivity is based on graph theory with the advantage that functional connectivity can also be included \cite{Kindlmann2008}.
 In graph theory \cite{Laita2011}, landscapes are described by nodes (i.e., habitat patches) connected by and functional connections called links (or edges) \cite{Laita2011}.
-The *grainscape* package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
-More generally, the *igraph* package \cite{Csardi2006} provides functionality for graph theoretic analyses.
+The \textit{grainscape} package \cite{Chubaty2020} provides a tool to model connectivity based on spatially explicit networks.
+More generally, the \textit{igraph} package \cite{Csardi2006} provides functionality for graph theoretic analyses.
 Resistance surfaces and least-cost paths are other tools to model functional connectivity which include attributes of the matrix.
 The resistance surface describes the effects of facilitating or hindering the landscape's characteristics for an organism moving within it \cite{Adriaensen2003}.
-Least-cost paths can be calculated using the *gdistance* package \cite{vanEtten2017}.
-Absorbing Markov chains quantify landscape connectivity as the combination of movement and mortality based on the landscape characteristics \cite{Fletcher2019}, and is provided by the recently published *samc* package \cite{Marx2020}.
+Least-cost paths can be calculated using the \textit{gdistance} package \cite{vanEtten2017}.
+Absorbing Markov chains quantify landscape connectivity as the combination of movement and mortality based on the landscape characteristics \cite{Fletcher2019}, and is provided by the recently published \textit{samc} package \cite{Marx2020}.
 
 #### Landscape genetics {#sec:landscape_genetics}
 
@@ -366,19 +380,21 @@ By explicitly including landscape characteristics, landscape genetics provides a
 As a result of its interdisciplinarity, landscape genetics draws together methods from multiple fields, including landscape ecology, spatial statistics, geography, and population genetics \cite{Storfer2007}.
 
 Since describing connectivity between two locations is one of the fundamental steps of landscape genetics, all packages useful for connectivity (see \ref{sec:connectivity}) are also important for landscape genetics.
-Further functionality for landscape genetics such as quantifying and analysing population genetic structure, and hierarchical decomposition analysis can be found in the *graphs4lg* \cite{Savary2020}, *PopGenReport* \cite{Adamack2014,Gruber2015}, *HierDpart* packages \cite{Qin2019}, or *GeNetIt* \cite{Murphy2010}.
+Further functionality for landscape genetics such as quantifying and analysing population genetic structure, and hierarchical decomposition analysis can be found in the \textit{graphs4lg} \cite{Savary2020}, \textit{PopGenReport} \cite{Adamack2014,Gruber2015}, \textit{HierDpart} packages \cite{Qin2019}, or \textit{GeNetIt} \cite{Murphy2010}.
 
 #### Neutral landscape models {#sec:NLM}
 
 Neutral landscape models are used to create structured landscapes in the absence of specific ecological and landscape processes as null models against which hypotheses including specific ecological and landscape processes can be tested statistically \cite{Gardner1987,With1997}.
-Because neutral landscape models are not based on ecological and landscape processes, many different generic algorithms to create landscapes can be found across \textcolor{blue}{a couple} *R* packages.
-A comprehensive collection of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the *NLMR* package \cite{Sciaini2018}.
-Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate Gaussian fields, which could be used as neutral landscape models.
+Because neutral landscape models are not based on ecological and landscape processes, many different generic algorithms to create landscapes can be found across \textcolor{blue}{a couple} \textit{R} packages.
+A comprehensive collection of algorithms to simulate neutral landscape models specifically designed for landscape ecology can be found in the \textit{NLMR} package \cite{Sciaini2018}.
+Furthermore, the \textit{RandomFields} package \cite{Schlather2015} allows to simulate Gaussian fields, which could be used as neutral landscape models.
 
 ```{=tex}
 \begin{table}
 
-\captionsetup{width=2\linewidth}
+\scriptsize	
+
+\captionsetup{font=scriptsize}
 
 \caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task. The table only includes packages specifically desinged for spatial data or landscape ecology.}
 
@@ -442,7 +458,7 @@ Task & \textit{R} package & Describtion & Reference \\
 & ctmm & Fit continuous time movement models &\cite{Calabrese2016} \\
 & moveHMM & Fit hidden Markov models to movement data &\cite{Michelot2016} \\
 \hline
-\multirow{5}{*}{Connectivity} & lconnect & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
+\multirow{5}{*}{Connectivity} & \textit{lconnect} & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
 & Makurhini & Calculate fragmentation and landscape connectivity indices & \cite{Godinez-Gomez2020} \\
 & grainscape & Calculate minimum planar graph and grains of connectivity models & \cite{Chubaty2020} \\
 & gdistance & Distances and routes on geographical grids & \cite{vanEtten2017} \\
@@ -468,7 +484,7 @@ Task & \textit{R} package & Describtion & Reference \\
 
 \FloatBarrier
 
-# Survey of *R* usage by landscape ecology community
+# Survey of \textit{R} usage by landscape ecology community
 
 ```{r participation, include = FALSE}
 digits <- 1
@@ -501,15 +517,15 @@ own_package <- dplyr::group_by(answers, own_package) %>%
   dplyr::arrange(-n_rel)
 ```
 
-To better understand how the landscape ecology community uses *R*, we conducted a short survey using mailing lists and social media to reach the community. \textcolor{blue}{Thus, the survey was not necessarily representative for all skill levels of *R* users and results are most likely biased towards more advanced users. Also, the survey did not include any personal questions, such as age or country of residence, which might have an effect on the representation of the survey.}.
+To better understand how the landscape ecology community uses \textit{R}, we conducted a short survey using mailing lists and social media to reach the community. \textcolor{blue}{Thus, the survey was not necessarily representative for all skill levels of \textit{R} users and results are most likely biased towards more advanced users. Also, the survey did not include any personal questions, such as age or country of residence, which might have an effect on the representation of the survey.}.
 All raw data and scripts to analyze the data can be found at [https://github.com/r-spatialecology/Hesselbarth_et_al_CLER](https://github.com/r-spatialecology/Hesselbarth_et_al_CLER).
 
 In total, the survey was answered by `r n_people` participants, of which the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
 Other, less frequent answers were \textcolor{blue}{"Data scientists", "None of the above", "Government employees", "Master's degree student" and "Bachelor's degree student" (in decreasing order).}
 
-Most people use *R* either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%).
+Most people use \textit{R} either "daily" (`r usage_freq[[1, 2]]`%) or a "few times a week" (`r usage_freq[[2, 2]]`%).
 Almost half of all participants described themselves as "advanced" users (`r expertise[[1, 2]]`%), while `r expertise[[2, 2]]`% described themselves as "intermediate" users.
-Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on *GitHub* and/or *CRAN*.
+Related to this, about half of the participants either implemented their own package (`r own_package[[3, 2]]`%) or plan to do so in the future (`r own_package[[2, 2]]`%) and most of these packages are hosted on \textit{GitHub} and/or \textit{CRAN}.
 
 ```{r research-topics, include = FALSE}
 
@@ -697,11 +713,11 @@ ggplot_packages <- ggplot(data = r_packages_df) +
 ```
 
 More people use the raster data model (`r data_model[[1, 2]]`%) in comparison to the vector data model (`r data_model[[2, 2]]`%).
-This was also represented in the most used *R* packages (Fig. \@ref(fig:fig-survey)c).
+This was also represented in the most used \textit{R} packages (Fig. \@ref(fig:fig-survey)c).
 When asked for the three most used packages, participants of the survey listed `r length(unique(r_packages))` packages in total.
-The *raster* package was mentioned the most, followed by the *sf* package.
+The \textit{raster} package was mentioned the most, followed by the \textit{sf} package.
 Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \@ref(fig:fig-survey)c.
-Nevertheless, the large availability and usage of different *R* packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r round(r_packages_df[[1, 2]], 2)`%).
+Nevertheless, the large availability and usage of different \textit{R} packages across the community can be seen in the large "others" option (packages mentioned by less than 5 participants; `r round(r_packages_df[[1, 2]], 2)`%).
 
 ```{r usefulness, include = FALSE}
 # create vector with classses
@@ -744,9 +760,9 @@ ggplot_usefulness <- ggplot(data = usefulness_df) +
   coord_flip()
 ```
 
-Lastly, when asked how useful *R* is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated *R* as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d)).
+Lastly, when asked how useful \textit{R} is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated \textit{R} as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d)).
 
-(ref:fig3cap) Results of the online survey about open-source software tools in *R* for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used *R* packages and d) the overall usefulness or *R* for landscape ecology. The 'others' category includes all answers with less than five total mentions.
+(ref:fig3cap) Results of the online survey about open-source software tools in \textit{R} for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used \textit{R} packages and d) the overall usefulness or \textit{R} for landscape ecology. The 'others' category includes all answers with less than five total mentions.
 ```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "(ref:fig3cap)", warning=FALSE, out.width="\\textwidth"}
 
 (ggplot_topics | ggplot_tasks) / (ggplot_packages | ggplot_usefulness) +
@@ -755,7 +771,7 @@ Lastly, when asked how useful *R* is currently for landscape ecology, the vast m
 
 ```
 
-The survey also included a section in which participants could list methods and tools currently missing in *R* and answers to this question were very diverse.
+The survey also included a section in which participants could list methods and tools currently missing in \textit{R} and answers to this question were very diverse.
 
 ```{r comments, include = FALSE}
 
@@ -801,33 +817,33 @@ perc_characterisation <- round(length(methods_characterisation) / nrow(answers) 
 
 Overall, `r round(length(id_na) / nrow(answers) * 100, digits)`% of the participants reported that currently no packages and functionality are missing for them or they lack the overview to answer the question.
 There were three most common topics across the answers of the participants.
-Firstly, many participants (`r perc_performance`%) wished for a better computational performance of *R* in terms of speed and required RAM, especially for larger data.
+Firstly, many participants (`r perc_performance`%) wished for a better computational performance of \textit{R} in terms of speed and required RAM, especially for larger data.
 Secondly, participants are missing specific approaches to quantify landscape characteristics (such as surface metrics), or are wishing for an improvement of currently available approaches to quantify landscape characteristics (`r perc_characterisation`%).
 Thirdly, many participants (`r perc_viz`%) are currently missing advanced and easy-to-apply methods to create high-quality maps or other visualization-related functionality.
 
 # Conclusions
 
-Since its first introduction in 1995, *R* has come a long way from an exclusively statistical programming language to a powerful landscape ecology tool.
-Today, many *R* packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed at spatial data handling and analysis.
-The highly dynamic development of *R* packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
-However, since landscape ecology constantly develops and improves, \textcolor{blue}{consequently also the *R* programming language and its packages are under constant change to adapt to these new developments.}
+Since its first introduction in 1995, \textit{R} has come a long way from an exclusively statistical programming language to a powerful landscape ecology tool.
+Today, many \textit{R} packages, mainly developed by the community itself, provide a vast collection of functions and algorithms aimed at spatial data handling and analysis.
+The highly dynamic development of \textit{R} packages for landscape ecology also shows the strength of open-source software with its high innovation, transparency, reliability, and longevity.
+However, since landscape ecology constantly develops and improves, \textcolor{blue}{consequently also the \textit{R} programming language and its packages are under constant change to adapt to these new developments.}
 
-A comprehensive collection of *R* software packages exists to handle the most common tasks of landscape ecology.
-Because it is possible to import, modify, analyze, and visualize spatial data all in the same  \textcolor{blue}{scripted} programming environment, *R* allows for transparent and reproducible workflows.
-\textcolor{blue}{Because scripts including all analysis steps and parameter settings can easily be shared, the script-based characteristic of the *R* programming language allows to easily share and reproduce analysis across all major operation systems (e.g., Windows, macOS, Linux), as demonstrated by the *R* script in the appendix.
+A comprehensive collection of \textit{R} software packages exists to handle the most common tasks of landscape ecology.
+Because it is possible to import, modify, analyze, and visualize spatial data all in the same  \textcolor{blue}{scripted} programming environment, \textit{R} allows for transparent and reproducible workflows.
+\textcolor{blue}{Because scripts including all analysis steps and parameter settings can easily be shared, the script-based characteristic of the \textit{R} programming language allows to easily share and reproduce analysis across all major operation systems (e.g., Windows, macOS, Linux), as demonstrated by the \textit{R} script in the appendix.
 This is a big advantage over point-and-click software interfaces where analysis steps and parameter settings can only be described but not shared, and furthermore are often only available for certain operating systems.}
 This also allows users to easily interchange, modify, or adapt methods from other related and unrelated fields.
 
-The survey revealed that the landscape ecology community is overall satisfied with the capabilities of the *R* programming language for landscape ecology. 
-Furthermore, the survey showed the that many members of the landscape ecology community actively develop *R* packages themselves, demonstrating that tools are constantly added and updated.
+The survey revealed that the landscape ecology community is overall satisfied with the capabilities of the \textit{R} programming language for landscape ecology. 
+Furthermore, the survey showed the that many members of the landscape ecology community actively develop \textit{R} packages themselves, demonstrating that tools are constantly added and updated.
 
 Landscape ecology combines many different research topics and methodological approaches and most of them heavily rely on spatial data.
-While the *R* programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the *R* programming language has to face. 
-\textcolor{blue}{Some packages discussed herein, such as *raster* and *terra*, already provide solutions by processing data in chunks small enough to be stored in RAM memory.
-Furthermore, also parallel processing, and even including the use of high performance clusters, is provided by several *R* packages. 
-While this is outside the scope of this manuscript, further resources about parallel processing in *R* can be found here \cite{Bengtsson2020,Schubert2019,McCallum2012}.} 
-Furthermore, as the individual fields collected under the umbrella of landscape ecology develop, so need the *R* packages related to those fields.
-But as the development of *R* packages over the past years clearly demonstrated, the landscape ecology community is ready to face these challenges.
+While the \textit{R} programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the \textit{R} programming language has to face. 
+\textcolor{blue}{Some packages discussed herein, such as \textit{raster} and \textit{terra}, already provide solutions by processing data in chunks small enough to be stored in RAM memory.
+Furthermore, also parallel processing, and even including the use of high performance clusters, is provided by several \textit{R} packages. 
+While this is outside the scope of this manuscript, further resources about parallel processing in \textit{R} can be found here \cite{Bengtsson2020,Schubert2019,McCallum2012}.} 
+Furthermore, as the individual fields collected under the umbrella of landscape ecology develop, so need the \textit{R} packages related to those fields.
+But as the development of \textit{R} packages over the past years clearly demonstrated, the landscape ecology community is ready to face these challenges.
 
 \FloatBarrier
 
@@ -837,12 +853,13 @@ We are thankful to all members of the 'Coastal Ecology and Conservation Lab' at 
 
 #### Conflict of interest
 
-MHKH and JN are authors of the *landscapemetrics* and *landscapetools* package.
-JN is author of *belg* and *motif* package. JS is author of the *amt* package. LJG is author of the *grainchanger* package.
+MHKH and JN are authors of the \textit{landscapemetrics} and \textit{landscapetools} package.
+MHKH is author of the \textit{NLMR} package.
+JN is author of \textit{belg} and \textit{motif} package. JS is author of the \textit{amt} package. LJG is author of the \textit{grainchanger} package.
 
 #### Funding
 
-LJG was supported by the Natural Environment Research Council (NERC) grant *A complex-systems approach to improve understanding of the biodiversity-landscape structure relationship*, grant number NE/T009373/1. 
+LJG was supported by the Natural Environment Research Council (NERC) grant \textit{A complex-systems approach to improve understanding of the biodiversity-landscape structure relationship}, grant number NE/T009373/1. 
 All other authors did not receive any funding for this research.
 
 ####  Availability of data and material (data transparency)
@@ -861,12 +878,10 @@ This article does not contain any studies with human or animal subjects performe
 
 ### Important references
 
-\noindent \textbullet \textbullet \cite{Bivand2020}: \textcolor{blue}{Recent and comprehensive overview of general developments of *R* to analyze spatial data demonstrating the capabilities of the programming language to anlyze spatial data.}
+\noindent \textbullet \textbullet \cite{Bivand2020}: \textcolor{blue}{Recent and comprehensive overview of general developments of \textit{R} to analyze spatial data demonstrating the capabilities of the programming language to analyze spatial data.}
 
-\noindent \textbullet \textbullet \cite{Lovelace2019}: \textcolor{blue}{Textbook about spatial data handling and analyzing covering all common tasks with applied and helpful code examples in the *R* programming language.}
+\noindent \textbullet \textbullet \cite{Lovelace2019}: \textcolor{blue}{Comprehensive textbook about spatial data handling and analyzing including many useful applied code examples.}
 
-\noindent \textbullet \cite{Gustafson2019}: \textcolor{blue}{This review presents an overview of the developments and the state-of-the-art for quantifying landscape spatial pattern including lessons learned by the author.}
+\noindent \textbullet \cite{Gustafson2019}: \textcolor{blue}{This review presents an overview of the developments and the state of the art for quantifying landscape spatial pattern including lessons learned by the author.}
 
-\noindent \textbullet \cite{Lai2019}: \textcolor{blue}{This review demonstrates that the *R* programming language is wideley used in ecology including possible reasons for the wide spread use.}
-
-
+\noindent \textbullet \cite{Lai2019}: \textcolor{blue}{This review demonstrates that the \textit{R} programming language is widely used in ecology including possible reasons for the wide spread use.}
