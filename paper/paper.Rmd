@@ -237,6 +237,39 @@ Finally, there are a number of tools for landscape ecology implemented in GIS so
 It is possible to control several GIS software directly from *R* using dedicated packages, such as *rgrass7* \cite{Bivand2021} for GRASS GIS, *RSAGA* \cite{Brenning2018} for SAGA GIS, and *rgee* \cite{Aybar2020} for Google Earth Engine.
 \textcolor{blue}{By being able to access these GIS software directly from within *R*, these packages can allow to create easily reproducibale and sharable *R* scripts, even if functionality is currently only available in the corresponding GIS software.}
 
+\begin{tabularx}{1\textwidth}{|X|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Box 1: Where to start}} \\
+
+\\
+
+\textbf{1.} Get familiar with basics of \textit{R} programming language. 
+Good resources can be found at \url{https://cran.r-project.org/manuals.html}. \\
+
+\textbf{2.} Understand the fundamental spatial data types i.e, raster data and vector data.
+This also includes being able to process the data using the corresponding packages such as \textit{raster} or \textit{sf}. 
+These packakage also have excellent documentation at \url{https://rspatial.org/raster} and \url{https://r-spatial.github.io/sf}, respectively. \\
+
+\textbf{3.} Be able to transform coordinate reference systems of data from different sources. Depending on the data type, \textit{raster} or \textit{sf} and the corresponding documentations are good starting points. \\
+
+\textbf{4.} Do a quick visualization of the data for inspection or a first glance at the data. 
+This can be done with base \textit{R} or if already familiar \textit{ggplot2}. \\
+
+\textbf{5.} Find suitable \textit{R} package for research questions. 
+This can be difficult since research questions, available data and package are diverse. 
+Good starting points are the CRAN Task Views (mainly \url{https://cran.r-project.org/web/views/Spatial.html}) or review papers similar to this one. 
+If several packages exist, try all of them and see which ones suites the question and data the best. \\
+
+\textbf{6.} Create publication-quality figures and maps using e.g. \textit{ggspatial} or \textit{tmap}. 
+Help for both packages can be found on the corresponding homepages \url{https://paleolimbot.github.io/ggspatial/index.html} or \url{https://mtennekes.github.io/tmap}. \\
+
+\textbf{7.} Make reproducible \textit{R} scripts publicly available if possible. \\
+
+\textbf{8.} Further excellent resources with applied help about spatial data in \textit{R} can be found \url{https://keen-swartz-3146c4.netlify.app}, \url{https://rspatial.org}, or \url{https://geocompr.robinlovelace.net}. \\
+
+\hline
+\end{tabularx}
+
 ## Creating maps
 
 Creating maps is essential when working with spatial data.

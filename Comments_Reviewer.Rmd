@@ -57,7 +57,7 @@ Nevertheless, we also believe that this is not necessarily important for this re
 Furthermore, we agree with the reviewer that more specific recommendation which package to use could be useful, however, we also think that this is very difficult. 
 Reasons for this include, besides others, personal preferences of the users or analysis specific circumstances. 
 Lastly, the review should be as neutral as possible without favoring one package over another because pros and cons of package differ between users and all were developed with a specific idea in mind.
-\textcolor{red}{Refer to new how to get started box} \vskip 0.5cm
+But, we think that our new "Box 1: Where to start" hopefully can assist novice users with their workflow. \vskip 0.5cm
 
 And, mentioned but not elaborated on: How would I combine these into an effective workflow, making my landscape ecology research easier and more reproducible?
 
