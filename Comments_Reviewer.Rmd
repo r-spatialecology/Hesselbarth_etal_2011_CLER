@@ -31,15 +31,17 @@ I hope you find these comments helpful.
 With a little more revision, I am quite confident that the paper can be accepted in Current Landscape Ecology reports.
 Thank you, and I look forward to receiving a revised manuscript!
 
-**Reference:** Rayfield B, MJ Fortin, A Fall.
-2011.
-Connectivity for conservation: a framework to classify network measures.
-Ecology 92(4): 847-858.
+*Reference:* Rayfield B, MJ Fortin, A Fall. 2011. Connectivity for conservation: a framework to classify network measures. Ecology 92(4): 847-858.
 
 ## Reviewer 1
 
 I think the idea of a review of R tools for landscape ecology workflows is a great one, but this manuscript suffers a bit from lack of clarity of purpose.
 If it's for landscape ecologists, as the choice of journal suggests, defining landscape ecology seems unnecessary, but a bit more information on R in general and why a landscape ecologist might choose R rather than some other tool would be useful.
+
+**Reply**: Thank you for the general encouraging words about the manuscript. 
+We agree that a definition of landscape ecology is not needed given the target audience of the journal. 
+Thus, we shortened the introduction. 
+\textcolor{red}{Maybe move section of powerful R to introduction? But, comprehensive comparison with other software outside of scope} \vskip 0.5cm
 
 I'm reading this manuscript from the perspective of a very experienced user of R for geospatial analyses, and who has spent a lot of time teaching students and post-docs how to do so.
 I am familiar with nearly all of the packages mentioned, and even I found the lists of packages with little explanation or information overwhelming.
@@ -48,13 +50,23 @@ Do they have good documentation?
 What capabilities might I need from other software?
 Have you used all the packages mentioned, or simply compiled lists?
 
+**Reply**: All authors of the manuscript are experienced R users with many years of experience using the programming language. 
+Additionally, all authors even contributed several packages to the community themselves. 
+Given the different background of all authors, collectively probably most packages were used by at least one of the authors, but probably not all. 
+Nevertheless, we also believe that this is not necessarily important for this review. 
+Furthermore, we agree with the reviewer that more specific recommendation which package to use could be useful, however, we also think that this is very difficult. 
+Reasons for this include, besides others, personal preferences of the users or analysis specific circumstances. 
+Lastly, the review should be as neutral as possible without favoring one package over another because pros and cons of package differ between users and all were developed with a specific idea in mind.
+But, we think that our new "Box 1: Where to start" hopefully can assist novice users with their workflow. \vskip 0.5cm
+
 And, mentioned but not elaborated on: How would I combine these into an effective workflow, making my landscape ecology research easier and more reproducible?
 
 1.1 I am a bit impressed but also surprised that you chose to define landscape ecology without using the word "pattern."
 
 "it has no internal support for reading, processing, or visualizing spatial data" This is misleading - these capabilities are part of well-developed and maintained packages, consonant with the R philosophy and structure.
 
-**Reply**: We agree with the reviewer that this sentence might be misleading. We tried to reword the statement in a way that makes clear base R does not have these capabilities, but many package provide it. \vskip 0.5cm
+**Reply**: We agree with the reviewer that this sentence might be misleading. 
+We tried to reword the statement in a way that makes clear base R does not have these capabilities, but many package provide it. \vskip 0.5cm
 
 Because of the lack of clear objective and audience, the manuscript is a mix of overexplanation and complex concepts dropped without adequate explanation.
 Some examples of underexplained concepts:
@@ -62,26 +74,46 @@ Some examples of underexplained concepts:
 "Packages that deal with such issue include groundhog [42], packrat [43], or renv [44]. For more information about R package development in general, see [40]." How do they do so?
 Why does it matter?
 
+**Reply**: We agree that it was not clear enough how these package could help woth reproducibility, thus we added a more detailed explanation. \vskip 0.5cm
+
 "also integrates into the widely used tidyverse packages" Which are what, and why should the reader care?
+
+**Reply**: Thank you for pointing out that any further explanation is missing. 
+We added a brief explanation of what the tidyverse is and why using it can be beneficial. \vskip 0.5cm
 
 "Finally, there are a number of tools for landscape ecology implemented in GIS software, such as r.li or r.pi for GRASS GIS [69,70,37], terrain analysis methods in SAGA GIS [71], or morphological operations for Google Earth Engine. It is possible to control several GIS software directly from R using dedicated packages, such as rgrass7 [72] for GRASS GIS, RSAGA [73] for SAGA GIS, and rgee [66] for Google Earth Engine." This should be expanded on.
 How can R fit into a workflow using these GIS tools, and why would you want to?
 
+**Reply**: We added an explanation how these package allow to incorporate functionality currently only available in GIS software into reproducible and shareable R scripts. \vskip 0.5cm
+
 The section on CRS and projections should discuss the recent major changes to PROJ and thus to R packages relying on it.
 A lot of the information that appears online is now obsolete.
 
+**Reply**: @Jakub? \vskip 0.5cm
+
 In some places the formatting is problematic, such as automatic hyphenation of R package names resulting in "random-Forest" instead of "randomForest".
+
+**Reply**: We agree that this is problematic and we weren't even aware this is happening so thanks for pointing it out. 
+We deactivated the automatic hyphenation by LaTeX. \vskip 0.5cm
 
 Table 1 is very useful, but does not contain all the packages mentioned in the text.
 
+**Reply**: Thank you for checking the table so extensively. 
+We made sure all packages should be included now. We also added the information to the table caption that not all packages from the manuscript are included but only packages specifically designed for spatial data and landscape ecology. \vskip 0.5cm
+
 Survey: do you think the survey results reflect the true state of affairs, or do they reflect lack of training/knowledge/the fragmented nature of the R community?
 
-**Reply**: We added that we aware that the survey is most likely not representative for the R community and R users due to how we tried to reach the community and also due to the questions asked in the survey. Since the survey is not the main idea of the manuscript though, we think that the survery still migth be interesting even with these shortcomings. \vskip 0.5cm
+**Reply**: We added that we aware that the survey is most likely not representative for the R community and R users due to how we tried to reach the community and also due to the questions asked in the survey. 
+Since the survey is not the main idea of the manuscript though, we think that the survery still migth be interesting even with these shortcomings. \vskip 0.5cm
 
 "However, since landscape ecology constantly develops and improves, the R programming language and its packages need to change and adapt to these changes." That is indeed a strength of the R community, though the way it is stated here implies that this is not true.
 Instead, the problem is that there are so many packages, and constantly more being added.
 
-**Reply**: We agree that the sentence implied that the R community is not constantly adapting to the new developments of landscape ecology which is certainly not true. We reworded the sentence making clearea that indeed the community constantly improves the R programming language. However, we do not agree with the reviewer that "[...] the problem is that there are so many packages [..]". Even though we acknowledge that the amount of package can be overwhelming, especially for novices users, diversity of packages is a big strength - even for similar specific tasks. Possible advantages include e.g., the possibility to compare different implementations of similar/identical task or providing functionality for slightly different data structures. \vskip 0.5cm
+**Reply**: We agree that the sentence implied that the R community is not constantly adapting to the new developments of landscape ecology which is certainly not true. 
+We reworded the sentence making clearea that indeed the community constantly improves the R programming language. 
+However, we do not agree with the reviewer that "[...] the problem is that there are so many packages [..]".
+Even though we acknowledge that the amount of package can be overwhelming, especially for novices users, diversity of packages is a big strength - even for similar specific tasks. 
+Possible advantages include e.g., the possibility to compare different implementations of similar/identical task or providing functionality for slightly different data structures. \vskip 0.5cm
 
 "Because it is possible to import, modify, analyze, and visualize spatial data all in the same programming environment, R allows for transparent and reproducible workflows."
 But the authors do not mention any tools for facililitating reproducibility.
@@ -93,7 +125,8 @@ Furthermore, the survey showed the that many members of the landscape ecology co
 Yes, agreed.
 So why imply not, as called out above?
 
-**Reply**: Please see our reply to the previous comment. We reworded the sentence to state clearer that this is indeed one of the strength of the R community. \vskip 0.5cm
+**Reply**: Please see our reply to the previous comment. 
+We reworded the sentence to state clearer that this is indeed one of the strength of the R community. \vskip 0.5cm
 
 "While the R programming language is generally well suited to handle, analyze and visualize spatial data, the increasing availability of large data sets also leads to the challenges of increased computational demands, in terms of computational time as well as memory requirements, the R programming language has to face." Which are?
 I know, but the casual reader may not.
@@ -103,20 +136,30 @@ How do existing packages, notably raster and terra, deal with this?
 Are there tools to help parallelize landscape ecology workflows?
 This problem statement without any discussion or resolution might turn landscape ecologists away from R as a tool.
 
-**Reply**: We added some explanation that raster and terra already provide solutions to this issue by processing only chunks that can be stored in memory. Additionally, we added some information about parallel processing as another possible solution to these issues. However, we believe that discussing underlying issues of R memory management is outside the scope if this paper. \vskip 0.5cm
+**Reply**: We added some explanation that raster and terra already provide solutions to this issue by processing only chunks that can be stored in memory. 
+Additionally, we added some information about parallel processing as another possible solution to these issues. 
+However, we believe that discussing underlying issues of R memory management is outside the scope if this paper. \vskip 0.5cm
 
 There *are* reasons one might choose tools other than R, or alongside R.
 This review doesn't really articulate what the pros and cons are.
 
+**Reply**: We agree with the reviewer that there are many reasons to use other software or programming languages. 
+Nevertheless, we think that the scope of this review is not to discuss pro and cons between the different tools, but rather to focus on R. 
+At the same time, we believe that the manuscript does give many arguments why R might be a good solution for many tasks. \vskip 0.5cm
+
 The reference section gives no journal names.
 That can't be right.
 
-**Reply**: We apologise for this. The manuscript was written using the rticles packages with the corresponding template for Springer journals which somehow did not include journal names. We fixed the citation style including journal names. \textcolor{red}{STILL NEED TO DO THIS ACTUALLY!} \vskip 0.5cm
+**Reply**: We apologize for this. 
+The manuscript was written using the rticles packages with the corresponding template for Springer journals, which somehow did not include journal names. 
+We fixed the citation style including journal names. \textcolor{red}{STILL NEED TO DO THIS ACTUALLY!} \vskip 0.5cm
 
 I took a look at a 2019 review of R packages for a particular discipline that was cited in this paper (Joo et al, J. Animal Ecology).
 Beyond simply listing packages, the authors looked at their documentation, whether they were actively maintained, and suggested how those packages might fit into a workflow.
 Their Figure 1 provides an illustration of the workflow, and helps to put the package list in their Table 1 into a sensible context.
 Something similar would work well here, and help to make sense of the overwhelming possibilities.
+
+**Reply**: We agree with the reviewer that Figure 1 of Joo et al. places the packages nicely into a context. We tried to achieve something similar with our Figure 1 as well, but obviously failed to achieve this goal. Thus, we tried to improve Figure 1 in the revised version of the manuscript to highlight better how the packages could be placed in a workflow. Also, we added an explanation that only packages were included that were available on CRAN at the time of preparation of the manuscript, which ensures at least that packages are maintained to fulfill all technical requirements by CRAN. \vskip 0.5cm
 
 Can you give any recommendations?
 There are a LOT of packages dealing with all aspects of landscape ecology, including aspects not covered here.
@@ -138,7 +181,8 @@ While the caption to the associated Figure 2 mentions base vs ggplot graphics, a
 We agree that ggplot2 graphics are a very large field.
 This also highlights that it is outside the scope of this paper.
 Nevertheless, ggplot2 is used quite frequently by the R community, so we decided to include it in the example.
-We added a reference to the manuscript pointing towards ggplot2 specific resources. \vskip 0.5cm
+We added an explanation how base R maps and ggplot2 maps differ in their underlying synthax and capabilities. 
+Also, we added a reference to the manuscript pointing towards ggplot2 specific resources. \vskip 0.5cm
 
 I would like to see a really useful review of R tools for landscape ecologists.
 There's a lot of potential there, and something that covers both the basic concepts of using R and getting information and the current state of the relevant packages would be of great utility.

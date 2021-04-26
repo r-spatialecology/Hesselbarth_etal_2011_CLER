@@ -34,6 +34,7 @@ preamble: |
   \usepackage{placeins}
   \usepackage[modulo]{lineno}
   \usepackage{xcolor}
+  \usepackage[none]{hyphenat}
 output:
   bookdown::pdf_book:
     base_format: rticles::springer_article
@@ -138,11 +139,14 @@ The growing popularity of the *R* programming language for spatial data analysis
 A recent overview over the progress of *R* to handle spatial data in general can be found in \cite{Bivand2020}.
 
 Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g. Python) for landscape ecology exist, in this review we focus on software implemented in the *R* programming language.
+\textcolor{blue}{We acknowledges that there are reasons and circumstances to also use other software tools and progamming languages, however, a comprehensive discussion of pro and cons is outside the scope of this manuscript.}
 For more general overviews of open-source software for \textcolor{blue}{landscape ecology studies} see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
+
 The *R* programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the *R* environment (Fig. \@ref(fig:fig-workflow)).
 The growing body of *R* packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
-
 Thus, in the first part of this article, we present an overview of existing *R* packages for landscape ecology and closely related fields (Table \@ref(tab:packages)).
+\textcolor{blue}{We included only packages that were available on the official *R* package archive network CRAN at the time the manuscript was prepared. 
+This ensures that all included packages were at least maintained to fulfill CRAN's technical quality standards.}
 In the second part, we present a survey in which we asked the community how they currently use the *R* programming language and to identify topics for which *R* packages are presently missing for landscape ecology.
 
 # Existing packages {#sec:existing_packages}
@@ -162,9 +166,10 @@ Thus, most packages can be found on both platforms, and many developers use *Git
 Furthermore, online communities like *rOpenSci* also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
 Packages that deal with such issue include *groundhog* \cite{Simonsohn2021}, *packrat* \cite{Ushey2018}, or *renv* \cite{Ushey2020}.
+\textcolor{blue}{These packages facilitate reproduciability to a high degree by preserving the project enviroment, including specific package versions, used for an analysis.}
 For more information about *R* package development in general, see \cite{Wickham2015}.
 
-(ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed.
+(ref:fig1cap) Exemplary workflow of spatial data analyses for landscape ecology using the *R* programming language. For all major tasks, some example *R* packages are listed. For more packages related to the specific task, see Table \@ref(tab:packages).
 ```{r fig-workflow, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:fig1cap)"}
 include_graphics("data/Figure_1.pdf")
 ```
@@ -191,6 +196,8 @@ The *sp* package was the standard for vector data representation for more than t
 As of 2020, more than 500 *R* packages directly depend or imports *sp*.
 However, *sp* is not actively developed anymore, and its recommended successor is the *sf* package \cite{Pebesma2018}.
 Besides many advantages and strength of the *sf* package in terms of spatial data handling, it also integrates into the widely used *tidyverse* packages \cite{Wickham2019}.
+\textcolor{blue}{The *tidyverse* is a collection of *R* packages developed for almost all major tasks of any data science project. 
+Because all *tidyverse* packages follow the same data philosophy structures, one strength of the *tidyverse* is its high consistency of usage across its packages \cite{Wickham2019}.}
 *sf* builds on the idea of "simple features", a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
 
 ## Spatial data download
@@ -228,6 +235,40 @@ Furthermore, *landscapetools* is a collection of various utility functions for t
 
 Finally, there are a number of tools for landscape ecology implemented in GIS software, such as `r.li` or `r.pi` for GRASS GIS \cite{Wegmann2018,Neteler2012,Porta2017}, terrain analysis methods in SAGA GIS \cite{Conrad2015}, or morphological operations for Google Earth Engine.
 It is possible to control several GIS software directly from *R* using dedicated packages, such as *rgrass7* \cite{Bivand2021} for GRASS GIS, *RSAGA* \cite{Brenning2018} for SAGA GIS, and *rgee* \cite{Aybar2020} for Google Earth Engine.
+\textcolor{blue}{By being able to access these GIS software directly from within *R*, these packages can allow to create easily reproducibale and sharable *R* scripts, even if functionality is currently only available in the corresponding GIS software.}
+
+\begin{tabularx}{1\textwidth}{|X|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Box 1: Where to start}} \\
+
+\\
+
+\textbf{1.} Get familiar with basics of \textit{R} programming language. 
+Good resources can be found at \url{https://cran.r-project.org/manuals.html}. \\
+
+\textbf{2.} Understand the fundamental spatial data types i.e, raster data and vector data.
+This also includes being able to process the data using the corresponding packages such as \textit{raster} or \textit{sf}. 
+These packakage also have excellent documentation at \url{https://rspatial.org/raster} and \url{https://r-spatial.github.io/sf}, respectively. \\
+
+\textbf{3.} Be able to transform coordinate reference systems of data from different sources. Depending on the data type, \textit{raster} or \textit{sf} and the corresponding documentations are good starting points. \\
+
+\textbf{4.} Do a quick visualization of the data for inspection or a first glance at the data. 
+This can be done with base \textit{R} or if already familiar \textit{ggplot2}. \\
+
+\textbf{5.} Find suitable \textit{R} package for research questions. 
+This can be difficult since research questions, available data and package are diverse. 
+Good starting points are the CRAN Task Views (mainly \url{https://cran.r-project.org/web/views/Spatial.html}) or review papers similar to this one. 
+If several packages exist, try all of them and see which ones suites the question and data the best. \\
+
+\textbf{6.} Create publication-quality figures and maps using e.g. \textit{ggspatial} or \textit{tmap}. 
+Help for both packages can be found on the corresponding homepages \url{https://paleolimbot.github.io/ggspatial/index.html} or \url{https://mtennekes.github.io/tmap}. \\
+
+\textbf{7.} Make reproducible \textit{R} scripts publicly available if possible. \\
+
+\textbf{8.} Further excellent resources with applied help about spatial data in \textit{R} can be found \url{https://keen-swartz-3146c4.netlify.app}, \url{https://rspatial.org}, or \url{https://geocompr.robinlovelace.net}. \\
+
+\hline
+\end{tabularx}
 
 ## Creating maps
 
@@ -236,18 +277,20 @@ Maps play an important role in checking the spatial and value-related quality of
 *R* allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g. changing the displayed values.
 All packages listed in Section \@ref(sec:spatrep) have build-in methods for plotting spatial data using the generic `plot()` function (Fig. \@ref(fig:fig-map)a).
-However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
+However, the generic functions are focused on quick visual inspection of the data (Fig. \@ref(fig:fig-map)a), rather than the creating complete maps \textcolor{blue}{as they do not directly support additional map elements (e.g., scale bar, north arrow) nor multiples maps.}
 
-Further plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
-Also the popular plotting package *ggplot2* \cite{Wickham2016} (Fig. \@ref(fig:fig-map)b) has an extension especially designed for plotting spatial data named *ggspatial* \cite{Dunnington2020}. 
-\textcolor{blue}{Fore more information about **ggplot2** in general see \cite{Wickham2016}.
-Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
-The *tmap* package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
+The popular plotting package *ggplot2* (Fig. \@ref(fig:fig-map)b) \textcolor{blue}{can also visualize spatial data and is build on a layered grammar of graphics, which allows to create maps by combining individual graphical elements (e.g., raster and vector elements) \cite{Wickham2016}.
+Additionally, there is an extension especially designed to plot spatial data named *ggspatial*, which provides additional map elements \cite{Dunnington2020}.
+For more information about *ggplot2* in general, see \cite{Wickham2016}}.
+The *tmap* package provides a provides a coherent plotting system intended for drawing maps (Fig. \@ref(fig:fig-map)c) \cite{Tennekes2018}. 
+\textcolor{blue}{This package operates in two modes, static and interactive, which means that the same code can be used to create static or interactive maps.}
 Quick interactive visualization of spatial data can be done with the *mapview* package\cite{Appelhans2020}.
-Both, *tmap* (Fig. \@ref(fig:fig-map)c) and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{Cheng2021}.
+Both, *tmap* and *mapview* build upon the *leaflet* package and leaflet javascript library \cite{Cheng2021}.
+Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the *cartography* package \cite{Giraud2016}.
+Further plotting methods for raster objects can be found in the *rasterVis* package \cite{Lamigueiro2020}.
 A slightly different approach to visualizing spatial data is adapted by the *rayshader* package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
-(ref:capfigmap) Comparison of different options to create maps using a) base plot, b) *ggplot2* package, and c) *tmap* package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the *raster* package (precipitation data) and *rnaturalearth* package (country borders) package. The code to create the maps can be found in the Appendix.
+(ref:capfigmap) Comparison of different options to create maps of the total annual precipitation in Switzerland using a) base plot, b) *ggplot2* package, and c) *tmap* package. All three approaches result in similar-looking outputs, but their syntax and capabilities differ. All maps show the total annual precipitation of Switzerland. Data were downloaded with the *raster* package (precipitation data) and *rnaturalearth* package (country borders) package. The code to create the maps can be found in the Appendix.
 ```{r fig-map, echo = FALSE, out.width="\\linewidth", fig.cap = "(ref:capfigmap)"}
 include_graphics("data/Figure_2.pdf")
 ```
@@ -346,7 +389,9 @@ Furthermore, the *RandomFields* package \cite{Schlather2015} allows to simulate 
 ```{=tex}
 \begin{table}
 
-\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
+\captionsetup{width=2\linewidth}
+
+\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task. The table only includes packages specifically desinged for spatial data or landscape ecology.}
 
 \begin{tabularx}{1.35\linewidth}{lrXr}
 
@@ -371,6 +416,10 @@ Task & \textit{R} package & Describtion & Reference \\
 & getlandsat & Download satellite data from Landsat 8 & \cite{Chamberlain2018} \\
 & MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
 & sen2r & Download satellite data from Sentinel & \cite{Ranghetti2020} \\
+\hline
+\multirow{3}{*}{Bridge stuff} & rgrass7 & Interface between GRASS7 and R  & \cite{Bivand2021} \\
+& RSAGA & Interface between SAGA and R & \cite{Brenning2018} \\
+& rgee &  Download data from Google Earth Engine & \cite{Aybar2020} \\
 \hline
 \multirow{7}{*}{Creating maps} & rasterVis & Vizualuzation of raster data & \cite{Lamigueiro2020} \\
 & ggspatial & Spatial extension for ggplot2 & \cite{Dunnington2020} \\

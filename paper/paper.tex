@@ -34,6 +34,7 @@
 \usepackage{placeins}
 \usepackage[modulo]{lineno}
 \usepackage{xcolor}
+\usepackage[none]{hyphenat}
 
 
 % Pandoc citation processing
@@ -167,11 +168,14 @@ The growing popularity of the \emph{R} programming language for spatial data ana
 A recent overview over the progress of \emph{R} to handle spatial data in general can be found in \cite{Bivand2020}.
 
 Even though many other open-source tools \cite{QGISDevelopmentTeam2016,GRASSDevelopmentTeam2017,Porta2017} and suitable programming languages (e.g.~Python) for landscape ecology exist, in this review we focus on software implemented in the \emph{R} programming language.
+\textcolor{blue}{We acknowledges that there are reasons and circumstances to also use other software tools and progamming languages, however, a comprehensive discussion of pro and cons is outside the scope of this manuscript.}
 For more general overviews of open-source software for \textcolor{blue}{landscape ecology studies} see \cite{Jolma2008,Steiniger2009,Steiniger2009a,Istvan2012}.
+
 The \emph{R} programming language can be a very powerful tool. In addition to handling spatial data, other analytical tasks such as statistical modeling, creation of publication-ready figures, and even complete reports can be done within the \emph{R} environment (Fig. \ref{fig:fig-workflow}).
 The growing body of \emph{R} packages related to spatial data processing and analysis results in a high capability of this language for landscape ecology.
-
 Thus, in the first part of this article, we present an overview of existing \emph{R} packages for landscape ecology and closely related fields (Table \ref{tab:packages}).
+\textcolor{blue}{We included only packages that were available on the official *R* package archive network CRAN at the time the manuscript was prepared. 
+This ensures that all included packages were at least maintained to fulfill CRAN's technical quality standards.}
 In the second part, we present a survey in which we asked the community how they currently use the \emph{R} programming language and to identify topics for which \emph{R} packages are presently missing for landscape ecology.
 
 \hypertarget{sec:existing_packages}{%
@@ -192,12 +196,13 @@ Thus, most packages can be found on both platforms, and many developers use \emp
 Furthermore, online communities like \emph{rOpenSci} also provide a peer-review process for code quality.
 However, while the package environment has many advantages, its highly dynamic characteristic with constant updates by the community might also be a threat to reproducibility since backwards compatibility is not always ensured.
 Packages that deal with such issue include \emph{groundhog} \cite{Simonsohn2021}, \emph{packrat} \cite{Ushey2018}, or \emph{renv} \cite{Ushey2020}.
+\textcolor{blue}{These packages facilitate reproduciability to a high degree by preserving the project enviroment, including specific package versions, used for an analysis.}
 For more information about \emph{R} package development in general, see \cite{Wickham2015}.
 
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{data/Figure_1} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the \emph{R} programming language. For all major tasks, some example \emph{R} packages are listed.}\label{fig:fig-workflow}
+\includegraphics[width=\linewidth]{data/Figure_1} \caption{Exemplary workflow of spatial data analyses for landscape ecology using the \emph{R} programming language. For all major tasks, some example \emph{R} packages are listed. For more packages related to the specific task, see Table \ref{tab:packages}.}\label{fig:fig-workflow}
 \end{figure}
 
 \hypertarget{sec:spatrep}{%
@@ -223,6 +228,8 @@ The \emph{sp} package was the standard for vector data representation for more t
 As of 2020, more than 500 \emph{R} packages directly depend or imports \emph{sp}.
 However, \emph{sp} is not actively developed anymore, and its recommended successor is the \emph{sf} package \cite{Pebesma2018}.
 Besides many advantages and strength of the \emph{sf} package in terms of spatial data handling, it also integrates into the widely used \emph{tidyverse} packages \cite{Wickham2019}.
+\textcolor{blue}{The *tidyverse* is a collection of *R* packages developed for almost all major tasks of any data science project. 
+Because all *tidyverse* packages follow the same data philosophy structures, one strength of the *tidyverse* is its high consistency of usage across its packages \cite{Wickham2019}.}
 \emph{sf} builds on the idea of ``simple features,'' a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points) and attributes connected to these geometries \cite{Pebesma2019a}.
 
 \hypertarget{spatial-data-download}{%
@@ -262,6 +269,40 @@ Furthermore, \emph{landscapetools} is a collection of various utility functions 
 
 Finally, there are a number of tools for landscape ecology implemented in GIS software, such as \texttt{r.li} or \texttt{r.pi} for GRASS GIS \cite{Wegmann2018,Neteler2012,Porta2017}, terrain analysis methods in SAGA GIS \cite{Conrad2015}, or morphological operations for Google Earth Engine.
 It is possible to control several GIS software directly from \emph{R} using dedicated packages, such as \emph{rgrass7} \cite{Bivand2021} for GRASS GIS, \emph{RSAGA} \cite{Brenning2018} for SAGA GIS, and \emph{rgee} \cite{Aybar2020} for Google Earth Engine.
+\textcolor{blue}{By being able to access these GIS software directly from within *R*, these packages can allow to create easily reproducibale and sharable *R* scripts, even if functionality is currently only available in the corresponding GIS software.}
+
+\begin{tabularx}{1\textwidth}{|X|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Box 1: Where to start}} \\
+
+\\
+
+\textbf{1.} Get familiar with basics of \textit{R} programming language. 
+Good resources can be found at \url{https://cran.r-project.org/manuals.html}. \\
+
+\textbf{2.} Understand the fundamental spatial data types i.e, raster data and vector data.
+This also includes being able to process the data using the corresponding packages such as \textit{raster} or \textit{sf}. 
+These packakage also have excellent documentation at \url{https://rspatial.org/raster} and \url{https://r-spatial.github.io/sf}, respectively. \\
+
+\textbf{3.} Be able to transform coordinate reference systems of data from different sources. Depending on the data type, \textit{raster} or \textit{sf} and the corresponding documentations are good starting points. \\
+
+\textbf{4.} Do a quick visualization of the data for inspection or a first glance at the data. 
+This can be done with base \textit{R} or if already familiar \textit{ggplot2}. \\
+
+\textbf{5.} Find suitable \textit{R} package for research questions. 
+This can be difficult since research questions, available data and package are diverse. 
+Good starting points are the CRAN Task Views (mainly \url{https://cran.r-project.org/web/views/Spatial.html}) or review papers similar to this one. 
+If several packages exist, try all of them and see which ones suites the question and data the best. \\
+
+\textbf{6.} Create publication-quality figures and maps using e.g. \textit{ggspatial} or \textit{tmap}. 
+Help for both packages can be found on the corresponding homepages \url{https://paleolimbot.github.io/ggspatial/index.html} or \url{https://mtennekes.github.io/tmap}. \\
+
+\textbf{7.} Make reproducible \textit{R} scripts publicly available if possible. \\
+
+\textbf{8.} Further excellent resources with applied help about spatial data in \textit{R} can be found \url{https://keen-swartz-3146c4.netlify.app}, \url{https://rspatial.org}, or \url{https://geocompr.robinlovelace.net}. \\
+
+\hline
+\end{tabularx}
 
 \hypertarget{creating-maps}{%
 \subsection{Creating maps}\label{creating-maps}}
@@ -271,21 +312,23 @@ Maps play an important role in checking the spatial and value-related quality of
 \emph{R} allows two major types of maps.
 Firstly, static maps in which the developer has full control over the presentation of the map and secondly, interactive maps in which the user has the possibility to modify the map by e.g.~changing the displayed values.
 All packages listed in Section \ref{sec:spatrep} have build-in methods for plotting spatial data using the generic \texttt{plot()} function (Fig. \ref{fig:fig-map}a).
-However, the generic functions are focused on quick visual inspection of the data, rather than the creating complete maps.
+However, the generic functions are focused on quick visual inspection of the data (Fig. \ref{fig:fig-map}a), rather than the creating complete maps \textcolor{blue}{as they do not directly support additional map elements (e.g., scale bar, north arrow) nor multiples maps.}
 
-Further plotting methods for raster objects can be found in the \emph{rasterVis} package \cite{Lamigueiro2020}.
-Also the popular plotting package \emph{ggplot2} \cite{Wickham2016} (Fig. \ref{fig:fig-map}b) has an extension especially designed for plotting spatial data named \emph{ggspatial} \cite{Dunnington2020}.
-\textbackslash textcolor\{blue\}\{Fore more information about \textbf{ggplot2} in general see \cite{Wickham2016}.
-Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
-The \emph{tmap} package provides a coherent plotting system for static and interactive maps that is based on the layered grammar of graphics \cite{Tennekes2018} and aims for creating publication-ready maps.
+The popular plotting package \emph{ggplot2} (Fig. \ref{fig:fig-map}b) \textcolor{blue}{can also visualize spatial data and is build on a layered grammar of graphics, which allows to create maps by combining individual graphical elements (e.g., raster and vector elements) \cite{Wickham2016}.
+Additionally, there is an extension especially designed to plot spatial data named *ggspatial*, which provides additional map elements \cite{Dunnington2020}.
+For more information about *ggplot2* in general, see \cite{Wickham2016}}.
+The \emph{tmap} package provides a provides a coherent plotting system intended for drawing maps (Fig. \ref{fig:fig-map}c) \cite{Tennekes2018}.
+\textcolor{blue}{This package operates in two modes, static and interactive, which means that the same code can be used to create static or interactive maps.}
 Quick interactive visualization of spatial data can be done with the \emph{mapview} package\cite{Appelhans2020}.
-Both, \emph{tmap} (Fig. \ref{fig:fig-map}c) and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{Cheng2021}.
+Both, \emph{tmap} and \emph{mapview} build upon the \emph{leaflet} package and leaflet javascript library \cite{Cheng2021}.
+Static thematic maps, including proportional symbols, choropleth, or typology maps, can be created with the \emph{cartography} package \cite{Giraud2016}.
+Further plotting methods for raster objects can be found in the \emph{rasterVis} package \cite{Lamigueiro2020}.
 A slightly different approach to visualizing spatial data is adapted by the \emph{rayshader} package \cite{Morgen-Wall2020} that creates topographic 2D and 3D maps.
 
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{data/Figure_2} \caption{Comparison of different options to create maps using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
+\includegraphics[width=\linewidth]{data/Figure_2} \caption{Comparison of different options to create maps of the total annual precipitation in Switzerland using a) base plot, b) \emph{ggplot2} package, and c) \emph{tmap} package. All three approaches result in similar-looking outputs, but their syntax and capabilities differ. All maps show the total annual precipitation of Switzerland. Data were downloaded with the \emph{raster} package (precipitation data) and \emph{rnaturalearth} package (country borders) package. The code to create the maps can be found in the Appendix.}\label{fig:fig-map}
 \end{figure}
 
 \FloatBarrier
@@ -388,7 +431,9 @@ Furthermore, the \emph{RandomFields} package \cite{Schlather2015} allows to simu
 
 \begin{table}
 
-\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task.}
+\captionsetup{width=2\linewidth}
+
+\caption{Overview of commonly used \textit{R} packages for spatial data and landscape ecology. Packages are sorted by their major application task. The table only includes packages specifically desinged for spatial data or landscape ecology.}
 
 \begin{tabularx}{1.35\linewidth}{lrXr}
 
@@ -413,6 +458,10 @@ Task & \textit{R} package & Describtion & Reference \\
 & getlandsat & Download satellite data from Landsat 8 & \cite{Chamberlain2018} \\
 & MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
 & sen2r & Download satellite data from Sentinel & \cite{Ranghetti2020} \\
+\hline
+\multirow{3}{*}{Bridge stuff} & rgrass7 & Interface between GRASS7 and R  & \cite{Bivand2021} \\
+& RSAGA & Interface between SAGA and R & \cite{Brenning2018} \\
+& rgee &  Download data from Google Earth Engine & \cite{Aybar2020} \\
 \hline
 \multirow{7}{*}{Creating maps} & rasterVis & Vizualuzation of raster data & \cite{Lamigueiro2020} \\
 & ggspatial & Spatial extension for ggplot2 & \cite{Dunnington2020} \\
