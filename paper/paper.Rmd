@@ -85,21 +85,21 @@ base_size <- 7.5
 API & Application programming interface. A set of protocols for sending and retrieving information from a server \\
 cell & Smallest, rectangular unit of raster data model \\
 CRAN & Comprehensive \textit{R} Archive Network. A repository for \textit{R} package \\
-CRS & Coordinate references systems. A coordinate-based local, regional or global system used to locate geographical entities \\
+CRS & Coordinate references system. A coordinate-based local, regional or global system used to locate geographical entities \\
 EPSG & Public registry of geodetic datums, spatial reference systems, Earth ellipsoids, coordinate transformations and related units of measurement \\
-GDAL & Open source translator library for raster and vector geospatial data formats \\
-GIS & Geographical information system \\
+GDAL & Open source translator library for raster and vector spatial data formats \\
+GIS & Geographic information system \\
 landscape & Mosaic of land covers, ecosystems, habitat types, land uses \\
 NLM & Neutral landscape model \\
 open-source software & Software released under licenses that allow to use, modify and distribute it \\
 patch & Neighboring cells with same value \\
-PROJ & Open source generic coordinate transformation software \\
-raster & Cell grid based data model \\
+PROJ & Open-source generic coordinate transformation software \\
+raster & Cell grid based spatial data model \\
 resolution & Size in meter or degree of one cell \\
 \textit{R} package & User-created software extension to \textit{R} programming language \\
-SDM & Species distribution modelling \\
-Simple Features & A set of standards that specify a common storage and access model of geographic features \\
-vector & Points, lines, and polygons-based data model \\
+SDM & Species distribution modeling \\
+Simple Features & A set of standards that specify a common storage and access model of spatial vector data \\
+vector & Points, lines, and polygons-based spatial data model \\
 
 \hline
 
