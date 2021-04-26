@@ -12,12 +12,13 @@
 # First, we need to load all required packages used in this R script. In case you are
 # missing a package, it can be install from CRAN using e.g., install.packages("raster").
 # By loading the packages, we make sure all functions from them can be used in the script.
-library(ggplot2)
 library(sf)
 library(raster)
-library(rnaturalearth)
-library(tmap)
 library(viridis)
+library(rnaturalearth)
+library(ggplot2)
+library(ggspatial)
+library(tmap)
 
 # This function downloads data and saves it as a RasterLayer. The 'name' argument
 # allows to specify a source to download data from the worldclim database. The
@@ -39,8 +40,7 @@ precipitation_sum <- raster::calc(x = precipitation, fun = sum)
 # To achieve this we reproject the downloaded data to the CRS epsg:21781.
 precipitation_sum <- raster::projectRaster(precipitation_sum, crs = "EPSG:21781")
 
-
-# Next, we download administrational boundaries of Switzerland as vector data from
+# Next, we download administration boundaries of Switzerland as vector data from
 # the naturalearth database. Again, we need to specify the resolution of the data
 # (called 'scale' here). Additionally, the function allows to select the return type
 # and we select a sf vector object.
@@ -48,21 +48,21 @@ switzerland <- rnaturalearth::ne_countries(scale = 50,
                                            country = "switzerland",
                                            returnclass = "sf")
 
-# To plot the precipitation data together with the administrational boundaries,
+# To plot the precipitation data together with the administration boundaries,
 # we also need to reproject the boundaries to the same coordinate reference system
 # epsg:21781.
 switzerland <- sf::st_transform(x = switzerland, crs = "EPSG:21781")
 
 # Because the precipitation data includes not just Switzerland but whole Europe,
 # we want to crop the raster data by including only cells that are within the the
-# administrational boundaries of Switzerland. However, we add a buffer of 5000m
+# administration boundaries of Switzerland. However, we add a buffer of 5000m
 # around the boundaries.
 precipitation_sum_ch <- raster::crop(x = precipitation_sum,
                                      y = sf::st_buffer(x = switzerland, dist = 5000))
 
 # The precipitation data is continuous, however, we want to plot discrete classes.
-# To classifiy the continuous values into 5 classes, we can use the cut function
-# and simply specifiy the number of breaks.
+# To classify the continuous values into 5 classes, we can use the cut function
+# and simply specify the number of breaks.
 precipitation_class_ch <- raster::cut(precipitation_sum_ch, breaks = 5)
 
 # We are going to use the same colors for all maps set by hex color codes. There
@@ -72,18 +72,16 @@ colors <- c("#440154FF", "#3B528BFF", "#21908CFF", "#5DC863FF", "#FDE725FF")
 
 # create base plot
 
-# pdf(file = "R/Figures/base_plot.pdf")
-
-
 # To create a map in base R we first plot the raster with precipitation classes,
 # setting the colors of the 5 classes to the previously set hex codes. Next, we
 # are going to add the vector data to the plot by plotting the sf object and setting
 # the 'add' argument to TRUE which just adds them to the already present map. For
-# better vizualization, we add the vector data twice using white and black colors.
+# better visualization, we add the vector data twice using white and black colors.
+
+# pdf(file = "R/Figures/base_plot.pdf")
 plot(precipitation_class_ch, col = colors)
 plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
 plot(st_geometry(switzerland), add = TRUE)
-
 # dev.off()
 
 # We can create the same map as a ggplot2 map. Therefore, we first specify which
@@ -96,6 +94,8 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     geom_sf(data = switzerland, fill = NA, col = "white") +
     scale_fill_manual(name = "Precipitation\nclassified", values = colors) +
     coord_sf() +
+    annotation_scale(location = "br") +
+    annotation_north_arrow(location = "tr", which_north = "true") +
     labs(x = "", y = "") +
     theme_classic() +
     theme(legend.position = "bottom")
@@ -117,8 +117,9 @@ plot_tm <- tm_shape(precipitation_class_ch) +
     tm_borders(lwd = 2, col = "white") +
     tm_scale_bar(breaks = c(0, 25, 50),
                  bg.color = "white") +
+    tm_compass(position = c("right", "top"),
+               bg.color = "white") +
     tm_layout(legend.outside = TRUE,
               legend.outside.position = "bottom")
 
 # tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
-
