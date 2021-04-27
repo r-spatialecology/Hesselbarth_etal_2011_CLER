@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  26 APR 2021 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  27 APR 2021 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,21 +440,15 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
 (Font)              size <12> substituted on input line 81.
 
 
-Overfull \hbox (5.22295pt too wide) in paragraph at lines 83--91
-\OT1/cmr/m/n/10 out-line ex-ist-ing pack-ages for down-load-ing, pro-cess-ing a
-nd vi-su-al-i-sa-tion of spa-tial
+Overfull \hbox (6.27806pt too wide) in paragraph at lines 83--91
+\OT1/cmr/m/n/10 ecol-ogy com-mu-nity. \OT1/cmr/bx/n/10 Sum-mary \OT1/cmr/m/n/10
+ We found that land-scape ecol-o-gists are gen-er-ally
  []
 
 
-Overfull \hbox (1.52841pt too wide) in paragraph at lines 83--91
-\OT1/cmr/m/n/10 data, as well as those specif-i-cally de-vel-oped for eco-log-i
--cal anal-y-sis. Ad-di-tion-ally,
- []
-
-
-Overfull \hbox (9.44472pt too wide) in paragraph at lines 83--91
-\OT1/cmr/m/n/10 com-mu-nity. \OT1/cmr/bx/n/10 Sum-mary \OT1/cmr/m/n/10 We found
- that land-scape ecol-o-gists are gen-er-ally sat-is-fied
+Overfull \hbox (14.11186pt too wide) in paragraph at lines 83--91
+\OT1/cmr/m/n/10 fu-ture de-vel-op-ments in-clude im-prove-ment of com-pu-ta-tio
+n per-for-mance; ad-di-tional
  []
 
 
@@ -468,96 +462,99 @@ Overfull \hbox (50.69794pt too wide) in paragraph at lines 141--142
  []
 
 
-Overfull \hbox (18.91719pt too wide) in paragraph at lines 144--147
-\OT1/cmr/m/n/10 het-ero-ge-neous land-scapes they oc-cur in and how the eco-log
--i-cal pro-cesses them-selves
+Overfull \hbox (1.66716pt too wide) in paragraph at lines 144--147
+\OT1/cmr/m/n/10 het-ero-ge-neous land-scapes and how the eco-log-i-cal pro-cess
+es them-selves in-flu-ence
  []
 
 
-Overfull \hbox (17.66728pt too wide) in paragraph at lines 144--147
-\OT1/cmr/m/n/10 land-scape ecol-ogy em-pha-sizes []spa-tial[] pat-terns to a hi
-gh de-gree [[]] and con-se-quently
+Overfull \hbox (2.58405pt too wide) in paragraph at lines 148--156
+\OT1/cmr/m/n/10 many di-verse con-trib-u-tors [[], []]. Ad-di-tion-ally, open-s
+ource soft-ware fa-cil-i-tates
  []
 
 
-Overfull \hbox (17.05627pt too wide) in paragraph at lines 148--156
-\OT1/cmr/m/n/10 though not strictly nec-es-sary by def-i-ni-tion of open-source
- [[], []], most open-source
+Overfull \hbox (31.11194pt too wide) in paragraph at lines 148--156
+\OT1/cmr/m/n/10 (com-pu-ta-tional) re-pro-ducibil-ity and al-lows a bet-ter un-
+der-stand-ing of the method-ol-ogy
  []
 
 
-Overfull \hbox (2.11168pt too wide) in paragraph at lines 148--156
-\OT1/cmr/m/n/10 [[], [], []]. This de-moc-ra-tizes sci-en-tific re-search as fr
-ee-of-cost soft-ware re-moves
+Overfull \hbox (5.27852pt too wide) in paragraph at lines 148--156
+\OT1/cmr/m/n/10 in con-trast to of-ten ex-pen-sive pro-pri-etary soft-ware [[],
+ [], []]. This de-moc-ra-tizes
+ []
+
+
+Overfull \hbox (9.88942pt too wide) in paragraph at lines 148--156
+\OT1/cmr/m/n/10 with-out ac-cess to pro-pri-etary soft-ware. For more gen-eral 
+overviews of open-source
  []
 
 [2]
-Overfull \hbox (19.97308pt too wide) in paragraph at lines 169--175
+Overfull \hbox (19.97308pt too wide) in paragraph at lines 170--176
 []\OT1/cmr/m/n/10 Even though many other open-source tools [[], [], []] and sui
 t-able pro-gram-ming
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [3]
-Overfull \hbox (32.334pt too wide) in paragraph at lines 179--182
+Overfull \hbox (32.334pt too wide) in paragraph at lines 180--183
 \OT1/cmr/m/n/10 shows how open-source soft-ware de-vel-op-ment can fa-cil-i-tat
 e in-no-va-tion, re-pro-ducibil-ity,
  []
 
 
-Overfull \hbox (5.12561pt too wide) in paragraph at lines 179--182
+Overfull \hbox (5.12561pt too wide) in paragraph at lines 180--183
 \OT1/cmr/m/n/10 and make them ac-ces-si-ble to po-ten-tial users: CRAN, GitHub,
  and Bio-con-duc-tor.
- []
-
-
-Overfull \hbox (3.63951pt too wide) in paragraph at lines 187--196
-\OT1/cmr/m/n/10 fa-cil-i-tate re-pro-du-cia-bil-ity to a high de-gree by pre-se
-rv-ing the project en-vi-ro-ment,
  []
 
 <data/Figure_1.pdf, id=183, 597.50786pt x 384.1122pt>
 File: data/Figure_1.pdf Graphic file (type pdf)
 <use data/Figure_1.pdf>
-Package pdftex.def Info: data/Figure_1.pdf  used on input line 200.
+Package pdftex.def Info: data/Figure_1.pdf  used on input line 202.
 (pdftex.def)             Requested size: 338.0pt x 217.28754pt.
 
-Overfull \hbox (39.45857pt too wide) in paragraph at lines 206--212
-\OT1/cmr/m/n/10 Ad-di-tion-ally, \OT1/cmr/m/it/10 R \OT1/cmr/m/n/10 al-lows for
- con-ver-sion be-tween data mod-els and spe-cific im-ple-men-ta-tions,
+Overfull \hbox (16.05637pt too wide) in paragraph at lines 208--214
+\OT1/cmr/m/n/10 hun-dreds of spa-tial data for-mats, and for co-or-di-nates tra
+ns-for-ma-tion. Ad-di-tion-ally,
  []
 
 [4] [5 <./data/Figure_1.pdf>]
-Overfull \hbox (13.86714pt too wide) in paragraph at lines 233--240
+Overfull \hbox (13.86714pt too wide) in paragraph at lines 235--242
 \OT1/cmr/m/n/10 el-e-va-tion data [[]], the \OT1/cmr/m/it/10 rg-bif \OT1/cmr/m/
 n/10 pack-age to ac-cess the Global Bio-di-ver-sity In-for-ma-tion
  []
 
 
-Overfull \hbox (15.62057pt too wide) in paragraph at lines 233--240
+Overfull \hbox (15.62057pt too wide) in paragraph at lines 235--242
 \OT1/cmr/m/n/10 In-for-ma-tion and Ecol-ogy Net-work Database, the \OT1/cmr/m/i
 t/10 marmap \OT1/cmr/m/n/10 to down-load bathymetry
  []
 
 
-Overfull \hbox (8.61172pt too wide) in paragraph at lines 244--256
+Overfull \hbox (8.61172pt too wide) in paragraph at lines 246--258
 \OT1/cmr/m/n/10 with each hav-ing many mem-bers. Us-ing ge-o-graph-i-cal CRS, p
 o-si-tions are spec-i-fied
  []
 
 [6]
-Overfull \hbox (0.16725pt too wide) in paragraph at lines 263--270
+Overfull \hbox (0.16725pt too wide) in paragraph at lines 265--272
 []\OT1/cmr/m/n/10 Another com-mon spa-tial data pro-cess-ing task is re-quired 
 when the avail-able
  []
 
 
-Overfull \hbox (21.69499pt too wide) in paragraph at lines 263--270
+Overfull \hbox (21.69499pt too wide) in paragraph at lines 265--272
 \OT1/cmr/m/n/10 data ex-tends over a larger area than the study re-gion. In thi
 s case, the pre-processing
  []
 
 
-Overfull \hbox (13.6384pt too wide) in paragraph at lines 263--270
+Overfull \hbox (13.6384pt too wide) in paragraph at lines 265--272
 \OT1/cmr/m/n/10 an-other, raster res-o-lu-tion changes, or vec-tor data sim-pli
 -fi-ca-tions. A com-pre-hen-sive
  []
@@ -566,13 +563,13 @@ Overfull \hbox (13.6384pt too wide) in paragraph at lines 263--270
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [7]
-Overfull \hbox (14.5562pt too wide) in paragraph at lines 324--334
+Overfull \hbox (14.5562pt too wide) in paragraph at lines 326--336
 \OT1/cmr/m/n/10 maps by com-bin-ing in-di-vid-ual graph-i-cal el-e-ments (e.g.,
  raster and vec-tor el-e-ments)
  []
 
 
-Overfull \hbox (13.30452pt too wide) in paragraph at lines 324--334
+Overfull \hbox (13.30452pt too wide) in paragraph at lines 326--336
 \OT1/cmr/m/n/10 in-ter-ac-tive vi-su-al-iza-tion of spa-tial data can be done w
 ith the \OT1/cmr/m/it/10 mapview \OT1/cmr/m/n/10 package[[]].
  []
@@ -581,76 +578,82 @@ ith the \OT1/cmr/m/it/10 mapview \OT1/cmr/m/n/10 package[[]].
 <data/Figure_2.pdf, id=436, 1011.78pt x 278.03876pt>
 File: data/Figure_2.pdf Graphic file (type pdf)
 <use data/Figure_2.pdf>
-Package pdftex.def Info: data/Figure_2.pdf  used on input line 338.
+Package pdftex.def Info: data/Figure_2.pdf  used on input line 340.
 (pdftex.def)             Requested size: 338.0pt x 92.88158pt.
 
-Overfull \hbox (17.78687pt too wide) in paragraph at lines 349--352
+Overfull \hbox (17.78687pt too wide) in paragraph at lines 351--354
  []\OT1/cmr/m/it/10 Quantify land-scape char-ac-ter-is-tics [] \OT1/cmr/m/n/10 
 One of the most fun-da-men-tal steps of land-scape
  []
 
 
-Overfull \hbox (7.91725pt too wide) in paragraph at lines 349--352
+Overfull \hbox (7.91725pt too wide) in paragraph at lines 351--354
 \OT1/cmr/m/n/10 and in-ves-ti-ga-tion of in-ter-ac-tions be-tween land-scape ch
 ar-ac-ter-is-tics and eco-log-i-cal
  []
 
 
-Overfull \hbox (7.25447pt too wide) in paragraph at lines 355--358
+Overfull \hbox (7.25447pt too wide) in paragraph at lines 357--360
 \OT1/cmr/m/n/10 met-rics for con-tin-u-ous raster data [[]]. The \OT1/cmr/m/it/
 10 geo-div \OT1/cmr/m/n/10 pack-age [[]] al-lows cal-cu-la-tion
  []
 
 
-Overfull \hbox (5.83395pt too wide) in paragraph at lines 355--358
+Overfull \hbox (5.83395pt too wide) in paragraph at lines 357--360
 \OT1/cmr/m/n/10 of gra-di-ent sur-face met-rics to fa-cil-i-tate con-tin-u-ous 
 anal-y-sis of land-scape fea-tures.
  []
 
 
-Overfull \hbox (3.30603pt too wide) in paragraph at lines 359--364
+Overfull \hbox (3.30603pt too wide) in paragraph at lines 361--366
 []\OT1/cmr/m/n/10 Most land-scape met-rics are rep-re-sented by a sin-gle num-b
 er de-pict-ing spe-cific
  []
 
 
-Overfull \hbox (24.61183pt too wide) in paragraph at lines 359--364
+Overfull \hbox (24.61183pt too wide) in paragraph at lines 361--366
 \OT1/cmr/m/n/10 sig-na-tures - a multi-value rep-re-sen-ta-tion of land-scape c
 om-po-si-tion and con-fig-u-ra-tion,
  []
 
 
-Overfull \hbox (14.38948pt too wide) in paragraph at lines 359--364
+Overfull \hbox (1.69505pt too wide) in paragraph at lines 361--366
+\OT1/cmr/m/n/10 (e.g., Eu-clid-ian, Jensen-Shannon, Jac-card). This en-ables se
+v-eral types of spa-tial
+ []
+
+
+Overfull \hbox (14.38948pt too wide) in paragraph at lines 361--366
 \OT1/cmr/m/n/10 de-tect-ing changes be-tween land-scape pat-terns, and spa-tial
  clus-ter-ing of land-scapes
  []
 
 [9 <./data/Figure_2.pdf>]
-Overfull \hbox (0.38947pt too wide) in paragraph at lines 371--374
+Overfull \hbox (0.38947pt too wide) in paragraph at lines 373--376
 []\OT1/cmr/m/n/10 Point pat-tern anal-y-sis uses event-level data, such as lo-c
 a-tions of in-di-vid-u-als,
  []
 
 
-Overfull \hbox (9.22183pt too wide) in paragraph at lines 371--374
+Overfull \hbox (9.22183pt too wide) in paragraph at lines 373--376
 \OT1/cmr/m/n/10 and di-ag-nos-tics. A com-pre-hen-sive text-book cov-er-ing bot
 h the-o-ret-i-cal back-ground
  []
 
 
-Overfull \hbox (11.1117pt too wide) in paragraph at lines 375--379
+Overfull \hbox (11.1117pt too wide) in paragraph at lines 377--381
 []\OT1/cmr/m/n/10 Distance-based meth-ods al-low to de-tect and cor-rect for sp
 a-tial au-to-cor-re-la-tion
  []
 
 
-Overfull \hbox (14.05623pt too wide) in paragraph at lines 387--390
+Overfull \hbox (14.05623pt too wide) in paragraph at lines 389--392
 \OT1/cmr/m/n/10 how land-scape pat-terns (e.g., habi-tat suit-abil-ity or re-so
 urces avail-abil-ity) in-flu-ence
  []
 
 
-Overfull \hbox (17.1349pt too wide) in paragraph at lines 391--395
+Overfull \hbox (17.1349pt too wide) in paragraph at lines 393--397
 \OT1/cmr/m/n/10 in-clud-ing the \OT1/cmr/m/it/10 dismo \OT1/cmr/m/n/10 [[]], \O
 T1/cmr/m/it/10 sdm \OT1/cmr/m/n/10 [[]], \OT1/cmr/m/it/10 ecospat \OT1/cmr/m/n/
 10 [[]], \OT1/cmr/m/it/10 biomod2 \OT1/cmr/m/n/10 [[]], \OT1/cmr/m/it/10 Pres-e
@@ -658,223 +661,220 @@ nce-Ab-sence
  []
 
 [10]
-Overfull \hbox (7.18121pt too wide) in paragraph at lines 404--419
+Overfull \hbox (7.18121pt too wide) in paragraph at lines 406--421
 \OT1/cmr/m/n/10 and dis-per-sal dis-tances [[], []]. Given its broad con-cept, 
 many dif-fer-ent mea-sures
  []
 
 
-Overfull \hbox (27.3873pt too wide) in paragraph at lines 423--427
+Overfull \hbox (27.3873pt too wide) in paragraph at lines 425--429
  []\OT1/cmr/m/it/10 Landscape ge-net-ics [] \OT1/cmr/m/n/10 Land-scape ge-net-i
 cs in-ves-ti-gates how char-ac-ter-is-tics of land-scapes
  []
 
 
-Overfull \hbox (11.63965pt too wide) in paragraph at lines 423--427
+Overfull \hbox (11.63965pt too wide) in paragraph at lines 425--429
 \OT1/cmr/m/n/10 our un-der-stand-ing of metapop-u-la-tion dy-nam-ics, spe-ci-a-
 tion, species' dis-tri-bu-tions,
  []
 
 
-Overfull \hbox (15.83405pt too wide) in paragraph at lines 423--427
+Overfull \hbox (15.83405pt too wide) in paragraph at lines 425--429
 \OT1/cmr/m/n/10 and con-ser-va-tion [[]]. By ex-plic-itly in-clud-ing land-scap
 e char-ac-ter-is-tics, land-scape
  []
 
 [11]
-Overfull \hbox (6.63945pt too wide) in paragraph at lines 428--430
+Overfull \hbox (6.63945pt too wide) in paragraph at lines 430--432
 []\OT1/cmr/m/n/10 Since de-scrib-ing con-nec-tiv-ity be-tween two lo-ca-tions i
 s one of the fun-da-men-tal
  []
 
 
-Overfull \hbox (31.42062pt too wide) in paragraph at lines 428--430
+Overfull \hbox (31.42062pt too wide) in paragraph at lines 430--432
 \OT1/cmr/m/n/10 hi-er-ar-chi-cal de-com-po-si-tion anal-y-sis can be found in t
 he \OT1/cmr/m/it/10 graphs4lg \OT1/cmr/m/n/10 [[]], \OT1/cmr/m/it/10 Pop-Gen-Re
 -port
  []
 
 
-Overfull \hbox (9.576pt too wide) in paragraph at lines 434--438
+Overfull \hbox (9.576pt too wide) in paragraph at lines 436--440
  []\OT1/cmr/m/it/10 Neutral land-scape mod-els [] \OT1/cmr/m/n/10 Neu-tral land
 -scape mod-els are used to cre-ate struc-tured
  []
 
 
-Overfull \hbox (4.8062pt too wide) in paragraph at lines 434--438
+Overfull \hbox (4.8062pt too wide) in paragraph at lines 436--440
 \OT1/cmr/m/n/10 pro-cesses can be tested sta-tis-ti-cally [[], []]. Be-cause ne
 u-tral land-scape mod-els
  []
 
 
-Overfull \hbox (0.20148pt too wide) in paragraph at lines 434--438
+Overfull \hbox (0.20148pt too wide) in paragraph at lines 436--440
 \OT1/cmr/m/n/10 [[]]. Fur-ther-more, the \OT1/cmr/m/it/10 Ran-dom-Fields \OT1/c
 mr/m/n/10 pack-age [[]] al-lows to sim-u-late Gaus-sian
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 524--524
+Underfull \hbox (badness 5832) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Species dis-tri-bu-tion mod-els us-ing in-di-vid-ual and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--524
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Species dis-tri-bu-tion, niche quan-tifi-ca-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--524
+Underfull \hbox (badness 10000) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Reproducible and remix-able species dis-tri-bu-tion
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 524--524
+Underfull \hbox (badness 1635) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Calculate frag-men-ta-tion and land-scape con-nec-tiv-ity
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 524--524
+Underfull \hbox (badness 6141) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Calculate min-i-mum pla-nar graph and grains of
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 524--524
+Underfull \hbox (badness 3271) in paragraph at lines 526--526
 []|\OT1/cmr/m/n/7 Calculating and de-com-pos-ing hi-er-ar-chi-cal di-ver-sity
  []
 
 
-Overfull \hbox (118.30206pt too wide) in paragraph at lines 524--525
+Overfull \hbox (118.30206pt too wide) in paragraph at lines 526--527
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 38.81665pt on input line 528.
+LaTeX Warning: Float too large for page by 38.81665pt on input line 530.
 
 [12] [13]
-Overfull \hbox (11.51717pt too wide) in paragraph at lines 535--537
+Overfull \hbox (11.51717pt too wide) in paragraph at lines 537--540
 \OT1/cmr/m/n/10 To bet-ter un-der-stand how the land-scape ecol-ogy com-mu-nity
  uses \OT1/cmr/m/it/10 R\OT1/cmr/m/n/10 , we con-ducted
  []
 
 
-Overfull \hbox (8.08397pt too wide) in paragraph at lines 541--544
+Overfull \hbox (8.08397pt too wide) in paragraph at lines 544--547
 \OT1/cmr/m/n/10 Al-most half of all par-tic-i-pants de-scribed them-selves as `
 `ad-vanced'' users (46.8%),
  []
 
 
-Overfull \hbox (1.80612pt too wide) in paragraph at lines 545--546
+Overfull \hbox (1.80612pt too wide) in paragraph at lines 548--549
 \OT1/cmr/m/n/10 top-ics the best, and op-tions that were se-lected by more than
  10% of par-tic-i-pants
  []
 
 
-Overfull \hbox (33.58409pt too wide) in paragraph at lines 545--546
+Overfull \hbox (33.58409pt too wide) in paragraph at lines 548--549
 \OT1/cmr/m/n/10 in-cluded ``bio-di-ver-sity,'' fol-lowed by ``land use man-age-
 ment,'' ``land-scape con-nec-tiv-ity,''
  []
 
 
-Overfull \hbox (2.11174pt too wide) in paragraph at lines 547--550
-\OT1/cmr/m/n/10 reffig:fig-surveyb).[] The avail-able op-tions seemed to de-scr
-ibe the most im-por-tant
- []
-
-
-Overfull \hbox (21.0697pt too wide) in paragraph at lines 558--559
+Overfull \hbox (21.0697pt too wide) in paragraph at lines 561--562
 \OT1/cmr/m/n/10 (sum-ma-rized 90.83%) and only very few par-tic-i-pants eval-u-
 ated \OT1/cmr/m/it/10 R \OT1/cmr/m/n/10 as ``in-ter-me-di-ate,''
  []
 
-<paper_files/figure-latex/fig-survey-1.pdf, id=1121, 451.6875pt x 307.1475pt>
+<paper_files/figure-latex/fig-survey-1.pdf, id=1122, 451.6875pt x 307.1475pt>
 File: paper_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig-survey-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig-survey-1.pdf  used on inp
-ut line 564.
+ut line 567.
 (pdftex.def)             Requested size: 338.0pt x 229.85388pt.
-[14]
-Overfull \hbox (13.33408pt too wide) in paragraph at lines 573--578
+
+Overfull \hbox (13.33408pt too wide) in paragraph at lines 576--581
 \OT1/cmr/m/n/10 par-tic-i-pants. Firstly, many par-tic-i-pants (12.8%) wished f
 or a bet-ter com-pu-ta-tional
  []
 
 
-Overfull \hbox (9.63954pt too wide) in paragraph at lines 573--578
+Overfull \hbox (9.63954pt too wide) in paragraph at lines 576--581
 \OT1/cmr/m/n/10 data. Sec-ondly, par-tic-i-pants are miss-ing spe-cific ap-proa
 ches to quan-tify land-scape
  []
 
 
-Overfull \hbox (21.80629pt too wide) in paragraph at lines 573--578
+Overfull \hbox (21.80629pt too wide) in paragraph at lines 576--581
 \OT1/cmr/m/n/10 Thirdly, many par-tic-i-pants (8.3%) are cur-rently miss-ing ad
 -vanced and easy-to-apply
  []
 
 
-Overfull \hbox (4.22292pt too wide) in paragraph at lines 573--578
+Overfull \hbox (4.22292pt too wide) in paragraph at lines 576--581
 \OT1/cmr/m/n/10 meth-ods to cre-ate high-quality maps or other visualization-re
 lated func-tion-al-ity. 
  []
 
-
-Overfull \hbox (20.11177pt too wide) in paragraph at lines 582--586
+[14]
+Overfull \hbox (20.11177pt too wide) in paragraph at lines 585--589
 \OT1/cmr/m/n/10 trans-parency, re-li-a-bil-ity, and longevity. How-ever, since 
 land-scape ecol-ogy con-stantly
  []
 
 [15 <./paper_files/figure-latex/fig-survey-1.pdf>]
-Overfull \hbox (2.86182pt too wide) in paragraph at lines 587--592
+Overfull \hbox (2.86182pt too wide) in paragraph at lines 590--595
 \OT1/cmr/m/n/10 mod-ify, an-a-lyze, and vi-su-al-ize spa-tial data all in the s
 ame []scripted[] pro-gram-ming
  []
 
 
-Overfull \hbox (2.94504pt too wide) in paragraph at lines 587--592
-\OT1/cmr/m/n/10 share and re-pro-duce anal-y-sis across all ma-jor op-er-a-tion
- sys-tems (e.g., Win-dows,
+Overfull \hbox (8.98631pt too wide) in paragraph at lines 590--595
+\OT1/cmr/m/n/10 (e.g., Win-dows, ma-cOS, Linux), as demon-strated by the \OT1/c
+mr/m/it/10 R \OT1/cmr/m/n/10 script in the ap-pendix.
  []
 
 
-Overfull \hbox (5.97278pt too wide) in paragraph at lines 593--595
+Overfull \hbox (20.86174pt too wide) in paragraph at lines 590--595
+\OT1/cmr/m/n/10 steps and pa-ram-e-ter set-tings can only be de-scribed but not
+ shared, and fur-ther-more,
+ []
+
+
+Overfull \hbox (5.97278pt too wide) in paragraph at lines 596--598
 []\OT1/cmr/m/n/10 The sur-vey re-vealed that the land-scape ecol-ogy com-mu-nit
 y is over-all sat-is-fied
  []
 
 
-Overfull \hbox (15.50063pt too wide) in paragraph at lines 596--603
+Overfull \hbox (15.50063pt too wide) in paragraph at lines 599--606
 []\OT1/cmr/m/n/10 Landscape ecol-ogy com-bines many dif-fer-ent re-search top-i
 cs and method-olog-i-cal
  []
 
 
-Overfull \hbox (21.34749pt too wide) in paragraph at lines 596--603
-\OT1/cmr/m/n/10 ap-proaches and most of them heav-ily rely on spa-tial data. Wh
-ile the \OT1/cmr/m/it/10 R \OT1/cmr/m/n/10 pro-gram-ming
+Overfull \hbox (24.25069pt too wide) in paragraph at lines 599--606
+\OT1/cmr/m/n/10 mem-ory. Fur-ther-more, also par-al-lel pro-cess-ing, in-clud-i
+ng the use of high per-for-mance
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [16]
-Overfull \hbox (2.88753pt too wide) in paragraph at lines 627--628
+Overfull \hbox (2.88753pt too wide) in paragraph at lines 630--631
 \OT1/cmr/m/n/10 to an-a-lyze the data can be found at []$\OT1/cmtt/m/n/10 https
  : / / github . com / r -[] spatialecology /
  []
 
 
-Overfull \hbox (61.25072pt too wide) in paragraph at lines 632--635
+Overfull \hbox (61.25072pt too wide) in paragraph at lines 635--638
 \OT1/cmr/m/n/10 manuscript and gave fi-nal ap-proval for pub-li-ca-tion. We use
 d the `sequence--determines--credit'
  []
 
 
-Overfull \hbox (1.64195pt too wide) in paragraph at lines 639--640
+Overfull \hbox (1.64195pt too wide) in paragraph at lines 642--643
  []\OT1/cmr/m/it/10 Human and An-i-mal Rights and In-formed Con-sent [] \OT1/cm
 r/m/n/10 This ar-ti-cle does not con-tain
  []
 
 
-Overfull \hbox (7.25075pt too wide) in paragraph at lines 644--645
+Overfull \hbox (7.25075pt too wide) in paragraph at lines 647--648
 \OT1/cmr/m/n/10 an-a-lyze spa-tial data demon-strat-ing the ca-pa-bil-i-ties of
  the pro-gram-ming lan-guage
  []
@@ -892,7 +892,7 @@ org/package=remotes$\OML/cmm/m/it/8 >$\OT1/cmr/m/n/8 .  URL []$\OT1/cmtt/m/n/8
 https : / / CRAN . R -[]
  []
 
-[18]
+
 Underfull \hbox (badness 1072) in paragraph at lines 169--174
 \OT1/cmr/m/n/8 man-age-ment sys-tem for projects and their r pack-age de-pen-de
 n-cies. r pack-age
@@ -910,7 +910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--180
 mm/m/it/8 >$\OT1/cmr/m/n/8 .  URL []$\OT1/cmtt/m/n/8 https : / / CRAN . R -[]
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 199--203
 []\OT1/cmr/m/n/8 R. Hi-j-mans.  terra: Spa-tial data anal-y-sis. r pack-age ver
 -sion 1.0-10.
@@ -1101,13 +1101,13 @@ Underfull \hbox (badness 6725) in paragraph at lines 757--762
 e ver-sion
  []
 
-[23]
+
 Underfull \hbox (badness 3138) in paragraph at lines 789--792
 []\OT1/cmr/m/n/8 M. Schu-bert, clus-termq en-ables ef-fi-cient par-al-leliza-ti
 on of ge-nomic anal-y-ses,
  []
 
-) [24] (./paper.aux)
+[23]) [24] (./paper.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1118,11 +1118,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  11294 strings out of 479302
  169470 string characters out of 5867266
- 514738 words of memory out of 5000000
+ 514743 words of memory out of 5000000
  28109 multiletter control sequences out of 15000+600000
  412506 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,74p,1109b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,74p,1110b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -1142,10 +1142,10 @@ e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/202
 0/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on paper.pdf (24 pages, 472236 bytes).
+Output written on paper.pdf (24 pages, 472007 bytes).
 PDF statistics:
- 1438 PDF objects out of 1440 (max. 8388607)
- 835 compressed objects within 9 object streams
+ 1439 PDF objects out of 1440 (max. 8388607)
+ 836 compressed objects within 9 object streams
  220 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

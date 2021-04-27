@@ -195,7 +195,7 @@ The \textit{sp} package was the standard for vector data representation for more
 As of 2020, more than 500 \textit{R} packages directly depend or imports \textit{sp}.
 However, \textit{sp} is not actively developed anymore, and its recommended successor is the \textit{sf} package \cite{Pebesma2018}.
 Besides many advantages and strengths of the \textit{sf} package in terms of spatial data handling, it also integrates into the widely used \textit{tidyverse} packages \cite{Wickham2019}.
-\textcolor{blue}{The \textit{tidyverse} is a collection of \textit{R} packages developed for almost all major tasks of any data science project. 
+\textcolor{blue}{The \textit{tidyverse} is a collection of \textit{R} packages developed for almost all major tasks of any data analysis project. 
 Because all \textit{tidyverse} packages follow the same data philosophy structures, one strength of the \textit{tidyverse} is its high consistency of usage across its packages \cite{Wickham2019}.}
 \textit{sf} builds on the idea of "simple features", a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points), and attributes connected to these geometries \cite{Pebesma2019a}.
 
