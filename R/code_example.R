@@ -12,12 +12,11 @@
 # First, we need to load all required packages used in this R script. In case you are
 # missing a package, it can be install from CRAN using e.g., install.packages("raster").
 # By loading the packages, we make sure all functions from them can be used in the script.
-library(sf)
-library(raster)
-library(viridis)
-library(rnaturalearth)
 library(ggplot2)
 library(ggspatial)
+library(raster)
+library(rnaturalearth)
+library(sf)
 library(tmap)
 
 # This function downloads data and saves it as a RasterLayer. The 'name' argument
