@@ -207,7 +207,7 @@ For more information about \textit{R} package development in general, see \cite{
 
 While \textcolor{blue}{base \textit{R}} has several built-in data structures, including vectors, matrices, data frames, and lists, it has no internal support for reading, processing, or visualizing spatial data.
 \textcolor{blue}{However, as discussed previously, one strength and core idea of the \textit{R} programming language are its expandability by packages.}
-Because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \textit{R} packages (\cite{Lovelace2019}, page 10, Table \ref{tab:packages}).
+Because there is a substantial interest in spatial data analysis, support for spatial data is now provided by many \textit{R} packages (\cite{Lovelace2019}, Table \ref{tab:packages}).
 Most spatial data belong to one of two data models, namely spatial raster and spatial vector model, and both data models have several implementations in the \textit{R} language.
 Importantly, main \textit{R} packages for spatial data use the external \textit{GDAL} \cite{GDAL/OGRcontributors2020} and \textit{PROJ} \cite{PROJcontributors2021} libraries, which allow for reading and writing of hundreds of spatial data formats, and for coordinates transformation.
 Additionally, \textit{R} allows for conversion between data models and specific implementations, which can be useful if given methods only exist for a particular data model or implementation.
@@ -226,13 +226,13 @@ As of 2020, more than 500 \textit{R} packages directly depend or imports \textit
 However, \textit{sp} is not actively developed anymore, and its recommended successor is the \textit{sf} package \cite{Pebesma2018}.
 Besides many advantages and strengths of the \textit{sf} package in terms of spatial data handling, it also integrates into the widely used \textit{tidyverse} packages \cite{Wickham2019}.
 \textcolor{blue}{The \textit{tidyverse} is a collection of \textit{R} packages developed for almost all major tasks of any data analysis project. 
-Because all \textit{tidyverse} packages follow the same data philosophy structures, one strength of the \textit{tidyverse} is its high consistency of usage across its packages \cite{Wickham2019}.}
-\textit{sf} builds on the idea of ``simple features'', a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points), and attributes connected to these geometries \cite{Pebesma2019a}.
+Because all \textit{tidyverse} packages follow the same philosophy how to structure data, one strength of the \textit{tidyverse} is its high consistency of usage across its packages \cite{Wickham2019}.}
+\textit{sf} builds on the idea of ``simple features,'' a standard used to describe spatial geometries using points, lines (two connected points) and polygons (several connected points), and attributes connected to these geometries \cite{Pebesma2019a}.
 
 \hypertarget{spatial-data-download}{%
 \subsection{Spatial data download}\label{spatial-data-download}}
 
-Nowadays, spatial data at many scales is available from an abundance of online-accessible sources.
+Nowadays, spatial data at various scales is available from many online-accessible sources.
 A lot of this data are publicly available, either as a direct download or through an API connection, and several packages can use this to download the spatial data directly into an \textit{R} session.
 Since publicly available data is becoming more prominent, so are \textit{R} packages to access them.
 Packages include \textit{rnaturalearth} \cite{South2017} to access the Natural Earth database to download region and country data, the \textit{elevatr} package to access raster elevation data \cite{Hollister2020}, the \textit{rgbif} package to access the Global Biodiversity Information Facility (GBIF) portal \cite{Chamberlain2017}, the \textit{BIEN} package \cite{Maitner2020} to access the Botanical Information and Ecology Network Database, the \textit{marmap} to download bathymetry data from the ETOPO1 database \cite{Pante2013}, or the \textit{FedData} package \cite{Bocinsky2019} to access the National Land Cover Database (NLCD) data for the USA.
@@ -257,7 +257,7 @@ Tools to find an appropriate CRS for a certain region can be found at \url{https
 All packages from Section \ref{sec:spatrep} have interfaces for coordinates transformations, allowing unification of spatial projections when the used data have different CRS.
 
 \textcolor{blue}{Until 2020, spatial \textit{R} objects stored information about their CRS using Proj4 string representations, and these strings could also be used for CRS transformations.
-However, the major changes in upstream software, namely PROJ6 and GDAL3, limited the capabilities of the Proj4 strings and switched to use a new representation called WKT2-2019 for CRS storing.
+However, the major changes in upstream software, namely PROJ6 and GDAL3, limited the capabilities of the Proj4 strings and switched to use a new representation called WKT2-2019 for storing the CRS.
 Thus, spatial objects saved with degraded Proj4 string representation to \textit{R} file formats could be incorrectly read, and special attention should be given to check their correctness.
 Proj4 string representation is also not recommended to set or transform CRS and instead the previously introduced EPSG codes should be used.
 A more detailed explanation of the recent CRS changes can be found in \cite{Bivand2020}.}
@@ -295,7 +295,7 @@ These packages also have excellent documentation at \url{https://rspatial.org/ra
 \textbf{3.} Be able to transform coordinate reference systems of data from different sources. Depending on the data type, \textit{raster} or \textit{sf} and the corresponding documentations are good starting points. \\
 
 \textbf{4.} Do a quick visualization of the data for inspection or a first glance at the data. 
-This can be done with base \textit{R} or if already familiar - \textit{ggplot2}. \\
+This can be done with base \textit{R} or -- if already familiar -- \textit{ggplot2}. \\
 
 \textbf{5.} Find suitable \textit{R} package for research questions. 
 This can be difficult since research questions, available data and packages are diverse. 
@@ -470,7 +470,7 @@ Task & \textit{R} package & Describtion & Reference \\
 & MODIS & Download satellite data from MODIS & \cite{Mattiuzzi2020} \\
 & sen2r & Download satellite data from Sentinel & \cite{Ranghetti2020} \\
 \hline
-\multirow{3}{*}{Bridge stuff} & rgrass7 & Interface between GRASS7 and R  & \cite{Bivand2021} \\
+\multirow{3}{*}{Interfacing to GIS} & rgrass7 & Interface between GRASS7 and R  & \cite{Bivand2021} \\
 & RSAGA & Interface between SAGA and R & \cite{Brenning2018} \\
 & rgee &  Download data from Google Earth Engine & \cite{Aybar2020} \\
 \hline
@@ -506,7 +506,7 @@ Task & \textit{R} package & Describtion & Reference \\
 & ctmm & Fit continuous time movement models &\cite{Calabrese2016} \\
 & moveHMM & Fit hidden Markov models to movement data &\cite{Michelot2016} \\
 \hline
-\multirow{5}{*}{Connectivity} & \textit{lconnect} & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
+\multirow{5}{*}{Connectivity} & lconnect & Calculate landscape connectivity metrics & \cite{Mestre2019} \\
 & Makurhini & Calculate fragmentation and landscape connectivity indices & \cite{Godinez-Gomez2020} \\
 & grainscape & Calculate minimum planar graph and grains of connectivity models & \cite{Chubaty2020} \\
 & gdistance & Distances and routes on geographical grids & \cite{vanEtten2017} \\
@@ -545,7 +545,7 @@ Most people use \textit{R} either ``daily'' (53.2\%) or a ``few times a week'' (
 Almost half of all participants described themselves as ``advanced'' users (46.8\%), while 40.4\% described themselves as ``intermediate'' users.
 Related to this, about half of the participants either implemented their own package (21.1\%) or plan to do so in the future (22\%) and most of these packages are hosted on \textit{GitHub} and/or \textit{CRAN}.
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity'', followed by ``land use management'', ``landscape connectivity'', and ``nature conservation'' (Fig. \ref{fig:fig-survey}a).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10\% of participants included ``biodiversity,'' followed by ``land use management,'' ``landscape connectivity,'' and ``nature conservation'' (Fig. \ref{fig:fig-survey}a).
 
 Next, we were interested in the most important tasks to the workflow of the participants.
 \textcolor{blue}{Not surprisingly, "(pre-)processing of data", "spatial statistics", and "creating maps" were the most selected options} (Fig. \ref{fig:fig-survey}b).
@@ -558,7 +558,7 @@ The \textit{raster} package was mentioned the most, followed by the \textit{sf} 
 Both packages are designed for basic and advanced data handling and processing of raster and vector data, respectively, representing the results of Fig. \ref{fig:fig-survey}c.
 Nevertheless, the large availability and usage of different \textit{R} packages across the community can be seen in the large ``others'' option (packages mentioned by less than 5 participants; 35.87\%).
 
-Lastly, when asked how useful \textit{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \textit{R} as ``intermediate'', ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey}d).
+Lastly, when asked how useful \textit{R} is currently for landscape ecology, the vast majority of participants answered with either ``very useful'' or ``useful'' (summarized 90.83\%) and only very few participants evaluated \textit{R} as ``intermediate,'' ``not useful'' or ``not useful at all'' (summarized 9.17\%; Fig. \ref{fig:fig-survey}d).
 
 
 

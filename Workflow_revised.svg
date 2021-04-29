@@ -882,15 +882,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4182101"
-     inkscape:cx="474.09475"
-     inkscape:cy="258.50117"
+     inkscape:cx="369.03274"
+     inkscape:cy="244.39889"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
-     inkscape:window-x="-1"
+     inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-nodes="false"
@@ -950,7 +950,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1032,7 +1032,7 @@
     <text
        xml:space="preserve"
        id="text6166-3-3"
-       style="font-style:normal;font-weight:normal;font-size:4.23332999999999959px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect6168-0-8);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:4.23332999999999959px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect6168-0-8);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
        x="17.382578"
        y="0"
        transform="translate(140.21353,-37.846946)"><tspan
@@ -1219,7 +1219,7 @@
 </tspan></tspan><tspan
          x="-46.013672"
          y="68.75352"><tspan
-           style="font-size:2.82222px">fasterize</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">fasterize</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.244395;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 48.071714,81.867752 h 26.33971"
@@ -1240,8 +1240,7 @@
        transform="translate(167.09104,-46.462847)"><tspan
          x="-78.884766"
          y="80.878657"><tspan
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Bridge tools</tspan><tspan
-           style="shape-inside:url(#rect6395-1-6-6)">
+           style="shape-inside:url(#rect6395-1-6-6)">GIS interface
 </tspan></tspan><tspan
          x="-78.884766"
          y="85.288386"><tspan
@@ -1373,95 +1372,72 @@
        transform="matrix(0.02929683,0,0,0.02969121,9.9760733,88.777243)">
       <g
          id="g531">
-	<g
-   id="g529">
-		<circle
-   cx="255.00101"
-   cy="433.5"
-   r="33"
-   id="circle527" />
-
-	</g>
-
-</g>
+        <g
+           id="g529">
+          <circle
+             cx="255.00101"
+             cy="433.5"
+             r="33"
+             id="circle527" />
+        </g>
+      </g>
       <g
          id="g537">
-	<g
-   id="g535">
-		<path
-   d="M 506.632,154.864 C 440.902,84.341 351.895,45.501 255.997,45.5 160.107,45.501 71.1,84.341 5.369,154.864 c -7.53,8.08 -7.085,20.736 0.995,28.267 8.081,7.53 20.736,7.086 28.267,-0.995 58.08,-62.316 136.696,-96.635 221.373,-96.636 84.67,0.001 163.286,34.32 221.366,96.636 3.939,4.226 9.28,6.364 14.635,6.364 4.883,0 9.778,-1.778 13.632,-5.369 8.08,-7.532 8.526,-20.187 0.995,-28.267 z"
-   id="path533" />
-
-	</g>
-
-</g>
+        <g
+           id="g535">
+          <path
+             d="M 506.632,154.864 C 440.902,84.341 351.895,45.501 255.997,45.5 160.107,45.501 71.1,84.341 5.369,154.864 c -7.53,8.08 -7.085,20.736 0.995,28.267 8.081,7.53 20.736,7.086 28.267,-0.995 58.08,-62.316 136.696,-96.635 221.373,-96.636 84.67,0.001 163.286,34.32 221.366,96.636 3.939,4.226 9.28,6.364 14.635,6.364 4.883,0 9.778,-1.778 13.632,-5.369 8.08,-7.532 8.526,-20.187 0.995,-28.267 z"
+             id="path533" />
+        </g>
+      </g>
       <g
          id="g543">
-	<g
-   id="g541">
-		<path
-   d="m 433.194,237.458 c -48.587,-48.954 -111.516,-75.913 -177.196,-75.911 -65.695,0.001 -128.625,26.961 -177.197,75.913 -7.78,7.841 -7.731,20.504 0.11,28.284 7.841,7.78 20.504,7.731 28.284,-0.11 41.005,-41.326 93.851,-64.086 148.803,-64.087 54.938,-0.002 107.784,22.759 148.804,64.089 3.91,3.939 9.052,5.911 14.196,5.911 5.092,0 10.188,-1.934 14.09,-5.805 7.839,-7.781 7.887,-20.444 0.106,-28.284 z"
-   id="path539" />
-
-	</g>
-
-</g>
+        <g
+           id="g541">
+          <path
+             d="m 433.194,237.458 c -48.587,-48.954 -111.516,-75.913 -177.196,-75.911 -65.695,0.001 -128.625,26.961 -177.197,75.913 -7.78,7.841 -7.731,20.504 0.11,28.284 7.841,7.78 20.504,7.731 28.284,-0.11 41.005,-41.326 93.851,-64.086 148.803,-64.087 54.938,-0.002 107.784,22.759 148.804,64.089 3.91,3.939 9.052,5.911 14.196,5.911 5.092,0 10.188,-1.934 14.09,-5.805 7.839,-7.781 7.887,-20.444 0.106,-28.284 z"
+             id="path539" />
+        </g>
+      </g>
       <g
          id="g549">
-	<g
-   id="g547">
-		<path
-   d="M 353.151,320.292 C 327.131,294.513 289.834,278.5 255.812,278.5 c -0.004,0 -0.011,0 -0.015,0 h -1.441 c -0.006,0 -0.009,0 -0.015,0 -34.023,0 -71.323,16.014 -97.342,41.792 -7.846,7.774 -7.905,20.437 -0.131,28.284 3.911,3.947 9.059,5.924 14.208,5.924 5.087,0 10.176,-1.929 14.075,-5.792 18.523,-18.352 45.68,-30.208 69.192,-30.208 0.003,0 0.007,0 0.01,0 h 1.447 c 0.004,0 0.005,0 0.009,0 23.509,0 50.668,11.857 69.189,30.208 7.846,7.773 20.511,7.717 28.284,-0.132 7.775,-7.846 7.716,-20.51 -0.131,-28.284 z"
-   id="path545" />
-
-	</g>
-
-</g>
+        <g
+           id="g547">
+          <path
+             d="M 353.151,320.292 C 327.131,294.513 289.834,278.5 255.812,278.5 c -0.004,0 -0.011,0 -0.015,0 h -1.441 c -0.006,0 -0.009,0 -0.015,0 -34.023,0 -71.323,16.014 -97.342,41.792 -7.846,7.774 -7.905,20.437 -0.131,28.284 3.911,3.947 9.059,5.924 14.208,5.924 5.087,0 10.176,-1.929 14.075,-5.792 18.523,-18.352 45.68,-30.208 69.192,-30.208 0.003,0 0.007,0 0.01,0 h 1.447 c 0.004,0 0.005,0 0.009,0 23.509,0 50.668,11.857 69.189,30.208 7.846,7.773 20.511,7.717 28.284,-0.132 7.775,-7.846 7.716,-20.51 -0.131,-28.284 z"
+             id="path545" />
+        </g>
+      </g>
       <g
-         id="g551">
-</g>
+         id="g551" />
       <g
-         id="g553">
-</g>
+         id="g553" />
       <g
-         id="g555">
-</g>
+         id="g555" />
       <g
-         id="g557">
-</g>
+         id="g557" />
       <g
-         id="g559">
-</g>
+         id="g559" />
       <g
-         id="g561">
-</g>
+         id="g561" />
       <g
-         id="g563">
-</g>
+         id="g563" />
       <g
-         id="g565">
-</g>
+         id="g565" />
       <g
-         id="g567">
-</g>
+         id="g567" />
       <g
-         id="g569">
-</g>
+         id="g569" />
       <g
-         id="g571">
-</g>
+         id="g571" />
       <g
-         id="g573">
-</g>
+         id="g573" />
       <g
-         id="g575">
-</g>
+         id="g575" />
       <g
-         id="g577">
-</g>
+         id="g577" />
       <g
-         id="g579">
-</g>
+         id="g579" />
     </g>
     <text
        xml:space="preserve"
@@ -1507,7 +1483,7 @@
 </tspan></tspan><tspan
          x="-46.013672"
          y="68.635607"><tspan
-           style="font-size:2.82222px">inlabru</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">inlabru</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.276934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 130.60259,74.955904 h 33.82025"
@@ -1531,12 +1507,12 @@
 </tspan></tspan><tspan
          x="-46.013672"
          y="64.225882"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">adehabitatHR</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Courier;-inkscape-font-specification:Courier">
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">sdm</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Cour;-inkscape-font-specification:Cour">
 </tspan></tspan><tspan
          x="-46.013672"
-         y="68.75352"><tspan
-           style="font-size:2.82222px">amt</tspan></tspan></text>
+         y="68.635607"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier;-inkscape-font-specification:Courier">dissmo</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.276934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 130.60259,92.865772 h 33.82025"
@@ -1569,7 +1545,7 @@
 </tspan></tspan><tspan
          x="-46.013672"
          y="68.75352"><tspan
-           style="font-size:2.82222px">grainscape</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">grainscape</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.276934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 130.6026,108.91001 h 33.82025"
@@ -1602,7 +1578,7 @@
 </tspan></tspan><tspan
          x="-46.013672"
          y="68.75352"><tspan
-           style="font-size:2.82222px">PopGenReport</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Courier;-inkscape-font-specification:Courier">PopGenReport</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.276934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 130.41604,124.76773 h 33.82025"
@@ -1616,92 +1592,61 @@
        transform="matrix(0.05195224,0,0,0.05195237,93.051399,7.1298771)">
       <g
          id="g3546">
-	<g
-   id="More_Horizontal">
-		<path
-   d="M 48.121,144.364 C 21.546,144.364 0,165.91 0,192.485 c 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.294,0 24.061,10.779 24.061,24.061 0,13.294 -10.767,24.061 -24.061,24.061 z"
-   id="path3527" />
-
-		<path
-   d="m 336.848,144.364 c -26.575,0 -48.121,21.546 -48.121,48.121 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.281,0 24.061,10.779 24.061,24.061 0,13.294 -10.779,24.061 -24.061,24.061 z"
-   id="path3529" />
-
-		<path
-   d="m 192.485,144.364 c -26.575,0 -48.121,21.546 -48.121,48.121 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.281,0 24.061,10.779 24.061,24.061 -0.001,13.294 -10.78,24.061 -24.061,24.061 z"
-   id="path3531" />
-
-	</g>
-
-	<g
-   id="g3534">
-	</g>
-
-	<g
-   id="g3536">
-	</g>
-
-	<g
-   id="g3538">
-	</g>
-
-	<g
-   id="g3540">
-	</g>
-
-	<g
-   id="g3542">
-	</g>
-
-	<g
-   id="g3544">
-	</g>
-
-</g>
+        <g
+           id="More_Horizontal">
+          <path
+             d="M 48.121,144.364 C 21.546,144.364 0,165.91 0,192.485 c 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.294,0 24.061,10.779 24.061,24.061 0,13.294 -10.767,24.061 -24.061,24.061 z"
+             id="path3527" />
+          <path
+             d="m 336.848,144.364 c -26.575,0 -48.121,21.546 -48.121,48.121 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.281,0 24.061,10.779 24.061,24.061 0,13.294 -10.779,24.061 -24.061,24.061 z"
+             id="path3529" />
+          <path
+             d="m 192.485,144.364 c -26.575,0 -48.121,21.546 -48.121,48.121 0,26.575 21.546,48.121 48.121,48.121 26.575,0 48.121,-21.546 48.121,-48.121 0,-26.575 -21.546,-48.121 -48.121,-48.121 z m 0,72.181 c -13.293,0 -24.061,-10.767 -24.061,-24.061 0,-13.294 10.767,-24.061 24.061,-24.061 13.281,0 24.061,10.779 24.061,24.061 -0.001,13.294 -10.78,24.061 -24.061,24.061 z"
+             id="path3531" />
+        </g>
+        <g
+           id="g3534" />
+        <g
+           id="g3536" />
+        <g
+           id="g3538" />
+        <g
+           id="g3540" />
+        <g
+           id="g3542" />
+        <g
+           id="g3544" />
+      </g>
       <g
-         id="g3548">
-</g>
+         id="g3548" />
       <g
-         id="g3550">
-</g>
+         id="g3550" />
       <g
-         id="g3552">
-</g>
+         id="g3552" />
       <g
-         id="g3554">
-</g>
+         id="g3554" />
       <g
-         id="g3556">
-</g>
+         id="g3556" />
       <g
-         id="g3558">
-</g>
+         id="g3558" />
       <g
-         id="g3560">
-</g>
+         id="g3560" />
       <g
-         id="g3562">
-</g>
+         id="g3562" />
       <g
-         id="g3564">
-</g>
+         id="g3564" />
       <g
-         id="g3566">
-</g>
+         id="g3566" />
       <g
-         id="g3568">
-</g>
+         id="g3568" />
       <g
-         id="g3570">
-</g>
+         id="g3570" />
       <g
-         id="g3572">
-</g>
+         id="g3572" />
       <g
-         id="g3574">
-</g>
+         id="g3574" />
       <g
-         id="g3576">
-</g>
+         id="g3576" />
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2604)"
