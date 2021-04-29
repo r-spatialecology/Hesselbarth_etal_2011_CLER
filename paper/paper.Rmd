@@ -526,7 +526,7 @@ own_package <- dplyr::group_by(answers, own_package) %>%
 ```
 
 To better understand how the landscape ecology community uses \textit{R}, we conducted a short survey using mailing lists and social media to reach the community. \textcolor{blue}{Thus, the survey was not necessarily representative for all skill levels of \textit{R} users and results are most likely biased towards more advanced users.
-Also, the survey did not include any personal questions, such as age or country of residence, which might affect the representation of the survey.}.
+Also, the survey did not include any personal questions, such as age or country of residence, which might affect the representation of the survey}.
 All raw data and scripts to analyze the data can be found at [https://github.com/r-spatialecology/Hesselbarth_et_al_CLER](https://github.com/r-spatialecology/Hesselbarth_et_al_CLER).
 
 In total, the survey was answered by `r n_people` participants, of which the majority were either "PhD students" (`r current_position[[1, 2]]`%), followed by "Post-Docs" (`r current_position[[2, 2]]`%) and "Professors" (`r current_position[[3, 2]]`%).
@@ -582,7 +582,7 @@ ggplot_topics <-  ggplot(data = topics_df) +
 
 ```
 
-We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey)a)).
+We asked the participants to select which terms describe their research topics the best, and options that were selected by more than 10% of participants included "biodiversity", followed by "land use management", "landscape connectivity", and "nature conservation" (Fig. \@ref(fig:fig-survey)a).
 
 ```{r tasks, include = FALSE}
 # get data
@@ -769,7 +769,7 @@ ggplot_usefulness <- ggplot(data = usefulness_df) +
   coord_flip()
 ```
 
-Lastly, when asked how useful \textit{R} is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated \textit{R} as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d)).
+Lastly, when asked how useful \textit{R} is currently for landscape ecology, the vast majority of participants answered with either "very useful" or "useful" (summarized `r good_eval`%) and only very few participants evaluated \textit{R} as "intermediate", "not useful" or "not useful at all" (summarized `r bad_eval`%; Fig. \@ref(fig:fig-survey)d).
 
 (ref:fig3cap) Results of the online survey about open-source software tools in \textit{R} for landscape ecology. Results include a) which terms describe major research topics the best, b) the most important workflow task, c) the most used \textit{R} packages and d) the overall usefulness or \textit{R} for landscape ecology. The 'others' category includes all answers with less than five total mentions.
 ```{r fig-survey, echo = FALSE, fig.align="center", fig.cap = "(ref:fig3cap)", warning=FALSE, out.width="\\textwidth"}
