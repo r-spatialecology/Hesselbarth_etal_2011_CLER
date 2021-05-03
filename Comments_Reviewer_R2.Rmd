@@ -13,8 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Thank you for your rapid revision and for the thoughtful way in which you addressed the comments. 
 I am happy with what you have done to respond to the reviewers and I think it will be a valuable contribution to the journal. 
+
+**Reply**: Thank you very much for the positive feedback. 
+We are happy to hear that our changes to the manuscript improved it and addressed the appreciated comments by the reviewers. \vskip 0.5cm
+
 I have only a few minor edits - these are just minor wording/syntax issues and should not take long to fix.
 Please see the attached marked-up PDF. 
+
+**Reply**: Thank you for the careful read of the manuscript and spotting these wording/syntax issues. 
+We used the attached PDF to improve the manuscript and implemented all comments and rewording suggestions. All changes are indicated by the blue color in the manuscript version that includes track changes. \vskip 0.5cm
+
 It might also be nice to acknowledge the two anonymous reviewers in your acknowledgments section.
 
-**Reply**:
+**Reply**: Thank you for this reminder. We agree that this is a nice acknowledgments and we added a corresponding sentence. \vskip 0.5cm
