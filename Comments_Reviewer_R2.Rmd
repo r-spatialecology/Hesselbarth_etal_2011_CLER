@@ -1,0 +1,20 @@
+---
+title: "Comments for the author R2"
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Comments for the Author
+
+Thank you for your rapid revision and for the thoughtful way in which you addressed the comments. 
+I am happy with what you have done to respond to the reviewers and I think it will be a valuable contribution to the journal. 
+I have only a few minor edits - these are just minor wording/syntax issues and should not take long to fix.
+Please see the attached marked-up PDF. 
+It might also be nice to acknowledge the two anonymous reviewers in your acknowledgments section.
+
+**Reply**:
