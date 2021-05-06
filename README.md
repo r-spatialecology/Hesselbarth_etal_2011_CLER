@@ -1,6 +1,20 @@
 # Open source landscape ecology tools
 
-A manuscript in a preparation for the [Current Landscape Ecology Reports](https://www.springer.com/journal/40823) journal, the section on [Methodological Developments in Landscape Ecology]( https://link.springer.com/journal/40823/topicalCollection/AC_2a02c55cb66acabe5a7301b9bd93b3a5/page/1).
-It is a review about open source tools for landscape ecology (with a fairly healthy dose of the toolset we have created in R).
+Repository to store manuscript and R scripts for *Hesselbarth, M.H.K., Nowosad, J., Signer, J., Graham, L.J. 2021. Open-source tools in R for landscape ecology. Current Landscape Ecology Reports. In press.*
 
-The manuscript can be found in the paper/ folder and is a .Rmd document. Always write one sentence per line to allow easy track-changing.
+The repository contains the following files:
+
+/01_Manuscript
+Folder storing all files related to the manuscript
+
+/02_Reviewer_comments
+Comments of two anonymous reviewers and replies to raised issues
+
+/03_R_Scripts
+All R scripts used to prepare manuscript
+
+/04_Various
+Folder containing various files
+
+Correspondence:
+mhk.hesselbarth@gmail.com
