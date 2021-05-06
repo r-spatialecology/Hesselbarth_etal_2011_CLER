@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  3 MAY 2021 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.18)  6 MAY 2021 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**paper.tex
-(./paper.tex
+**Manuscript.tex
+(./Manuscript.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-06> (./svjour3.cls
 Document Class: svjour3 2007/05/08 v3.2 
@@ -361,8 +361,8 @@ LaTeX Info: Redefining \_ on input line 43.
 File: l3backend-pdftex.def 2021-02-06 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box57
-) (./paper.aux)
-\openout1 = `paper.aux'.
+) (./Manuscript.aux)
+\openout1 = `Manuscript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -427,9 +427,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 44.
 LaTeX Info: Redefining \pageref on input line 44.
 LaTeX Info: Redefining \nameref on input line 44.
-(./paper.out) (./paper.out)
+(./Manuscript.out) (./Manuscript.out)
 \@outlinefile=\write3
-\openout3 = `paper.out'.
+\openout3 = `Manuscript.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -786,11 +786,12 @@ Overfull \hbox (16.06969pt too wide) in paragraph at lines 562--563
 ted \OT1/cmr/m/it/10 R \OT1/cmr/m/n/10 as ``in-ter-me-di-ate,''
  []
 
-<paper_files/figure-latex/fig-survey-1.pdf, id=1122, 451.6875pt x 307.1475pt>
-File: paper_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/fig-survey-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/fig-survey-1.pdf  used on inp
-ut line 568.
+<Manuscript_files/figure-latex/fig-survey-1.pdf, id=1122, 451.6875pt x 307.1475
+pt>
+File: Manuscript_files/figure-latex/fig-survey-1.pdf Graphic file (type pdf)
+<use Manuscript_files/figure-latex/fig-survey-1.pdf>
+Package pdftex.def Info: Manuscript_files/figure-latex/fig-survey-1.pdf  used o
+n input line 568.
 (pdftex.def)             Requested size: 338.0pt x 229.85388pt.
 
 Overfull \hbox (13.33408pt too wide) in paragraph at lines 577--582
@@ -822,7 +823,7 @@ Overfull \hbox (20.11177pt too wide) in paragraph at lines 586--590
 land-scape ecol-ogy con-stantly
  []
 
-[15 <./paper_files/figure-latex/fig-survey-1.pdf>]
+[15 <./Manuscript_files/figure-latex/fig-survey-1.pdf>]
 Overfull \hbox (2.86182pt too wide) in paragraph at lines 591--596
 \OT1/cmr/m/n/10 mod-ify, an-a-lyze, and vi-su-al-ize spa-tial data all in the s
 ame scripted pro-gram-ming
@@ -882,7 +883,7 @@ Overfull \hbox (7.25075pt too wide) in paragraph at lines 649--650
  the pro-gram-ming lan-guage
  []
 
-(./paper.bbl [17]
+(./Manuscript.bbl [17]
 Underfull \hbox (badness 4792) in paragraph at lines 95--99
 []\OT1/cmr/m/n/8 D. Smith.  Over 16 years of r project his-tory.  URL []$\OT1/c
 mtt/m/n/8 https : / / blog .
@@ -1110,22 +1111,22 @@ Underfull \hbox (badness 3138) in paragraph at lines 811--814
 on of ge-nomic anal-y-ses,
  []
 
-) [24] (./paper.aux)
+) [24] (./Manuscript.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package rerunfilecheck Info: File `paper.out' has not changed.
+Package rerunfilecheck Info: File `Manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: 9EBAF804E04320A0B95C9E2315C076F8;623.
  ) 
 Here is how much of TeX's memory you used:
  11294 strings out of 479302
- 169470 string characters out of 5867266
- 513260 words of memory out of 5000000
+ 169595 string characters out of 5867266
+ 513270 words of memory out of 5000000
  28109 multiletter control sequences out of 15000+600000
  412506 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,74p,1117b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,74p,1122b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -1145,7 +1146,7 @@ e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/202
 0/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on paper.pdf (24 pages, 472716 bytes).
+Output written on Manuscript.pdf (24 pages, 472730 bytes).
 PDF statistics:
  1439 PDF objects out of 1440 (max. 8388607)
  836 compressed objects within 9 object streams

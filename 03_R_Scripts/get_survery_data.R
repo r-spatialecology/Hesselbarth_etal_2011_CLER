@@ -14,4 +14,4 @@ names(answers) <-  new_names
 
 results <- list(answers = answers, old_names = old_names, new_names = new_names)
 
-saveRDS(object = results, file = "paper/data/results.rds")
+saveRDS(object = results, file = "01_Manuscript/data/results.rds")

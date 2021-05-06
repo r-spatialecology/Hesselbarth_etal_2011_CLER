@@ -40,7 +40,7 @@ The 'var' argument specifies which kind of data is downloaded, in this case prec
 
 ```{r download_data_dummy, eval = FALSE}
 precipitation <- raster::getData(name = "worldclim", lon = 3, lat = 38,
-                                 res = 0.5, var = "prec", path = "R/")
+                                 res = 0.5, var = "prec", path = "03_R_Scripts/")
 ```
 
 ```{r load, eval = TRUE, include = FALSE}
@@ -121,7 +121,7 @@ Next, we are going to add the vector data to the plot by plotting the sf object 
 For better visualization, we add the vector data twice using white and black colors.
 
 ```{r base_plot, eval = FALSE}
-# pdf(file = "R/Figures/base_plot.pdf")
+# pdf(file = "03_R_Scripts/Figures/base_plot.pdf")
 
 plot(precipitation_class_ch, col = colors)
 plot(st_geometry(switzerland), add = TRUE, lwd = 4, border = "white")
@@ -148,7 +148,7 @@ plot_gg <- ggplot(raster::as.data.frame(precipitation_class_ch, xy = TRUE)) +
     theme_classic() +
     theme(legend.position = "bottom")
 
-# ggplot2::ggsave(filename = "R/Figures/ggplot2.pdf")
+# ggplot2::ggsave(filename = "03_R_Scripts/Figures/ggplot2.pdf")
 ```
 
 Creating the map with tmap is comparable to ggplot2. 
@@ -172,5 +172,5 @@ plot_tm <- tm_shape(precipitation_class_ch) +
     tm_layout(legend.outside = TRUE,
               legend.outside.position = "bottom")
 
-# tmap::tmap_save(plot_tm, "R/Figures/tmap.pdf")
+# tmap::tmap_save(plot_tm, "03_R_Scripts/Figures/tmap.pdf")
 ```
