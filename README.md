@@ -1,6 +1,9 @@
-# Open source landscape ecology tools
+# Open-source tools in R for landscape ecology
 
 Repository to store manuscript and R scripts for *Hesselbarth, M.H.K., Nowosad, J., Signer, J., Graham, L.J. 2021. Open-source tools in R for landscape ecology. Current Landscape Ecology Reports. In press.*
+
+<br/><br/>
+<br/><br/>
 
 The repository contains the following files:
 
@@ -15,6 +18,9 @@ All R scripts used to prepare manuscript
 
 /04_Various
 Folder containing various files
+
+<br/><br/>
+<br/><br/>
 
 Correspondence:
 mhk.hesselbarth@gmail.com
